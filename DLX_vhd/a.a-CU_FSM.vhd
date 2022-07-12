@@ -14,6 +14,7 @@ entity dlx_cu is
     -- ALU_OPC_SIZE       :     integer := 6;  -- ALU Op Code Word Size
     IR_SIZE            :     integer := 32;  -- Instruction Register Size    
     CW_SIZE            :     integer := 15);  -- Control Word Size
+	
   port (
     Clk                : in  std_logic;  -- Clock
     Rst                : in  std_logic;  -- Reset:Active-Low
@@ -22,8 +23,8 @@ entity dlx_cu is
     
     -- IF Control Signal
     IR_LATCH_EN        : out std_logic;  -- Instruction Register Latch Enable
-    NPC_LATCH_EN       : out std_logic;
-                                        -- NextProgramCounter Register Latch Enable
+    NPC_LATCH_EN       : out std_logic;  -- NextProgramCounter Register Latch Enable
+	
     -- ID Control Signals
     RegA_LATCH_EN      : out std_logic;  -- Register A Latch Enable
     RegB_LATCH_EN      : out std_logic;  -- Register B Latch Enable
@@ -34,6 +35,7 @@ entity dlx_cu is
     MUXB_SEL           : out std_logic;  -- MUX-B Sel
     ALU_OUTREG_EN      : out std_logic;  -- ALU Output Register Enable
     EQ_COND            : out std_logic;  -- Branch if (not) Equal to Zero
+	
     -- ALU Operation Code
     ALU_OPCODE         : out aluOp; -- choose between implicit or exlicit coding, like std_logic_vector(ALU_OPC_SIZE -1 downto 0);
     
@@ -50,6 +52,7 @@ entity dlx_cu is
 end dlx_cu;
 
 architecture dlx_cu_fsm of dlx_cu is
+
   type mem_array is array (integer range 0 to MICROCODE_MEM_SIZE - 1) of std_logic_vector(CW_SIZE - 1 downto 0);
   signal cw_mem : mem_array := ("111100010000111", -- R type: IS IT CORRECT?
                                 "000000000000000",
@@ -63,15 +66,15 @@ architecture dlx_cu_fsm of dlx_cu is
                                 "000000000000000");-- to be completed (enlarged and filled)
                                 
                                 
-  signal IR_opcode : std_logic_vector(OP_CODE_SIZE -1 downto 0);  -- OpCode part of IR
-  signal IR_func : std_logic_vector(FUNC_SIZE downto 0);   -- Func part of IR when Rtype
-  signal cw   : std_logic_vector(CW_SIZE - 1 downto 0); -- full control word read from cw_mem
+  signal IR_opcode	: std_logic_vector(OP_CODE_SIZE -1 downto 0);	-- OpCode part of IR
+  signal IR_func	: std_logic_vector(FUNC_SIZE downto 0);			-- Func part of IR when Rtype
+  signal cw			: std_logic_vector(CW_SIZE - 1 downto 0);		-- full control word read from cw_mem
 
 
-  signal aluOpcode_i: aluOp := NOP; -- ALUOP defined in package
-  signal aluOpcode1: aluOp := NOP;
-  signal aluOpcode2: aluOp := NOP;
-  signal aluOpcode3: aluOp := NOP;
+  signal aluOpcode_i:	aluOp := NOP; -- ALUOP defined in package
+  signal aluOpcode1:	aluOp := NOP;
+  signal aluOpcode2:	aluOp := NOP;
+  signal aluOpcode3:	aluOp := NOP;
 
   -- declarations for FSM implementation (to be completed whith alla states!)
 	type TYPE_STATE is (
@@ -184,7 +187,8 @@ begin  -- dlx_cu_rtl
 	begin
 		--O <= '0';
 		case CURRENT_STATE is	
-			when reset => cw <= "000000000000000";
+			when reset => cw <=
+			"000000000000000";
 			when fetch => cw <= "110000000000000";
 			when dec101 => cw <=  TO BE COMPLETED
 			-- TO BE COMPLETED
