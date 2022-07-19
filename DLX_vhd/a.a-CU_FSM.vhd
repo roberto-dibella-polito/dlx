@@ -93,6 +93,7 @@ begin  -- dlx_cu_rtl
   IR_opcode(5 downto 0) <= IR_IN(31 downto 26);
   IR_func(10 downto 0)  <= IR_IN(FUNC_SIZE - 1 downto 0);
 
+	-- Microcode memory addressed by using the OPCODE
   cw <= cw_mem(conv_integer(IR_opcode));
 
 
