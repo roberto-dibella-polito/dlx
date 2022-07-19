@@ -78,9 +78,27 @@ architecture dlx_cu_fsm of dlx_cu is
 
   -- declarations for FSM implementation (to be completed whith alla states!)
 	type TYPE_STATE is (
-		reset, fetch,
-		dec1 .........
-		... to be completed!
+		RESET, FETCH,
+		ADD,AND,OR,
+		SGE,SLE,SLL,
+		SNE,SRL,SUB,
+		XOR,J,JAL,
+		BEQZ,BNEZ,ADDI,
+		SUBI,ANDI,ORI,
+		XORI,SLLI,NOP,
+		SRLI,SNEI,SLEI,
+		SGEI,LW,SW,
+		ADDU,ADDUI,JALR,
+		JR,LB,LBU,
+		LHI,LHU,MULT,
+		SB,SEQ,SEQI,
+		SGEU,SGEUI,SGT,
+		SGTI,SGTU,SGTUI,
+		SLT,SLTI,SLTU,
+		SLTUI,SRA,SRAI,
+		SUBU,SUBUI,
+		EX, MEM, WB);
+		
 	);
 	signal CURRENT_STATE : TYPE_STATE := reset;
 	signal NEXT_STATE : TYPE_STATE := fetch;

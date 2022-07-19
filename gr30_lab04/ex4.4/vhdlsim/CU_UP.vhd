@@ -132,7 +132,7 @@ architecture STRUCTURE of CU_UP is
   signal ext_addr : std_logic_vector(5 downto 0); --external address (OPCODE or FUNC) 
   signal mem_addr_incremented: std_logic_vector(5 downto 0); --external address should be incremented two times in order to access the cells associated to the second and third stage
   signal mem_addr_ff : std_logic_vector(5 downto 0); -- input of a register, that is used to synchronize the memory address 
-   signal mem_addr : std_logic_vector(5 downto 0); -- memory_adddress (output of the register) 
+  signal mem_addr : std_logic_vector(5 downto 0); -- memory_adddress (output of the register) 
   signal mem_out : std_logic_vector(12 downto 0);-- output of the memory (CONTROL WORD)
   signal ring_out: std_logic_vector(2 downto 0); -- output of the  ring counter, used to scan the three stages of each instruction
   
