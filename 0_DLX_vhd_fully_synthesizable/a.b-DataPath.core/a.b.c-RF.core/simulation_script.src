@@ -1,0 +1,46 @@
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/constants.vhd
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/counter.vhd
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/mux2to1_1bit_bhv.vhd
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/mux2to1_bhv.vhd
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/address_converter.vhd
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/RF_phys.vhd
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/RF_datapath.vhd
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/RF_cu.vhd
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/RF.vhd
+vcom -reportprogress 300 -work work /home/ms19.30/Desktop/gr30_lab03/ex3.1.3/vhdlsim/tb_RF.vhd
+
+
+
+vsim -t 100ps work.rf_tb 
+delete wave *
+add wave *
+add wave \
+{sim:/rf_tb/dut/controlunit/current_state } 
+add wave \
+{sim:/rf_tb/dut/cansave } \
+{sim:/rf_tb/dut/canrestore }  
+
+add wave \
+{sim:/rf_tb/dut/datapath/physical_rf/registers(0) } 
+add wave \
+{sim:/rf_tb/dut/datapath/physical_rf/registers(1) }  
+add wave \
+{sim:/rf_tb/dut/datapath/physical_rf/registers(2) } 
+add wave \
+{sim:/rf_tb/dut/datapath/physical_rf/registers(3) } 
+add wave \
+{sim:/rf_tb/dut/datapath/physical_rf/registers(12)}  
+add wave \
+{sim:/rf_tb/dut/datapath/physical_rf/registers(15)} 
+add wave \
+{sim:/rf_tb/dut/datapath/physical_rf/registers(16)} 
+add wave \
+{sim:/rf_tb/dut/datapath/physical_rf/registers(18)}
+
+
+add wave \
+{sim:/rf_tb/dut/datapath/cwp_counter/q } 
+add wave \
+{sim:/rf_tb/dut/datapath/swp_counter/q } 
+
+run 370 ns

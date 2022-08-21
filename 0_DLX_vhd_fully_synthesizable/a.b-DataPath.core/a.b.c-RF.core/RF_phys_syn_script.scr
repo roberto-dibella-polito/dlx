@@ -1,0 +1,40 @@
+##############################################################
+#SCRIPT FOR SPEEDING UP and RECORDING the RF_phys SYNTHESIS#
+# analyzing and checking vhdl netlist#
+# here the analyze command is used for each file from bottom to top #
+##############################################################
+analyze -library WORK -format vhdl {constants.vhd}
+analyze -library WORK -format vhdl {RF_phys.vhd}
+##############################################################
+# elaborating the top entity#
+elaborate RF_phys -architecture BEHAVIOR -library WORK -parameters "Nbit = 64, Nreg = 32"
+##########################################
+# first compilation, without constraints #
+compile 
+# reporting timing and power after the first synthesis without constraints #
+report_timing > RF_phys_time_unconstr.rpt
+report_area > RF_phys_area_unconstr.rpt
+
+############ CLOCK CONSTRAINT ####################
+
+# Clock generation
+create_clock -name "CLK" -period 2 CLK
+
+# compilation
+compile
+
+# time report
+report_timing > RF_phys_time_constr1.rpt
+
+############# COMBINATIONAL PATH ################
+set_max_delay 2 -from [all_inputs] -to [all_outputs]
+
+# optimize
+# compile -map_effort high
+compile
+
+# save report
+report_timing > RF_phys_time_constr2.rpt
+
+# saving files
+write -hierarchy -format vhdl -output RF_phys_syn.vhdl
