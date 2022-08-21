@@ -1,0 +1,209 @@
+# //  Questa Sim-64
+# //  Version 10.7c linux_x86_64 Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+source ../simulation_script.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:01 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package CONSTANTS
+# End time: 22:11:01 on Aug 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:01 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package CONSTANTS
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 22:11:01 on Aug 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:01 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 22:11:01 on Aug 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:01 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 22:11:01 on Aug 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:01 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package CONSTANTS
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 22:11:02 on Aug 21,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:02 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../RF_phys.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package CONSTANTS
+# -- Compiling entity RF_phys
+# -- Compiling architecture BEHAVIOR of RF_phys
+# End time: 22:11:02 on Aug 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:02 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package CONSTANTS
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 22:11:02 on Aug 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:02 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package CONSTANTS
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 22:11:02 on Aug 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:02 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package CONSTANTS
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 22:11:02 on Aug 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 22:11:02 on Aug 21,2022
+# vcom -reportprogress 300 -work work ../tb_RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package CONSTANTS
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_TB
+# -- Compiling architecture bhv of RF_TB
+# End time: 22:11:02 on Aug 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps work.rf_tb 
+# Start time: 22:11:02 on Aug 21,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.math_real(body)
+# Loading work.constants
+# Loading ieee.numeric_std(body)
+# Loading work.rf_tb(bhv)#1
+# Loading work.rf(structure)#1
+# Loading work.counter(behavior)#1
+# Loading work.mux2to1(behavior)#1
+# Loading work.rf_phys(behavior)#1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /rf_tb/dut/DataPath/Conv_RD1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /rf_tb/dut/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /rf_tb/dut/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /rf_tb/dut/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /rf_tb/dut/DataPath/SF_converter
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# End time: 00:11:40 on Aug 22,2022, Elapsed time: 2:00:38
+# Errors: 0, Warnings: 20
+exit

@@ -15,23 +15,22 @@ entity  RF_datapath is
             N: integer := 8;      -- IN/OUT and LOC registers per window
             F: integer := 8);     -- Number of windows
   port (
-         
-         CLK: 		IN std_logic;
-	 RD_CU: 	IN std_logic;
-	 WR_CU:		IN std_logic;
-         RD1_CPU:     	IN std_logic;
-	 RD2_CPU:      	IN std_logic;
-	 WR_CPU:       	IN std_logic;
-	 EN_CU:        IN std_logic;
-         EN_CPU:        IN std_logic;
-	 ADD_WR: 	IN std_logic_vector(NbitAdd-1 downto 0);
-	 ADD_RD1: 	IN std_logic_vector(NbitAdd-1 downto 0);
-	 ADD_RD2: 	IN std_logic_vector(NbitAdd-1 downto 0);
+	CLK: 		IN std_logic;
+	RD_CU: 		IN std_logic;
+	WR_CU:		IN std_logic;
+    RD1_CPU:	IN std_logic;
+	RD2_CPU:	IN std_logic;
+	WR_CPU:		IN std_logic;
+	EN_CU:		IN std_logic;
+    EN_CPU:		IN std_logic;
+	ADD_WR:		IN std_logic_vector(NbitAdd-1 downto 0);
+	ADD_RD1:	IN std_logic_vector(NbitAdd-1 downto 0);
+	ADD_RD2:	IN std_logic_vector(NbitAdd-1 downto 0);
 
          -- Physical RF 
-         RST_RF:        in std_logic;
+     RST_RF:	in std_logic;
 	 DATAIN: 	IN std_logic_vector(Nbit-1 downto 0);
-         OUT1: 		OUT std_logic_vector(Nbit-1 downto 0);
+     OUT1: 		OUT std_logic_vector(Nbit-1 downto 0);
 	 OUT2: 		OUT std_logic_vector(Nbit-1 downto 0);
          
          --Counters signals: inputs
@@ -157,11 +156,6 @@ begin
     ( ADDR=> addr_sf_in,
       CWP => sf_wp,
       PH_ADDR => spill_fill_addr ); 
-
-
-
-
-
 
 ---------------CWP COUNTER---------------
 

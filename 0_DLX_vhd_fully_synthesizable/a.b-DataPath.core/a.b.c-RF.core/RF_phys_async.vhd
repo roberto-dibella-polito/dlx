@@ -64,6 +64,6 @@ begin
 		if RD2 = '1' then  OUT2 <= REGISTERS(to_integer(unsigned(ADD_RD2))); 
 		end if;
 	  end if;
-  end process p0;
+  end process async_memory;
 
 end behavior_async;
