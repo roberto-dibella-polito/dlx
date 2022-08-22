@@ -6,7 +6,7 @@ vcom -reportprogress 300 -work work ../address_converter.vhd
 vcom -reportprogress 300 -work work ../RF_phys.vhd
 vcom -reportprogress 300 -work work ../RF_datapath.vhd
 vcom -reportprogress 300 -work work ../RF_cu.vhd
-vcom -reportprogress 300 -work work ../RF.vhd
+vcom -reportprogress 300 -work work ../../RF.vhd
 vcom -reportprogress 300 -work work ../tb_RF.vhd
 
 

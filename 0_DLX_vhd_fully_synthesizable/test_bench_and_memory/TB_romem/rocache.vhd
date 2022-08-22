@@ -19,7 +19,7 @@ entity ROCACHE is
 end ROCACHE;
 
 architecture Behavioral of ROCACHE is
-	signal ICACHE,ICACHE_REG							: ROCACHE_TYPE;
+	signal ICACHE,ICACHE_REG				: ROCACHE_TYPE;
 	signal STATE_CURRENT					: state_type;
 	signal STATE_NEXT						: state_type;
 	signal INT_ISSUE_RAM_READ				: std_logic;
