@@ -16,7 +16,7 @@ package myTypes is
 	--			| 31-26  | 25 - 0 |
 	--			-------------------
 	-- J-TYPE	| opcode | offset |
-
+	
 	constant OP_SIZE		: integer := 6;
 	constant FUNC_FULL_SIZE	: integer := 11;
 	constant FUNC_SIZE		: integer := 6;		-- Bits needed
@@ -97,15 +97,15 @@ package myTypes is
 	-- The compiler will assign a binary value to each value of that type
 	type aluOp is ( 
 		ADD,
-		AND,
-		OR,
+		AND_O,
+		OR_O,
 		SGE,
 		SLE,
-		SLL,
+		SLL_O,
 		SNE,
-		SRL,
+		SRL_O,
 		SUB,
-		XOR,
+		XOR_O,
 		ADDU,
 		MULT,
 		SEQ,
@@ -114,7 +114,7 @@ package myTypes is
 		SGTU,
 		SLT,
 		SLTU,
-		SRA,
+		SRA_O,
 		SUBU,
 		NOP 	);
 

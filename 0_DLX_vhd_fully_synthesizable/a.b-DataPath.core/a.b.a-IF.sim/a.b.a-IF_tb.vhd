@@ -7,7 +7,7 @@ use work.myTypes.all;
 use work.ROCACHE_PKG.all;
 
 entity DLX_IF_tb is
-end DLX_IF;
+end DLX_IF_tb;
 
 architecture structure of DLX_IF_tb is
 	
@@ -21,10 +21,10 @@ architecture structure of DLX_IF_tb is
 			RST			: in std_logic;			-- Active LOW
 			
 			-- Instruction Memory interface
-			IRAM_ADDRESS			: out std_logic_vector(Instr_size - 1 downto 0);
+			IRAM_ADDRESS			: out std_logic_vector(INSTR_SIZE-1 downto 0);
 			--IRAM_ISSUE				: out std_logic;
 			--IRAM_READY				: in std_logic;
-			IRAM_DATA				: in std_logic_vector(2*Data_size-1 downto 0);
+			IRAM_DATA				: in std_logic_vector(2*INSTR_SIZE-1 downto 0);
 			
 			-- Stage interface
 			NPC_SEL					: in std_logic;
@@ -54,7 +54,7 @@ architecture structure of DLX_IF_tb is
 	component ROMEM
 		generic (
 			file_path	: -- string(1 to 37) := "C://DLX//dlx-master//rocache//hex.txt";
-						string;
+						string(1 to 94) := "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_romem/hex.txt";
 			ENTRIES		: integer := 128;
 			WORD_SIZE	: integer := 32;
 			data_delay	: natural := 2
@@ -92,8 +92,8 @@ architecture structure of DLX_IF_tb is
 	
 	signal stall_i, ram_issue_i, ram_ready_i, clk_i, rst_i, npc_sel_i, pc_latch_en_i: std_logic;
 	signal npc_alu_i, npc_out_o, instr_o : std_logic_vector(31 downto 0);
-	signal address_i, ram_address_i: std_logic_vector(31 downto 0);
-	signal data_i, ram_data_i	: std_logic_vector(2*32-1 downto 0);
+	signal address_i, ram_address_i, data_i: std_logic_vector(31 downto 0);
+	signal ram_data_i	: std_logic_vector(2*32-1 downto 0);
 	
 begin
 	

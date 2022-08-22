@@ -10,6 +10,7 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 use work.myTypes.all;
 use work.ROCACHE_PKG.all;
 
@@ -23,10 +24,10 @@ entity DLX_IF is
 		RST			: in std_logic;			-- Active LOW
 		
 		-- Instruction Memory interface
-		IRAM_ADDRESS			: out std_logic_vector(Instr_size - 1 downto 0);
+		IRAM_ADDRESS			: out std_logic_vector(INSTR_SIZE-1 downto 0);
 		--IRAM_ISSUE				: out std_logic;
 		--IRAM_READY				: in std_logic;
-		IRAM_DATA				: in std_logic_vector(2*Data_size-1 downto 0);
+		IRAM_DATA				: in std_logic_vector(2*INSTR_SIZE-1 downto 0);
 		
 		-- Stage interface
 		NPC_SEL					: in std_logic;
@@ -45,9 +46,10 @@ architecture structure of DLX_IF is
 
 	component mux2to1 is 
 		generic (N : integer);
-		port (IN0,IN1 : in std_logic_vector (N-1 downto 0); --input signals
-			SEL: in std_logic; --select signal
-			MUX_OUT : out std_logic_vector (N-1 downto 0));--N bits output
+		port (
+			IN0,IN1	: in std_logic_vector (N-1 downto 0); --input signals
+			SEL		: in std_logic; --select signal
+			MUX_OUT	: out std_logic_vector (N-1 downto 0));--N bits output
 	end component;
 	
 	signal PC_i, NPC_4_i, NPC_OUT_i	: std_logic_vector(PC_SIZE-1 downto 0);
@@ -76,12 +78,12 @@ begin
 	-------------------------------------
 	-- INCREMENTER
 	-------------------------------------
-	NPC_4_i <= PC_i + 4;
+	NPC_4_i <= std_logic_vector(unsigned(PC_i) + 4);
 	
 	-------------------------------------
 	-- MULTIPLEXER
 	-------------------------------------
-	mux: generic map( N => PC_SIZE ) port map(
+	mux: mux2to1 generic map( N => PC_SIZE ) port map(
 		IN0 => NPC_4_i,
 		IN1	=> NPC_ALU,
 		SEL	=> NPC_SEL,

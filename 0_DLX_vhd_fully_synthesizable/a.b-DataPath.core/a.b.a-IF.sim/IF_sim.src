@@ -1,8 +1,8 @@
-vcom -reportprogress 300 -work work ../../../000-globals.vhd
-vcom -reportprogress 300 -work work ../../../test_bench_and_memory/TB_packages/rocache.vhd
-vcom -reportprogress 300 -work work ../../../test_bench_and_memory/TB_romem/rocache.vhd
-vcom -reportprogress 300 -work work ../../../test_bench_and_memory/TB_romem/romem.vhd
-vcom -reportprogress 300 -work work ../../../000-commons/mux2to1_bhv.vhd
-vcom -reportprogress 300 -work work ../../../000-commons/clk_gen.vhd
+vcom -reportprogress 300 -work work ../../000-globals.vhd
+vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_packages/rocache.vhd
+vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/rocache.vhd
+vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem.vhd
+vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd
+vcom -reportprogress 300 -work work ../../000-commons/clk_gen.vhd
 vcom -reportprogress 300 -work work ../a.b.a-IF.vhd
 vcom -reportprogress 300 -work work a.b.a-IF_tb.vhd

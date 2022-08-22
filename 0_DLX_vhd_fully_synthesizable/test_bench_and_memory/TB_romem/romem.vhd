@@ -11,7 +11,7 @@ use work.ROCACHE_PKG.all;
 entity ROMEM is
 	generic (
 		file_path	: -- string(1 to 37) := "C://DLX//dlx-master//rocache//hex.txt";
-					string;
+					string(1 to 94) := "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_romem/hex.txt";
 		ENTRIES		: integer := 128;
 		WORD_SIZE	: integer := 32;
 		data_delay	: natural := 2
