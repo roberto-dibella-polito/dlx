@@ -12,7 +12,6 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.myTypes.all;
-use work.ROCACHE_PKG.all;
 
 entity DLX_IF is
 	generic (
@@ -24,10 +23,8 @@ entity DLX_IF is
 		RST			: in std_logic;			-- Active LOW
 		
 		-- Instruction Memory interface
-		IRAM_ADDRESS			: out std_logic_vector(INSTR_SIZE-1 downto 0);
-		--IRAM_ISSUE				: out std_logic;
-		--IRAM_READY				: in std_logic;
-		IRAM_DATA				: in std_logic_vector(2*INSTR_SIZE-1 downto 0);
+		IRAM_ADDRESS			: out std_logic_vector(PC_SIZE-1 downto 0);
+		IRAM_DATA				: in std_logic_vector(IR_SIZE-1 downto 0);
 		
 		-- Stage interface
 		NPC_SEL					: in std_logic;
@@ -66,7 +63,7 @@ begin
 	--------------------------------------
     PC: process (Clk, Rst)
     begin  -- process PC_P
-      if Rst = '0' then                 -- asynchronous reset (active low)
+      if Rst = '1' then                 -- asynchronous reset (active high)
         PC_i <= (others => '0');
       elsif Clk'event and Clk = '1' then  -- rising clock edge
         if (PC_LATCH_EN = '1') then

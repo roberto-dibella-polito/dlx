@@ -49,7 +49,7 @@ begin
 				READ_MODE
 			);
 
-			while (not endfile(mem_fp)) loop
+			while (not endfile(mem_fp) and index < ENTRIES) loop
 				readline(mem_fp,file_line);
 				hread(file_line,tmp_data_u);
 				Memory(index) <= conv_integer(unsigned(tmp_data_u));
