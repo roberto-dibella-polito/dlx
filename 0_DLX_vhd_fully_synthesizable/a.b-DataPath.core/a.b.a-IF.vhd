@@ -15,27 +15,25 @@ use work.myTypes.all;
 
 entity DLX_IF is
 	generic (
-    	IR_SIZE      : integer := 32;       -- Instruction Register Size
-    	PC_SIZE      : integer := 32       -- Program Counter Size
+    	IR_SIZE		: integer := 32;       -- Instruction Register Size
+    	PC_SIZE		: integer := 32       -- Program Counter Size
     );
 	port(
 		CLK			: in std_logic;
 		RST			: in std_logic;			-- Active LOW
 		
 		-- Instruction Memory interface
-		IRAM_ADDRESS			: out std_logic_vector(PC_SIZE-1 downto 0);
-		IRAM_DATA				: in std_logic_vector(IR_SIZE-1 downto 0);
+		IRAM_ADDRESS	: out std_logic_vector(PC_SIZE-1 downto 0);
+		IRAM_DATA		: in std_logic_vector(IR_SIZE-1 downto 0);
 		
 		-- Stage interface
-		NPC_SEL					: in std_logic;
-		NPC_ALU					: in std_logic_vector(PC_SIZE-1 downto 0);
-		NPC_OUT					: out std_logic_vector(PC_SIZE-1 downto 0);
-		INSTR					: out std_logic_vector(IR_SIZE-1 downto 0);
+		NPC_ALU			: in std_logic_vector(PC_SIZE-1 downto 0);
+		NPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);
+		INSTR			: out std_logic_vector(IR_SIZE-1 downto 0);
 		
 		-- IF control signals
-		--IR_LATCH_EN				: in std_logic;
-		--NPC_LATCH_EN			: in std_logic;
-		PC_LATCH_EN				: in std_logic
+		NPC_SEL			: in std_logic;
+		PC_LATCH_EN		: in std_logic
 	);
 end DLX_IF;
 
