@@ -3,7 +3,7 @@ use IEEE.std_logic_1164.all;
 use ieee.numeric_std.all;
 use IEEE.std_logic_unsigned.all;
 use IEEE.math_real.all;
-use work.constants.all;
+use work.rf_constants.all;
 use WORK.all;
 
 entity RF_phys is

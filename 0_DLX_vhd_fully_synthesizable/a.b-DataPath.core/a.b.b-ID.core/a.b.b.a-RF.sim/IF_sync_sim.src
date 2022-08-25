@@ -1,13 +1,14 @@
-vcom -reportprogress 300 -work work ../constants.vhd
-vcom -reportprogress 300 -work work ../counter.vhd
-vcom -reportprogress 300 -work work ../mux2to1_1bit_bhv.vhd
-vcom -reportprogress 300 -work work ../mux2to1_bhv.vhd
-vcom -reportprogress 300 -work work ../address_converter.vhd
-vcom -reportprogress 300 -work work ../RF_phys.vhd
-vcom -reportprogress 300 -work work ../RF_datapath.vhd
-vcom -reportprogress 300 -work work ../RF_cu.vhd
-vcom -reportprogress 300 -work work ../../RF.vhd
-vcom -reportprogress 300 -work work ../tb_RF.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/rf_constants.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/counter.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/mux2to1_1bit_bhv.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/mux2to1_bhv.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/address_converter.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/RF_phys.vhd
+#vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/RF_phys_async.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/RF_datapath.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/RF_cu.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/tb_RF.vhd
 
 
 vsim -t 100ps work.rf_tb 

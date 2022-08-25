@@ -3,10 +3,10 @@ use IEEE.math_real.all;
 
 package rf_constants is
  
-  constant Nbit: integer := 32;
-  constant M : integer :=32;
-  constant N : integer :=0;
-  constant F : integer :=1;
+  constant Nbit: integer := 8;
+  constant M : integer :=8;
+  constant N : integer :=2;
+  constant F : integer :=4;
 
   -- CPU ADDRESS
   -- CPU "sees", for each call:

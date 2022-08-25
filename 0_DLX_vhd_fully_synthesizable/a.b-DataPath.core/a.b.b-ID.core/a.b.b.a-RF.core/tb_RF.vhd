@@ -8,7 +8,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
 use IEEE.math_real.all;
-use work.constants.all;
+use work.rf_constants.all;
 use IEEE.numeric_std.all;
 use WORK.all;
 
@@ -129,26 +129,31 @@ begin
     wait for 10 ns;
 
     -- Two write operations in W0
-    wait for 5 ns;			-- 	25 ns: R(18)<= "1"
+    wait for 10 ns;			-- 	25 ns 
     WR <='1';
     ADD_WR <= "1000";    	--GLOBAL 8 ,physical address=18  
     DATAIN <= "00000001";  
     ENABLE <= '1';
-    wait for 10 ns;			-- 	35 ns: R(3) <= "2"
+    
+							-- 	30 ns: R(18)<= "1"		
+	wait for 10 ns;			-- 	35 ns: 
     ADD_WR <= "0011";    	-- W0, LOCAL 3 - physical address=3      
     DATAIN <= "00000010";
-    wait for 10 ns;
-    
-
-    -- Read operation on the two written registers
-	-- 45 ns => READ
+							--	40 ns: R(3) <= "2"    
 	
+	wait for 10 ns;			-- 	35 ns: 
+    ADD_WR <= "1001";    	-- W0, LOCAL 3 - physical address=3      
+    DATAIN <= "00000011";
+	
+    -- Read operation on the two written registers
+					
+	wait for 10 ns;			-- 45 ns => READ
     WR <= '0';
     RD1 <= '1';
     RD2 <= '1';
     ADD_RD1 <= "0011"; -- W0, LOCAL 3 - physical address = 3
     ADD_RD2 <= "1000"; -- GLOBAL 8 - physical address = 18
-    wait for 10 ns;
+    wait for 10 ns;			-- 55 ns
 
     -- CALL
     RD1 <= '0';

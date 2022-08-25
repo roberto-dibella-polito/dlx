@@ -5,18 +5,17 @@
 # RF_datapath.vhd -> RF_phys interface has commented clock	##
 ##############################################################
 
-
-vcom -reportprogress 300 -work work ../constants.vhd
-vcom -reportprogress 300 -work work ../counter.vhd
-vcom -reportprogress 300 -work work ../mux2to1_1bit_bhv.vhd
-vcom -reportprogress 300 -work work ../mux2to1_bhv.vhd
-vcom -reportprogress 300 -work work ../address_converter.vhd
-#vcom -reportprogress 300 -work work ../RF_phys.vhd
-vcom -reportprogress 300 -work work ../RF_phys_async.vhd
-vcom -reportprogress 300 -work work ../RF_datapath.vhd
-vcom -reportprogress 300 -work work ../RF_cu.vhd
-vcom -reportprogress 300 -work work ../../RF.vhd
-vcom -reportprogress 300 -work work ../tb_RF.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/rf_constants.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/counter.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/mux2to1_1bit_bhv.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/mux2to1_bhv.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/address_converter.vhd
+#vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/RF_phys.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/RF_phys_async.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/RF_datapath.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/RF_cu.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.vhd
+vcom -reportprogress 300 -work work ../a.b.b.a-RF.core/tb_RF.vhd
 
 
 vsim -t 100ps work.rf_tb 
@@ -53,4 +52,9 @@ add wave \
 add wave \
 {sim:/rf_tb/dut/datapath/swp_counter/q } 
 
-#run 370 ns
+add wave  \
+sim:/rf_tb/dut/DataPath/Physical_RF/ADD_WR \
+sim:/rf_tb/dut/DataPath/Physical_RF/ADD_RD1 \
+sim:/rf_tb/dut/DataPath/Physical_RF/ADD_RD2
+
+run 370 ns

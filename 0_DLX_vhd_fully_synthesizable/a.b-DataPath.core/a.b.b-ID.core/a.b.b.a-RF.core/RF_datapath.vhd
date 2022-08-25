@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
 use IEEE.math_real.all;
-use work.constants.all;
+use work.rf_constants.all;
 use IEEE.numeric_std.all;
 use WORK.all;
 
@@ -57,7 +57,7 @@ architecture BEHAVIOR of RF_datapath is
     generic ( Nbit: integer := 64;
               Nreg: integer := 32;
               NbitAdd: integer := 5);
-    port ( --CLK: 		IN std_logic;
+    port ( CLK: 		IN std_logic;
            RESET:	IN std_logic;
            ENABLE: 	IN std_logic;
            RD1: 	IN std_logic;
@@ -319,7 +319,7 @@ begin
   ---------------------------------- PHYSICAL REGISTER FILE -------------------------------------
 
   Physical_RF: RF_phys generic map ( Nbit => Nbit,  Nreg => 2*N*F+M, NbitAdd => NbitAdd_phy) port map
-  ( --CLK         => CLK,
+  ( CLK         => CLK,
     RESET       => RST_RF,
     ENABLE 	=> mux_en_control_out,
     RD1 	=> mux_rd1_control_out,
