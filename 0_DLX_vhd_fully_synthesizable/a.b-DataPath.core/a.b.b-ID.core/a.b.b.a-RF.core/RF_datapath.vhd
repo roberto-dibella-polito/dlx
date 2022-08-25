@@ -8,12 +8,15 @@ use WORK.all;
 
 -- N,F are power of 2
 
+-- CURRENT USAGE:
+-- Asynchronous physical register file
 
 entity  RF_datapath is
-  generic ( Nbit : integer := 64; -- Parallelism
-            M: integer := 8;      -- Global registers
-            N: integer := 8;      -- IN/OUT and LOC registers per window
-            F: integer := 8);     -- Number of windows
+  generic ( 
+	Nbit : integer := 64; -- Parallelism
+	M: integer := 8;      -- Global registers
+	N: integer := 8;      -- IN/OUT and LOC registers per window
+	F: integer := 8);     -- Number of windows
   port (
 	CLK: 		IN std_logic;
 	RD_CU: 		IN std_logic;
@@ -27,23 +30,23 @@ entity  RF_datapath is
 	ADD_RD1:	IN std_logic_vector(NbitAdd-1 downto 0);
 	ADD_RD2:	IN std_logic_vector(NbitAdd-1 downto 0);
 
-         -- Physical RF 
-     RST_RF:	in std_logic;
-	 DATAIN: 	IN std_logic_vector(Nbit-1 downto 0);
-     OUT1: 		OUT std_logic_vector(Nbit-1 downto 0);
-	 OUT2: 		OUT std_logic_vector(Nbit-1 downto 0);
+    -- Physical RF 
+    RST_RF:	in std_logic;
+	DATAIN: 	IN std_logic_vector(Nbit-1 downto 0);
+    OUT1: 		OUT std_logic_vector(Nbit-1 downto 0);
+	OUT2: 		OUT std_logic_vector(Nbit-1 downto 0);
          
-         --Counters signals: inputs
-         CNT_SWP, CNT_CWP, CNT_SAVE, CNT_REST, CNT_SPILL_FILL : in std_logic; --Enables
-         RST_SWP, RST_CWP, RST_REST, RST_SPILL_FILL : in std_logic; --Resets
-         UP_DWN_SWP, UP_DWN_CWP, UP_DWN_SAVE, UP_DWN_REST : in std_logic;--up/down
-         LD_SAVE: in std_logic; -- Load
+    --Counters signals: inputs
+	CNT_SWP, CNT_CWP, CNT_SAVE, CNT_REST, CNT_SPILL_FILL : in std_logic; --Enables
+	RST_SWP, RST_CWP, RST_REST, RST_SPILL_FILL : in std_logic; --Resets
+	UP_DWN_SWP, UP_DWN_CWP, UP_DWN_SAVE, UP_DWN_REST : in std_logic;--up/down
+	LD_SAVE: in std_logic; -- Load
+	
+	--Counters signals: outputs
+	CANSAVE, CANRESTORE,END_SF: out std_logic;
 
-         --Counters signals: outputs
-         CANSAVE, CANRESTORE,END_SF: out std_logic;
-
-         --Mux
-         SEL_WP,CPU_WORK: in std_logic);
+	--Mux
+	SEL_WP,CPU_WORK: in std_logic);
 
 end RF_datapath;
 
@@ -54,17 +57,17 @@ architecture BEHAVIOR of RF_datapath is
     generic ( Nbit: integer := 64;
               Nreg: integer := 32;
               NbitAdd: integer := 5);
-    port ( CLK: 		IN std_logic;
-           RESET: 	IN std_logic;
+    port ( --CLK: 		IN std_logic;
+           RESET:	IN std_logic;
            ENABLE: 	IN std_logic;
            RD1: 	IN std_logic;
            RD2: 	IN std_logic;
-           WR: 	        IN std_logic;
-           ADD_WR:      IN std_logic_vector(NbitAdd-1 downto 0);
-           ADD_RD1: 	IN std_logic_vector(NbitAdd-1 downto 0);
-           ADD_RD2: 	IN std_logic_vector(NbitAdd-1 downto 0);
+           WR: 	    IN std_logic;
+           ADD_WR:  IN std_logic_vector(NbitAdd-1 downto 0);
+           ADD_RD1: IN std_logic_vector(NbitAdd-1 downto 0);
+           ADD_RD2: IN std_logic_vector(NbitAdd-1 downto 0);
            DATAIN: 	IN std_logic_vector(Nbit-1 downto 0);
-           OUT1:        OUT std_logic_vector(Nbit-1 downto 0);
+           OUT1:    OUT std_logic_vector(Nbit-1 downto 0);
            OUT2: 	OUT std_logic_vector(Nbit-1 downto 0));
     
   end component;
@@ -316,7 +319,7 @@ begin
   ---------------------------------- PHYSICAL REGISTER FILE -------------------------------------
 
   Physical_RF: RF_phys generic map ( Nbit => Nbit,  Nreg => 2*N*F+M, NbitAdd => NbitAdd_phy) port map
-  ( CLK         => CLK,
+  ( --CLK         => CLK,
     RESET       => RST_RF,
     ENABLE 	=> mux_en_control_out,
     RD1 	=> mux_rd1_control_out,

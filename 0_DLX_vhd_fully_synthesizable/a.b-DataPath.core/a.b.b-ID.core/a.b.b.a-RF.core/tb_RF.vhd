@@ -129,19 +129,20 @@ begin
     wait for 10 ns;
 
     -- Two write operations in W0
-    wait for 5 ns;
+    wait for 5 ns;			-- 	25 ns: R(18)<= "1"
     WR <='1';
-    ADD_WR <= "1000";    --GLOBAL 8 ,physical address=18  
+    ADD_WR <= "1000";    	--GLOBAL 8 ,physical address=18  
     DATAIN <= "00000001";  
     ENABLE <= '1';
-    wait for 10 ns;
-    ADD_WR <= "0011";    -- W0, LOCAL 3 - physical address=3      
+    wait for 10 ns;			-- 	35 ns: R(3) <= "2"
+    ADD_WR <= "0011";    	-- W0, LOCAL 3 - physical address=3      
     DATAIN <= "00000010";
     wait for 10 ns;
     
 
     -- Read operation on the two written registers
-   
+	-- 45 ns => READ
+	
     WR <= '0';
     RD1 <= '1';
     RD2 <= '1';
