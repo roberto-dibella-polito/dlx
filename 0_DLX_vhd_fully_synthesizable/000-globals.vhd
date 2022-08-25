@@ -18,6 +18,7 @@ package myTypes is
 	-- J-TYPE	| opcode | offset |
 	
 	constant INSTR_SIZE		: integer := 32;
+	constant DATA_SIZE		: integer := 32;
 	constant PC_SIZE		: integer := 32;
 	
 	constant OP_SIZE		: integer := 6;
