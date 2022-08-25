@@ -6,7 +6,8 @@ use IEEE.std_logic_1164.all;
 use IEEE.std_logic_unsigned.all;
 use IEEE.math_real.all;
 use work.rf_constants.all;
-use IEEE.numeric_std.all;
+--use IEEE.numeric_std.all;
+use ieee.std_logic_arith.all;
 use WORK.all;
 use work.myTypes.all;
 
@@ -82,10 +83,11 @@ begin
 	-- It takes 26 bits: if the instruction is a J-type, the
 	-- flag is rised and the right immediate is selected.
 	imm_or_off: process( IMM_ISOFF, IMM_I )
+	begin
 		if IMM_ISOFF = '1' then
-			IMM_O	<= std_logic_vector(signed(IMM_I)'length);
+			IMM_O	<= SXT(IMM_I,IMM_O'length);
 		else
-			IMM_O	<= std_logic_vector(signed(IMM_I(15 downto 0))'length);
+			IMM_O	<= SXT(IMM_I(15 downto 0),IMM_O'length);
 		end if;
 	end process;
 	

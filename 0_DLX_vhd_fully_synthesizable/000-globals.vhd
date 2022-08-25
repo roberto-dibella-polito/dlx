@@ -21,6 +21,7 @@ package myTypes is
 	constant DATA_SIZE		: integer := 32;
 	constant PC_SIZE		: integer := 32;
 	
+	
 	constant OP_SIZE		: integer := 6;
 	constant FUNC_FULL_SIZE	: integer := 11;
 	constant FUNC_SIZE		: integer := 6;		-- Bits needed

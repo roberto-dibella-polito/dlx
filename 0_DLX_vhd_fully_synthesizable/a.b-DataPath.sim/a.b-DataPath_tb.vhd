@@ -18,7 +18,7 @@ architecture structure of DLX_DP_tb is
 			
 			-- Instruction Memory interface
 			IRAM_ADDRESS	: out std_logic_vector(PC_SIZE-1 downto 0);
-			IRAM_DATA		: in std_logic_vector(IR_SIZE-1 downto 0);
+			IRAM_DATA		: in std_logic_vector(INSTR_SIZE-1 downto 0);
 			
 			-- IF control signals
 			NPC_SEL			: in std_logic;
@@ -39,12 +39,12 @@ architecture structure of DLX_DP_tb is
 			RS2_EN			: in std_logic;
 			RF_WR_EN		: in std_logic;
 			
-			IMM_ISOFF		: in std_logic	
+			IMM_ISOFF		: in std_logic;	
 			
 			-- ID/EX control signals
 			RegA_LATCH_EN	: in std_logic;  -- Register A Latch Enable
 			RegB_LATCH_EN	: in std_logic;  -- Register B Latch Enable
-			RegIMM_LATCH_EN	: in std_logic;  -- Immediate Register Latch Enable
+			RegIMM_LATCH_EN	: in std_logic  -- Immediate Register Latch Enable
 			
 			-- ... more stages missing
 		);
@@ -62,7 +62,7 @@ architecture structure of DLX_DP_tb is
 	end component;
 	
 	signal clk_i, rst_i, npc_sel_i, pc_latch_en_i, ir_latch_en_i,
-		ir_latch_en_i, npc_latch_en_i, call_i, ret_i, spill_i, fill_i,
+		npc_latch_en_i, call_i, ret_i, spill_i, fill_i,
 		rf_en_i, rs1_en_i, rs2_en_i, rf_wr_en_i, imm_isoff_i : std_logic;
 		
 	signal ram_addr_i : std_logic_vector(PC_SIZE-1 downto 0);
@@ -120,9 +120,9 @@ begin
 	-- Clock process
 	clkgen : process
 	begin
-		clk <= '0';
+		clk_i <= '0';
 		wait for 5 ns;
-		clk <= '1';
+		clk_i <= '1';
 		wait for 5 ns;
 	end process;
 	

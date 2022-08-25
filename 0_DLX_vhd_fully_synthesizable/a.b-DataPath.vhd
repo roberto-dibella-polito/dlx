@@ -13,7 +13,7 @@ entity DLX_DP is
 		
 		-- Instruction Memory interface
 		IRAM_ADDRESS	: out std_logic_vector(PC_SIZE-1 downto 0);
-		IRAM_DATA		: in std_logic_vector(IR_SIZE-1 downto 0);
+		IRAM_DATA		: in std_logic_vector(INSTR_SIZE-1 downto 0);
 		
 		-- IF control signals
 		NPC_SEL			: in std_logic;
@@ -34,12 +34,12 @@ entity DLX_DP is
 		RS2_EN			: in std_logic;
 		RF_WR_EN		: in std_logic;
 		
-		IMM_ISOFF		: in std_logic	
+		IMM_ISOFF		: in std_logic;	
 		
 		-- ID/EX control signals
 		RegA_LATCH_EN	: in std_logic;  -- Register A Latch Enable
 		RegB_LATCH_EN	: in std_logic;  -- Register B Latch Enable
-		RegIMM_LATCH_EN	: in std_logic;  -- Immediate Register Latch Enable
+		RegIMM_LATCH_EN	: in std_logic  -- Immediate Register Latch Enable
 		
 		-- ... more stages missing
 	);
@@ -71,7 +71,7 @@ architecture structure of DLX_DP is
 		);
 	end component;
 	
-	component DLX_ID
+	component DLX_ID is
 		generic(
 			ADDR_SIZE	: integer := 32;
 			DATA_SIZE	: integer := 32;
@@ -81,7 +81,7 @@ architecture structure of DLX_DP is
 		port(
 			CLK			: in std_logic;
 			RST			: in std_logic;	-- Active HIGH
-			
+		
 			-- Windowed register file control interface
 			CALL		: in std_logic;
 			RET			: in std_logic;
@@ -91,16 +91,16 @@ architecture structure of DLX_DP is
 			RS1_EN		: in std_logic;
 			RS2_EN		: in std_logic;
 			RF_WR_EN	: in std_logic;
-			
+		
 			IMM_ISOFF	: in std_logic;
-			
+		
 			ADDR_WR  	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
-			ADDR_RS1 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
-			ADDR_RS2 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
-			DATAIN  	: IN  std_logic_vector(DATA_SIZE-1 downto 0);
-			OUT1    	: OUT std_logic_vector(DATA_SIZE-1 downto 0);
-			OUT2    	: OUT std_logic_vector(DATA_SIZE-1 downto 0);
-			
+		    ADDR_RS1 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
+		    ADDR_RS2 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
+		    DATAIN  	: IN  std_logic_vector(DATA_SIZE-1 downto 0);
+		    OUT1    	: OUT std_logic_vector(DATA_SIZE-1 downto 0);
+		    OUT2    	: OUT std_logic_vector(DATA_SIZE-1 downto 0);
+		
 			IMM_I		: in std_logic_vector(IMM_I_SIZE-1 downto 0);
 			IMM_O		: out std_logic_vector(IMM_O_SIZE-1 downto 0);
 			NPC_FWD_I	: in std_logic_vector(NPC_SIZE-1 downto 0);
@@ -124,6 +124,9 @@ architecture structure of DLX_DP is
 	signal rf_out1_id_o, rf_out2_id_o, rf_out1_ex_i, rf_out2_ex_i	: std_logic_vector(DATA_SIZE-1 downto 0);			-- 
 	signal imm_id_o, imm_ex_i			: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal rd_id_o, rd_ex_i				: std_logic_vector(RX_SIZE-1 downto 0);
+	signal npc_id_o, npc_ex_i			: std_logic_vector(PC_SIZE-1 downto 0);	
+
+	signal ir_reset						: std_logic_vector(INSTR_SIZE-OP_SIZE-1 downto 0);
 	
 begin
 	
@@ -141,11 +144,14 @@ begin
 	);
 	
 	-- IF/ID REGISTERS
+	
+	ir_reset <= (others=>'0');
+
 	if_id_pipe: process(CLK, RST)
 	begin
 		if( RST = '1' ) then
 			
-			ir <= NOP_OP & (others=>'0');
+			ir <= NOP_OP & ir_reset;
 			npc_id_i <= (others=>'0');
 			
 		elsif(CLK'event and CLK = '1') then
@@ -157,7 +163,7 @@ begin
 			
 			-- NPC register
 			if(NPC_LATCH_EN = '1') then
-				npc_id_i <= npc_id_o;
+				npc_id_i <= npc_if_o;
 			end if;
 		
 		end if;
@@ -169,7 +175,7 @@ begin
 	rs2_id_i <= ir(20 downto 16);
 	rd_id_i	 <= ir(15 downto 11);
 	
-	imm_id_i <= ir(26 downto 0);
+	imm_id_i <= ir(25 downto 0);
 			
 	id_stage: DLX_ID
 		generic map(
@@ -177,8 +183,8 @@ begin
 			DATA_SIZE	=> DATA_SIZE,
 			IMM_I_SIZE	=> OFFSET_SIZE,
 			IMM_O_SIZE	=> DATA_SIZE,
-			NPC_SIZE	=> PC_SIZE );
-		port(
+			NPC_SIZE	=> PC_SIZE )
+		port map(
 			CLK			=> CLK,
 			RST			=> RST,
 			
@@ -208,11 +214,10 @@ begin
 			RD_FWD_I	=> rd_id_i,
 			RD_FWD_O	=> rd_id_o
 		);
-	end component;
 	
 	-- ID/EX REGISTERS
 	-- Blocking and flushing mechanisms not yet implemented
-	if_id_pipe: process(CLK, RST)
+	id_ex_pipe: process(CLK, RST)
 	begin
 		if( RST = '1' ) then
 		

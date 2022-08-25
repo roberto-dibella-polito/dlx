@@ -2,7 +2,6 @@ vcom -reportprogress 300 -work work ../000-globals.vhd
 
 # Instruction Fetch
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/
 
 # Instruction Decode
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd
@@ -15,12 +14,15 @@ vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-R
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd
 
 # ...
 
 vcom -reportprogress 300 -work work ../a.b-DataPath.vhd
+
+vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd
 vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd
 
-vsim -t 100ps work.dlx_if_tb
+vsim -t 100ps work.DLX_DP_tb
 add wave *
 
