@@ -1,13 +1,16 @@
 vcom -reportprogress 300 -work work ../000-globals.vhd
+vcom -reportprogress 300 -work work ../000-commons/counter.vhd
+vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd
+vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd
 
 # Instruction Fetch
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd
 
 # Instruction Decode
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/counter.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/mux2to1_1bit_bhv.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/mux2to1_bhv.vhd
+#vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/counter.vhd
+#vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/mux2to1_1bit_bhv.vhd
+#vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/mux2to1_bhv.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd
 #vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd

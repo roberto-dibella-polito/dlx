@@ -7,10 +7,11 @@ use IEEE.numeric_std.all;
 
 
 entity mux2to1 is 
-  generic (N : integer);
-  port (IN0,IN1 : in std_logic_vector (N-1 downto 0); --input signals
-        SEL: in std_logic; --select signal
-        MUX_OUT : out std_logic_vector (N-1 downto 0));--N bits output
+	generic (N : integer);
+	port (
+		IN0,IN1	: in std_logic_vector (N-1 downto 0); --input signals
+		SEL		: in std_logic; --select signal
+		MUX_OUT	: out std_logic_vector (N-1 downto 0));--N bits output
 end mux2to1;
 
 architecture behavior of mux2to1 is
