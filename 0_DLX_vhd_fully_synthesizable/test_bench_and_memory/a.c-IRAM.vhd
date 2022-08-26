@@ -10,6 +10,7 @@ use ieee.std_logic_textio.all;
 -- file name is "test.asm.mem"
 entity IRAM is
   generic (
+	file_path : string := "hex.txt";
     RAM_DEPTH : integer := 127;
     I_SIZE : integer := 32);
   port (
@@ -25,10 +26,14 @@ architecture IRam_Bhe of IRAM is
   type RAMtype is array (0 to RAM_DEPTH - 1) of integer;-- std_logic_vector(I_SIZE - 1 downto 0);
 
   signal IRAM_mem : RAMtype;
+	signal addr_shifted	: std_logic_vector(I_SIZE-1 downto 0);
 
 begin  -- IRam_Bhe
 
-  Dout <= conv_std_logic_vector(IRAM_mem(conv_integer(unsigned(Addr))),I_SIZE);
+	-- The memory is BYTE-ADDRESSABLE: each row corresponds to 4 bytes
+	-- => Incoming address is shifted by two
+	addr_shifted <= "00" & Addr(31 downto 2);
+  Dout <= conv_std_logic_vector(IRAM_mem(conv_integer(unsigned(addr_shifted))),I_SIZE);
 
   -- purpose: This process is in charge of filling the Instruction RAM with the firmware
   -- type   : combinational
@@ -41,7 +46,7 @@ begin  -- IRam_Bhe
     variable tmp_data_u : std_logic_vector(I_SIZE-1 downto 0);
   begin  -- process FILL_MEM_P
     if (Rst = '0') then
-      file_open(mem_fp,"hex.txt",READ_MODE);
+      file_open(mem_fp,file_path,READ_MODE);
       while (not endfile(mem_fp)) loop
         readline(mem_fp,file_line);
         hread(file_line,tmp_data_u);

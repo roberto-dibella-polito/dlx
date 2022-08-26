@@ -13,7 +13,7 @@ use work.myTypes.all;
 
 entity DLX_ID is
 	generic(
-		ADDR_SIZE	: integer := 32;
+		ADDR_SIZE	: integer := 5;
 		DATA_SIZE	: integer := 32;
 		IMM_I_SIZE	: integer := 26;
 		IMM_O_SIZE	: integer := 32;

@@ -24,5 +24,47 @@ vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd
 vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd
 
 vsim -t 100ps work.DLX_DP_tb
-add wave *
+#add wave *
 
+add wave  \
+sim:/dlx_dp_tb/clk_i \
+sim:/dlx_dp_tb/rst_i 
+
+add wave -group "Controls" \
+sim:/dlx_dp_tb/npc_sel_i \
+sim:/dlx_dp_tb/pc_latch_en_i \
+sim:/dlx_dp_tb/ir_latch_en_i \
+sim:/dlx_dp_tb/npc_latch_en_i \
+sim:/dlx_dp_tb/call_i \
+sim:/dlx_dp_tb/ret_i \
+sim:/dlx_dp_tb/spill_i \
+sim:/dlx_dp_tb/fill_i \
+sim:/dlx_dp_tb/rf_en_i \
+sim:/dlx_dp_tb/rs1_en_i \
+sim:/dlx_dp_tb/rs2_en_i \
+sim:/dlx_dp_tb/rf_wr_en_i \
+sim:/dlx_dp_tb/imm_isoff_i
+
+add wave -divider "IRAM" \
+sim:/dlx_dp_tb/mem/IRAM_mem \
+sim:/dlx_dp_tb/ram_addr_i \
+sim:/dlx_dp_tb/ram_data_i
+
+add wave  \
+sim:/dlx_dp_tb/dut/ir \
+-divider "Register File" \
+sim:/dlx_dp_tb/dut/rs1_id_i \
+sim:/dlx_dp_tb/dut/rs2_id_i \
+sim:/dlx_dp_tb/dut/rd_id_i \
+-divider "RF - Internal" \
+sim:/dlx_dp_tb/dut/id_stage/regfile/DataPath/Physical_RF/ADD_WR \
+sim:/dlx_dp_tb/dut/id_stage/regfile/DataPath/Physical_RF/ADD_RD1 \
+sim:/dlx_dp_tb/dut/id_stage/regfile/DataPath/Physical_RF/ADD_RD2 \
+sim:/dlx_dp_tb/dut/id_stage/regfile/DataPath/Physical_RF/REGISTERS \
+sim:/dlx_dp_tb/dut/rf_out1_id_o \
+sim:/dlx_dp_tb/dut/rf_out2_id_o \
+-divider "Fwd signals" \
+sim:/dlx_dp_tb/dut/imm_id_o \
+sim:/dlx_dp_tb/dut/npc_id_i 
+
+run 30 ns

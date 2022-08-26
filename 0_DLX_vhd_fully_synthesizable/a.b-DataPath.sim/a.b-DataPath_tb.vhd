@@ -52,6 +52,7 @@ architecture structure of DLX_DP_tb is
 	
 	component IRAM is
 		generic (
+			file_path : string := "hex.txt";
 			RAM_DEPTH : integer := 127;
 			I_SIZE : integer := 32);
 		port (
@@ -90,7 +91,7 @@ begin
 		-- ID control signals
 		-- Windowed register file
 		CALL			=> call_i,
-		RET				=> rst_i,
+		RET				=> ret_i,
 		SPILL			=> spill_i,
 		FILL			=> fill_i,
 		RF_EN			=> rf_en_i,
@@ -109,6 +110,7 @@ begin
 	);
 	
 	mem: IRAM generic map(
+		file_path => "/home/ms22.32/Desktop/DLX/asm_example/test.asm.mem",
 		RAM_DEPTH => 127,
 		I_SIZE => INSTR_SIZE )
 	port map(
@@ -141,7 +143,7 @@ begin
 		rf_en_i				<= '1';
 		rs1_en_i			<= '1';
 		rs2_en_i			<= '1';
-		rf_en_i				<= '0';
+		rf_wr_en_i			<= '0';
 		imm_isoff_i			<= '0';
 		rega_latch_en_i		<= '1';
 		regb_latch_en_i		<= '1';
