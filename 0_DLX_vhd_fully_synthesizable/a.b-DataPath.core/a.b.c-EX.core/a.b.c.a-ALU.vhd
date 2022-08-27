@@ -2,7 +2,7 @@
 -- Execution stage
 -- .MUXA,MUXB
 -- .Zero Detector
--- .ALU
+-- -> ALU
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -17,13 +17,9 @@ entity DLX_ALU is
 		PORT_A		: in std_logic_vector(DATA_SIZE-1 downto 0);
 		PORT_B		: in std_logic_vector(DATA_SIZE-1 downto 0);
 		ALU_OUT		: out std_logic_vector(DATA_SIZE-1 downto 0);
-		DATA_MEM	: out std_logic_vector(DATA_SIZE-1 downto 0);
-		RD_FWD_OUT	: out std_logic_vector(RD_SIZE-1 downto 0);
-		BRANCH_T	: out std_logic
-		
 		ALU_OP		: in aluOp
 	);
-end DLX_EX;
+end DLX_ALU;
 
 architecture bhv of DLX_ALU is
 	
@@ -50,9 +46,10 @@ architecture bhv of DLX_ALU is
 		);
 	end component:
 	
-	signal sub_i, cout_i	: std_logic;
-	signal adder_out		: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal and_out, or_out, sge_out, sle_out, sne_out	: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal sub_i, cout_i, shift_arith_i, shift_dir_i	: std_logic;
+	signal adder_out, shifter_out						: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal and_out, or_out, sge_out, sle_out, sne_out, seq_out, 
+		sgeu_out, sgt_out, sgtu_out, slt_out, sltu_out 	: std_logic_vector(DATA_SIZE-1 downto 0);
 	
 begin
 	
@@ -69,79 +66,130 @@ begin
 	-- Execution modules
 	and_out <= PORT_A and PORT_B;	-- AND_O
 	or_out	<= PORT_A or PORT_B;	-- OR_O
-	
-	-- XOR_O : bitwise xor / OUT <= A xor B (unsigned)
-	xor_out <= PORT_A xor PORT_B;	
+	xor_out <= PORT_A xor PORT_B;	-- XOR_O
 	
 	alu_p: process(PORT_A,PORT_B)
 	begin
-		-- SGE : greater or equal
+		-- SGE		: greater or equal
 		if( signed(PORT_A) >= signed(PORT_B) ) then
 			sge_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
 		else
 			sge_out <= (others='0');
 		end if;
 		
-		-- SLE : greater or equal
+		-- SLE		: greater or equal
 		if( signed(PORT_A) <= signed(PORT_B) ) then
 			sle_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
 		else
 			sle_out <= (others='0');
 		end if;
 	
-		-- SNE		: set if not equal		if( A != B ) OUT <= '1'		(signed)
+		-- SNE		: set if not equal		if( A != B ) OUT <= '1' 	(signed)
 		if( signed(PORT_A) /= signed(PORT_B) ) then 
 			sne_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
 		else
 			sne_out <= (others=>'0');
-		end if
+		end if;
 		
+		-- SEQ 		: set if equal			if( A == B ) OUT <= '1' 	(signed)
+		if( signed(PORT_A) = signed(PORT_B) ) then 
+			seq_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
+		else
+			seq_out <= (others=>'0');
+		end if;
 		
+		-- SGEU		: great or equal uns	if( A >= B ) OUT <= '1'		(unsigned)
+		if( unsigned(PORT_A) = unsigned(PORT_B) ) then 
+			sgeu_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
+		else
+			sgeu_out <= (others=>'0');
+		end if;
+		
+		-- SGT		: greater than			if( A > B )  OUT <= '1'		(signed)
+		if( signed(PORT_A) > signed(PORT_B) ) then 
+			sgt_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
+		else
+			sgt_out <= (others=>'0');
+		end if;
+		
+		-- SGTU		: greater than uns		if( A > B )  OUT <= '1'		(unsigned)
+		if( unsigned(PORT_A) > unsigned(PORT_B) ) then 
+			sgtu_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
+		else
+			sgtu_out <= (others=>'0');
+		end if;
+		
+		-- SLT		: less than				if( A < B )  OUT <= '1'		(signed)
+		if( signed(PORT_A) < signed(PORT_B) ) then 
+			slt_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
+		else
+			slt_out <= (others=>'0');
+		end if;
+		
+		-- SLTU		: less than uns 		if( A < B )  OUT <= '1'		(unsigned)
+		if( unsigned(PORT_A) > unsigned(PORT_B) ) then 
+			sltu_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
+		else
+			sltu_out <= (others=>'0');
+		end if;
+		
+	end process alu_p;
+	
 	-- SLL_O 	: shift left logical	OUT <= A << B(4 downto 0) 	(unsigned)
 	-- SRL_O	: shift right logical	OUT <= A >> B(4 downto 0)	(unsigned)
+	-- SRA_O	: shift right arith		OUT <= A(0)^B & (A >> B)_(B 
+	shifter: SHIFTER_GENERIC 
+	generic map(N => DATA_SIZE)
+	port map(	
+		A				=> PORT_A,
+		B				=> PORT_B(4 downto 0),
+		LOGIC_ARITH		=> shift_arith_i,	-- 1 = logic, 0 = arith
+		LEFT_RIGHT		=> shift_dir_i,		-- 1 = left, 0 = right
+		SHIFT_ROTATE	=> '1',				-- 1 = shift, 0 = rotate
+		OUTPUT			=> shifter_out 
+	);
 	
 	
 	-- ADDU		: Add unsigned			OUT <= A + B				(unsigned)
 	-- MULT		: Integer mult			OUT <= A*B 					(signed)
-	-- SEQ		: set if equal			if( A == B ) OUT <= '1'		(signed)
-	-- SGEU		: great or equal uns	if( A >= B ) OUT <= '1'		(unsigned)
-	-- SGT		: greater than			if( A > B )  OUT <= '1'		(signed)
-	-- SGTU		: greater than uns		if( A > B )  OUT <= '1'		(unsigned)
-	-- SLT		: less than				if( A < B )  OUT <= '1'		(signed)
-	-- SLTU		: less than uns 		if( A < B )  OUT <= '1'		(unsigned)
-	-- SRA_O	: shift right arith		OUT <= A(0)^B & (A >> B)_(B 
 	-- SUBU		: sub unsigned			OUT <= A - B 				(unsigned)
 	-- NOP 		: no operation			
-	
 	
 	
 	-- ALU Control Unit
 	-- Translates the aluOp signal into a control signal
 	-- for the adder
+	-- Outputs:	sub_i, shift_arith_i, shift_dir_i, shift_rotate_i
+	
+	sub_i			<= '1' when( aluOp = SUB or aluOp = SUBU ) else '0';
+	shift_arith_i	<= '1' when( aluOp = SUBU ) else '0';
+	shift_dir_i		<= '1' when( aluOp = SLE ) else '0';
+	
 	alu_control: process(aluOp)
 	begin
-
 		case aluOp is
-			when ADD =>
-				sub_i 	<= '0';
-				ALU_OUT	<= adder_out;
-			
-			-- SUB	: Signed subtraction / OUT <= A - B (signed)
-			when SUB =>
-				sub_i	<= '1';
-				ALU_OUT	<= adder_out;
-			
-			when AND_O =>
-				sub_i	<= '0';
-				ALU_OUT	<= 
-				
-			when OR_O =>
-				sub_i	<= '0';
-				ALU_OUT	<= 
-			
-			when SGE =>
-				sub_i	<= '0';
-				ALU_OUT	<= 
-	
+			when ADD	=> ALU_OUT	<= adder_out;
+			when SUB	=> ALU_OUT	<= adder_out;
+			when AND_O	=> ALU_OUT	<= and_out;
+			when OR_O	=> ALU_OUT	<= or_out;
+			when SGE	=> ALU_OUT	<= sge_out;	
+			when SLE	=> ALU_OUT	<= sle_out;
+			when SLL_O	=> ALU_OUT	<= shifter_out;
+			when SNE	=> ALU_OUT	<= sne_out;
+			when SRL_O	=> ALU_OUT	<= shifter_out;
+			when XOR_O	=> ALU_OUT	<= xor_out;
+			--when ADDU	=> ALU_OUT	<= adder_out;
+			--when MULT	=> ALU_OUT	<= mult_out;
+			when SEQ	=> ALU_OUT	<= seq_out;
+			when SGEU	=> ALU_OUT	<= sgeu_out;
+			when SGT	=> ALU_OUT	<= sgt_out;
+			when SGTU	=> ALU_OUT	<= sgtu_out;
+			when SLT	=> ALU_OUT	<= slt_out;
+			when SLTU	=> ALU_OUT	<= sltu_out;
+			when SRA_O	=> ALU_OUT	<= sra_out;
+			--when SUBU	=> ALU_OUT	<= adder_out;
+			when NOP	=> ALU_OUT	<= adder_out; 
+		end case;
+	end process alu_control;
 end bhv;
 

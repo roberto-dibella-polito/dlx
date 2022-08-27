@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 
 package myTypes is
 
-	-- TYPES INSTRUCTION FORMAY
+	-- TYPES INSTRUCTION FORMAT
 	
 	--			| 31-26  | 25-21 | 20-16 | 15-0      |
 	--			--------------------------------------
