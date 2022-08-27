@@ -1,0 +1,3170 @@
+# //  Questa Sim-64
+# //  Version 10.7c linux_x86_64 Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:18 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 17:44:18 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:18 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 17:44:18 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:18 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 17:44:18 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:18 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 17:44:19 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:19 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 17:44:19 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:19 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 17:44:19 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:19 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 17:44:19 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:19 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 17:44:19 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:19 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 17:44:19 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:19 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 17:44:19 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:19 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 17:44:19 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:19 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 17:44:20 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:20 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 17:44:20 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:20 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 17:44:20 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:20 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 17:44:20 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:20 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 17:44:20 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:44:20 on Aug 27,2022
+# vcom -reportprogress 300 -work work a.b.c-EX_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX_tb
+# -- Compiling architecture bhv of DLX_EX_tb
+# End time: 17:44:20 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps -vopt work.dlx_ex_tb -voptargs="+acc" 
+# Start time: 17:44:20 on Aug 27,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mytypes
+# Loading work.dlx_ex_tb(bhv)#1
+# Loading work.dlx_ex(structure)#1
+# Loading work.mux2to1(behavior)#1
+# Loading work.dlx_alu(bhv)#1
+# Loading work.p4(structure)#1
+# Loading work.sparse_tree(structure)#1
+# Loading work.pg_net(struct_pg_1)#1
+# Loading work.g_block(structure)#1
+# Loading work.pg_block(structure)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cs_sum(structure)#1
+# Loading work.cs_block(structure)#1
+# Loading work.rca(behavioral)#1
+# Loading work.mux2to1(behavior)#2
+# Loading work.shifter_generic(behavioral)#1
+run 5 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+run 5 ns
+# Causality operation skipped due to absence of debug database file
+quit -sim
+# End time: 17:46:07 on Aug 27,2022, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 109
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:09 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 17:46:09 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:09 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 17:46:09 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:09 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 17:46:09 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:09 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 17:46:10 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:10 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 17:46:10 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:10 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 17:46:10 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:10 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 17:46:10 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:10 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 17:46:10 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:10 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 17:46:10 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:10 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 17:46:10 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:10 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 17:46:11 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:11 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 17:46:11 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:11 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 17:46:11 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:11 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 17:46:11 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:11 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 17:46:11 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:11 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 17:46:11 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:46:11 on Aug 27,2022
+# vcom -reportprogress 300 -work work a.b.c-EX_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX_tb
+# -- Compiling architecture bhv of DLX_EX_tb
+# End time: 17:46:11 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps -vopt work.dlx_ex_tb -voptargs="+acc" 
+# Start time: 17:46:11 on Aug 27,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mytypes
+# Loading work.dlx_ex_tb(bhv)#1
+# Loading work.dlx_ex(structure)#1
+# Loading work.mux2to1(behavior)#1
+# Loading work.dlx_alu(bhv)#1
+# Loading work.p4(structure)#1
+# Loading work.sparse_tree(structure)#1
+# Loading work.pg_net(struct_pg_1)#1
+# Loading work.g_block(structure)#1
+# Loading work.pg_block(structure)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cs_sum(structure)#1
+# Loading work.cs_block(structure)#1
+# Loading work.rca(behavioral)#1
+# Loading work.mux2to1(behavior)#2
+# Loading work.shifter_generic(behavioral)#1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+quit -sim
+# End time: 17:47:30 on Aug 27,2022, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 108
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:32 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 17:47:32 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:32 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 17:47:33 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 17:47:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 17:47:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 17:47:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 17:47:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 17:47:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 17:47:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 17:47:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 17:47:34 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:34 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 17:47:34 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:34 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 17:47:34 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:34 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 17:47:34 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:34 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 17:47:34 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:34 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 17:47:34 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:34 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 17:47:34 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 17:47:34 on Aug 27,2022
+# vcom -reportprogress 300 -work work a.b.c-EX_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX_tb
+# -- Compiling architecture bhv of DLX_EX_tb
+# End time: 17:47:35 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -t 100ps -vopt work.dlx_ex_tb -voptargs="+acc" 
+# Start time: 17:47:35 on Aug 27,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mytypes
+# Loading work.dlx_ex_tb(bhv)#1
+# Loading work.dlx_ex(structure)#1
+# Loading work.mux2to1(behavior)#1
+# Loading work.dlx_alu(bhv)#1
+# Loading work.p4(structure)#1
+# Loading work.sparse_tree(structure)#1
+# Loading work.pg_net(struct_pg_1)#1
+# Loading work.g_block(structure)#1
+# Loading work.pg_block(structure)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.cs_sum(structure)#1
+# Loading work.cs_block(structure)#1
+# Loading work.rca(behavioral)#1
+# Loading work.mux2to1(behavior)#2
+# Loading work.shifter_generic(behavioral)#1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+add wave  \
+sim:/dlx_ex_tb/uut/alu/ALU_OUT
+add wave  \
+sim:/dlx_ex_tb/uut/alu/adder/Sum
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+run 10 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(7)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(6)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(5)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(4)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(3)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(2)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(1)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_ex_tb/uut/alu/adder/SumGen/CS_Blocks(0)/CS_Bn/RCA0
+quit -sim
+# End time: 17:51:41 on Aug 27,2022, Elapsed time: 0:04:06
+# Errors: 0, Warnings: 108
+quit -sim
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:31 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 19:43:31 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:31 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 19:43:31 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:31 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 19:43:31 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:31 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 19:43:31 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:31 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 19:43:32 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:32 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 19:43:32 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:32 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 19:43:32 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:32 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 19:43:32 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:32 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 19:43:32 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:32 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 19:43:32 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:32 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 19:43:32 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:32 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 19:43:33 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 19:43:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 19:43:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:43:33 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(69): Type error resolving infix expression "+" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(70): Type error resolving infix expression "+" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(71): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(72): Type error resolving infix expression "-" as type ieee.std_logic_1164.STD_LOGIC_VECTOR.
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(174): Illegal target for signal assignment.
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(174): (vcom-1136) Unknown identifier "sub_i".
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(174): Enumeration literal '0' is not of type (error).
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(201): (vcom-1136) Unknown identifier "adder_out".
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(202): (vcom-1136) Unknown identifier "adder_out".
+# ** Note: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(205): VHDL Compiler exiting
+# End time: 19:43:33 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 9, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 19:44:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 19:44:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 19:44:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 19:44:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 19:44:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 19:44:16 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 19:44:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 19:44:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 19:44:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 19:44:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 19:44:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 19:44:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 19:44:17 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:17 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 19:44:17 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:17 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(174): Illegal target for signal assignment.
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(174): (vcom-1136) Unknown identifier "sub_i".
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(174): Enumeration literal '0' is not of type (error).
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(201): (vcom-1136) Unknown identifier "adder_out".
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(202): (vcom-1136) Unknown identifier "adder_out".
+# ** Note: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(205): VHDL Compiler exiting
+# End time: 19:44:17 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:55 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 19:44:55 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:55 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 19:44:55 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:55 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 19:44:55 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:55 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 19:44:55 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:55 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 19:44:55 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:55 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 19:44:56 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:56 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 19:44:56 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:56 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 19:44:56 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:56 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 19:44:56 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:56 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 19:44:56 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:56 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 19:44:56 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:56 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 19:44:56 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:56 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 19:44:57 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:57 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 19:44:57 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:44:57 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(201): (vcom-1136) Unknown identifier "adder_out".
+# ** Error: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(202): (vcom-1136) Unknown identifier "adder_out".
+# ** Note: ../a.b.c-EX.core/a.b.c.a-ALU.vhd(205): VHDL Compiler exiting
+# End time: 19:44:57 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 19:45:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 19:45:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 19:45:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 19:45:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 19:45:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:15 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 19:45:15 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 19:45:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 19:45:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 19:45:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 19:45:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 19:45:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 19:45:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 19:45:16 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:16 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 19:45:17 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:17 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 19:45:17 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:17 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 19:45:17 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:45:17 on Aug 27,2022
+# vcom -reportprogress 300 -work work a.b.c-EX_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX_tb
+# -- Compiling architecture bhv of DLX_EX_tb
+# End time: 19:45:17 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps -vopt work.dlx_ex_tb -voptargs="+acc" 
+# Start time: 19:45:17 on Aug 27,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mytypes
+# Loading work.dlx_ex_tb(bhv)#1
+# Loading work.dlx_ex(structure)#1
+# Loading work.mux2to1(behavior)#1
+# Loading work.dlx_alu(bhv)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.shifter_generic(behavioral)#1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut
+quit -sim
+# End time: 19:48:20 on Aug 27,2022, Elapsed time: 0:03:03
+# Errors: 0, Warnings: 12
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:23 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 19:48:23 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:23 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 19:48:24 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:24 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 19:48:24 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:24 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 19:48:24 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:24 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 19:48:24 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:24 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 19:48:24 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:24 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 19:48:24 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:24 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 19:48:24 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:24 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 19:48:25 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:25 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 19:48:25 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:25 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 19:48:25 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:25 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 19:48:25 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:25 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 19:48:25 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:25 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 19:48:25 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:25 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 19:48:25 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:25 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 19:48:26 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:48:26 on Aug 27,2022
+# vcom -reportprogress 300 -work work a.b.c-EX_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX_tb
+# -- Compiling architecture bhv of DLX_EX_tb
+# End time: 19:48:26 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps -vopt work.dlx_ex_tb -voptargs="+acc" 
+# Start time: 19:48:26 on Aug 27,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mytypes
+# Loading work.dlx_ex_tb(bhv)#1
+# Loading work.dlx_ex(structure)#1
+# Loading work.mux2to1(behavior)#1
+# Loading work.dlx_alu(bhv)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.shifter_generic(behavioral)#1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut
+run 5 ns
+run 5 ns
+quit -sim
+# End time: 19:52:35 on Aug 27,2022, Elapsed time: 0:04:09
+# Errors: 0, Warnings: 12
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:40 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 19:52:40 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:40 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 19:52:40 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:40 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 19:52:40 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:41 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 19:52:41 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:41 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 19:52:41 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:41 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 19:52:41 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:41 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 19:52:41 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:41 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 19:52:41 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:41 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 19:52:41 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:41 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 19:52:41 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:41 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 19:52:42 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:42 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 19:52:42 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:42 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 19:52:42 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:42 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 19:52:42 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:42 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 19:52:42 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:42 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 19:52:42 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 19:52:42 on Aug 27,2022
+# vcom -reportprogress 300 -work work a.b.c-EX_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX_tb
+# -- Compiling architecture bhv of DLX_EX_tb
+# End time: 19:52:42 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps -vopt work.dlx_ex_tb -voptargs="+acc" 
+# Start time: 19:52:42 on Aug 27,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mytypes
+# Loading work.dlx_ex_tb(bhv)#1
+# Loading work.dlx_ex(structure)#1
+# Loading work.mux2to1(behavior)#1
+# Loading work.dlx_alu(bhv)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.shifter_generic(behavioral)#1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut
+run 1 ns
+run 9 ns
+force -freeze sim:/dlx_ex_tb/alu_op_i SLL_O 0
+force -freeze sim:/dlx_ex_tb/b_i 32'h00000004 0
+run 5 ns
+force -freeze sim:/dlx_ex_tb/alu_op_i SRL_O 0
+run 5 ns
+force -freeze sim:/dlx_ex_tb/b_i 32'h00000002 0
+run 5 ns
+quit -sim
+# End time: 19:59:14 on Aug 27,2022, Elapsed time: 0:06:32
+# Errors: 0, Warnings: 12
+source a.b.c-EX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:35 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 20:00:36 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:36 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 20:00:36 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:36 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 20:00:36 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:36 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 20:00:36 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:36 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 20:00:36 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:36 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 20:00:36 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:36 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 20:00:36 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:36 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 20:00:37 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:37 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 20:00:37 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:37 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 20:00:37 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:37 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 20:00:37 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:37 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 20:00:37 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:37 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 20:00:37 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:37 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 20:00:37 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:37 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 20:00:38 on Aug 27,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:38 on Aug 27,2022
+# vcom -reportprogress 300 -work work ../a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 20:00:38 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 20:00:38 on Aug 27,2022
+# vcom -reportprogress 300 -work work a.b.c-EX_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX_tb
+# -- Compiling architecture bhv of DLX_EX_tb
+# End time: 20:00:38 on Aug 27,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps -vopt work.dlx_ex_tb -voptargs="+acc" 
+# Start time: 20:00:38 on Aug 27,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mytypes
+# Loading work.dlx_ex_tb(bhv)#1
+# Loading work.dlx_ex(structure)#1
+# Loading work.mux2to1(behavior)#1
+# Loading work.dlx_alu(bhv)#1
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.shifter_generic(behavioral)#1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu/shifter
+# ** Warning: NUMERIC_STD.">=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."/=": metavalue detected, returning TRUE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD.">": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut/alu
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_ex_tb/uut
+run 10 ns
+run 5 ns
+# End time: 20:03:55 on Aug 27,2022, Elapsed time: 0:03:17
+# Errors: 0, Warnings: 12

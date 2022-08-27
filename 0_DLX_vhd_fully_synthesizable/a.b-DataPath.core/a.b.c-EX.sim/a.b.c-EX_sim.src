@@ -1,25 +1,26 @@
-vcom -reportprogress 300 -work work ../000-globals.vhd
-vcom -reportprogress 300 -work work ../000-commons/counter.vhd
-vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd
-vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd
+vcom -reportprogress 300 -work work ../../000-globals.vhd
+vcom -reportprogress 300 -work work ../../000-commons/counter.vhd
+vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd
+vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd
+vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd
 
-# Instruction Fetch
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd
-
-# Instruction Decode
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_block.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd
-vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.vhd
+# Execute
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.core/a.b.c.a-ALU.vhd
+vcom -reportprogress 300 -work work ../a.b.c-EX.vhd
 vcom -reportprogress 300 -work work a.b.c-EX_tb.vhd
 
-vsim -t 100ps work.DLX_DP_tb
+#vsim -t 100ps work.DLX_EX_tb
+vsim -t 100ps -vopt work.dlx_ex_tb -voptargs=+acc
 add wave *
+
+run 15 ns
 
