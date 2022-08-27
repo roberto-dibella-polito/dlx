@@ -1,6 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
-use work.constants.all;
+--use work.constants.all;
 
 -- PG Network basic block
 -- Representation of sum and carry ad generate and propagate

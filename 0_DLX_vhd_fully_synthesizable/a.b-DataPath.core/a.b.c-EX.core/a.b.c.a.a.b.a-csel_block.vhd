@@ -61,7 +61,7 @@ begin  -- architecture STRUCTURE
       Ci => '1',
       S => rca_out1 );
 
-  Mux: MUX21_GENERIC generic map(N => N)
+  Mux: mux2to1 generic map(N => N)
     port map
     ( IN0		=> rca_out1,
       IN1		=> rca_out0,

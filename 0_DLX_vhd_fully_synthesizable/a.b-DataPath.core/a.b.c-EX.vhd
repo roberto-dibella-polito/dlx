@@ -14,7 +14,7 @@ entity DLX_EX is
 		DATA_SIZE	: integer := 32;
 		NPC_SIZE	: integer := 32;
 		IMM_SIZE	: integer := 32;
-		RD_SIZE		: integer := 32;
+		RD_SIZE		: integer := 32
 	);
 	port(
 		PORT_A		: in std_logic_vector(DATA_SIZE-1 downto 0);
@@ -28,9 +28,9 @@ entity DLX_EX is
 		BRANCH_T	: out std_logic;
 		
 		-- Control signals
-		MUXA_SEL	: out std_logic;  -- MUX-A Sel
-		MUXB_SEL	: out std_logic;  -- MUX-B Sel
-		ALU_OP		: in aluOp;		
+		MUXA_SEL	: in std_logic;  -- MUX-A Sel
+		MUXB_SEL	: in std_logic;  -- MUX-B Sel
+		ALU_OP		: in aluOp		
 	);
 end DLX_EX;
 
@@ -38,7 +38,7 @@ architecture structure of DLX_EX is
 	
 	component DLX_ALU
 		generic(
-			DATA_SIZE	: integer := 32;
+			DATA_SIZE	: integer := 32
 		);
 		port(
 			PORT_A		: in std_logic_vector(DATA_SIZE-1 downto 0);

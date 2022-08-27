@@ -4,6 +4,8 @@
 -- .Zero Detector
 -- -> ALU
 
+-- VERSION WITHOUT the Pentium 4 as ADDER component
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -11,7 +13,7 @@ use work.myTypes.all;
 
 entity DLX_ALU is
 	generic(
-		DATA_SIZE	: integer := 32;
+		DATA_SIZE	: integer := 32
 	);
 	port(
 		PORT_A		: in std_logic_vector(DATA_SIZE-1 downto 0);
@@ -23,16 +25,16 @@ end DLX_ALU;
 
 architecture bhv of DLX_ALU is
 	
-	component P4
-		generic(Nbit: integer := 32);
-		port   (
-			A			: in std_logic_vector(Nbit-1 downto 0);
-			B			: in std_logic_vector(Nbit-1 downto 0);
-			Cin			: in std_logic;
-			Cout		: out std_logic;
-			SUB_ADD_n	: in std_logic;              
-			Sum			: out std_logic_vector(Nbit-1 downto 0));
-	end component;
+	--component P4
+	--	generic(Nbit: integer := 32);
+	--	port   (
+	--		A			: in std_logic_vector(Nbit-1 downto 0);
+	--		B			: in std_logic_vector(Nbit-1 downto 0);
+	--		Cin			: in std_logic;
+	--		Cout		: out std_logic;
+	--		SUB_ADD_n	: in std_logic;              
+	--		Sum			: out std_logic_vector(Nbit-1 downto 0));
+	--end component;
 	
 	component SHIFTER_GENERIC
 		generic(N: integer);
@@ -44,44 +46,52 @@ architecture bhv of DLX_ALU is
 			SHIFT_ROTATE	: in std_logic;	-- 1 = shift, 0 = rotate
 			OUTPUT			: out std_logic_vector(N-1 downto 0) 
 		);
-	end component:
+	end component;
 	
-	signal sub_i, cout_i, shift_arith_i, shift_dir_i	: std_logic;
-	signal adder_out, shifter_out						: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal and_out, or_out, sge_out, sle_out, sne_out, seq_out, 
-		sgeu_out, sgt_out, sgtu_out, slt_out, sltu_out 	: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal shift_arith_i, shift_dir_i	: std_logic;
+	signal shifter_out					: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal and_out, or_out, xor_out, sge_out, sle_out, sne_out, seq_out, sra_out,
+		sgeu_out, sgt_out, sgtu_out, slt_out, sltu_out, add_out, addu_out, sub_out, subu_out	: std_logic_vector(DATA_SIZE-1 downto 0);
 	
 begin
 	
-	adder: P4 generic map(Nbit => DATA_SIZE)
-	port map(
-		A			=> PORT_A,
-		B			=> PORT_B,
-		Cin			=> sub_i,
-		Cout		=> cout_i,
-		SUB_ADD_n	=> sub_i,             
-		Sum			=> adder_out 
-	);
+	--adder: P4 generic map(Nbit => DATA_SIZE)
+	--port map(
+	--	A			=> PORT_A,
+	--	B			=> PORT_B,
+	--	Cin			=> sub_i,
+	--	Cout		=> cout_i,
+	--	SUB_ADD_n	=> sub_i,             
+	--	Sum			=> adder_out 
+	--);
+
+	-- Arithmetic unit
+	add_out 	<= std_logic_vector(signed(PORT_A) + signed(PORT_B));
+	addu_out	<= std_logic_vector(unsigned(PORT_A) + unsigned(PORT_B));
+	sub_out		<= std_logic_vector(signed(PORT_A) - signed(PORT_B));
+	subu_out	<= std_logic_vector(unsigned(PORT_A) - unsigned(PORT_B));
 	
 	-- Execution modules
 	and_out <= PORT_A and PORT_B;	-- AND_O
 	or_out	<= PORT_A or PORT_B;	-- OR_O
 	xor_out <= PORT_A xor PORT_B;	-- XOR_O
 	
+	
+
 	alu_p: process(PORT_A,PORT_B)
 	begin
 		-- SGE		: greater or equal
 		if( signed(PORT_A) >= signed(PORT_B) ) then
 			sge_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
 		else
-			sge_out <= (others='0');
+			sge_out <= (others=>'0');
 		end if;
 		
 		-- SLE		: greater or equal
 		if( signed(PORT_A) <= signed(PORT_B) ) then
 			sle_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
 		else
-			sle_out <= (others='0');
+			sle_out <= (others=>'0');
 		end if;
 	
 		-- SNE		: set if not equal		if( A != B ) OUT <= '1' 	(signed)
@@ -161,15 +171,17 @@ begin
 	-- for the adder
 	-- Outputs:	sub_i, shift_arith_i, shift_dir_i, shift_rotate_i
 	
-	sub_i			<= '1' when( aluOp = SUB or aluOp = SUBU ) else '0';
-	shift_arith_i	<= '1' when( aluOp = SUBU ) else '0';
-	shift_dir_i		<= '1' when( aluOp = SLE ) else '0';
+	--sub_i			<= '1' when( ALU_OP = SUB or ALU_OP = SUBU ) else '0';
+	shift_arith_i	<= '1' when( ALU_OP = SUBU ) else '0';
+	shift_dir_i		<= '1' when( ALU_OP = SLL_O ) else '0';
 	
-	alu_control: process(aluOp)
+	alu_control: process(ALU_OP, add_out, sub_out, and_out, or_out, sge_out, sle_out, shifter_out, 
+					sne_out, xor_out, addu_out, seq_out, sgeu_out, sgt_out, sgtu_out, slt_out, sltu_out,
+					sra_out, subu_out)
 	begin
-		case aluOp is
-			when ADD	=> ALU_OUT	<= adder_out;
-			when SUB	=> ALU_OUT	<= adder_out;
+		case ALU_OP is
+			when ADD	=> ALU_OUT	<= add_out;
+			when SUB	=> ALU_OUT	<= sub_out;
 			when AND_O	=> ALU_OUT	<= and_out;
 			when OR_O	=> ALU_OUT	<= or_out;
 			when SGE	=> ALU_OUT	<= sge_out;	
@@ -178,7 +190,7 @@ begin
 			when SNE	=> ALU_OUT	<= sne_out;
 			when SRL_O	=> ALU_OUT	<= shifter_out;
 			when XOR_O	=> ALU_OUT	<= xor_out;
-			--when ADDU	=> ALU_OUT	<= adder_out;
+			when ADDU	=> ALU_OUT	<= addu_out;
 			--when MULT	=> ALU_OUT	<= mult_out;
 			when SEQ	=> ALU_OUT	<= seq_out;
 			when SGEU	=> ALU_OUT	<= sgeu_out;
@@ -187,8 +199,9 @@ begin
 			when SLT	=> ALU_OUT	<= slt_out;
 			when SLTU	=> ALU_OUT	<= sltu_out;
 			when SRA_O	=> ALU_OUT	<= sra_out;
-			--when SUBU	=> ALU_OUT	<= adder_out;
-			when NOP	=> ALU_OUT	<= adder_out; 
+			when SUBU	=> ALU_OUT	<= subu_out;
+			when NOP	=> ALU_OUT	<= add_out; 
+			when others	=> ALU_OUT	<= add_out;
 		end case;
 	end process alu_control;
 end bhv;
