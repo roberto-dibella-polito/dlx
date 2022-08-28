@@ -63,8 +63,8 @@ begin  -- architecture STRUCTURE
 
   Mux: mux2to1 generic map(N => N)
     port map
-    ( IN0		=> rca_out1,
-      IN1		=> rca_out0,
+    ( IN1		=> rca_out1,
+      IN0		=> rca_out0,
       SEL		=> Cin,
       MUX_OUT	=> S );
 

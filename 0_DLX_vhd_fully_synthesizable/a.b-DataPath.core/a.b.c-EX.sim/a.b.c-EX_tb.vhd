@@ -83,15 +83,16 @@ begin
 		--a_i			<= x"843d3bc9";
 		--b_i			<= x"1e2f11bb";
 		
-		npc_in_i	<= x"1e2f11bb";
-		imm_i		<= x"843d3bc9";
-		rd_fwd_i	<=(others=>'0');
+		--npc_in_i	<= x"1e2f11bb";
+		--imm_i		<= x"843d3bc9";
+		npc_in_i	<= (others=>'0');
+		imm_i		<= (others=>'0');
+		rd_fwd_i	<= (others=>'0');
 		
 		muxa_sel_i	<= '0';
 		muxb_sel_i	<= '0';
 		
 		alu_op_i	<= ADD;
-		
 		wait for 5 ns;
 		alu_op_i	<= SUB;
 		wait for 5 ns;

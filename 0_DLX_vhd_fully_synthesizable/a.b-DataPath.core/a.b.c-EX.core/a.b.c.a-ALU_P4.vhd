@@ -165,9 +165,11 @@ begin
 	
 	sub_i			<= '1' when( ALU_OP = SUB or ALU_OP = SUBU ) else '0';
 	shift_arith_i	<= '1' when( ALU_OP = SUBU ) else '0';
-	shift_dir_i		<= '1' when( ALU_OP = SLE ) else '0';
+	shift_dir_i		<= '1' when( ALU_OP = SLL_O ) else '0';
 	
-	alu_control: process(ALU_OP)
+	alu_control: process(ALU_OP, adder_out, and_out, or_out, sge_out, sle_out, shifter_out, 
+					sne_out, xor_out, seq_out, sgeu_out, sgt_out, sgtu_out, slt_out, sltu_out,
+					sra_out)
 	begin
 		case ALU_OP is
 			when ADD	=> ALU_OUT	<= adder_out;

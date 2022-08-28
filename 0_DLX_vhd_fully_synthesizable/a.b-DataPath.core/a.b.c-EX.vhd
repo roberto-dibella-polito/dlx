@@ -81,8 +81,8 @@ begin
 	
 	alu: DLX_ALU generic map( DATA_SIZE	=> DATA_SIZE )
 	port map(
-		PORT_A		=> PORT_A,
-		PORT_B		=> PORT_B,
+		PORT_A		=> muxA_out,
+		PORT_B		=> muxB_out,
 		ALU_OUT		=> ALU_OUT,
 		ALU_OP		=> ALU_OP
 	);
