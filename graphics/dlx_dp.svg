@@ -23,21 +23,27 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     showguides="true"
+     showguides="false"
      inkscape:guide-bbox="true"
-     inkscape:zoom="10.159482"
-     inkscape:cx="429.59869"
-     inkscape:cy="152.81291"
+     inkscape:zoom="1.7959597"
+     inkscape:cx="425.67771"
+     inkscape:cy="194.60348"
      inkscape:window-width="1280"
      inkscape:window-height="961"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true">
     <sodipodi:guide
        position="71.50888,161.76659"
        orientation="0,-1"
        id="guide86377" />
+    <sodipodi:guide
+       position="49.167249,174.39566"
+       orientation="1,0"
+       id="guide968" />
   </sodipodi:namedview>
   <defs
      id="defs85356">
@@ -203,6 +209,78 @@
        width="304.09961"
        height="65.577728"
        id="rect14615-0-0-3" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="261.29367"
+       height="69.53125"
+       id="rect14615-11-1-9" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="261.29367"
+       height="69.53125"
+       id="rect14615-11-1-4-8" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="261.29367"
+       height="69.53125"
+       id="rect14615-11-1-4-7-9" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="261.29367"
+       height="69.53125"
+       id="rect14615-11-1-4-76-5" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="261.29367"
+       height="69.53125"
+       id="rect14615-11-1-4-7-3-2" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="261.29367"
+       height="69.53125"
+       id="rect14615-11-1-4-7-3-3-2" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="261.29367"
+       height="69.53125"
+       id="rect14615-13-3" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="261.29367"
+       height="69.53125"
+       id="rect14615-13-5" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="261.29367"
+       height="69.53125"
+       id="rect14615-13-07-6" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="304.09961"
+       height="65.577728"
+       id="rect14615-0-0-0-1" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="304.09961"
+       height="65.577728"
+       id="rect14615-0-0-7-9" />
+    <rect
+       x="56.25"
+       y="295.3125"
+       width="304.09961"
+       height="65.577728"
+       id="rect14615-0-0-3-8" />
   </defs>
   <g
      inkscape:label="Livello 1"
@@ -266,7 +344,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89145">NPC_ALU</tspan></text>
+         id="tspan1383">NPC_ALU</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,53.735898,31.835249)"
@@ -274,7 +352,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89147">NPC_OUT</tspan></text>
+         id="tspan1385">NPC_OUT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,56.787858,43.344279)"
@@ -282,7 +360,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89149">INSTR</tspan></text>
+         id="tspan1387">INSTR</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,32.769088,47.074459)"
@@ -290,7 +368,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-1)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89151">NPC_SEL</tspan></text>
+         id="tspan1389">NPC_SEL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,24.607811,51.205129)"
@@ -298,7 +376,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89153">PC_LATCH_EN</tspan></text>
+         id="tspan1391">PC_LATCH_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,24.607811,80.517795)"
@@ -306,7 +384,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-5)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89155">IRAM_ADDRESS
+         id="tspan1393">IRAM_ADDRESS
 </tspan></text>
     <text
        xml:space="preserve"
@@ -315,7 +393,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-5-6)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89157">IRAM_DATA
+         id="tspan1395">IRAM_DATA
 </tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -328,14 +406,14 @@
     <text
        xml:space="preserve"
        style="font-size:10.5833px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;stroke-width:0.264583"
-       x="39.915894"
-       y="60.795116"
+       x="44.09787"
+       y="60.795124"
        id="text41727"><tspan
          sodipodi:role="line"
          id="tspan41725"
          style="stroke-width:0.264583"
-         x="39.915894"
-         y="60.795116">IF</tspan></text>
+         x="44.09787"
+         y="60.795124">IF</tspan></text>
     <g
        id="g49724"
        transform="translate(67.132178,11.891716)">
@@ -446,7 +524,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-2)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89159">NPC_FWD_OUT</tspan></text>
+         id="tspan1397">NPC_FWD_OUT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,88.984751,31.835253)"
@@ -454,7 +532,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89161">NPC_FWD_I</tspan></text>
+         id="tspan1399">NPC_FWD_I</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,89.095871,37.879149)"
@@ -462,7 +540,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89163">ADDR_RD1</tspan></text>
+         id="tspan1401">ADDR_RD1</tspan></text>
     <g
        id="g49724-3-0-3"
        transform="rotate(-90,86.910525,19.69821)">
@@ -482,7 +560,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-7)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89165">ADDR_RD2</tspan></text>
+         id="tspan1403">ADDR_RD2</tspan></text>
     <g
        id="g49724-3-0-2"
        transform="rotate(-90,94.016695,26.804383)">
@@ -502,7 +580,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-76)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89167">IMM_I</tspan></text>
+         id="tspan1405">IMM_I</tspan></text>
     <g
        id="g49724-3-0-3-5"
        transform="rotate(-90,95.636225,28.42391)">
@@ -522,7 +600,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-7-3)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89169">RD_FWD_I</tspan></text>
+         id="tspan1407">RD_FWD_I</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,109.42129,59.543506)"
@@ -530,7 +608,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-7-3-3)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89171">RD_FWD_O</tspan></text>
+         id="tspan1409">RD_FWD_O</tspan></text>
     <g
        id="g49724-3-0-2-9"
        transform="rotate(-90,89.756005,22.438542)">
@@ -550,7 +628,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-76-3)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89173">DATAIN</tspan></text>
+         id="tspan1411">DATAIN</tspan></text>
     <g
        id="g49724-3-0-3-5-2"
        transform="rotate(-90,91.413555,24.046089)">
@@ -570,7 +648,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-7-3-0)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89175">ADDR_WR</tspan></text>
+         id="tspan1413">ADDR_WR</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,114.3727,42.190534)"
@@ -578,7 +656,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-95)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89177">OUT2</tspan></text>
+         id="tspan1415">OUT2</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,113.14715,56.304454)"
@@ -586,7 +664,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-9)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89179">IMM_O</tspan></text>
+         id="tspan1417">IMM_O</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,114.69178,37.987889)"
@@ -594,7 +672,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-07)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89181">OUT1</tspan></text>
+         id="tspan1419">OUT1</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,80.237957,42.732024)"
@@ -602,7 +680,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-1-7)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89183">RET</tspan></text>
+         id="tspan1421">RET</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,77.564678,43.913122)"
@@ -610,7 +688,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-07)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89185">CALL</tspan></text>
+         id="tspan1423">CALL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,82.911238,44.102033)"
@@ -618,7 +696,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-4)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89187">SPILL</tspan></text>
+         id="tspan1425">SPILL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,85.584518,42.959035)"
@@ -626,7 +704,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-0)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89189">FILL</tspan></text>
+         id="tspan1427">FILL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,96.168891,45.595868)"
@@ -634,7 +712,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-0-0)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89191">RS1_EN</tspan></text>
+         id="tspan1429">RS1_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,98.842171,45.873679)"
@@ -642,7 +720,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-0-7)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89193">RS2_EN</tspan></text>
+         id="tspan1431">RS2_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,90.822331,48.400973)"
@@ -650,7 +728,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-0-1)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89195">RF_WR_EN</tspan></text>
+         id="tspan1433">RF_WR_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,93.495611,44.698931)"
@@ -658,7 +736,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-0-3)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan89197">RF_EN</tspan></text>
+         id="tspan1435">RF_EN</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 122.66189,78.423279 V 77.409145"
@@ -697,6 +775,232 @@
          style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 48.118468,16.513898 2e-6,5.969064"
          id="path3233-3-6-0" />
+    </g>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 167.76242,37.287173 h 1.32936 l -0.66468,1.229658 z"
+       id="path2663-7-2-5" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 168.42709,31.318109 1e-5,5.969064"
+       id="path3233-3-6-6" />
+    <g
+       id="g49724-3-6"
+       transform="rotate(-90,108.07739,-15.949163)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 47.45379,22.482962 h 1.32936 l -0.664679,1.229658 z"
+         id="path2663-7-2-20-0" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 48.118468,16.513898 2e-6,5.969064"
+         id="path3233-3-6-2-7" />
+    </g>
+    <g
+       id="g49724-3-0-4"
+       transform="rotate(-90,112.52651,-11.450032)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 47.45379,22.482962 h 1.32936 l -0.664679,1.229658 z"
+         id="path2663-7-2-20-3-3" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 48.118468,16.513898 2e-6,5.969064"
+         id="path3233-3-6-2-4-9" />
+    </g>
+    <g
+       id="g49724-5-9"
+       transform="translate(113.06793,14.75766)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 47.45379,22.482962 h 1.32936 l -0.664679,1.229658 z"
+         id="path2663-7-2-2-1" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 48.118468,16.513898 2e-6,5.969064"
+         id="path3233-3-6-5-7" />
+    </g>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.093105;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect1448-9"
+       width="33.931755"
+       height="35.580265"
+       x="147.84087"
+       y="38.621983" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 181.77263,63.12926 5.96906,-2e-6"
+       id="path3233-4-2-41" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 181.76821,71.718005 5.96906,-2e-6"
+       id="path3233-4-2-9-8" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 181.77263,54.266606 5.96906,-2e-6"
+       id="path3233-4-2-0-9" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05237265,0,0,0.05237265,145.74898,27.611592)"
+       id="text14613-4-2-5"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-9)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1437">NPC_IN</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05237265,0,0,0.05237265,145.86011,36.549536)"
+       id="text14613-4-2-6-18"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-8)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1439">PORT_A</tspan></text>
+    <g
+       id="g49724-3-0-3-9"
+       transform="rotate(-90,115.9169,-8.0596485)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 47.45379,22.482962 h 1.32936 l -0.664679,1.229658 z"
+         id="path2663-7-2-20-3-6-6" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 48.118468,16.513898 2e-6,5.969064"
+         id="path3233-3-6-2-4-1-6" />
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05237265,0,0,0.05237265,145.86011,43.330303)"
+       id="text14613-4-2-6-9-2"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-7-9)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1441">PORT_B</tspan></text>
+    <g
+       id="g49724-3-0-2-95"
+       transform="rotate(-90,120.28698,-3.6895625)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 47.45379,22.482962 h 1.32936 l -0.664679,1.229658 z"
+         id="path2663-7-2-20-3-5-2" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 48.118468,16.513898 2e-6,5.969064"
+         id="path3233-3-6-2-4-5-5" />
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05237265,0,0,0.05237265,145.74898,52.070475)"
+       id="text14613-4-2-6-1-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-76-5)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1443">IMM_IN</tspan></text>
+    <g
+       id="g49724-3-0-3-5-23"
+       transform="rotate(-90,121.90651,-2.0700375)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 47.45379,22.482962 h 1.32936 l -0.664679,1.229658 z"
+         id="path2663-7-2-20-3-6-7-8" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 48.118468,16.513898 2e-6,5.969064"
+         id="path3233-3-6-2-4-1-4-4" />
+    </g>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05237265,0,0,0.05237265,145.74898,55.309527)"
+       id="text14613-4-2-6-9-0-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-7-3-2)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1445">RD_FWD_IN</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05237265,0,0,0.05237265,168.47843,55.319844)"
+       id="text14613-4-2-6-9-0-2-9"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-1-4-7-3-3-2)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1447">RD_FWD_O</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05237265,0,0,0.05237265,168.75465,46.720784)"
+       id="text14613-5-44"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-3)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1449">DATA_MEM</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 181.77263,46.394828 5.96906,-2e-6"
+       id="path3233-4-2-2" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05237265,0,0,0.05237265,168.89911,29.996665)"
+       id="text14613-5-79"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-5)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1451">BRANCH_T</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.05237265,0,0,0.05237265,170.13543,37.868445)"
+       id="text14613-5-7-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-07-6)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1453">ALU_OUT</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0,-0.05237265,0.05237265,0,148.40859,51.355815)"
+       id="text14613-2-6-5-5"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-0-0-1)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1455">MUXB_SEL</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0,-0.05237265,0.05237265,0,152.02894,49.063985)"
+       id="text14613-2-6-0-4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-0-7-9)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1457">ALU_OP</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0,-0.05237265,0.05237265,0,144.78824,51.408202)"
+       id="text14613-2-6-2-9"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-0-3-8)"><tspan
+         x="56.25"
+         y="321.83515"
+         id="tspan1459">MUXA_SEL</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 179.42613,74.199618 H 178.412"
+       id="path31617-3-6" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;stroke-width:0.264583"
+       x="157.30319"
+       y="60.116264"
+       id="text41727-3"><tspan
+         sodipodi:role="line"
+         id="tspan41725-2"
+         style="stroke-width:0.264583"
+         x="157.30319"
+         y="60.116264">EX</tspan></text>
+    <g
+       id="g49724-7-8"
+       transform="translate(116.68828,14.757659)">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 47.45379,22.482962 h 1.32936 l -0.664679,1.229658 z"
+         id="path2663-7-2-3-0" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 48.118468,16.513898 2e-6,5.969064"
+         id="path3233-3-6-0-0" />
     </g>
   </g>
 </svg>

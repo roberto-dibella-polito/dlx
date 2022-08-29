@@ -79,7 +79,7 @@ begin
 			sge_out <= (others=>'0');
 		end if;
 		
-		-- SLE		: greater or equal
+		-- SLE		: less or equal
 		if( signed(PORT_A) <= signed(PORT_B) ) then
 			sle_out <= std_logic_vector(to_unsigned(1,DATA_SIZE));
 		else

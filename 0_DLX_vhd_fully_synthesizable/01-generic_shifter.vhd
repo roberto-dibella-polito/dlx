@@ -5,8 +5,6 @@ use IEEE.std_logic_unsigned.all;
 
 use WORK.all;
 
-
-
 entity SHIFTER_GENERIC is
 	generic(N: integer);
 	port(	

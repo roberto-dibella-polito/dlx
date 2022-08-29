@@ -71,7 +71,7 @@ architecture dlx_rtl of DLX is
     Clk                : in  std_logic;  -- Clock
     Rst                : in  std_logic;  -- Reset:Active-Low
     -- Instruction Register
-    IR_IN              : in  std_logic_vector(IR_SIZE - 1 downto 0);
+    --IR_IN              : in  std_logic_vector(IR_SIZE - 1 downto 0);
     -- IF Control Signal
     IR_LATCH_EN        : out std_logic;  -- Instruction Register Latch Enable
     NPC_LATCH_EN       : out std_logic;
@@ -141,23 +141,23 @@ architecture dlx_rtl of DLX is
     -- TO BE REMOVED AS SOON AS THE DATAPATH IS INSERTED!!!!!
     -- a proper connection must be made here if more than one
     -- instruction must be executed
-    PC_BUS <= (others => '0'); 
+    -- PC_BUS <= (others => '0'); 
 
 
     -- purpose: Instruction Register Process
     -- type   : sequential
     -- inputs : Clk, Rst, IRam_DOut, IR_LATCH_EN_i
     -- outputs: IR_IN_i
-    IR_P: process (Clk, Rst)
-    begin  -- process IR_P
-      if Rst = '0' then                 -- asynchronous reset (active low)
-        IR <= (others => '0');
-      elsif Clk'event and Clk = '1' then  -- rising clock edge
-        if (IR_LATCH_EN_i = '1') then
-          IR <= IRam_DOut;
-        end if;
-      end if;
-    end process IR_P;
+    --IR_P: process (Clk, Rst)
+    --begin  -- process IR_P
+    --  if Rst = '0' then                 -- asynchronous reset (active low)
+    --    IR <= (others => '0');
+    --  elsif Clk'event and Clk = '1' then  -- rising clock edge
+    --    if (IR_LATCH_EN_i = '1') then
+    --      IR <= IRam_DOut;
+    --    end if;
+    --  end if;
+    --end process IR_P;
     
     -- COMPLETE WITH CACHE TO CONNECT IRAM and DRAM in the testbench...
 	-- Need to connect THAT things designed by THEM, behavioral description
@@ -168,16 +168,16 @@ architecture dlx_rtl of DLX is
     -- type   : sequential
     -- inputs : Clk, Rst, PC_BUS
     -- outputs: IRam_Addr
-    PC_P: process (Clk, Rst)
-    begin  -- process PC_P
-      if Rst = '0' then                 -- asynchronous reset (active low)
-        PC <= (others => '0');
-      elsif Clk'event and Clk = '1' then  -- rising clock edge
-        if (PC_LATCH_EN_i = '1') then
-          PC <= PC_BUS;
-        end if;
-      end if;
-    end process PC_P;
+    --PC_P: process (Clk, Rst)
+    --begin  -- process PC_P
+    --  if Rst = '0' then                 -- asynchronous reset (active low)
+    --    PC <= (others => '0');
+    --  elsif Clk'event and Clk = '1' then  -- rising clock edge
+    --    if (PC_LATCH_EN_i = '1') then
+    --      PC <= PC_BUS;
+    --    end if;
+    --  end if;
+    --end process PC_P;
 	-- The output of this register has to be forwarded also to the datapath,
 	-- to be incremented
 
