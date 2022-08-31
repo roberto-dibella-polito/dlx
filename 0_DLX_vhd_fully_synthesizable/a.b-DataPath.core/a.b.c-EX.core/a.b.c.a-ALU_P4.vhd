@@ -52,8 +52,11 @@ architecture bhv of DLX_ALU is
 	signal adder_out, shifter_out						: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal and_out, or_out, xor_out, sge_out, sle_out, sne_out, seq_out, sra_out,
 		sgeu_out, sgt_out, sgtu_out, slt_out, sltu_out 	: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal x0	: std_logic_vector(DATA_SIZE-1 downto 0);
 	
 begin
+	
+	x0 <= (others=>'0');
 	
 	adder: P4 generic map(Nbit => DATA_SIZE)
 	port map(

@@ -1,3 +1,4 @@
+
 library ieee;
 use ieee.std_logic_1164.all;
 
@@ -20,7 +21,6 @@ package myTypes is
 	constant INSTR_SIZE		: integer := 32;
 	constant DATA_SIZE		: integer := 32;
 	constant PC_SIZE		: integer := 32;
-	
 	
 	constant OP_SIZE		: integer := 6;
 	constant FUNC_FULL_SIZE	: integer := 11;

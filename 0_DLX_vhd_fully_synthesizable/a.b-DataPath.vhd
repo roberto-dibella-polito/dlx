@@ -1,5 +1,7 @@
 -- DLX
--- Datapath
+-- Datapath / PIPELINED
+-- The usage of the pipeline drastically changes the control signals,
+-- removing the LATCH_EN signals.
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -14,17 +16,18 @@ entity DLX_DP is
 		CLK				: in std_logic;
 		RST				: in std_logic;	-- Active HIGH
 		
+		-- Pipeline register enable and clear signal
+		PIPE_LATCH_EN	: in std_logic;
+		PIPE_CLEAR_n	: in std_logic
+		
 		-- Instruction Memory interface
 		IRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
 		IRAM_DATA		: in std_logic_vector(DATA_SIZE-1 downto 0);
 		
-		-- IF control signals
-		NPC_SEL			: in std_logic;
-		
 		-- IF/ID pipeline registers control
 		IR_LATCH_EN		: in std_logic;
 		NPC_LATCH_EN	: in std_logic;
-		
+
 		-- ID control signals
 		-- Windowed register file
 		CALL			: in std_logic;
@@ -34,14 +37,14 @@ entity DLX_DP is
 		RF_EN			: in std_logic;
 		RS1_EN			: in std_logic;
 		RS2_EN			: in std_logic;
-		RF_WR_EN		: in std_logic;
+		--RF_WR_EN		: in std_logic;
 		
 		IMM_ISOFF		: in std_logic;	
 		
 		-- ID/EX control signals
-		RegA_LATCH_EN	: in std_logic;  -- Register A Latch Enable
-		RegB_LATCH_EN	: in std_logic;  -- Register B Latch Enable
-		RegIMM_LATCH_EN	: in std_logic;  -- Immediate Register Latch Enable
+		--RegA_LATCH_EN	: in std_logic;  -- Register A Latch Enable
+		--RegB_LATCH_EN	: in std_logic;  -- Register B Latch Enable
+		--RegIMM_LATCH_EN	: in std_logic;  -- Immediate Register Latch Enable
 		
 		-- EX control signals
 		MUXA_SEL		: in std_logic;
@@ -50,32 +53,21 @@ entity DLX_DP is
 		ALU_OP			: in aluOp;
 		
 		-- EX/MEM Pipeline registers
-		ALU_OUTREG_EN	: in std_logic;
-		EQ_COND			: in std_logic;
+		--ALU_OUTREG_EN	: in std_logic;
+		--EQ_COND			: in std_logic;
 		
-		-- DRAM interface
-		--DRAM_ISSUE		: out std_logic;
-		--DRAM_READNOTWRITE	: out std_logic;
-		--DRAM_READY		: in std_logic;
+		-- DRAM Data Interface
 		DRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
 		DRAM_DATA		: inout std_logic_vector(2*DATA_SIZE-1 downto 0);
 		
 		-- MEM control signals
-		LMD_LATCH_EN	: in std_logic;  -- LMD Register Latch Enable
-		JUMP_EN			: in std_logic;  -- JUMP Enable Signal for PC input MUX
-		PC_LATCH_EN		: in std_logic;
-		
-		--DRAM_WE			: in std_logic;  -- Data RAM Write Enable
-		--DMEM_READY		: out std_logic;
-		--DMEM_ISSUE		: in std_logic;
+		--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
+		JUMP_EN			: in std_logic;	-- JUMP Enable Signal for PC input MUX
+		PC_LATCH_EN		: in std_logic;	-- Pipelined version -> with no stalls, always active
 		
 		-- WB Control signals
 		WB_MUX_SEL		: out std_logic;  -- Write Back MUX Sel
 		RF_WE			: out std_logic;  -- Register File Write Enable
-		
-		-- Pipeline register enable and clear signal
-		PIPE_LATCH_EN	: in std_logic;
-		PIPE_CLEAR_n	: in std_logic
 
 	);
 end DLX_DP;
@@ -273,7 +265,7 @@ begin
 		RF_EN		=> RF_EN,
 		RS1_EN		=> RS1_EN,
 		RS2_EN		=> RS2_EN,
-		RF_WR_EN	=> RF_WR_EN,
+		RF_WR_EN	=> RF_WE,
 		
 		IMM_ISOFF	=> IMM_ISOFF,
 		
