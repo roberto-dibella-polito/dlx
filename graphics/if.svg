@@ -33,10 +33,10 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-intersection-paths="true"
      inkscape:zoom="1.4142136"
-     inkscape:cx="202.58609"
+     inkscape:cx="374.76658"
      inkscape:cy="145.31044"
-     inkscape:window-width="1280"
-     inkscape:window-height="961"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -400,15 +400,15 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9587">NPC_ALU</tspan></text>
+         id="tspan1299">NPC_ALU</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,108.22191,0.27063276)"
        id="text14613-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-8)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-8);stroke-width:3.81878709;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9589">NPC_ALU</tspan></text>
+         id="tspan1301">NPC_ALU</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,30.508284,27.81933)"
@@ -416,15 +416,15 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9591">NPC_OUT</tspan></text>
+         id="tspan1303">NPC_OUT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,115.70789,14.936753)"
        id="text14613-4-0"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-3)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-11-3);stroke-width:3.81878709;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9593">NPC_OUT</tspan></text>
+         id="tspan1305">NPC_OUT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,33.560253,39.328354)"
@@ -432,23 +432,23 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9595">INSTR</tspan></text>
+         id="tspan1307">INSTR</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,118.80985,36.244903)"
        id="text14613-5-8"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-8)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-8);stroke-width:3.81878709;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9597">INSTR</tspan></text>
+         id="tspan1309">INSTR</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.07225008,0,0,0.07225008,69.619932,32.032529)"
        id="text14613-5-1"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-7);stroke-width:2.76816;stroke-miterlimit:4;stroke-dasharray:none"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-13-7);stroke-width:2.76816302;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9599">PC</tspan></text>
+         id="tspan1311">PC</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,9.5414826,43.058539)"
@@ -456,15 +456,15 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-1)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9601">NPC_SEL</tspan></text>
+         id="tspan1313">NPC_SEL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,87.888652,0.27063276)"
        id="text14613-8-5"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-1-0)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-1-0);stroke-width:3.81878709;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9603">NPC_SEL</tspan></text>
+         id="tspan1315">NPC_SEL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,1.3802016,47.189206)"
@@ -472,15 +472,15 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9605">PC_LATCH_EN</tspan></text>
+         id="tspan1317">PC_LATCH_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.05237265,0,0,0.05237265,73.665459,0.27063276)"
        id="text14613-2-6"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-1)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-1);stroke-width:3.81878709;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9607">PC_LATCH_EN</tspan></text>
+         id="tspan1319">PC_LATCH_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,1.3802016,76.50188)"
@@ -488,16 +488,16 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-5)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9609">IRAM_ADDRESS
+         id="tspan1321">IRAM_ADDRESS
 </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,77.331319,70.257117)"
        id="text14613-2-7-4"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-5-2)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-5-2);stroke-width:3.81878709;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9611">IRAM_ADDRESS
+         id="tspan1323">IRAM_ADDRESS
 </tspan></text>
     <text
        xml:space="preserve"
@@ -506,16 +506,16 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-5-6)"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9613">IRAM_DATA
+         id="tspan1325">IRAM_DATA
 </tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05237265,0.05237265,0,95.826362,70.257117)"
        id="text14613-2-7-9-5"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-5-6-6)"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30.3116px;line-height:1.25;font-family:Typold;-inkscape-font-specification:'Typold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect14615-0-5-6-6);stroke-width:3.81878709;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan9615">IRAM_DATA
+         id="tspan1327">IRAM_DATA
 </tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -544,18 +544,18 @@
        xml:space="preserve"
        transform="matrix(0.08728728,0,0,0.08728728,73.557017,34.761094)"
        id="text12122-7"
-       style="font-size:40px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;white-space:pre;shape-inside:url(#rect12124-6);stroke-width:2.29128;stroke-miterlimit:4;stroke-dasharray:none"><tspan
+       style="font-size:40px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;white-space:pre;shape-inside:url(#rect12124-6);stroke-width:2.29128459;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="233.08203"
          y="51.732422"
-         id="tspan9617">+</tspan></text>
+         id="tspan1329">+</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.08728728,0,0,0.08728728,60.666927,29.256171)"
        id="text12122-7-9"
-       style="font-size:40px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;white-space:pre;shape-inside:url(#rect12124-6-8);stroke-width:2.29128;stroke-miterlimit:4;stroke-dasharray:none"><tspan
+       style="font-size:40px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;white-space:pre;shape-inside:url(#rect12124-6-8);stroke-width:2.29128459;stroke-miterlimit:4;stroke-dasharray:none"><tspan
          x="233.08203"
          y="51.732422"
-         id="tspan9619">4</tspan></text>
+         id="tspan1331">4</tspan></text>
     <g
        id="g3573-3-1"
        transform="matrix(0,1,1,0,13.403378,-29.082277)"
@@ -670,11 +670,11 @@
        d="m 120.77685,54.518639 h -11.3172 v 12.629004"
        id="path8592" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 120.77684,33.32935 h 5.72083"
        id="path9021" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 120.77685,54.518639 h 5.72082"
        id="path9136" />
   </g>

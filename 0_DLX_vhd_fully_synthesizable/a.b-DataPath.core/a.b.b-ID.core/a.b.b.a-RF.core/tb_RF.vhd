@@ -73,8 +73,6 @@ begin
   -- M = 4 Globals
   -- N = 2 Number of IN/LOC/OUT registers
   -- F = 4 Windows
-
-
   
   -- PHYSICAL RF                       ACTIVE WINDOW
   --  _________                          _________

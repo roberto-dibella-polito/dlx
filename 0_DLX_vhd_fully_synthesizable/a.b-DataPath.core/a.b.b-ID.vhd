@@ -77,9 +77,13 @@ architecture structure of DLX_ID is
 			OUT2	: OUT std_logic_vector(Nbit-1 downto 0));
 	end component;
 	
-begin
+	signal x0, out1_i, out2_i				: std_logic_vector(Nbit-1 downto 0);
+	signal addr_wRS1, addr_wRS2, addr_wRD	: std_logic_vector(NbitAdd-1 downto 0);
+	signal aRS1_iszero_n, aRS2_iszero_n		: std_logic;
 	
-	-- Sign extender
+begin
+		
+	-- SIGN EXTENDER
 	-- It takes 26 bits: if the instruction is a J-type, the
 	-- flag is rised and the right immediate is selected.
 	imm_or_off: process( IMM_ISOFF, IMM_I )
@@ -93,6 +97,26 @@ begin
 	
 	NPC_FWD_O	<= NPC_FWD_I;
 	RD_FWD_O	<= RD_FWD_I;
+	
+	x0 <= (others=>'0');
+	
+	-- WINDOWED REGISTER FILE FIX
+	-- The current version of RF cannot use x0 as fixed register.
+	-- An external register is added, fixed to 0, and selected when
+	-- the ADDR_RSX = 0.
+	-- If ADDR_RSX /= 0, the RF is addressed using ADDR_RSX-1.
+	-- So, the registers used are RF(0) to RF(30). 
+	-- RF(31) is currently not used.
+	
+	aRS1_iszero_n	<= '0' when( unsigned(ADDR_RS1) = 0 ) else '1';
+	aRS2_iszero_n	<= '0' when( unsigned(ADDR_RS2) = 0 ) else '1';
+	
+	addr_wRS1	<= std_logic_vector(unsigned(ADDR_RS1)-1);
+	addr_wRS2	<= std_logic_vector(unsigned(ADDR_RS2)-1);
+	addr_wRD	<= std_logic_vector(unsigned(ADDR_RD)-1);
+	
+	OUT1	<= out1_i when( aRS1_iszero_n = '1' ) else x0;
+	OUT2	<= out2_i when( aRS2_iszero_n = '1' ) else x0;
 	
 	regfile: RF generic map (
 		Nbit	=> Nbit,
@@ -110,11 +134,12 @@ begin
 		RD1		=> RS1_EN,
 		RD2		=> RS2_EN,
 		WR		=> RF_WR_EN,
-		ADD_WR	=> ADDR_WR,
-		ADD_RD1	=> ADDR_RS1,
-		ADD_RD2	=> ADDR_RS2,
+		ADD_WR	=> addr_wRD,
+		ADD_RD1	=> addr_wRS1,
+		ADD_RD2	=> addr_wRS2,
 		DATAIN	=> DATAIN,
-		OUT1	=> OUT1,
-		OUT2	=> OUT2
+		OUT1	=> out1_i,
+		OUT2	=> out2_i
 	);
+
 end structure;

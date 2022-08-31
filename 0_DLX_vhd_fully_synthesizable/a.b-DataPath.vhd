@@ -73,7 +73,8 @@ entity DLX_DP is
 		WB_MUX_SEL		: out std_logic;  -- Write Back MUX Sel
 		RF_WE			: out std_logic;  -- Register File Write Enable
 		
-		-- Pipeline register clear signal
+		-- Pipeline register enable and clear signal
+		PIPE_LATCH_EN	: in std_logic;
 		PIPE_CLEAR_n	: in std_logic
 
 	);
@@ -182,7 +183,7 @@ architecture structure of DLX_DP is
 	-- ID/EX signals
 	signal rf_out1_id_o, rf_out2_id_o, rf_out1_ex_i, rf_out2_ex_i	: std_logic_vector(DATA_SIZE-1 downto 0);			-- 
 	signal imm_id_o, imm_ex_i			: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal rd_id_o, rd_ex_i				: std_logic_vector(RX_SIZE-1 downto 0);
+	signal rd_fwd_id_o, rd__fwd_ex_i	: std_logic_vector(RX_SIZE-1 downto 0);
 	signal npc_id_o, npc_ex_i			: std_logic_vector(PC_SIZE-1 downto 0);	
 
 	signal ir_reset						: std_logic_vector(INSTR_SIZE-OP_SIZE-1 downto 0);
@@ -230,17 +231,19 @@ begin
 			npc_id_i <= (others=>'0');
 			
 		elsif(CLK'event and CLK = '1') then
-
+			
+			if( PIPE_LATCH_EN <= '1' ) then
 			-- Instruction Register
-			if(IR_LATCH_EN = '1') then
+			--if(IR_LATCH_EN = '1') then
 				ir <= instr_if_o;
-			end if;
+			--end if;
 				
 			-- NPC register
-			if(NPC_LATCH_EN = '1') then
+			--if(NPC_LATCH_EN = '1') then	
 				npc_id_i <= npc_if_o;
+			--end if;
+			
 			end if;
-					
 		end if;
 	end process;
 	
@@ -290,7 +293,9 @@ begin
 	);
 	
 	-- ID/EX REGISTERS
-	-- Blocking and flushing mechanisms not yet implemented
+	-- Blocking mechanisms not yet implemented
+	-- Flushing mechanis: synchronous reset PIPE_CLEAR_n
+	
 	id_ex_pipe: process(CLK, RST)
 	begin
 		if( RST = '1' ) then
@@ -299,7 +304,7 @@ begin
 			rf_out2_ex_i	<= (others=>'0');
 			imm_ex_i		<= (others=>'0');
 			npc_ex_i		<= (others=>'0');
-			rd_ex_i 		<= (others=>'0');
+			rd_fwd_ex_i 	<= (others=>'0');
 			
 		elsif(CLK'event and CLK = '1') then
 			
@@ -308,22 +313,23 @@ begin
 				rf_out2_ex_i	<= (others=>'0');
 				imm_ex_i		<= (others=>'0');
 				npc_ex_i		<= (others=>'0');
-				rd_ex_i 		<= (others=>'0');
-			else
+				rd_fwd_ex_i		<= (others=>'0');
+			elsif( PIPE_LATCH_EN <= '1' ) then
+						
 				-- Operands registers Register
-				if(RegA_LATCH_EN = '1') then
+				--if(RegA_LATCH_EN = '1') then
 					rf_out1_ex_i <= rf_out1_id_o;
-				end if;
+				--end if;
 			
-				if(RegB_LATCH_EN = '1') then
+				--if(RegB_LATCH_EN = '1') then
 					rf_out2_ex_i <= rf_out2_id_o;
-				end if;
+				--end if;
 			
-				if(RegIMM_LATCH_EN = '1') then
+				--if(RegIMM_LATCH_EN = '1') then
 					imm_ex_i <= imm_id_o;
-				end if;
+				--end if;
 			
-				rd_ex_i <= rd_id_o;
+				rd_fwd_ex_i <= rd_fwd_id_o;
 				npc_ex_i <= npc_id_o;
 			end if;
 		
@@ -373,11 +379,11 @@ begin
 				rd_fwd_mem_i	<= (others=>'0');
 				branch_t_mem_i	<= '0';
 			
-			else
+			elsif( PIPE_LATCH_EN <= '1') then
 				-- Operands registers Register
-				if(ALU_OUTREG_EN = '1') then
+				--if(ALU_OUTREG_EN = '1') then
 					alu_out_mem_i <= alu_out_ex_o;
-				end if;
+				--end if;
 			
 				data_mem_mem_i	<= data_mem_ex_o;
 				rd_fwd_mem_i	<= rd_fwd_ex_o;
@@ -417,12 +423,12 @@ begin
 				data_mem_wb_i	<= (others=>'0');
 				rd_fwd_wb_i		<= (others=>'0');
 			
-			else
+			elsif( PIPE_LATCH_EN = '1' ) then
 			
 				-- LMD register
-				if(LMD_LATCH_EN = '1') then
+				--if(LMD_LATCH_EN = '1') then
 					data_mem_wb_i <= data_mem_mem_o;
-				end if;
+				--end if;
 				
 				alu_out_wb_i	<= alu_out_mem_o;
 				rd_fwd_wb_i		<= rd_fwd_mem_o;

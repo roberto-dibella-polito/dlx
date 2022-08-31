@@ -6,6 +6,36 @@ use work.rf_constants.all;
 use IEEE.numeric_std.all;
 use WORK.all;
 
+-- Windowed Register File example
+	
+-- Constants:
+-- M = 4 Globals
+-- N = 2 Number of IN/LOC/OUT registers
+-- F = 4 Windows
+  
+-- PHYSICAL RF                       ACTIVE WINDOW
+--  _________                          _________
+-- |  IN/OUT | <- 0 - W0              |   IN    | <- 0
+-- |_________| <- 1                   |_________| <- 1
+-- |   LOC   | <- 2                   |   LOC   | <- 2 
+-- |_________| <- 3                   |_________| <- 3 
+-- |  IN/OUT | <- 4 - W1              |   OUT   | <- 4             
+-- |_________| <- 5                   |_________| <- 5 
+-- |   LOC   | <- 6                   | GLOBALS | <- 6
+-- |_________| <- 7                   |         | <- 7
+-- |  IN/OUT | <- 8 - W2              |         | <- 8   
+-- |_________| <- 9                   |_________| <- 9
+-- |   LOC   | <- 10 
+-- |_________| <- 11
+-- |  IN/OUT | <- 12 - W3
+-- |_________| <- 13 
+-- |   LOC   | <- 14
+-- |_________| <- 15
+-- | GLOBALS | <- 16 
+-- |         | <- 17
+-- |         | <- 18
+-- |_________| <- 19
+
 
 entity RF is
   generic (Nbit : integer := 64;  -- Parallelism
