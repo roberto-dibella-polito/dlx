@@ -16,17 +16,24 @@ entity DLX_DP is
 		CLK				: in std_logic;
 		RST				: in std_logic;	-- Active HIGH
 		
-		-- Pipeline register enable and clear signal
-		PIPE_LATCH_EN	: in std_logic;
-		PIPE_CLEAR_n	: in std_logic
+		-- Pipeline registers enable and clear signal
+		PIPE_IF_ID_EN	: in std_logic;
+		PIPE_ID_EX_EN	: in std_logic;
+		PIPE_EX_MEM_EN	: in std_logic;
+		PIPE_MEM_WB_EN	: in std_logic;
+		
+		PIPE_CLEAR_n	: in std_logic;
 		
 		-- Instruction Memory interface
 		IRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
 		IRAM_DATA		: in std_logic_vector(DATA_SIZE-1 downto 0);
 		
-		-- IF/ID pipeline registers control
-		IR_LATCH_EN		: in std_logic;
-		NPC_LATCH_EN	: in std_logic;
+		-- Instruction port, forwarded to CU
+		INSTR			: out std_logic_vector(DATA_SIZE-1 downto 0);	
+		
+		-- IF/ID pipeline registers control -> PIPE_IF_ID used
+		--IR_LATCH_EN		: in std_logic;
+		--NPC_LATCH_EN	: in std_logic;
 
 		-- ID control signals
 		-- Windowed register file
@@ -211,6 +218,8 @@ begin
 		PC_LATCH_EN		=> PC_LATCH_EN
 	);
 	
+	INSTR <= instr_if_o;
+	
 	-- IF/ID REGISTERS
 	
 	ir_reset <= (others=>'0');
@@ -224,7 +233,7 @@ begin
 			
 		elsif(CLK'event and CLK = '1') then
 			
-			if( PIPE_LATCH_EN <= '1' ) then
+			if( PIPE_IF_ID_EN <= '1' ) then
 			-- Instruction Register
 			--if(IR_LATCH_EN = '1') then
 				ir <= instr_if_o;
@@ -306,7 +315,7 @@ begin
 				imm_ex_i		<= (others=>'0');
 				npc_ex_i		<= (others=>'0');
 				rd_fwd_ex_i		<= (others=>'0');
-			elsif( PIPE_LATCH_EN <= '1' ) then
+			elsif( PIPE_ID_EX_EN <= '1' ) then
 						
 				-- Operands registers Register
 				--if(RegA_LATCH_EN = '1') then
@@ -371,7 +380,7 @@ begin
 				rd_fwd_mem_i	<= (others=>'0');
 				branch_t_mem_i	<= '0';
 			
-			elsif( PIPE_LATCH_EN <= '1') then
+			elsif( PIPE_EX_MEM_EN <= '1') then
 				-- Operands registers Register
 				--if(ALU_OUTREG_EN = '1') then
 					alu_out_mem_i <= alu_out_ex_o;
@@ -415,7 +424,7 @@ begin
 				data_mem_wb_i	<= (others=>'0');
 				rd_fwd_wb_i		<= (others=>'0');
 			
-			elsif( PIPE_LATCH_EN = '1' ) then
+			elsif( PIPE_MEM_WB_EN = '1' ) then
 			
 				-- LMD register
 				--if(LMD_LATCH_EN = '1') then

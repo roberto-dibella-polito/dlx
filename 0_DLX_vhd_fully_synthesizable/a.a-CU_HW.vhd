@@ -22,15 +22,20 @@ entity dlx_cu is
     IR_IN				: in  std_logic_vector(IR_SIZE - 1 downto 0);
     
 	-- Pipeline control signals (ID, EX, MEM)
-	PIPE_LATCH_EN		: out std_logic;
+	PIPE_IF_ID_EN		: out std_logic;
+	PIPE_ID_EX_EN		: out std_logic;
+	PIPE_EX_MEM_EN		: out std_logic;
+	PIPE_MEM_WB_EN		: out std_logic;
+	
 	PIPE_CLEAR_n		: out std_logic;
     
 	-- IF Control Signal
-    IR_LATCH_EN			: out std_logic;  -- Instruction Register Latch Enable
-    NPC_LATCH_EN		: out std_logic;	 -- NextProgramCounter Register Latch Enable
+	-- Controlled by PIPE_IF_ID_EN
+    --IR_LATCH_EN			: out std_logic;  -- Instruction Register Latch Enable
+    --NPC_LATCH_EN		: out std_logic;	 -- NextProgramCounter Register Latch Enable
 	
 	-- ID Control Signals
-	-- Not used -> Controlled by Pipeline
+	-- Not used -> Controlled by PIPE_ID_EX_EN
     --RegA_LATCH_EN      : out std_logic;  -- Register A Latch Enable
     --RegB_LATCH_EN      : out std_logic;  -- Register B Latch Enable
     --RegIMM_LATCH_EN    : out std_logic;  -- Immediate Register Latch Enable
@@ -48,6 +53,8 @@ entity dlx_cu is
     MUXB_SEL           	: out std_logic;  	-- MUX-B Sel
     BRANCH_T			: in std_logic;
 	ALU_OP				: out aluOp;		-- FUNC field
+	
+	-- Controlled by PIPE_EX_MEM_EN
 	--ALU_OUTREG_EN      : out std_logic;  -- ALU Output Register Enable
     --EQ_COND            : out std_logic;  -- Branch if (not) Equal to Zero
     
@@ -135,8 +142,8 @@ architecture dlx_cu_hw of dlx_cu is
 								not_implemented,	-- 0x39
 								not_implemented,	-- 0x3A	SLTUI
 								not_implemented,	-- 0x3B	SGTUI
-								not_implemented,	-- 0x3C	SGEUI
-								not_implemented,	-- 0x3D
+								not_implemented,	-- 0x3C	
+								not_implemented,	-- 0x3D	SGEUI
 								not_implemented,	-- 0x3E
 								not_implemented);	-- 0x3F
 													
@@ -163,36 +170,36 @@ architecture dlx_cu_hw of dlx_cu is
  
 begin  -- dlx_cu_rtl
 
-  IR_opcode(5 downto 0) <= IR_IN(31 downto 26);
-  IR_func(10 downto 0)  <= IR_IN(FUNC_SIZE - 1 downto 0);
+	IR_opcode(5 downto 0) <= IR_IN(31 downto 26);
+	IR_func(10 downto 0)  <= IR_IN(FUNC_SIZE - 1 downto 0);
 
-  cw <= cw_mem(conv_integer(IR_opcode));
+	cw <= cw_mem(conv_integer(IR_opcode));
 
+	-- Control Signals forwarded to output
+	-- stage one control signals
+	--IR_LATCH_EN  <= cw1(CW_SIZE - 1);
+	--NPC_LATCH_EN <= cw1(CW_SIZE - 2);
 
-  -- stage one control signals
-  IR_LATCH_EN  <= cw1(CW_SIZE - 1);
-  NPC_LATCH_EN <= cw1(CW_SIZE - 2);
-  
-  -- stage two control signals
-  RegA_LATCH_EN   <= cw2(CW_SIZE - 3);
-  RegB_LATCH_EN   <= cw2(CW_SIZE - 4);
-  RegIMM_LATCH_EN <= cw2(CW_SIZE - 5);
-  
-  -- stage three control signals
-  MUXA_SEL      <= cw3(CW_SIZE - 6);
-  MUXB_SEL      <= cw3(CW_SIZE - 7);
-  ALU_OUTREG_EN <= cw3(CW_SIZE - 8);
-  EQ_COND       <= cw3(CW_SIZE - 9);
-  
-  -- stage four control signals
-  DRAM_WE      <= cw4(CW_SIZE - 10);
-  LMD_LATCH_EN <= cw4(CW_SIZE - 11);
-  JUMP_EN      <= cw4(CW_SIZE - 12);
-  PC_LATCH_EN  <= cw4(CW_SIZE - 13);
-  
-  -- stage five control signals
-  WB_MUX_SEL <= cw5(CW_SIZE - 14);
-  RF_WE      <= cw5(CW_SIZE - 15);
+	-- stage two control signals
+	RegA_LATCH_EN   <= cw2(CW_SIZE - 3);
+	RegB_LATCH_EN   <= cw2(CW_SIZE - 4);
+	RegIMM_LATCH_EN <= cw2(CW_SIZE - 5);
+
+	-- stage three control signals
+	MUXA_SEL      <= cw3(CW_SIZE - 6);
+	MUXB_SEL      <= cw3(CW_SIZE - 7);
+	ALU_OUTREG_EN <= cw3(CW_SIZE - 8);
+	EQ_COND       <= cw3(CW_SIZE - 9);
+
+	-- stage four control signals
+	DRAM_WE      <= cw4(CW_SIZE - 10);
+	LMD_LATCH_EN <= cw4(CW_SIZE - 11);
+	JUMP_EN      <= cw4(CW_SIZE - 12);
+	PC_LATCH_EN  <= cw4(CW_SIZE - 13);
+
+	-- stage five control signals
+	WB_MUX_SEL <= cw5(CW_SIZE - 14);
+	RF_WE      <= cw5(CW_SIZE - 15);
 
 
   -- process to pipeline control words
