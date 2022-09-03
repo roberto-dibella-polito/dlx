@@ -31,8 +31,9 @@ package myTypes is
 	
 	-- R-type instruction -> usage of ALU
 	-- 0x00
-	constant RR_OP		: std_logic_vector(OP_SIZE-1 downto 0) := (others=>'0');
-	
+	constant RR_OP		: std_logic_vector(OP_SIZE-1 downto 0) := (others=>'0');	
+
+
 	-- Register-Register instructions identified by the FUNC field
 	-- MANDATORY INSTRUCTIONS
 	-- ALU instruction -> OPCODE = 0x00

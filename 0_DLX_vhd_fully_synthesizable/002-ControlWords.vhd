@@ -19,7 +19,7 @@ package DLX_ControlWords is
 	-- 12	pipe_flush_n
 
 	constant uC_MEM_SIZE	: integer := 64;
-	constant CW_SIZE		: integer := 12;
+	constant CW_SIZE		: integer := 13;
 	
 	constant RR_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1110000010111";	-- Register-Register control word
 	constant RI_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1100010010111";

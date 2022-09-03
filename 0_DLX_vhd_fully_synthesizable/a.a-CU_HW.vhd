@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.std_logic_arith.all;
 use work.myTypes.all;
+use work.DLX_ControlWords.all;
 --use ieee.numeric_std.all;
 --use work.all;
 
@@ -17,7 +18,7 @@ entity dlx_cu is
 
 	port (
 		Clk					: in  std_logic;	-- Clock
-		Rst_n				: in  std_logic;	-- Reset:Active-Low
+		Rst					: in  std_logic;	-- Reset:Active-High
 
 		-- Instruction Register
 		IR_IN				: in  std_logic_vector(IR_SIZE - 1 downto 0);
@@ -210,7 +211,7 @@ begin  -- dlx_cu_rtl
 	-- process to pipeline control words
 	CW_PIPE: process (Clk, Rst)
 	begin  -- process Clk
-		if Rst = '0' then                   -- asynchronous reset (active low)
+		if Rst = '1' then                   -- asynchronous reset (active low)
 			cw1 <= (others => '0');
 			cw2 <= (others => '0');
 			cw3 <= (others => '0');
@@ -218,7 +219,6 @@ begin  -- dlx_cu_rtl
 			--cw5 <= (others => '0');
 			aluOpcode1 <= NOP;
 			aluOpcode2 <= NOP;
-			aluOpcode3 <= NOP;
 		elsif Clk'event and Clk = '1' then  -- rising clock edge
 			cw1 <= cw;
 			cw2 <= cw1(CW_SIZE - 1 - 4 downto 0);
@@ -231,7 +231,7 @@ begin  -- dlx_cu_rtl
 		end if;
 	end process CW_PIPE;
 
-	ALU_OPCODE <= aluOpcode2;
+	ALU_OP <= aluOpcode2;
 
 	-- purpose: Generation of ALU OpCode
 	-- type   : combinational
@@ -277,9 +277,9 @@ begin  -- dlx_cu_rtl
 			when SLLI_OP	=> aluOpcode_i <= SLL_O;
 			when NOP_OP		=> aluOpcode_i <= NOP;
 			when SRLI_OP	=> aluOpcode_i <= SRL_O;
-			when SNEI_OP	=> aluOpcode_i <= SNEI;
-			when SLEI_OP	=> aluOpcode_i <= SLEI;
-			when SGEI_OP	=> aluOpcode_i <= SGEI;
+			when SNEI_OP	=> aluOpcode_i <= SNE;
+			when SLEI_OP	=> aluOpcode_i <= SLE;
+			when SGEI_OP	=> aluOpcode_i <= SGE;
 			when LW_OP		=> aluOpcode_i <= ADD;
 			when SW_OP		=> aluOpcode_i <= ADD;
 			when ADDUI_OP	=> aluOpcode_i <= NOP; -- TO BE VERIFIED
