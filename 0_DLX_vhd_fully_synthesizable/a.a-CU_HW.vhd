@@ -237,68 +237,130 @@ begin  -- dlx_cu_rtl
 	-- type   : combinational
 	-- inputs : IR_i
 	-- outputs: aluOpcode
+	--ALU_OP_CODE_P : process (IR_opcode, IR_func)
+	--begin  -- process ALU_OP_CODE_P
+	--	case IR_opcode is
+	--		-- case of R type requires analysis of FUNC
+	--		when RR_OP =>
+	--			case IR_func is
+	--				when ADD_FUNC 	=> aluOpcode_i <= ADD; 
+	--				when AND_FUNC 	=> aluOpcode_i <= AND_O; 
+	--				when OR_FUNC	=> aluOpcode_i <= OR_O; 
+	--				when SGE_FUNC	=> aluOpcode_i <= SGE;
+	--				when SLE_FUNC	=> aluOpcode_i <= SLE; 
+	--				when SLL_FUNC	=> aluOpcode_i <= SLL_O;
+	--				when SNE_FUNC	=> aluOpcode_i <= SNE; 
+	--				when SRL_FUNC	=> aluOpcode_i <= SRL_O;
+	--				when SUB_FUNC	=> aluOpcode_i <= SUB; 
+	--				when XOR_FUNC	=> aluOpcode_i <= XOR_O;
+	--				when ADDU_FUNC	=> aluOpcode_i <= ADDU;	-- for now 
+	--				when MULT_FUNC	=> aluOpcode_i <= MULT;	-- for now
+	--				when SEQ_FUNC	=> aluOpcode_i <= SEQ; 
+	--				when SGEU_FUNC	=> aluOpcode_i <= SGEU;
+	--				when SGT_FUNC	=> aluOpcode_i <= SGT; 
+	--				when SGTU_FUNC	=> aluOpcode_i <= SGTU;
+	--				when SLT_FUNC	=> aluOpcode_i <= SLT;
+	--				when SLTU_FUNC	=> aluOpcode_i <= SLTU; 
+	--				when SRA_FUNC	=> aluOpcode_i <= SRA_O;
+	--				when SUBU_FUNC	=> aluOpcode_i <= SUBU; 
+	--				when others		=> aluOpcode_i <= NOP;
+	--			end case;
+	--		when J_OP		=> aluOpcode_i <= NOP; -- j
+	--		when JAL_OP		=> aluOpcode_i <= NOP; -- jal
+	--		when BEQZ_OP	=> aluOpcode_i <= NOP;
+	--		when BNEZ_OP	=> aluOpcode_i <= NOP;
+	--		when ADDI_OP	=> aluOpcode_i <= ADD;
+	--		when SUBI_OP	=> aluOpcode_i <= SUB;
+	--		when ANDI_OP	=> aluOpcode_i <= AND_O;
+	--		when ORI_OP		=> aluOpcode_i <= OR_O;
+	--		when XORI_OP	=> aluOpcode_i <= XOR_O;
+	--		when SLLI_OP	=> aluOpcode_i <= SLL_O;
+	--		when NOP_OP		=> aluOpcode_i <= NOP;
+	--		when SRLI_OP	=> aluOpcode_i <= SRL_O;
+	--		when SNEI_OP	=> aluOpcode_i <= SNE;
+	--		when SLEI_OP	=> aluOpcode_i <= SLE;
+	--		when SGEI_OP	=> aluOpcode_i <= SGE;
+	--		when LW_OP		=> aluOpcode_i <= ADD;
+	--		when SW_OP		=> aluOpcode_i <= ADD;
+	--		when ADDUI_OP	=> aluOpcode_i <= NOP; -- TO BE VERIFIED
+	--		when JALR_OP	=> aluOpcode_i <= NOP; 
+	--		when JR_OP		=> aluOpcode_i <= NOP; 
+	--		when LBU_OP		=> aluOpcode_i <= NOP; 
+	--		when LHI_OP		=> aluOpcode_i <= NOP; 
+	--		when LHU_OP		=> aluOpcode_i <= NOP; 
+	--		when SB_OP		=> aluOpcode_i <= NOP; 
+	--		when SEQI_OP	=> aluOpcode_i <= NOP;
+	--		when SGEUI_OP	=> aluOpcode_i <= SGEU;
+	--		when SGTUI_OP	=> aluOpcode_i <= SGTU;
+	--		when SLTI_OP	=> aluOpcode_i <= SLT;
+	--		when SLTUI_OP	=> aluOpcode_i <= SLTU;
+	--		when SRAI_OP	=> aluOpcode_i <= SRA_O;
+	--		when SUBUI_OP	=> aluOpcode_i <= SUBU; 			
+	--		when others => aluOpcode_i <= NOP;
+	--	end case;
+	--end process ALU_OP_CODE_P;
+	
 	ALU_OP_CODE_P : process (IR_opcode, IR_func)
 	begin  -- process ALU_OP_CODE_P
-		case IR_opcode is
+		case conv_integer(unsigned(IR_opcode)) is
 			-- case of R type requires analysis of FUNC
-			when RR_OP =>
-				case IR_func is
-					when ADD_FUNC 	=> aluOpcode_i <= ADD; 
-					when AND_FUNC 	=> aluOpcode_i <= AND_O; 
-					when OR_FUNC	=> aluOpcode_i <= OR_O; 
-					when SGE_FUNC	=> aluOpcode_i <= SGE;
-					when SLE_FUNC	=> aluOpcode_i <= SLE; 
-					when SLL_FUNC	=> aluOpcode_i <= SLL_O;
-					when SNE_FUNC	=> aluOpcode_i <= SNE; 
-					when SRL_FUNC	=> aluOpcode_i <= SRL_O;
-					when SUB_FUNC	=> aluOpcode_i <= SUB; 
-					when XOR_FUNC	=> aluOpcode_i <= XOR_O;
-					when ADDU_FUNC	=> aluOpcode_i <= ADDU;	-- for now 
-					when MULT_FUNC	=> aluOpcode_i <= MULT;	-- for now
-					when SEQ_FUNC	=> aluOpcode_i <= SEQ; 
-					when SGEU_FUNC	=> aluOpcode_i <= SGEU;
-					when SGT_FUNC	=> aluOpcode_i <= SGT; 
-					when SGTU_FUNC	=> aluOpcode_i <= SGTU;
-					when SLT_FUNC	=> aluOpcode_i <= SLT;
-					when SLTU_FUNC	=> aluOpcode_i <= SLTU; 
-					when SRA_FUNC	=> aluOpcode_i <= SRA_O;
-					when SUBU_FUNC	=> aluOpcode_i <= SUBU; 
+			when 0 => -- Register-register instruction
+				case conv_integer(unsigned(IR_func)) is
+					when 32 => aluOpcode_i <= ADD; 		-- ADD
+					when 36 => aluOpcode_i <= AND_O; 	-- AND
+					when 37	=> aluOpcode_i <= OR_O; 	-- OR
+					when 45	=> aluOpcode_i <= SGE;		-- SGE
+					when 44	=> aluOpcode_i <= SLE;		-- SLE 
+					when 4	=> aluOpcode_i <= SLL_O;	-- SLL
+					when 41	=> aluOpcode_i <= SNE; 		-- SNE
+					when 6	=> aluOpcode_i <= SRL_O;	-- SRL
+					when 34	=> aluOpcode_i <= SUB;		-- SUB
+					when 38	=> aluOpcode_i <= XOR_O;	-- XOR
+					when 33	=> aluOpcode_i <= ADDU;	-- for now 
+					when 14	=> aluOpcode_i <= MULT;	-- for now
+					when 40	=> aluOpcode_i <= SEQ; 		-- SEQ
+					when 61	=> aluOpcode_i <= SGEU;		-- SGEU
+					when 43	=> aluOpcode_i <= SGT;		-- SGT 
+					when 59	=> aluOpcode_i <= SGTU;		-- SGTU
+					when 42	=> aluOpcode_i <= SLT;		-- SLT
+					when 58	=> aluOpcode_i <= SLTU; 	-- SLTU
+					when 7	=> aluOpcode_i <= SRA_O;	-- SRA
+					when 35	=> aluOpcode_i <= SUBU; 	-- SUBU
 					when others		=> aluOpcode_i <= NOP;
 				end case;
-			when J_OP		=> aluOpcode_i <= NOP; -- j
-			when JAL_OP		=> aluOpcode_i <= NOP; -- jal
-			when BEQZ_OP	=> aluOpcode_i <= NOP;
-			when BNEZ_OP	=> aluOpcode_i <= NOP;
-			when ADDI_OP	=> aluOpcode_i <= ADD;
-			when SUBI_OP	=> aluOpcode_i <= SUB;
-			when ANDI_OP	=> aluOpcode_i <= AND_O;
-			when ORI_OP		=> aluOpcode_i <= OR_O;
-			when XORI_OP	=> aluOpcode_i <= XOR_O;
-			when SLLI_OP	=> aluOpcode_i <= SLL_O;
-			when NOP_OP		=> aluOpcode_i <= NOP;
-			when SRLI_OP	=> aluOpcode_i <= SRL_O;
-			when SNEI_OP	=> aluOpcode_i <= SNE;
-			when SLEI_OP	=> aluOpcode_i <= SLE;
-			when SGEI_OP	=> aluOpcode_i <= SGE;
-			when LW_OP		=> aluOpcode_i <= ADD;
-			when SW_OP		=> aluOpcode_i <= ADD;
-			when ADDUI_OP	=> aluOpcode_i <= NOP; -- TO BE VERIFIED
-			when JALR_OP	=> aluOpcode_i <= NOP; 
-			when JR_OP		=> aluOpcode_i <= NOP; 
-			when LBU_OP		=> aluOpcode_i <= NOP; 
-			when LHI_OP		=> aluOpcode_i <= NOP; 
-			when LHU_OP		=> aluOpcode_i <= NOP; 
-			when SB_OP		=> aluOpcode_i <= NOP; 
-			when SEQI_OP	=> aluOpcode_i <= NOP;
-			when SGEUI_OP	=> aluOpcode_i <= SGEU;
-			when SGTUI_OP	=> aluOpcode_i <= SGTU;
-			when SLTI_OP	=> aluOpcode_i <= SLT;
-			when SLTUI_OP	=> aluOpcode_i <= SLTU;
-			when SRAI_OP	=> aluOpcode_i <= SRA_O;
-			when SUBUI_OP	=> aluOpcode_i <= SUBU; 			
+			when 2	=> aluOpcode_i <= NOP; 		-- J
+			when 3	=> aluOpcode_i <= NOP; 		-- JAL
+			when 4	=> aluOpcode_i <= NOP;		-- BEQZ
+			when 5	=> aluOpcode_i <= NOP;		-- BNEZ
+			when 8	=> aluOpcode_i <= ADD;		-- ADDI
+			when 10	=> aluOpcode_i <= SUB;		-- SUBI
+			when 12	=> aluOpcode_i <= AND_O;	-- ANDI
+			when 13	=> aluOpcode_i <= OR_O;		-- ORI
+			when 14	=> aluOpcode_i <= XOR_O;	-- XORI
+			when 20	=> aluOpcode_i <= SLL_O;	-- SLL
+			when 21	=> aluOpcode_i <= NOP;		-- NOP
+			when 22	=> aluOpcode_i <= SRL_O;	-- SRLI
+			when 25	=> aluOpcode_i <= SNE;		-- SNEI
+			when 28	=> aluOpcode_i <= SLE;		-- SLEI
+			when 29	=> aluOpcode_i <= SGE;		-- SGEI
+			when 35	=> aluOpcode_i <= ADD;		-- LW
+			when 43	=> aluOpcode_i <= ADD;		-- SW
+			when 9	=> aluOpcode_i <= NOP;		-- ADDU
+			when 19	=> aluOpcode_i <= NOP; 		-- JALR
+			when 18	=> aluOpcode_i <= NOP; 		-- JR
+			when 36	=> aluOpcode_i <= NOP; 		-- LBU
+			when 15	=> aluOpcode_i <= NOP; 		-- LHI
+			when 37	=> aluOpcode_i <= NOP; 		-- LHU
+			when 40	=> aluOpcode_i <= NOP; 		-- SB
+			when 24	=> aluOpcode_i <= NOP;		-- SEQI
+			when 61	=> aluOpcode_i <= SGEU;		-- SGEUI
+			when 59	=> aluOpcode_i <= SGTU;		-- SGTUI
+			when 26	=> aluOpcode_i <= SLT;		-- SLTI
+			when 58	=> aluOpcode_i <= SLTU;		-- SLTUI
+			when 23	=> aluOpcode_i <= SRA_O;	-- SRAI
+			when 11	=> aluOpcode_i <= SUBU; 	-- SUBU		
 			when others => aluOpcode_i <= NOP;
 		end case;
 	end process ALU_OP_CODE_P;
-
 
 end dlx_cu_hw;
