@@ -43,12 +43,16 @@ vcom -reportprogress 300 -work work ../../a.a-CU_HW.vhd
 vcom -reportprogress 300 -work work ../../a-DLX.vhd
 
 ############### TESTBENCH ###############################
-vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_ROMEM/romem.vhd
-vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_RWMEM/rwmem.vhd
+#vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_packages/rocache.vhd
+#vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_packages/rwcache.vhd
+vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem.vhd
+vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem.vhd
 vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_TOP_DLX.vhd
 
 vsim -t 100ps work.DLX_TestBench
 add wave *
-
+add wave -group "IF" sim:/dlx_testbench/UUT/dp/if_stage/*
+add wave -group "IRAM" sim:/dlx_testbench/IRAM/*
+add wave -group "Control Unit" sim:/dlx_testbench/UUT/CU_I/*
 
 run 30 ns

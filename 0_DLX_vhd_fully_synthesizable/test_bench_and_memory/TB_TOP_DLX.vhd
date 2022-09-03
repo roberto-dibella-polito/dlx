@@ -2,8 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.std_logic_arith.all;
-use work.ROCACHE_PKG.all;
-use work.RWCACHE_PKG.all;
+--use work.ROCACHE_PKG.all;
+--use work.RWCACHE_PKG.all;
+use work.myTypes.all;
 
 entity DLX_TestBench is
 end DLX_TestBench;
@@ -28,20 +29,21 @@ architecture tb of DLX_TestBench is
 
 	component RWMEM is
 	generic(
-			FILE_PATH: string;				-- RAM output data file
-			FILE_PATH_INIT: string;			-- RAM initialization data file
-			WORD_SIZE: natural := 32;		-- Number of bits per word
-			ENTRIES: 	natural := 128;		-- Number of lines in the ROM
-			DATA_DELAY: natural := 2		-- Delay ( in # of clock cycles )
+			file_path: string;
+			file_path_init: string;
+			Data_size : natural := 64;
+			Instr_size: natural := 32;
+			RAM_DEPTH: 	natural := 128;
+			data_delay: natural := 2
 		);
 	port (
 			CLK   				: in std_logic;
 			RST					: in std_logic;
-			ADDRESS				: in std_logic_vector(WORD_SIZE - 1 downto 0);
+			ADDR				: in std_logic_vector(Instr_size - 1 downto 0);
 			ENABLE				: in std_logic;
 			READNOTWRITE		: in std_logic;
 			DATA_READY			: out std_logic;
-			INOUT_DATA			: inout std_logic_vector(2*WORD_SIZE-1 downto 0)
+			INOUT_DATA			: inout std_logic_vector(Data_size-1 downto 0)
 		);
 	end component;
 
@@ -54,13 +56,13 @@ architecture tb of DLX_TestBench is
 			IRAM_ADDRESS			: out std_logic_vector(Instr_size - 1 downto 0);
 			IRAM_ISSUE				: out std_logic;
 			IRAM_READY				: in std_logic;
-			IRAM_DATA				: in std_logic_vector(2*Data_size-1 downto 0);
+			IRAM_DATA				: in std_logic_vector(Data_size-1 downto 0);
 
 			DRAM_ADDRESS			: out std_logic_vector(Instr_size-1 downto 0);
 			DRAM_ISSUE				: out std_logic;
 			DRAM_READNOTWRITE		: out std_logic;
 			DRAM_READY				: in std_logic;
-			DRAM_DATA				: inout std_logic_vector(2*Data_size-1 downto 0)
+			DRAM_DATA				: inout std_logic_vector(Data_size-1 downto 0)
 		);
 	end component;
 
@@ -84,14 +86,25 @@ architecture tb of DLX_TestBench is
 begin
 	-- IRAM
 	IRAM : ROMEM
-		generic map ("/home/ms22.32/Desktop/DLX/asm_example/test.asm.mem")
-		port map (CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, IRAM_DATA);
+		generic map (
+			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/test.asm.mem",
+			DATA_DELAY	=> 0
+		)
+		port map (
+			CLK					=> Clk,
+			RST					=> Rst,
+			ADDRESS				=> iram_addr_shifted,
+			ENABLE				=> IRAM_ENABLE,
+			DATA_READY			=> IRAM_READY,
+			DATA				=> IRAM_DATA
+		);
 
 	-- DRAM
 	DRAM : RWMEM
 		generic map (
-			FILE_PATH_INIT => "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex.txt",
-			FILE_PATH => "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex_out.txt"
+			file_path_init 	=> "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex.txt",
+			file_path 		=> "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex_out.txt",
+			DATA_DELAY		=> 0
 		)
 		port map ( CLK, RST, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, DRAM_DATA );
 
@@ -105,7 +118,7 @@ begin
 	-- DLX
 	UUT : DLX 
 		generic map( IR_SIZE => 32, PC_SIZE => 32, DATA_SIZE => 32) 
-		port map ( CLK, RST, iram_addr_shifted, IRAM_ENABLE, IRAM_READY, iram_data_first, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, dram_data_first );
+		port map ( CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, iram_first_word, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, dram_first_word );
 
 	Clk <= not Clk after 10 ns;
 	Rst <= '1', '0' after 5 ns;

@@ -1,5 +1,5 @@
 vcom -reportprogress 300 -work work ../../000-globals.vhd
-vcom -reportprogress 300 -work work ./a.c-IRAM.vhd
+vcom -reportprogress 300 -work work ./a.b.a.a-IRAM.vhd
 vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd
 vcom -reportprogress 300 -work work ../../000-commons/clk_gen.vhd
 vcom -reportprogress 300 -work work ../a.b.a-IF.vhd

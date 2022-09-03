@@ -24,7 +24,7 @@ entity dlx_cu is
 		IR_IN				: in  std_logic_vector(IR_SIZE - 1 downto 0);
 	
 		-- IRAM control signals
-		IRAM_ISSUE			: in std_logic;
+		IRAM_ISSUE			: out std_logic;
 		IRAM_READY			: in std_logic;
 		
 		-- Pipeline control signals (ID, EX, MEM)
@@ -153,7 +153,7 @@ architecture dlx_cu_hw of dlx_cu is
 	);	
 	
 	signal IR_opcode : std_logic_vector(OP_CODE_SIZE -1 downto 0);  -- OpCode part of IR
-	signal IR_func : std_logic_vector(FUNC_SIZE downto 0);   -- Func part of IR when Rtype
+	signal IR_func : std_logic_vector(FUNC_SIZE-1 downto 0);   -- Func part of IR when Rtype
 	signal cw   : std_logic_vector(CW_SIZE - 1 downto 0); -- full control word read from cw_mem
 
 	-- control word is shifted to the correct stage
@@ -171,7 +171,7 @@ architecture dlx_cu_hw of dlx_cu is
 begin  -- dlx_cu_rtl
 
 	IR_opcode(5 downto 0) <= IR_IN(31 downto 26);
-	IR_func(10 downto 0)  <= IR_IN(FUNC_SIZE - 1 downto 0);
+	IR_func(FUNC_SIZE-1 downto 0)  <= IR_IN(FUNC_SIZE - 1 downto 0);
 
 	cw <= cw_mem(conv_integer(IR_opcode));
 	
@@ -183,6 +183,10 @@ begin  -- dlx_cu_rtl
 	pipe_clear_i	<= '1';			-- For now, no branch instruction is created
 	pipe_enable_i 	<= not stall;
 	PC_LATCH_EN		<= not stall;
+
+	-- Request data to the IRAM
+	-- for now, ALWAY
+	IRAM_ISSUE		<= '1';
 	
 	PIPE_IF_ID_EN		<= pipe_enable_i;
 	

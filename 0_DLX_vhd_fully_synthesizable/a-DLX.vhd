@@ -12,9 +12,9 @@ entity DLX is
 	port (
 		-- Inputs
 		CLK						: in std_logic;		-- Clock
-		RST_n					: in std_logic;		-- Reset:Active-Low
+		RST						: in std_logic;		-- Reset:Active-High
 
-		IRAM_ADDRESS			: out std_logic_vector(IR - 1 downto 0);
+		IRAM_ADDRESS			: out std_logic_vector(IR_SIZE - 1 downto 0);
 		IRAM_ISSUE				: out std_logic;
 		IRAM_READY				: in std_logic;
 		IRAM_DATA				: in std_logic_vector(DATA_SIZE-1 downto 0);
@@ -41,7 +41,7 @@ architecture dlx_rtl of DLX is
 	component DLX_DP
 		generic(
 			ADDR_SIZE	: integer := 32;
-			DATA_SIZE	: integer := 32
+			DATA_SIZE	: integer := 32	);
 		port(
 			CLK				: in std_logic;
 			RST				: in std_logic;	-- Active HIGH
@@ -91,7 +91,7 @@ architecture dlx_rtl of DLX is
 			
 			-- WB Control signals
 			WB_MUX_SEL		: in std_logic;  -- Write Back MUX Sel
-			RF_WE			: in std_logic;  -- Register File Write Enable
+			RF_WE			: in std_logic  -- Register File Write Enable
 		);
 	end component;
   
@@ -107,13 +107,13 @@ architecture dlx_rtl of DLX is
 
 		port (
 			Clk					: in  std_logic;	-- Clock
-			Rst_n				: in  std_logic;	-- Reset:Active-Low
+			Rst					: in  std_logic;	-- Reset:Active-High
 
 			-- Instruction Register
 			IR_IN				: in  std_logic_vector(IR_SIZE - 1 downto 0);
 			
 			-- IRAM control interface
-			IRAM_ISSUE			: in std_logic;
+			IRAM_ISSUE			: out std_logic;
 			IRAM_READY			: in std_logic;
 
 			-- Pipeline control signals (ID, EX, MEM)
@@ -179,6 +179,7 @@ architecture dlx_rtl of DLX is
 	signal imm_isoff_i		: std_logic;
 	signal muxA_sel_i		: std_logic;
 	signal muxB_sel_i		: std_logic;
+	signal mem_in_en_i		: std_logic;
 	signal is_zero_i		: std_logic;
 	signal alu_op_i			: aluOp;
 	signal dram_issue_i		: std_logic;
@@ -188,6 +189,8 @@ architecture dlx_rtl of DLX is
 	signal pc_latch_en_i	: std_logic;
 	signal wb_mux_sel_i		: std_logic;
 	signal rf_we_i			: std_logic;
+	signal iram_address_i	: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal iram_data_i		: std_logic_vector(DATA_SIZE-1 downto 0);
 	
 	
 begin  -- DLX
@@ -201,7 +204,7 @@ begin  -- DLX
 	)
 	port map(
 		Clk					=> CLK,
-		Rst_n				=> RST_n,
+		Rst					=> RST,
 		IR_IN				=> instr_i,
 		IRAM_ISSUE			=> IRAM_ISSUE,
 		IRAM_READY			=> IRAM_READY,
@@ -220,6 +223,7 @@ begin  -- DLX
 		IMM_ISOFF			=> imm_isoff_i,	
 		MUXA_SEL           	=> muxA_sel_i,
 		MUXB_SEL           	=> muxB_sel_i,
+		MEM_IN_EN			=> mem_in_en_i,
 		IS_ZERO				=> is_zero_i,
 		ALU_OP				=> alu_op_i,
 		DRAM_ISSUE			=> DRAM_ISSUE,
@@ -243,8 +247,8 @@ begin  -- DLX
 		PIPE_EX_MEM_EN	=> pipe_ex_mem_en_i,
 		PIPE_MEM_WB_EN	=> pipe_mem_wb_en_i,
 		PIPE_CLEAR_n	=> pipe_clear_n_i,
-		IRAM_ADDRESS	=> IRAM_ADDRESS,
-		IRAM_DATA		=> IRAM_DATA,
+		IRAM_ADDRESS	=> iram_address_i,
+		IRAM_DATA		=> iram_data_i,
 		INSTR			=> instr_i,
 		CALL			=> rf_call_i,
 		RET				=> rf_ret_i,
@@ -256,7 +260,8 @@ begin  -- DLX
 		IMM_ISOFF		=> imm_isoff_i,	
 		MUXA_SEL		=> muxA_sel_i,
 		MUXB_SEL		=> muxB_sel_i,
-		BRANCH_T		=> is_zero_i,
+		MEM_IN_EN		=> mem_in_en_i,
+ 		BRANCH_T		=> is_zero_i,
 		ALU_OP			=> alu_op_i,
 		DRAM_ADDRESS	=> DRAM_ADDRESS,
 		DRAM_DATA		=> DRAM_DATA,
@@ -265,5 +270,8 @@ begin  -- DLX
 		WB_MUX_SEL		=> wb_mux_sel_i,
 		RF_WE			=> rf_we_i
 	);
+
+	IRAM_ADDRESS 	<= iram_address_i;
+	iram_data_i		<= IRAM_DATA;
 
 end dlx_rtl;
