@@ -62,14 +62,14 @@ entity dlx_cu is
 		-- Controlled by PIPE_EX_MEM_EN
 		--ALU_OUTREG_EN      : out std_logic;  -- ALU Output Register Enable
 		--EQ_COND            : out std_logic;  -- Branch if (not) Equal to Zero
-
+		MEM_IN_EN			: out std_logic;		
+		
 		-- MEM Control Signals
 		-- . DRAM control interface
 		DRAM_ISSUE			: out std_logic;
 		DRAM_READNOTWRITE	: out std_logic;
 		DRAM_READY			: in std_logic;
-		MEM_IN_EN			: out std_logic;
-
+		
 		--LMD_LATCH_EN       : out std_logic;	-- LMD Register Latch Enable
 		JUMP_EN            : out std_logic;		-- JUMP Enable Signal for PC input MUX
 		PC_LATCH_EN        : out std_logic;		-- Program Counte Latch Enable

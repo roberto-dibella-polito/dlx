@@ -78,6 +78,7 @@ architecture dlx_rtl of DLX is
 			MUXB_SEL		: in std_logic;
 			BRANCH_T		: out std_logic;
 			ALU_OP			: in aluOp;
+			MEM_IN_EN		: in std_logic;
 			
 			-- DRAM Data Interface
 			DRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
@@ -89,8 +90,8 @@ architecture dlx_rtl of DLX is
 			PC_LATCH_EN		: in std_logic;	-- Pipelined version -> with no stalls, always active
 			
 			-- WB Control signals
-			WB_MUX_SEL		: out std_logic;  -- Write Back MUX Sel
-			RF_WE			: out std_logic;  -- Register File Write Enable
+			WB_MUX_SEL		: in std_logic;  -- Write Back MUX Sel
+			RF_WE			: in std_logic;  -- Register File Write Enable
 		);
 	end component;
   
@@ -138,6 +139,7 @@ architecture dlx_rtl of DLX is
 			MUXB_SEL           	: out std_logic;  	-- MUX-B Sel
 			IS_ZERO				: in std_logic;
 			ALU_OP				: out aluOp;		-- FUNC field
+			MEM_IN_EN			: out std_logic;
 
 			-- MEM Control Signals
 			DRAM_ISSUE			: out std_logic;

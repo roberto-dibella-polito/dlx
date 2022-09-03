@@ -12,6 +12,7 @@ entity DLX_DP is
 	generic(
 		ADDR_SIZE	: integer := 32;
 		DATA_SIZE	: integer := 32
+	);
 	port(
 		CLK				: in std_logic;
 		RST				: in std_logic;	-- Active HIGH
@@ -60,8 +61,8 @@ entity DLX_DP is
 		PC_LATCH_EN		: in std_logic;	-- Pipelined version -> with no stalls, always active
 		
 		-- WB Control signals
-		WB_MUX_SEL		: out std_logic;  -- Write Back MUX Sel
-		RF_WE			: out std_logic;  -- Register File Write Enable
+		WB_MUX_SEL		: in std_logic;  -- Write Back MUX Sel
+		RF_WE			: in std_logic  -- Register File Write Enable
 
 	);
 end DLX_DP;
@@ -169,16 +170,16 @@ architecture structure of DLX_DP is
 	-- ID/EX signals
 	signal rf_out1_id_o, rf_out2_id_o, rf_out1_ex_i, rf_out2_ex_i	: std_logic_vector(DATA_SIZE-1 downto 0);			-- 
 	signal imm_id_o, imm_ex_i			: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal rd_fwd_id_o, rd__fwd_ex_i	: std_logic_vector(RX_SIZE-1 downto 0);
+	signal rd_fwd_id_o, rd_fwd_ex_i		: std_logic_vector(RX_SIZE-1 downto 0);
 	signal npc_id_o, npc_ex_i			: std_logic_vector(PC_SIZE-1 downto 0);	
 
 	signal ir_reset						: std_logic_vector(INSTR_SIZE-OP_SIZE-1 downto 0);
 	
 	-- EX/MEM signals
-	signal alu_out_ex_o, alu_out_mem_i	: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal data_mem_ex_o, data_mem_mem_i: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal rd_fwd_ex_o, rd_fwd_ex_i		: std_logic_vector(RX_SIZE-1 downto 0);
-	signal branch_t_ex_o, branch_t_mem_i: std_logic;
+	signal alu_out_ex_o, alu_out_mem_i		: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal data_mem_ex_o, data_mem_mem_i	: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal rd_fwd_ex_o, rd_fwd_mem_i		: std_logic_vector(RX_SIZE-1 downto 0);
+	signal branch_t_ex_o, branch_t_mem_i	: std_logic;
 	
 	-- MEM interface internal signals
 	--DRAM_WE			: in std_logic;  -- Data RAM Write Enable
@@ -202,7 +203,7 @@ begin
 		NPC_ALU			=> npc_alu_fb,
 		NPC_OUT			=> npc_if_o,
 		INSTR			=> instr_if_o,
-		NPC_SEL			=> NPC_SEL,
+		NPC_SEL			=> JUMP_EN,
 		PC_LATCH_EN		=> PC_LATCH_EN
 	);
 	
@@ -278,7 +279,7 @@ begin
 		NPC_FWD_I	=> npc_id_i,
 		NPC_FWD_O	=> npc_id_o,
 		RD_FWD_I	=> rd_id_i,
-		RD_FWD_O	=> rd_id_o
+		RD_FWD_O	=> rd_fwd_id_o
 	);
 	
 	-- ID/EX REGISTERS
@@ -341,7 +342,7 @@ begin
 		ALU_OUT		=> alu_out_ex_o,
 		DATA_MEM	=> data_mem_ex_o,
 		RD_FWD_OUT	=> rd_fwd_ex_o,
-		BRANCH_T	=> ,
+		BRANCH_T	=> BRANCH_T,
 		MUXA_SEL	=> MUXA_SEL,
 		MUXB_SEL	=> MUXB_SEL,
 		ALU_OP		=> ALU_OP	
@@ -353,7 +354,7 @@ begin
 	
 	z_word <= (others=>'Z');
 	
-	id_ex_pipe: process(CLK, RST)
+	ex_mem_pipe: process(CLK, RST)
 	begin
 		if( RST = '1' ) then
 		
@@ -437,12 +438,14 @@ begin
 	
 	-- WRITE BACK stage
 	-- Multiplexer
-	wb_mux: process(WB_MUX_SEL,alu_out_wb_i, data_mem_wb_i)
-	begin
-		case WB_MUX_SEL is
-			when '0'	=> wr_data_id_i <= data_mem_wb_i;
-			when '1'	=> wr_data_id_i <= alu_out_wb_i;
-		end case;
-	end process;
+	--wb_mux: process(WB_MUX_SEL,alu_out_wb_i, data_mem_wb_i)
+	--begin
+	--	case WB_MUX_SEL is
+	--		when '0'	=> wr_data_id_i <= data_mem_wb_i;
+	--		when '1'	=> wr_data_id_i <= alu_out_wb_i;
+	--	end case;
+	--end process;
 	
+	wr_data_id_i <= data_mem_wb_i when WB_MUX_SEL = '0' else alu_out_wb_i;
+
 end structure;

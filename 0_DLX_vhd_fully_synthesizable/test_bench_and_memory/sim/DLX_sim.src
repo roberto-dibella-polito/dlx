@@ -3,6 +3,7 @@ vcom -reportprogress 300 -work work ../../000-commons/counter.vhd
 vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd
 vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd
 vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd
+vcom -reportprogress 300 -work work ../../002-ControlWords.vhd
 
 ################ UNITY UNDER TEST ################################################
 

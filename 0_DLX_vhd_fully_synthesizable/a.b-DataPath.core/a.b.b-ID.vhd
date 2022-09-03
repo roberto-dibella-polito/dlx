@@ -117,7 +117,7 @@ begin
 	
 	p_addr_wRS1 <= unsigned(ADDR_RS1) - 1;
 	p_addr_wRS2 <= unsigned(ADDR_RS2) - 1;	
-	p_addr_wRD <= unsigned(ADDR_RD) - 1;
+	p_addr_wRD <= unsigned(ADDR_WR) - 1;
 	
 	addr_wRS1 <= std_logic_vector(p_addr_wRS1);	
 	addr_wRS2 <= std_logic_vector(p_addr_wRS2);
