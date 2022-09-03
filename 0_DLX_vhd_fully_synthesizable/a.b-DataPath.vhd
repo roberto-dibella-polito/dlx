@@ -48,10 +48,11 @@ entity DLX_DP is
 		MUXB_SEL		: in std_logic;
 		BRANCH_T		: out std_logic;
 		ALU_OP			: in aluOp;
+		MEM_IN_EN		: in std_logic;
 		
 		-- DRAM Data Interface
 		DRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
-		DRAM_DATA		: inout std_logic_vector(2*DATA_SIZE-1 downto 0);
+		DRAM_DATA		: inout std_logic_vector(DATA_SIZE-1 downto 0);
 		
 		-- MEM control signals
 		--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
@@ -183,6 +184,7 @@ architecture structure of DLX_DP is
 	--DRAM_WE			: in std_logic;  -- Data RAM Write Enable
 	--DMEM_READY		: out std_logic;
 	--DMEM_ISSUE		: in std_logic;
+	signal z_word		: std_logic_vector(DATA_SIZE-1 downto 0);
 	
 	-- MEM/WB signals
 	signal rd_fwd_mem_o, rd_fwd_wb_i	: std_logic_vector(RX_SIZE-1 downto 0);
@@ -348,6 +350,9 @@ begin
 	-- EX/MEM REGISTERS
 	-- Blocking and flushing mechanisms not yet implemented
 	-- Input:	ALU_OUTREG_EN
+	
+	z_word <= (others=>'Z');
+	
 	id_ex_pipe: process(CLK, RST)
 	begin
 		if( RST = '1' ) then
@@ -366,13 +371,16 @@ begin
 				rd_fwd_mem_i	<= (others=>'0');
 				branch_t_mem_i	<= '0';
 			
-			elsif( PIPE_EX_MEM_EN <= '1') then
+			elsif( PIPE_EX_MEM_EN = '1') then
 				-- Operands registers Register
 				--if(ALU_OUTREG_EN = '1') then
 					alu_out_mem_i <= alu_out_ex_o;
 				--end if;
-			
-				data_mem_mem_i	<= data_mem_ex_o;
+				if( MEM_IN_EN = '1' ) then
+					data_mem_mem_i	<= z_word;
+				else
+					data_mem_mem_i	<= data_mem_ex_o;
+				end if;
 				rd_fwd_mem_i	<= rd_fwd_ex_o;
 				branch_t_mem_i	<= branch_t_ex_o;
 			
@@ -387,11 +395,14 @@ begin
 	-- Branch taken flag
 	BRANCH_T <= branch_t_mem_i;
 	
+	
 	DRAM_ADDRESS	<= alu_out_mem_i;
 	DRAM_DATA		<= data_mem_mem_i;
 	alu_out_mem_o	<= alu_out_mem_i;
 	data_mem_mem_o	<= data_mem_mem_i;
 	rd_fwd_mem_o	<= rd_fwd_mem_i;
+	
+	
 
 	-- MEM/WB registers
 	mem_wb_pipe: process(CLK, RST)

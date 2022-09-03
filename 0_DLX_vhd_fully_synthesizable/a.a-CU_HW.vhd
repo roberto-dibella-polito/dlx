@@ -68,6 +68,7 @@ entity dlx_cu is
 		DRAM_ISSUE			: out std_logic;
 		DRAM_READNOTWRITE	: out std_logic;
 		DRAM_READY			: in std_logic;
+		MEM_IN_EN			: out std_logic;
 
 		--LMD_LATCH_EN       : out std_logic;	-- LMD Register Latch Enable
 		JUMP_EN            : out std_logic;		-- JUMP Enable Signal for PC input MUX
@@ -157,8 +158,8 @@ architecture dlx_cu_hw of dlx_cu is
 	-- control word is shifted to the correct stage
 	signal cw1 : std_logic_vector(CW_SIZE -1 downto 0); -- first stage
 	signal cw2 : std_logic_vector(CW_SIZE - 1 - 4 downto 0); -- second stage
-	signal cw3 : std_logic_vector(CW_SIZE - 1 - 6 downto 0); -- third stage
-	signal cw4 : std_logic_vector(CW_SIZE - 1 - 9 downto 0); -- fourth stage
+	signal cw3 : std_logic_vector(CW_SIZE - 1 - 7 downto 0); -- third stage
+	signal cw4 : std_logic_vector(CW_SIZE - 1 - 10 downto 0); -- fourth stage
 
 	signal aluOpcode_i: aluOp := NOP; -- ALUOP defined in package
 	signal aluOpcode1: aluOp := NOP;
@@ -193,17 +194,18 @@ begin  -- dlx_cu_rtl
 	
 	MUXA_SEL			<= cw2(CW_SIZE-5);
 	MUXB_SEL			<= cw2(CW_SIZE-6);
+	MEM_IN_EN			<= cw2(CW_SIZE-7);
 	
 	PIPE_EX_MEM_EN		<= pipe_enable_i;
 	
-	DRAM_ISSUE			<= cw3(CW_SIZE-7);
-	DRAM_READNOTWRITE	<= cw3(CW_SIZE-8);
-	JUMP_EN				<= cw3(CW_SIZE-9);
+	DRAM_ISSUE			<= cw3(CW_SIZE-8);
+	DRAM_READNOTWRITE	<= cw3(CW_SIZE-9);
+	JUMP_EN				<= cw3(CW_SIZE-10);
 	
 	PIPE_MEM_WB_EN		<= pipe_enable_i;
 	
-	WB_MUX_SEL			<= cw4(CW_SIZE-10);
-	RF_WE				<= cw4(CW_SIZE-11);
+	WB_MUX_SEL			<= cw4(CW_SIZE-11);
+	RF_WE				<= cw4(CW_SIZE-12);
 
 	-- process to pipeline control words
 	CW_PIPE: process (Clk, Rst)
@@ -220,8 +222,8 @@ begin  -- dlx_cu_rtl
 		elsif Clk'event and Clk = '1' then  -- rising clock edge
 			cw1 <= cw;
 			cw2 <= cw1(CW_SIZE - 1 - 4 downto 0);
-			cw3 <= cw2(CW_SIZE - 1 - 6 downto 0);
-			cw4 <= cw3(CW_SIZE - 1 - 9 downto 0);
+			cw3 <= cw2(CW_SIZE - 1 - 7 downto 0);
+			cw4 <= cw3(CW_SIZE - 1 - 10 downto 0);
 
 			aluOpcode1 <= aluOpcode_i;
 			aluOpcode2 <= aluOpcode1;
