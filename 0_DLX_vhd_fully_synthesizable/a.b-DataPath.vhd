@@ -48,6 +48,7 @@ entity DLX_DP is
 		MUXB_SEL		: in std_logic;
 		BRANCH_T		: out std_logic;
 		ALU_OP			: in aluOp;
+		DATA_MEM_BLOCK	: in std_logic;
 		
 		-- DRAM Data Interface
 		DRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
