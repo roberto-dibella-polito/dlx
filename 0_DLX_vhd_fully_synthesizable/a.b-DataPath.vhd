@@ -31,10 +31,6 @@ entity DLX_DP is
 		-- Instruction port, forwarded to CU
 		INSTR			: out std_logic_vector(DATA_SIZE-1 downto 0);	
 		
-		-- IF/ID pipeline registers control -> PIPE_IF_ID used
-		--IR_LATCH_EN		: in std_logic;
-		--NPC_LATCH_EN	: in std_logic;
-
 		-- ID control signals
 		-- Windowed register file
 		CALL			: in std_logic;
@@ -44,24 +40,14 @@ entity DLX_DP is
 		RF_EN			: in std_logic;
 		RS1_EN			: in std_logic;
 		RS2_EN			: in std_logic;
-		--RF_WR_EN		: in std_logic;
 		
 		IMM_ISOFF		: in std_logic;	
-		
-		-- ID/EX control signals
-		--RegA_LATCH_EN	: in std_logic;  -- Register A Latch Enable
-		--RegB_LATCH_EN	: in std_logic;  -- Register B Latch Enable
-		--RegIMM_LATCH_EN	: in std_logic;  -- Immediate Register Latch Enable
 		
 		-- EX control signals
 		MUXA_SEL		: in std_logic;
 		MUXB_SEL		: in std_logic;
 		BRANCH_T		: out std_logic;
 		ALU_OP			: in aluOp;
-		
-		-- EX/MEM Pipeline registers
-		--ALU_OUTREG_EN	: in std_logic;
-		--EQ_COND			: in std_logic;
 		
 		-- DRAM Data Interface
 		DRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
