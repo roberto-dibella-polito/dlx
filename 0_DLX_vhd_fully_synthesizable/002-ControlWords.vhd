@@ -16,6 +16,7 @@ package DLX_ControlWords is
 	-- 9	JUMP_EN
 	-- 10	WB_MUX_SEL
 	-- 11	RF_WE
+	-- 12	pipe_flush_n
 
 	constant uC_MEM_SIZE	: integer := 64;
 	constant CW_SIZE		: integer := 12;
