@@ -41,10 +41,10 @@ architecture Behavioral of RWCACHE is
 	signal INT_INOUT_DATA,int_address_data,address_to_mem	: std_logic_vector(DATA_SIZE -1 downto 0);
 	signal ADDRESS							: std_logic_vector(DATA_SIZE -1 downto 0);
 	signal IN_DATA							: std_logic_vector(DATA_SIZE -1 downto 0);
-	signal INT_MEM_DATA						: std_logic_vector(DATA_SIZE -1 downto 0);
+	signal INT_MEM_DATA							: std_logic_vector(DATA_SIZE -1 downto 0);
 	signal INT_RAM_DATA						: std_logic_vector(2*DATA_SIZE -1 downto 0) := (others => 'Z');
 	signal NOP_OUT							: std_logic;
-	signal INT_STALL						: std_logic;
+	signal INT_STALL							: std_logic;
 	signal rewrite							: std_logic:='0';
 	signal INT_RAM_READNOTWRITE: std_logic;
 begin
@@ -306,7 +306,7 @@ begin
 	RAM_READNOTWRITE <= INT_RAM_READNOTWRITE;
 	RAM_ADDRESS		<= address_to_mem when (rewrite = '1') else
 						int_address_data  when (INT_ISSUE_RAM_READ='1') else (others=> 'Z') ;
-	RAM_DATA		<= INT_RAM_DATA when rewrite = '1' else (others =>'Z');
-	INT_MEM_DATA	<= INT_INOUT_DATA;
+	RAM_DATA <= INT_RAM_DATA when rewrite = '1' else (others =>'Z');
+	INT_MEM_DATA		<= INT_INOUT_DATA;
 	MEM_DATA		<= INT_MEM_DATA;
 end Behavioral;

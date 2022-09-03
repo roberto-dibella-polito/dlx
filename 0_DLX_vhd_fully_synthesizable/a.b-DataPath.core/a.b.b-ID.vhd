@@ -3,10 +3,9 @@
 
 library IEEE;
 use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all;
+--use IEEE.std_logic_unsigned.all;
 use IEEE.math_real.all;
 use work.rf_constants.all;
---use IEEE.numeric_std.all;
 use ieee.std_logic_arith.all;
 use WORK.all;
 use work.myTypes.all;
@@ -79,6 +78,7 @@ architecture structure of DLX_ID is
 	
 	signal x0, out1_i, out2_i				: std_logic_vector(Nbit-1 downto 0);
 	signal addr_wRS1, addr_wRS2, addr_wRD	: std_logic_vector(NbitAdd-1 downto 0);
+	signal p_addr_wRS1, p_addr_wRS2, p_addr_wRD	: unsigned(NbitAdd-1 downto 0);
 	signal aRS1_iszero_n, aRS2_iszero_n		: std_logic;
 	
 begin
@@ -111,10 +111,18 @@ begin
 	aRS1_iszero_n	<= '0' when( unsigned(ADDR_RS1) = 0 ) else '1';
 	aRS2_iszero_n	<= '0' when( unsigned(ADDR_RS2) = 0 ) else '1';
 	
-	addr_wRS1	<= std_logic_vector(unsigned(ADDR_RS1)-1);
-	addr_wRS2	<= std_logic_vector(unsigned(ADDR_RS2)-1);
-	addr_wRD	<= std_logic_vector(unsigned(ADDR_RD)-1);
+	--addr_wRS1	<= std_logic_vector( unsigned(ADDR_RS1) - x"00000001");
+	--addr_wRS2	<= std_logic_vector( unsigned(ADDR_RS1) - to_unsigned(1,ADDR_SIZE));
+	--addr_wRD	<= ADDR_RD - x"00000001" ;
 	
+	p_addr_wRS1 <= unsigned(ADDR_RS1) - 1;
+	p_addr_wRS2 <= unsigned(ADDR_RS2) - 1;	
+	p_addr_wRD <= unsigned(ADDR_RD) - 1;
+	
+	addr_wRS1 <= std_logic_vector(p_addr_wRS1);	
+	addr_wRS2 <= std_logic_vector(p_addr_wRS2);
+	addr_wRD <= std_logic_vector(p_addr_wRD);
+
 	OUT1	<= out1_i when( aRS1_iszero_n = '1' ) else x0;
 	OUT2	<= out2_i when( aRS2_iszero_n = '1' ) else x0;
 	

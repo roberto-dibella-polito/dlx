@@ -77,21 +77,35 @@ architecture tb of DLX_TestBench is
 	signal DRAM_READY :			std_logic;
 	signal DRAM_DATA :			std_logic_vector(2*Data_size-1 downto 0);
 
+	signal iram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal dram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal iram_addr_shifted	: std_logic_vector(PC_SIZE-1 downto 0);
+
 begin
 	-- IRAM
 	IRAM : ROMEM
-		generic map ("/home/gandalf/Desktop/dlx/rocache/hex.txt")
+		generic map ("/home/ms22.32/Desktop/DLX/asm_example/test.asm.mem")
 		port map (CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, IRAM_DATA);
 
 	-- DRAM
 	DRAM : RWMEM
-		generic map ("/home/gandalf/Desktop/dlx/rwcache/hex_init.txt","/home/gandalf/Desktop/dlx/rwcache/hex.txt")
+		generic map (
+			FILE_PATH_INIT => "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex.txt",
+			FILE_PATH => "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex_out.txt"
+		)
 		port map ( CLK, RST, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, DRAM_DATA );
+
+	iram_first_word	<= IRAM_DATA(31 downto 0);
+	dram_first_word	<= DRAM_DATA(31 downto 0);
+
+	-- The memory is BYTE-ADDRESSABLE: each row corresponds to 4 bytes
+	-- => Incoming address is shifted by two
+	iram_addr_shifted <= "00" & IRAM_ADDRESS(31 downto 2);
 
 	-- DLX
 	UUT : DLX 
-		generic map( IR_SIZE => INSTR_SIZE, PC_SIZE => PC_SIZE, DATA_SIZE => DATA_SIZE) 
-		port map ( CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, IRAM_DATA, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, DRAM_DATA );
+		generic map( IR_SIZE => 32, PC_SIZE => 32, DATA_SIZE => 32) 
+		port map ( CLK, RST, iram_addr_shifted, IRAM_ENABLE, IRAM_READY, iram_data_first, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, dram_data_first );
 
 	Clk <= not Clk after 10 ns;
 	Rst <= '1', '0' after 5 ns;

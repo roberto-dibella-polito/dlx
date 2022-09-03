@@ -11,7 +11,7 @@ use work.ROCACHE_PKG.all;
 entity ROMEM is
 	generic (
 		file_path	: -- string(1 to 37) := "C://DLX//dlx-master//rocache//hex.txt";
-					string := "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_romem/hex.txt";
+					string;
 		ENTRIES		: integer := 128;
 		WORD_SIZE	: integer := 32;
 		data_delay	: natural := 2
@@ -49,7 +49,7 @@ begin
 				READ_MODE
 			);
 
-			while (not endfile(mem_fp) and index < ENTRIES) loop
+			while (not endfile(mem_fp)) loop
 				readline(mem_fp,file_line);
 				hread(file_line,tmp_data_u);
 				Memory(index) <= conv_integer(unsigned(tmp_data_u));
