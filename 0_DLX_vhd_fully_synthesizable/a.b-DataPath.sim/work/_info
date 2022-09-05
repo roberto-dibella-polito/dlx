@@ -1,0 +1,653 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/a.b-DataPath.sim
+T_opt
+Z1 !s110 1662223269
+Vgkj>B6Mh;mjWQS4M;faDm2
+04 9 9 work dlx_dp_tb structure 1
+=1-000ae431a4f1-631383a5-621fc-7be1
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+Eaddress_converter
+Z2 w1661439557
+Z3 DPx4 work 12 rf_constants 0 22 [Z8bMiYk0Yi7XebF;];]j1
+Z4 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+Z5 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z6 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z7 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+R0
+Z10 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd
+Z11 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd
+l0
+L12
+VO?lFZ014[[3Y<miNiaPRL2
+!s100 JKaf>?H]Dc2mCR@ikH<3S0
+Z12 OL;C;10.7c;67
+32
+Z13 !s110 1662223267
+!i10b 1
+Z14 !s108 1662223267.000000
+Z15 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd|
+Z16 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd|
+!i113 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Abehavior
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 17 address_converter 0 22 O?lFZ014[[3Y<miNiaPRL2
+l25
+L19
+VY2F<EJZ@R??AfeXAz^3hj1
+!s100 nIIMGclTicF9@8B]f`DNJ3
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Ecounter
+Z19 w1661611321
+R4
+R7
+R5
+R6
+R8
+R9
+R0
+Z20 8../000-commons/counter.vhd
+Z21 F../000-commons/counter.vhd
+l0
+L10
+V2z=Xk[d[K2STc>B3zVQSZ2
+!s100 VmN@o5[8[55[i^=;I0Zj23
+R12
+32
+R13
+!i10b 1
+R14
+Z22 !s90 -reportprogress|300|-work|work|../000-commons/counter.vhd|
+Z23 !s107 ../000-commons/counter.vhd|
+!i113 0
+R17
+R18
+Abehavior
+R4
+R7
+R5
+R6
+R8
+R9
+DEx4 work 7 counter 0 22 2z=Xk[d[K2STc>B3zVQSZ2
+l20
+L18
+Vf5MX^_LX2DDCSQYKfk9`D3
+!s100 2Coi^C`D2ac[0<7:eCQA41
+R12
+32
+R13
+!i10b 1
+R14
+R22
+R23
+!i113 0
+R17
+R18
+Edlx_dp
+Z24 w1662211109
+Z25 DPx4 work 7 mytypes 0 22 49LHiEL_?n=XNmT1dU7gd0
+R7
+R8
+R9
+R0
+Z26 8../a.b-DataPath.vhd
+Z27 F../a.b-DataPath.vhd
+l0
+L11
+VX>D@TDMOa5ZI=;^PkO3X:1
+!s100 :h[T_]mE_HP`8>abZlI3k0
+R12
+32
+Z28 !s110 1662223268
+!i10b 1
+Z29 !s108 1662223268.000000
+Z30 !s90 -reportprogress|300|-work|work|../a.b-DataPath.vhd|
+Z31 !s107 ../a.b-DataPath.vhd|
+!i113 0
+R17
+R18
+Astructure
+R25
+R7
+R8
+R9
+DEx4 work 6 dlx_dp 0 22 X>D@TDMOa5ZI=;^PkO3X:1
+l195
+L70
+VM2O?4NPjQRTc@^QoSieb:2
+!s100 gU:YahRJG9RYVkDL4Zl_T0
+R12
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R17
+R18
+Edlx_dp_tb
+Z32 w1662223232
+R25
+R7
+R8
+R9
+R0
+Z33 8a.b-DataPath_tb.vhd
+Z34 Fa.b-DataPath_tb.vhd
+l0
+L9
+VijbL>O15@L`>a;[Z@nI9b1
+!s100 DdWk9dMgW`ZgHaKi?RkWz2
+R12
+32
+R1
+!i10b 1
+Z35 !s108 1662223269.000000
+Z36 !s90 -reportprogress|300|-work|work|a.b-DataPath_tb.vhd|
+Z37 !s107 a.b-DataPath_tb.vhd|
+!i113 0
+R17
+R18
+Astructure
+R25
+R7
+R8
+R9
+DEx4 work 9 dlx_dp_tb 0 22 ijbL>O15@L`>a;[Z@nI9b1
+l127
+L12
+VH1TEZbn_V05NQDE06JOUk2
+!s100 R8dF28j<HdTI6H6G^Sod<2
+R12
+32
+R1
+!i10b 1
+R35
+R36
+R37
+!i113 0
+R17
+R18
+Edlx_id
+Z38 w1662209617
+R25
+R5
+R3
+R4
+R8
+R9
+R0
+Z39 8../a.b-DataPath.core/a.b.b-ID.vhd
+Z40 F../a.b-DataPath.core/a.b.b-ID.vhd
+l0
+L13
+Vh>?l<37_YIQ=n7jhNPW[?1
+!s100 <GnjRWiizKQOF4Qz^Z1cg1
+R12
+32
+R28
+!i10b 1
+R29
+Z41 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.vhd|
+Z42 !s107 ../a.b-DataPath.core/a.b.b-ID.vhd|
+!i113 0
+R17
+R18
+Astructure
+R25
+R5
+R3
+R4
+R8
+R9
+DEx4 work 6 dlx_id 0 22 h>?l<37_YIQ=n7jhNPW[?1
+l84
+L52
+VcaJQ2chhMc1ZaflG0OWk43
+!s100 `NdX>LH3UBhgbY3oYD]Mg3
+R12
+32
+R28
+!i10b 1
+R29
+R41
+R42
+!i113 0
+R17
+R18
+Edlx_if
+Z43 w1661439419
+R25
+R7
+R8
+R9
+R0
+Z44 8../a.b-DataPath.core/a.b.a-IF.vhd
+Z45 F../a.b-DataPath.core/a.b.a-IF.vhd
+l0
+L16
+VY2?oNRd<6P9]ZE4iI3<fo1
+!s100 ]=8cWI^O[cL3]3:hX:WB<3
+R12
+32
+R13
+!i10b 1
+R14
+Z46 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.a-IF.vhd|
+Z47 !s107 ../a.b-DataPath.core/a.b.a-IF.vhd|
+!i113 0
+R17
+R18
+Astructure
+R25
+R7
+R8
+R9
+DEx4 work 6 dlx_if 0 22 Y2?oNRd<6P9]ZE4iI3<fo1
+l52
+L40
+VcKV80n=>fL>B3n1F_=OVh2
+!s100 jQbeR1lH9E?f2J]bLM1DZ1
+R12
+32
+R13
+!i10b 1
+R14
+R46
+R47
+!i113 0
+R17
+R18
+Eiram
+Z48 w1661513986
+Z49 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R5
+R8
+R9
+R0
+Z50 8../test_bench_and_memory/a.c-IRAM.vhd
+Z51 F../test_bench_and_memory/a.c-IRAM.vhd
+l0
+L11
+Va@VW=:k_Q:fA>TOM3BK:o2
+!s100 C7N;MCZ68]MbS0`E9Di[z3
+R12
+32
+R1
+!i10b 1
+R29
+Z52 !s90 -reportprogress|300|-work|work|../test_bench_and_memory/a.c-IRAM.vhd|
+Z53 !s107 ../test_bench_and_memory/a.c-IRAM.vhd|
+!i113 0
+R17
+R18
+Airam_bhe
+R49
+R5
+R8
+R9
+DEx4 work 4 iram 0 22 a@VW=:k_Q:fA>TOM3BK:o2
+l31
+L24
+VazURXDRPQ?>_=K<>bR7T]0
+!s100 TFcaM^;TlT;OS8cR6SZH]3
+R12
+32
+R1
+!i10b 1
+R29
+R52
+R53
+!i113 0
+R17
+R18
+Emux2to1
+Z54 w1661611158
+R7
+R8
+R9
+R0
+Z55 8../000-commons/mux2to1_bhv.vhd
+Z56 F../000-commons/mux2to1_bhv.vhd
+l0
+L9
+V6gA>]iI<lP9Po6V[ea85m0
+!s100 1VdhD78dkD<Q?MJhe]8WY2
+R12
+32
+R13
+!i10b 1
+R14
+Z57 !s90 -reportprogress|300|-work|work|../000-commons/mux2to1_bhv.vhd|
+Z58 !s107 ../000-commons/mux2to1_bhv.vhd|
+!i113 0
+R17
+R18
+Abehavior
+R7
+R8
+R9
+DEx4 work 7 mux2to1 0 22 6gA>]iI<lP9Po6V[ea85m0
+l19
+L17
+VloZ>I?`R?@HbaBl<9fXAa2
+!s100 c=0VA6?Wo22n^PNzN_1i[1
+R12
+32
+R13
+!i10b 1
+R14
+R57
+R58
+!i113 0
+R17
+R18
+Emux2to1_1b
+Z59 w1661203552
+R7
+R8
+R9
+R0
+Z60 8../000-commons/mux2to1_1bit_bhv.vhd
+Z61 F../000-commons/mux2to1_1bit_bhv.vhd
+l0
+L9
+VMj0PRUYJKFCh2F?[kIP<_0
+!s100 hVi<Of0:9e9lLP0=477jL2
+R12
+32
+R13
+!i10b 1
+R14
+Z62 !s90 -reportprogress|300|-work|work|../000-commons/mux2to1_1bit_bhv.vhd|
+Z63 !s107 ../000-commons/mux2to1_1bit_bhv.vhd|
+!i113 0
+R17
+R18
+Abehavior
+R7
+R8
+R9
+DEx4 work 10 mux2to1_1b 0 22 Mj0PRUYJKFCh2F?[kIP<_0
+l17
+L15
+VI3jdhn3Hi^YNNCjN_f@DB2
+!s100 Tl8oIo5H>R?XTCcn9KRCK0
+R12
+32
+R13
+!i10b 1
+R14
+R62
+R63
+!i113 0
+R17
+R18
+Pmytypes
+R8
+R9
+w1662215142
+R0
+8../000-globals.vhd
+F../000-globals.vhd
+l0
+L5
+V49LHiEL_?n=XNmT1dU7gd0
+!s100 RZfUojUj[2ldkAzIA]3lS0
+R12
+32
+R13
+!i10b 1
+!s108 1662223266.000000
+!s90 -reportprogress|300|-work|work|../000-globals.vhd|
+!s107 ../000-globals.vhd|
+!i113 0
+R17
+R18
+Erf
+Z64 w1662198427
+R7
+R3
+R4
+R5
+R6
+R8
+R9
+R0
+Z65 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
+Z66 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
+l0
+L40
+VTl_g2`lM?5nKjm:2B[FKN3
+!s100 >kNoC>4o`7HMoz3m3JGW:0
+R12
+32
+R28
+!i10b 1
+R29
+Z67 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd|
+Z68 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd|
+!i113 0
+R17
+R18
+Astructure
+R7
+R3
+R4
+R5
+R6
+R8
+R9
+DEx4 work 2 rf 0 22 Tl_g2`lM?5nKjm:2B[FKN3
+l137
+L64
+Vm=U_k1j>A;N[P_FBjTZ@M0
+!s100 YQYbz`58OF[5Y0<@]ZTXl2
+R12
+32
+R28
+!i10b 1
+R29
+R67
+R68
+!i113 0
+R17
+R18
+Prf_constants
+R4
+w1661509731
+R0
+8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd
+F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd
+l0
+L4
+V[Z8bMiYk0Yi7XebF;];]j1
+!s100 Hm2J]IWba=O^a7B@`OQmc1
+R12
+32
+R13
+!i10b 1
+R14
+!s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd|
+!s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd|
+!i113 0
+R17
+R18
+Erf_cu
+Z69 w1661439588
+R7
+R3
+R4
+R5
+R6
+R8
+R9
+R0
+Z70 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
+Z71 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
+l0
+L11
+V]C9ZmE?QRQ];_L^e3m4C50
+!s100 XgbMY9a^1mi]]]ad2F:zG2
+R12
+32
+R28
+!i10b 1
+R29
+Z72 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd|
+Z73 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd|
+!i113 0
+R17
+R18
+Abehavior
+R7
+R3
+R4
+R5
+R6
+R8
+R9
+DEx4 work 5 rf_cu 0 22 ]C9ZmE?QRQ];_L^e3m4C50
+l45
+L36
+V=N3k;YcOjcCe7939iI7Y23
+!s100 ^=[>RCHzYlWmXJ=zSEG5o3
+R12
+32
+R28
+!i10b 1
+R29
+R72
+R73
+!i113 0
+R17
+R18
+Erf_datapath
+Z74 w1661441615
+R7
+R3
+R4
+R5
+R6
+R8
+R9
+R0
+Z75 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
+Z76 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
+l0
+L14
+V4Z95AIC38DEZn65d2IPC53
+!s100 9TM@`G60@R5VdKI0<_>[z0
+R12
+32
+R28
+!i10b 1
+R29
+Z77 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd|
+Z78 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd|
+!i113 0
+R17
+R18
+Abehavior
+R7
+R3
+R4
+R5
+R6
+R8
+R9
+DEx4 work 11 rf_datapath 0 22 4Z95AIC38DEZn65d2IPC53
+l132
+L53
+VBzb=@HmH3@ONh=j[Y6NIK1
+!s100 gCQOlS<Qk90HIKW6S^jH21
+R12
+32
+R28
+!i10b 1
+R29
+R77
+R78
+!i113 0
+R17
+R18
+Erf_phys
+Z79 w1661445534
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R0
+Z80 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd
+Z81 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd
+l0
+L23
+VU7<HW;_=F?B=K_Gii:AnS2
+!s100 3HF<HYX=LehD?keol94o;0
+R12
+32
+R28
+!i10b 1
+R29
+Z82 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd|
+Z83 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd|
+!i113 0
+R17
+R18
+Abehavior_async
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 7 rf_phys 0 22 U7<HW;_=F?B=K_Gii:AnS2
+l51
+L44
+VBIO?P[F6TMi>nRh`8S56`1
+!s100 4i_IK;A0?@213dbGbB^Wj1
+R12
+32
+R28
+!i10b 1
+R29
+R82
+R83
+!i113 0
+R17
+R18

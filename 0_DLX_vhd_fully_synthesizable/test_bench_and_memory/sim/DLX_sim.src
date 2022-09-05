@@ -49,10 +49,63 @@ vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem.v
 vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem.vhd
 vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_TOP_DLX.vhd
 
-vsim -t 100ps work.DLX_TestBench
-add wave *
-add wave -group "IF" sim:/dlx_testbench/UUT/dp/if_stage/*
-add wave -group "IRAM" sim:/dlx_testbench/IRAM/*
-add wave -group "Control Unit" sim:/dlx_testbench/UUT/CU_I/*
+vsim -t 100ps work.dlx_testbench -voptargs=+acc
+
+# Top level entity signals
+add wave sim:/dlx_testbench/CLK \
+sim:/dlx_testbench/RST \
+sim:/dlx_testbench/IRAM_ADDRESS 
+
+add wave -group "IRAM control" \
+sim:/dlx_testbench/IRAM/ADDRESS \
+sim:/dlx_testbench/IRAM/DATA \
+sim:/dlx_testbench/IRAM/DATA_READY \
+sim:/dlx_testbench/IRAM/ENABLE \
+sim:/dlx_testbench/IRAM/ENTRIES 
+
+add wave sim:/dlx_testbench/iram_first_word \
+sim:/dlx_testbench/instruction_i \
+-divider "ID" \
+sim:/dlx_testbench/UUT/dp/npc_id_i \
+sim:/dlx_testbench/UUT/dp/ir \
+sim:/dlx_testbench/UUT/dp/rs1_id_i \
+sim:/dlx_testbench/UUT/dp/rs2_id_i \
+sim:/dlx_testbench/UUT/dp/rd_id_i \
+-unsigned sim:/dlx_testbench/UUT/dp/id_stage/ADDR_RS1 \
+-unsigned sim:/dlx_testbench/UUT/dp/id_stage/ADDR_RS2 \
+-unsigned sim:/dlx_testbench/UUT/dp/id_stage/ADDR_WR \
+sim:/dlx_testbench/UUT/dp/id_stage/IMM_I \
+-divider "Register File" \
+sim:/dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Physical_RF/ADD_RD1 \
+sim:/dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Physical_RF/ADD_RD2 \
+sim:/dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Physical_RF/ADD_WR \
+sim:/dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Physical_RF/REGISTERS \
+-divider "EX" \
+sim:/dlx_testbench/UUT/dp/ex_stage/NPC_IN \
+sim:/dlx_testbench/UUT/dp/ex_stage/PORT_A \
+sim:/dlx_testbench/UUT/dp/ex_stage/PORT_B \
+sim:/dlx_testbench/UUT/dp/ex_stage/IMM_IN \
+sim:/dlx_testbench/UUT/dp/ex_stage/RD_FWD_IN \
+sim:/dlx_testbench/UUT/dp/ex_stage/BRANCH_T \
+-divider "MEM" \
+sim:/dlx_testbench/UUT/dp/alu_out_mem_i \
+sim:/dlx_testbench/UUT/dp/data_mem_mem_i \
+-divider "DRAM" 
+
+add wave -group "DRAM Controls" sim:/dlx_testbench/DRAM/ENABLE \
+sim:/dlx_testbench/DRAM/READNOTWRITE \
+sim:/dlx_testbench/DRAM/DATA_READY 
+
+add wave sim:/dlx_testbench/DRAM/ADDR \
+sim:/dlx_testbench/DRAM/INOUT_DATA \
+sim:/dlx_testbench/dram_first_word \
+-divider "WB" \
+sim:/dlx_testbench/UUT/dp/data_mem_wb_i \
+sim:/dlx_testbench/UUT/dp/alu_out_wb_i \
+sim:/dlx_testbench/UUT/dp/wr_data_id_i 
+
+#add wave -group "IF" sim:/dlx_testbench/UUT/dp/if_stage/*
+#add wave -group "IRAM" sim:/dlx_testbench/IRAM/*
+#add wave -group "Control Unit" sim:/dlx_testbench/UUT/CU_I/*
 
 run 30 ns

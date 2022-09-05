@@ -8,18 +8,19 @@ package DLX_ControlWords is
 	-- 1	RF_RS1_EN
 	-- 2	RF_RS2_EN
 	-- 3	IMM_ISOFF
-	-- 4	MUXA_SEL
-	-- 5	MUXB_SEL
-	-- 6	MEM_IN_EN
-	-- 7	DRAM_ISSUE
-	-- 8	DRAM_READNOTWRITE
-	-- 9	JUMP_EN
-	-- 10	WB_MUX_SEL
-	-- 11	RF_WE
-	-- 12	pipe_flush_n
+	-- 4	RegRD_SEL
+	-- 5	MUXA_SEL
+	-- 6	MUXB_SEL
+	-- 7	MEM_IN_EN
+	-- 8	DRAM_ISSUE
+	-- 9	DRAM_READNOTWRITE
+	-- 10	JUMP_EN
+	-- 11	WB_MUX_SEL
+	-- 12	RF_WE
+	-- 13	pipe_flush_n
 
 	constant uC_MEM_SIZE	: integer := 64;
-	constant CW_SIZE		: integer := 13;
+	constant CW_SIZE		: integer := 14;
 	
 	constant RR_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1110000010111";	-- Register-Register control word
 	constant RI_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1100010010111";
@@ -34,5 +35,6 @@ package DLX_ControlWords is
 	constant not_implemented	: std_logic_vector(CW_SIZE-1 downto 0) := (others=>'0');
 	
 	-- OPTIONAL INSTRUCTIONS
+
 	
 end DLX_ControlWords;

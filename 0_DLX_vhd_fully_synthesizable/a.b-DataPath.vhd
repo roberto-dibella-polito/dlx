@@ -31,6 +31,8 @@ entity DLX_DP is
 		
 		-- Instruction port, forwarded to CU
 		INSTR		: out std_logic_vector(DATA_SIZE-1 downto 0);	
+
+		RegRD_SEL	: in std_logic;
 		
 		-- ID control signals
 		-- Windowed register file
@@ -241,7 +243,11 @@ begin
 	
 	rs1_id_i <= ir(25 downto 21);
 	rs2_id_i <= ir(20 downto 16);
-	rd_id_i	 <= ir(15 downto 11);
+	
+	rd_id_i <= ir(15 downto 11) when RegRD_SEL = '0' else ir(20 downto 16);
+
+
+	--rd_id_i	 <= ir(15 downto 11);
 	
 	imm_id_i <= ir(25 downto 0);
 			

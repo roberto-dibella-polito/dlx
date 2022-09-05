@@ -1,12 +1,28 @@
 addi r1,r0,#2	# r1 = 2
+nop
+nop
+nop
+nop
 subi r2,r1,#1	# r2 = 1
+nop
+nop
+nop
+nop
 addi r3,r1,#-4	# r3 = -2
+nop
+nop
+nop
+nop
 subi r4,r3,#-1	# r4 = -1
-addui r5,r1,#4	# r5 = 6
-subui r6,r5,#3	# r6 = 3
+nop
+nop
+nop
+nop
+# addui r5,r1,#4	# r5 = 6
+# subui r6,r5,#3	# r6 = 3
 add r7,r1,r2	# r7 = 3
 sub r8,r5,r6	# r8 = 3
-addu r9,r6,r1	# r9 = 5
+# addu r9,r6,r1	# r9 = 5
 sge r10,r1,r2	# r10= 1
 sge r10,r2,r1	# r10= 0
 sge r10,r1,r1	# r10= 1

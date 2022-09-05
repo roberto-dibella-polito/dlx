@@ -61,6 +61,8 @@ architecture dlx_rtl of DLX is
 			-- Instruction port, forwarded to CU
 			INSTR			: out std_logic_vector(DATA_SIZE-1 downto 0);	
 			
+			RegRD_SEL		: in std_logic;
+
 			-- ID control signals
 			-- Windowed register file
 			CALL			: in std_logic;
@@ -124,6 +126,8 @@ architecture dlx_rtl of DLX is
 
 			PIPE_CLEAR_n		: out std_logic;
 
+			RegRD_SEL			: out std_logic;
+
 			-- ID control signals
 			RF_CALL				: out std_logic;
 			RF_RET				: out std_logic;
@@ -164,6 +168,7 @@ architecture dlx_rtl of DLX is
 
 	-- Control Unit Bus signals
 	signal instr_i			: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal regrd_sel_i		: std_logic;
 	signal pipe_if_id_en_i	: std_logic;
 	signal pipe_id_ex_en_i	: std_logic;
 	signal pipe_ex_mem_en_i	: std_logic;
@@ -213,6 +218,7 @@ begin  -- DLX
 		PIPE_EX_MEM_EN		=> pipe_ex_mem_en_i,
 		PIPE_MEM_WB_EN		=> pipe_mem_wb_en_i,
 		PIPE_CLEAR_n		=> pipe_clear_n_i,
+		RegRD_SEL			=> regrd_sel_i,
 		RF_CALL				=> rf_call_i,
 		RF_RET				=> rf_ret_i,
 		RF_SPILL			=> rf_spill_i,
@@ -250,6 +256,7 @@ begin  -- DLX
 		IRAM_ADDRESS	=> iram_address_i,
 		IRAM_DATA		=> iram_data_i,
 		INSTR			=> instr_i,
+		RegRD_SEL		=> regrd_sel_i,
 		CALL			=> rf_call_i,
 		RET				=> rf_ret_i,
 		SPILL			=> rf_spill_i,

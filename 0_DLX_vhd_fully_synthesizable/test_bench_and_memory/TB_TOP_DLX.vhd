@@ -83,7 +83,7 @@ architecture tb of DLX_TestBench is
 	signal dram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal iram_addr_shifted	: std_logic_vector(PC_SIZE-1 downto 0);
 
-	signal opcode_i				: std_logic_vector(INSTR_SIZE-1 downto 0);
+	signal opcode_i				: std_logic_vector(OP_SIZE-1 downto 0);
 	signal func_i				: std_logic_vector(FUNC_SIZE-1 downto 0);
 	signal instruction_i		: dlxInstr;
 	
@@ -91,7 +91,8 @@ begin
 	-- IRAM
 	IRAM : ROMEM
 		generic map (
-			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/test.asm.mem",
+			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/test_arith_c.asm.mem",
+			ENTRIES		=> 256,
 			DATA_DELAY	=> 0
 		)
 		port map (
@@ -115,7 +116,7 @@ begin
 	iram_first_word	<= IRAM_DATA(31 downto 0);
 	dram_first_word	<= DRAM_DATA(31 downto 0);
 
-	opcode_i 	<= iram_first_word(31 downto 0);
+	opcode_i 	<= iram_first_word(31 downto 26);
 	func_i		<= iram_first_word(FUNC_SIZE-1 downto 0);
 	
 	-- The memory is BYTE-ADDRESSABLE: each row corresponds to 4 bytes
@@ -158,7 +159,7 @@ begin
 					when 58 => instruction_i <= SLTU;
 					when 59 => instruction_i <= SGTU;
 					when 61 => instruction_i <= SGEU;
-					when others => NOP;
+					when others => instruction_i <= NOP;
 				end case;
 			when 2 => instruction_i <= J;
 			when 3 => instruction_i <= JAL;
@@ -193,7 +194,7 @@ begin
 			when 58 => instruction_i <= SLTUI;
 			when 59 => instruction_i <= SGTUI;
 			when 61 => instruction_i <= SGEUI;
-			when others => NOP;
+			when others => instruction_i <= NOP;
 		end case;
 	end process;
 	

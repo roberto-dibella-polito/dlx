@@ -1,0 +1,2193 @@
+# //  Questa Sim-64
+# //  Version 10.7c linux_x86_64 Aug 17 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+source a.b-DataPath_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:22 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 18:17:22 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:22 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 18:17:22 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:22 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 18:17:22 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:22 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 18:17:22 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:22 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 18:17:23 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:23 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 18:17:23 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:23 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 18:17:23 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:23 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 18:17:23 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:23 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 18:17:23 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:23 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 18:17:23 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:23 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 18:17:23 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:23 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 18:17:24 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:24 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 18:17:24 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:24 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity IRAM
+# -- Compiling architecture IRam_Bhe of IRAM
+# End time: 18:17:24 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:17:24 on Sep 03,2022
+# vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP_tb
+# -- Compiling architecture structure of DLX_DP_tb
+# End time: 18:17:24 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps work.DLX_DP_tb 
+# Start time: 18:17:24 on Sep 03,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error (suppressible): a.b-DataPath_tb.vhd(110): (vopt-1270) Bad default binding for component instance "dut: DLX_DP".
+#  (Component port "RegIMM_LATCH_EN" is not on the entity.)
+# ** Warning: a.b-DataPath_tb.vhd(110): (vopt-3473) Component instance "/DLX_DP_tb/dut : DLX_DP" is not bound.
+# Optimization failed
+# Error loading design
+# End time: 18:17:24 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 1
+# Unrecognized dataset prefix: sim
+# Unrecognized dataset prefix: sim
+source a.b-DataPath_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:35 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 18:19:35 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:35 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 18:19:35 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:35 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 18:19:36 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:36 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 18:19:36 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:36 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 18:19:36 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:36 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 18:19:36 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:36 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 18:19:36 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:36 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 18:19:36 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:36 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 18:19:36 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:36 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 18:19:37 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:37 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 18:19:37 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:37 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 18:19:37 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:37 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 18:19:37 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:37 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity IRAM
+# -- Compiling architecture IRam_Bhe of IRAM
+# End time: 18:19:37 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:19:37 on Sep 03,2022
+# vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP_tb
+# -- Compiling architecture structure of DLX_DP_tb
+# ** Error: a.b-DataPath_tb.vhd(103): (vcom-1484) Unknown formal identifier "NPC_SEL".
+# ** Error: a.b-DataPath_tb.vhd(107): (vcom-1484) Unknown formal identifier "IR_LATCH_EN".
+# ** Error: a.b-DataPath_tb.vhd(108): (vcom-1484) Unknown formal identifier "NPC_LATCH_EN".
+# ** Error: a.b-DataPath_tb.vhd(119): (vcom-1484) Unknown formal identifier "RF_WR_EN".
+# ** Error: a.b-DataPath_tb.vhd(124): (vcom-1484) Unknown formal identifier "RegA_LATCH_EN".
+# ** Error: a.b-DataPath_tb.vhd(125): (vcom-1484) Unknown formal identifier "RegB_LATCH_EN".
+# ** Error: a.b-DataPath_tb.vhd(126): (vcom-1484) Unknown formal identifier "RegIMM_LATCH_EN".
+# ** Note: a.b-DataPath_tb.vhd(176): VHDL Compiler exiting
+# End time: 18:19:37 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source a.b-DataPath_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:38 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 18:27:39 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:39 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 18:27:39 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:39 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 18:27:39 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:39 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 18:27:39 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:39 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 18:27:39 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:39 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 18:27:39 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:39 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 18:27:39 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:39 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 18:27:40 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:40 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 18:27:40 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:40 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 18:27:40 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:40 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 18:27:40 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:40 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 18:27:40 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:40 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 18:27:40 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:40 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity IRAM
+# -- Compiling architecture IRam_Bhe of IRAM
+# End time: 18:27:40 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:27:40 on Sep 03,2022
+# vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP_tb
+# -- Compiling architecture structure of DLX_DP_tb
+# ** Error: a.b-DataPath_tb.vhd(127): (vcom-1136) Unknown identifier "CLK".
+# ** Error: a.b-DataPath_tb.vhd(128): (vcom-1136) Unknown identifier "RST".
+# ** Error: a.b-DataPath_tb.vhd(150): (vcom-1136) Unknown identifier "DRAM_ADDRESS".
+# ** Error: a.b-DataPath_tb.vhd(151): (vcom-1136) Unknown identifier "DRAM_DATA".
+# ** Error: a.b-DataPath_tb.vhd(163): (vcom-1136) Unknown identifier "rst_i".
+# ** Error: a.b-DataPath_tb.vhd(171): Illegal target for signal assignment.
+# ** Error: a.b-DataPath_tb.vhd(171): (vcom-1136) Unknown identifier "clk_i".
+# ** Error: a.b-DataPath_tb.vhd(173): Illegal target for signal assignment.
+# ** Error: a.b-DataPath_tb.vhd(173): (vcom-1136) Unknown identifier "clk_i".
+# ** Note: a.b-DataPath_tb.vhd(203): VHDL Compiler exiting
+# End time: 18:27:41 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 9, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source a.b-DataPath_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:57 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 18:29:57 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:57 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 18:29:58 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:58 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 18:29:58 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:58 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 18:29:58 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:58 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 18:29:58 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:58 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 18:29:58 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:58 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 18:29:58 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:58 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 18:29:58 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:58 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 18:29:59 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:59 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 18:29:59 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:59 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 18:29:59 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:59 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 18:29:59 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:59 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 18:29:59 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:59 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity IRAM
+# -- Compiling architecture IRam_Bhe of IRAM
+# End time: 18:29:59 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:29:59 on Sep 03,2022
+# vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP_tb
+# -- Compiling architecture structure of DLX_DP_tb
+# ** Error: a.b-DataPath_tb.vhd(120): (vcom-1136) Unknown identifier "ADDR_SIZE".
+# ** Error: a.b-DataPath_tb.vhd(120): (vcom-1591) Bad expression in left bound of range expression.
+# ** Error: a.b-DataPath_tb.vhd(120): Type error in range expression.
+# ** Error: a.b-DataPath_tb.vhd(121): (vcom-1136) Unknown identifier "ADDR_SIZE".
+# ** Error: a.b-DataPath_tb.vhd(121): (vcom-1591) Bad expression in left bound of range expression.
+# ** Error: a.b-DataPath_tb.vhd(121): Type error in range expression.
+# ** Error: a.b-DataPath_tb.vhd(130): (vcom-1136) Unknown identifier "clk_i".
+# ** Error: a.b-DataPath_tb.vhd(131): (vcom-1136) Unknown identifier "rst_i".
+# ** Error: a.b-DataPath_tb.vhd(166): (vcom-1136) Unknown identifier "rst_i".
+# ** Error: a.b-DataPath_tb.vhd(174): Illegal target for signal assignment.
+# ** Error: a.b-DataPath_tb.vhd(174): (vcom-1136) Unknown identifier "clk_i".
+# ** Error: a.b-DataPath_tb.vhd(176): Illegal target for signal assignment.
+# ** Error: a.b-DataPath_tb.vhd(176): (vcom-1136) Unknown identifier "clk_i".
+# ** Note: a.b-DataPath_tb.vhd(206): VHDL Compiler exiting
+# End time: 18:29:59 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 13, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source a.b-DataPath_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:50 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 18:30:50 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:50 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 18:30:50 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:50 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 18:30:50 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:50 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 18:30:50 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:50 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 18:30:50 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:50 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 18:30:50 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:50 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 18:30:51 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:51 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 18:30:51 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:51 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 18:30:51 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:51 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 18:30:51 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:51 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 18:30:51 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:51 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 18:30:51 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:51 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 18:30:51 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:51 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity IRAM
+# -- Compiling architecture IRam_Bhe of IRAM
+# End time: 18:30:52 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:30:52 on Sep 03,2022
+# vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP_tb
+# -- Compiling architecture structure of DLX_DP_tb
+# ** Error: a.b-DataPath_tb.vhd(17): near "component": (vcom-1576) expecting ';'.
+# End time: 18:30:52 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source a.b-DataPath_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:01 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 18:31:01 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:01 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 18:31:01 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:01 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 18:31:01 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:01 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 18:31:01 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:01 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 18:31:01 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:01 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 18:31:02 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:02 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 18:31:02 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:02 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 18:31:02 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:02 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 18:31:02 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:02 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 18:31:02 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:02 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 18:31:02 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:02 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 18:31:02 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:03 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 18:31:03 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:03 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity IRAM
+# -- Compiling architecture IRam_Bhe of IRAM
+# End time: 18:31:03 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:03 on Sep 03,2022
+# vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP_tb
+# -- Compiling architecture structure of DLX_DP_tb
+# ** Error: a.b-DataPath_tb.vhd(17): near "component": (vcom-1576) expecting ';'.
+# End time: 18:31:03 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source a.b-DataPath_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:09 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 18:31:10 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:10 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 18:31:10 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:10 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 18:31:10 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:10 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 18:31:10 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:10 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 18:31:10 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:10 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 18:31:10 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:10 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 18:31:10 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:10 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 18:31:11 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:11 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 18:31:11 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:11 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 18:31:11 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:11 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 18:31:11 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:11 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 18:31:11 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:11 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 18:31:11 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:11 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity IRAM
+# -- Compiling architecture IRam_Bhe of IRAM
+# End time: 18:31:11 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:11 on Sep 03,2022
+# vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP_tb
+# -- Compiling architecture structure of DLX_DP_tb
+# ** Error: a.b-DataPath_tb.vhd(133): (vcom-1136) Unknown identifier "clk_i".
+# ** Error: a.b-DataPath_tb.vhd(134): (vcom-1136) Unknown identifier "rst_i".
+# ** Error: a.b-DataPath_tb.vhd(169): (vcom-1136) Unknown identifier "rst_i".
+# ** Error: a.b-DataPath_tb.vhd(177): Illegal target for signal assignment.
+# ** Error: a.b-DataPath_tb.vhd(177): (vcom-1136) Unknown identifier "clk_i".
+# ** Error: a.b-DataPath_tb.vhd(179): Illegal target for signal assignment.
+# ** Error: a.b-DataPath_tb.vhd(179): (vcom-1136) Unknown identifier "clk_i".
+# ** Note: a.b-DataPath_tb.vhd(209): VHDL Compiler exiting
+# End time: 18:31:12 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 7, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source a.b-DataPath_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:32 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 18:31:32 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:32 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 18:31:33 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:33 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 18:31:33 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:33 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 18:31:33 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:33 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 18:31:33 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:33 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 18:31:33 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:33 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 18:31:33 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:33 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 18:31:33 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:33 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 18:31:34 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:34 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 18:31:34 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:34 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 18:31:34 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:34 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 18:31:34 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:34 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 18:31:34 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:34 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity IRAM
+# -- Compiling architecture IRam_Bhe of IRAM
+# End time: 18:31:34 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:31:34 on Sep 03,2022
+# vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP_tb
+# -- Compiling architecture structure of DLX_DP_tb
+# End time: 18:31:34 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps work.DLX_DP_tb 
+# Start time: 18:31:34 on Sep 03,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: ../a.b-DataPath.vhd(349): (vopt-3473) Component instance "/DLX_DP_tb/dp/ex_stage : DLX_EX" is not bound.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mytypes
+# Loading ieee.math_real(body)
+# Loading work.rf_constants
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.dlx_dp_tb(structure)#1
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.rf(structure)#1
+# Loading work.counter(behavior)#1
+# Loading work.mux2to1(behavior)#2
+# Loading work.rf_phys(behavior_async)#1
+# ** Warning: (vsim-3473) Component instance "ex_stage : DLX_EX" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp File: ../a.b-DataPath.vhd
+# (vish-4014) No objects found matching '/dlx_dp_tb/npc_sel_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/ir_latch_en_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/npc_latch_en_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/call_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/ret_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/spill_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/fill_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/rs1_en_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/rs2_en_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/rf_wr_en_i'.
+add wave *
+run 5 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+force -freeze sim:/dlx_dp_tb/rst_i 1 0
+run 5 ns
+force -freeze sim:/dlx_dp_tb/rst_i 0 0
+# Causality operation skipped due to absence of debug database file
+run 10 ns
+# ** Error: (vsim-3953) STD_LOGIC_1164.HREAD End of string encountered
+#    Time: 10 ns  Iteration: 2  Instance: /dlx_dp_tb/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 10 ns  Iteration: 2  Instance: /dlx_dp_tb/mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 10 ns  Iteration: 2  Instance: /dlx_dp_tb/mem
+run 10 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 4  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ns  Iteration: 4  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 5  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ns  Iteration: 5  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+force -freeze sim:/dlx_dp_tb/pc_latch_en_i 1 0
+run 10 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 35 ns  Iteration: 4  Instance: /dlx_dp_tb/mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 35 ns  Iteration: 4  Instance: /dlx_dp_tb/mem
+run 50 ns
+add wave  \
+sim:/dlx_dp_tb/dp/if_stage/PC_i
+run 10 ns
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Warning: (vsim-3473) Component instance "ex_stage : DLX_EX" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp File: ../a.b-DataPath.vhd
+run 50 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 25 ns  Iteration: 3  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ns  Iteration: 3  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+quit -sim
+# End time: 18:40:55 on Sep 03,2022, Elapsed time: 0:09:21
+# Errors: 1, Warnings: 47
+source a.b-DataPath_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:06 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 18:41:07 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:07 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 18:41:07 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:07 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 18:41:07 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:07 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 18:41:07 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:07 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 18:41:07 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:07 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 18:41:07 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:07 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 18:41:07 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:08 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 18:41:08 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:08 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 18:41:08 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:08 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 18:41:08 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:08 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 18:41:08 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:08 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 18:41:08 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:08 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 18:41:08 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:08 on Sep 03,2022
+# vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity IRAM
+# -- Compiling architecture IRam_Bhe of IRAM
+# End time: 18:41:09 on Sep 03,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 18:41:09 on Sep 03,2022
+# vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP_tb
+# -- Compiling architecture structure of DLX_DP_tb
+# End time: 18:41:09 on Sep 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps work.DLX_DP_tb 
+# Start time: 18:41:09 on Sep 03,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: ../a.b-DataPath.vhd(349): (vopt-3473) Component instance "/DLX_DP_tb/dp/ex_stage : DLX_EX" is not bound.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mytypes
+# Loading ieee.math_real(body)
+# Loading work.rf_constants
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_textio(body)
+# Loading work.dlx_dp_tb(structure)#1
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.rf(structure)#1
+# Loading work.counter(behavior)#1
+# Loading work.mux2to1(behavior)#2
+# Loading work.rf_phys(behavior_async)#1
+# ** Warning: (vsim-3473) Component instance "ex_stage : DLX_EX" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp File: ../a.b-DataPath.vhd
+# (vish-4014) No objects found matching '/dlx_dp_tb/npc_sel_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/pc_latch_en_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/ir_latch_en_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/npc_latch_en_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/call_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/ret_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/spill_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/fill_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/rs1_en_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/rs2_en_i'.
+# (vish-4014) No objects found matching '/dlx_dp_tb/rf_wr_en_i'.
+add wave *
+force -freeze sim:/dlx_dp_tb/rst_i 1 0
+run 3 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/SF_converter
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_RD1
+force -freeze sim:/dlx_dp_tb/rst_i 0 0
+run 15 ns
+# ** Error: (vsim-3953) STD_LOGIC_1164.HREAD End of string encountered
+#    Time: 3 ns  Iteration: 0  Instance: /dlx_dp_tb/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 3 ns  Iteration: 0  Instance: /dlx_dp_tb/mem
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 3 ns  Iteration: 0  Instance: /dlx_dp_tb/mem
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 2  Instance: /dlx_dp_tb/dp/id_stage
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 4  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ns  Iteration: 4  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 15 ns  Iteration: 5  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ns  Iteration: 5  Instance: /dlx_dp_tb/dp/id_stage/regfile/DataPath/Conv_W
+# End time: 18:44:09 on Sep 03,2022, Elapsed time: 0:03:00
+# Errors: 2, Warnings: 54
