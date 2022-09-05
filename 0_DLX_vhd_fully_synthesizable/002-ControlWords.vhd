@@ -22,11 +22,11 @@ package DLX_ControlWords is
 	constant uC_MEM_SIZE	: integer := 64;
 	constant CW_SIZE		: integer := 14;
 	
-	constant RR_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1110000010111";	-- Register-Register control word
-	constant RI_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1100010010111";
-	constant NOP_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "0000000010001";
-	constant LW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1100010110011";
-	constant SW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1110011100001";	
+	constant RR_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11100000010111";	-- Register-Register control word
+	constant RI_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11001010010111";
+	constant NOP_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "00000000010001";
+	constant LW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11001010110011";
+	constant SW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11100011100001";	
 	--constant J_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "";
 	--constant JAL_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "";
 	--constant BQZ_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "";
