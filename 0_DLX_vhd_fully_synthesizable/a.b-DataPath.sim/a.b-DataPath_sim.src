@@ -2,72 +2,89 @@ vcom -reportprogress 300 -work work ../000-globals.vhd
 vcom -reportprogress 300 -work work ../000-commons/counter.vhd
 vcom -reportprogress 300 -work work ../000-commons/mux2to1_1bit_bhv.vhd
 vcom -reportprogress 300 -work work ../000-commons/mux2to1_bhv.vhd
+vcom -reportprogress 300 -work work ../01-generic_shifter.vhd
+vcom -reportprogress 300 -work work ../002-ControlWords.vhd
+
 
 # Instruction Fetch
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.a-IF.vhd
 
 # Instruction Decode
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd
-#vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/counter.vhd
-#vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/mux2to1_1bit_bhv.vhd
-#vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/mux2to1_bhv.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd
-#vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
 vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.b-ID.vhd
 
-# ...
+# Execute
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd
+vcom -reportprogress 300 -work work ../a.b-DataPath.core/a.b.c-EX.vhd
 
 vcom -reportprogress 300 -work work ../a.b-DataPath.vhd
 
-vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd
+#vcom -reportprogress 300 -work work ../test_bench_and_memory/a.c-IRAM.vhd
+vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_romem/romem.vhd
 vcom -reportprogress 300 -work work a.b-DataPath_tb.vhd
 
-vsim -t 100ps work.DLX_DP_tb
+vsim -t 100ps work.DLX_DP_tb -voptargs=+acc
 #add wave *
 
 add wave  \
 sim:/dlx_dp_tb/clk_i \
-sim:/dlx_dp_tb/rst_i 
+sim:/dlx_dp_tb/rst_i
+#sim:/dlx_dp_tb/IRAM/ADDRESS \
+#sim:/dlx_dp_tb/IRAM/DATA
 
-add wave -group "Controls" \
-sim:/dlx_dp_tb/npc_sel_i \
-sim:/dlx_dp_tb/pc_latch_en_i \
-sim:/dlx_dp_tb/ir_latch_en_i \
-sim:/dlx_dp_tb/npc_latch_en_i \
-sim:/dlx_dp_tb/call_i \
-sim:/dlx_dp_tb/ret_i \
-sim:/dlx_dp_tb/spill_i \
-sim:/dlx_dp_tb/fill_i \
-sim:/dlx_dp_tb/rf_en_i \
-sim:/dlx_dp_tb/rs1_en_i \
-sim:/dlx_dp_tb/rs2_en_i \
-sim:/dlx_dp_tb/rf_wr_en_i \
-sim:/dlx_dp_tb/imm_isoff_i
+add wave -divider "ID stage" \
+sim:/dlx_dp_tb/dp/rs1_id_i \
+sim:/dlx_dp_tb/dp/rs2_id_i \
+sim:/dlx_dp_tb/dp/rd_id_i
 
-add wave -divider "IRAM" \
-sim:/dlx_dp_tb/mem/IRAM_mem \
-sim:/dlx_dp_tb/ram_addr_i \
-sim:/dlx_dp_tb/ram_data_i
+add wave -group "ID controls" \
+sim:/dlx_dp_tb/dp/id_stage/RF_WR_EN \
+sim:/dlx_dp_tb/dp/id_stage/RS1_EN \
+sim:/dlx_dp_tb/dp/id_stage/RS2_EN 
 
-add wave  \
-sim:/dlx_dp_tb/dut/ir \
--divider "Register File" \
-sim:/dlx_dp_tb/dut/rs1_id_i \
-sim:/dlx_dp_tb/dut/rs2_id_i \
-sim:/dlx_dp_tb/dut/rd_id_i \
--divider "RF - Internal" \
-sim:/dlx_dp_tb/dut/id_stage/regfile/DataPath/Physical_RF/ADD_WR \
-sim:/dlx_dp_tb/dut/id_stage/regfile/DataPath/Physical_RF/ADD_RD1 \
-sim:/dlx_dp_tb/dut/id_stage/regfile/DataPath/Physical_RF/ADD_RD2 \
-sim:/dlx_dp_tb/dut/id_stage/regfile/DataPath/Physical_RF/REGISTERS \
-sim:/dlx_dp_tb/dut/rf_out1_id_o \
-sim:/dlx_dp_tb/dut/rf_out2_id_o \
--divider "Fwd signals" \
-sim:/dlx_dp_tb/dut/imm_id_o \
-sim:/dlx_dp_tb/dut/npc_id_i 
+add wave -divider "Register File" sim:/dlx_dp_tb/dp/id_stage/regfile/RD1 \
+sim:/dlx_dp_tb/dp/id_stage/regfile/RD2 \
+sim:/dlx_dp_tb/dp/id_stage/regfile/WR \
+sim:/dlx_dp_tb/dp/id_stage/regfile/ADD_WR \
+sim:/dlx_dp_tb/dp/id_stage/regfile/ADD_RD1 \
+sim:/dlx_dp_tb/dp/id_stage/regfile/ADD_RD2 \
+sim:/dlx_dp_tb/dp/id_stage/regfile/DATAIN \
+sim:/dlx_dp_tb/dp/id_stage/regfile/DataPath/Physical_RF/REGISTERS \
+sim:/dlx_dp_tb/dp/id_stage/regfile/OUT1 \
+sim:/dlx_dp_tb/dp/id_stage/regfile/OUT2 
+
+add wave -divider "EX" \
+sim:/dlx_dp_tb/dp/ex_stage/NPC_IN \
+sim:/dlx_dp_tb/dp/ex_stage/PORT_A \
+sim:/dlx_dp_tb/dp/ex_stage/PORT_B \
+sim:/dlx_dp_tb/dp/ex_stage/IMM_IN \
+sim:/dlx_dp_tb/dp/ex_stage/ALU_OUT \
+sim:/dlx_dp_tb/dp/ex_stage/RD_FWD_IN \
+sim:/dlx_dp_tb/dp/ex_stage/BRANCH_T \
+-divider "MEM" \
+sim:/dlx_dp_tb/dp/alu_out_mem_i \
+sim:/dlx_dp_tb/dp/data_mem_mem_i \
+-divider "WB" \
+sim:/dlx_dp_tb/dp/data_mem_wb_i \
+sim:/dlx_dp_tb/dp/alu_out_wb_i \
+sim:/dlx_dp_tb/dp/wr_data_id_i 
+
+
+
+
 
 run 30 ns

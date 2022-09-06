@@ -31,8 +31,6 @@ entity DLX_DP is
 		
 		-- Instruction port, forwarded to CU
 		INSTR		: out std_logic_vector(DATA_SIZE-1 downto 0);	
-
-		RegRD_SEL	: in std_logic;
 		
 		-- ID control signals
 		-- Windowed register file
@@ -44,7 +42,8 @@ entity DLX_DP is
 		RS1_EN		: in std_logic;
 		RS2_EN		: in std_logic;
 		
-		IMM_ISOFF	: in std_logic;	
+		IMM_ISOFF	: in std_logic;
+		RegRD_SEL	: in std_logic;	
 		
 		-- EX control signals
 		MUXA_SEL	: in std_logic;
@@ -119,11 +118,11 @@ architecture structure of DLX_DP is
 			IMM_ISOFF	: in std_logic;
 		
 			ADDR_WR  	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
-		    	ADDR_RS1 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
-		    	ADDR_RS2 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
-		    	DATAIN  	: IN  std_logic_vector(DATA_SIZE-1 downto 0);
-		    	OUT1    	: OUT std_logic_vector(DATA_SIZE-1 downto 0);
-		    	OUT2    	: OUT std_logic_vector(DATA_SIZE-1 downto 0);
+		    ADDR_RS1 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
+		    ADDR_RS2 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
+		    DATAIN  	: IN  std_logic_vector(DATA_SIZE-1 downto 0);
+		    OUT1    	: OUT std_logic_vector(DATA_SIZE-1 downto 0);
+		    OUT2    	: OUT std_logic_vector(DATA_SIZE-1 downto 0);
 		
 			IMM_I		: in std_logic_vector(IMM_I_SIZE-1 downto 0);
 			IMM_O		: out std_logic_vector(IMM_O_SIZE-1 downto 0);

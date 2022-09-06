@@ -60,8 +60,6 @@ architecture dlx_rtl of DLX is
 			
 			-- Instruction port, forwarded to CU
 			INSTR			: out std_logic_vector(DATA_SIZE-1 downto 0);	
-			
-			RegRD_SEL		: in std_logic;
 
 			-- ID control signals
 			-- Windowed register file
@@ -73,7 +71,8 @@ architecture dlx_rtl of DLX is
 			RS1_EN			: in std_logic;
 			RS2_EN			: in std_logic;
 			
-			IMM_ISOFF		: in std_logic;	
+			IMM_ISOFF		: in std_logic;
+			RegRD_SEL		: in std_logic;	
 			
 			-- EX control signals
 			MUXA_SEL		: in std_logic;
@@ -126,8 +125,6 @@ architecture dlx_rtl of DLX is
 
 			PIPE_CLEAR_n		: out std_logic;
 
-			RegRD_SEL			: out std_logic;
-
 			-- ID control signals
 			RF_CALL				: out std_logic;
 			RF_RET				: out std_logic;
@@ -137,6 +134,7 @@ architecture dlx_rtl of DLX is
 			RF_RS1_EN			: out std_logic;
 			RF_RS2_EN			: out std_logic;
 			IMM_ISOFF			: out std_logic;	
+			RegRD_SEL			: out std_logic;
 
 			-- EX Control Signals
 			MUXA_SEL           	: out std_logic;  	-- MUX-A Sel
@@ -168,7 +166,6 @@ architecture dlx_rtl of DLX is
 
 	-- Control Unit Bus signals
 	signal instr_i			: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal regrd_sel_i		: std_logic;
 	signal pipe_if_id_en_i	: std_logic;
 	signal pipe_id_ex_en_i	: std_logic;
 	signal pipe_ex_mem_en_i	: std_logic;
@@ -182,6 +179,7 @@ architecture dlx_rtl of DLX is
 	signal rf_rs1_en_i		: std_logic;
 	signal rf_rs2_en_i		: std_logic;
 	signal imm_isoff_i		: std_logic;
+	signal regrd_sel_i		: std_logic;
 	signal muxA_sel_i		: std_logic;
 	signal muxB_sel_i		: std_logic;
 	signal mem_in_en_i		: std_logic;

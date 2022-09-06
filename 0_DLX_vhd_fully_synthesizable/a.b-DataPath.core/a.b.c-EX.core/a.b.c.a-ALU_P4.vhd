@@ -185,7 +185,7 @@ begin
 			when SNE	=> ALU_OUT	<= sne_out;
 			when SRL_O	=> ALU_OUT	<= shifter_out;
 			when XOR_O	=> ALU_OUT	<= xor_out;
-			--when ADDU	=> ALU_OUT	<= adder_out;
+			when ADDU	=> ALU_OUT	<= adder_out;
 			--when MULT	=> ALU_OUT	<= mult_out;
 			when SEQ	=> ALU_OUT	<= seq_out;
 			when SGEU	=> ALU_OUT	<= sgeu_out;
@@ -194,7 +194,7 @@ begin
 			when SLT	=> ALU_OUT	<= slt_out;
 			when SLTU	=> ALU_OUT	<= sltu_out;
 			when SRA_O	=> ALU_OUT	<= sra_out;
-			--when SUBU	=> ALU_OUT	<= adder_out;
+			when SUBU	=> ALU_OUT	<= adder_out;
 			when NOP	=> ALU_OUT	<= adder_out; 
 			when others	=> ALU_OUT	<= adder_out;
 		end case;

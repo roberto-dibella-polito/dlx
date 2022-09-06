@@ -91,7 +91,7 @@ begin
 	-- IRAM
 	IRAM : ROMEM
 		generic map (
-			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/test_arith_c.asm.mem",
+			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/test_arithmetic_comments.asm.mem",
 			ENTRIES		=> 256,
 			DATA_DELAY	=> 0
 		)

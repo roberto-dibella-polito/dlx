@@ -45,6 +45,7 @@ entity dlx_cu is
 		--RegA_LATCH_EN      : out std_logic;  -- Register A Latch Enable
 		--RegB_LATCH_EN      : out std_logic;  -- Register B Latch Enable
 		--RegIMM_LATCH_EN    : out std_logic;  -- Immediate Register Latch Enable
+		RegRD_SEL			: out std_logic;
 		RF_CALL				: out std_logic;
 		RF_RET				: out std_logic;
 		RF_SPILL			: in std_logic;
@@ -95,9 +96,9 @@ architecture dlx_cu_hw of dlx_cu is
 		not_implemented, 	-- 0x06
 		not_implemented,	-- 0x07
 		RI_CW, 				-- 0x08	ADDI
-		not_implemented,	-- 0x09	ADDUI
+		RI_CW,				-- 0x09	ADDUI
 		RI_CW,				-- 0x0A	SUBI
-		not_implemented,	-- 0x0B	SUBUI
+		RI_CW,				-- 0x0B	SUBUI
 		RI_CW,				-- 0x0C	ANDI
 		RI_CW,				-- 0x0D	ORI
 		RI_CW,				-- 0x0E	XORI
@@ -152,9 +153,9 @@ architecture dlx_cu_hw of dlx_cu is
 		not_implemented		-- 0x3F
 	);	
 	
-	signal IR_opcode : std_logic_vector(OP_CODE_SIZE -1 downto 0);  -- OpCode part of IR
-	signal IR_func : std_logic_vector(FUNC_SIZE-1 downto 0);   -- Func part of IR when Rtype
-	signal cw   : std_logic_vector(CW_SIZE - 1 downto 0); -- full control word read from cw_mem
+	signal IR_opcode	: std_logic_vector(OP_CODE_SIZE -1 downto 0);  -- OpCode part of IR
+	signal IR_func 		: std_logic_vector(FUNC_SIZE-1 downto 0);   -- Func part of IR when Rtype
+	signal cw   		: std_logic_vector(CW_SIZE - 1 downto 0); -- full control word read from cw_mem
 
 	-- control word is shifted to the correct stage
 	signal cw1 : std_logic_vector(CW_SIZE -1 downto 0); -- first stage
@@ -179,6 +180,8 @@ begin  -- dlx_cu_rtl
 	-- For now, all the pipeline register will remain ACTIVE
 	-- and a new instruction will be fetched every clk
 	stall <= '0';
+
+	--stall <= not IRAM_READY;
 	
 	pipe_clear_i	<= '1';			-- For now, no branch instruction is created
 	pipe_enable_i 	<= not stall;
@@ -190,9 +193,12 @@ begin  -- dlx_cu_rtl
 	
 	PIPE_IF_ID_EN		<= pipe_enable_i;
 	
-	RF_EN				<= cw1(CW_SIZE-1);
+	--RF_EN				<= cw1(CW_SIZE-1);	-- For now, RF always active. Enable used for single ports
+	RF_EN				<= '1';	
 	RF_RS1_EN			<= cw1(CW_SIZE-2);
 	RF_RS2_EN			<= cw1(CW_SIZE-3);
+	RF_CALL				<= '0';
+	RF_RET				<= '0';
 	IMM_ISOFF			<= cw1(CW_SIZE-4);
 	RegRD_SEL			<= cw1(CW_SIZE-5);
 	
@@ -217,21 +223,25 @@ begin  -- dlx_cu_rtl
 	CW_PIPE: process (Clk, Rst)
 	begin  -- process Clk
 		if Rst = '1' then                   -- asynchronous reset (active low)
-			cw1 <= (others => '0');
-			cw2 <= (others => '0');
-			cw3 <= (others => '0');
-			cw4 <= (others => '0');
+			cw1 <= NOP_CW;
+			cw2 <= NOP_CW(CW_SIZE-1-5 downto 0);
+			cw3 <= NOP_CW(CW_SIZE - 1 - 8 downto 0);
+			cw4 <= NOP_CW(CW_SIZE - 1 - 11 downto 0);
 			--cw5 <= (others => '0');
 			aluOpcode1 <= NOP;
 			aluOpcode2 <= NOP;
 		elsif Clk'event and Clk = '1' then  -- rising clock edge
-			cw1 <= cw;
-			cw2 <= cw1(CW_SIZE - 1 - 5 downto 0);
-			cw3 <= cw2(CW_SIZE - 1 - 8 downto 0);
-			cw4 <= cw3(CW_SIZE - 1 - 11 downto 0);
+			
+			-- Pipeline should not stall
+			--if( stall = '0' ) then
+				cw1 <= cw;
+				cw2 <= cw1(CW_SIZE - 1 - 5 downto 0);
+				cw3 <= cw2(CW_SIZE - 1 - 8 downto 0);
+				cw4 <= cw3(CW_SIZE - 1 - 11 downto 0);
 
-			aluOpcode1 <= aluOpcode_i;
-			aluOpcode2 <= aluOpcode1;
+				aluOpcode1 <= aluOpcode_i;
+				aluOpcode2 <= aluOpcode1;
+			--end if;
 		
 		end if;
 	end process CW_PIPE;

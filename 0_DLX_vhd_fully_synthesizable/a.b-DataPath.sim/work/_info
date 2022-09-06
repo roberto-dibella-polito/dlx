@@ -9,11 +9,11 @@ z2
 cModel Technology
 Z0 d/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/a.b-DataPath.sim
 T_opt
-Z1 !s110 1662223269
-Vgkj>B6Mh;mjWQS4M;faDm2
+Z1 !s110 1662468978
+VeBSmQWY?ZH<KBG]PNB2HX1
 04 9 9 work dlx_dp_tb structure 1
-=1-000ae431a4f1-631383a5-621fc-7be1
-o-quiet -auto_acc_if_foreign -work work
+=1-000ae431a4f1-63174372-82355-2f6b
+o-quiet -auto_acc_if_foreign -work work +acc
 tCvgOpt 0
 n@_opt
 OL;O;10.7c;67
@@ -35,9 +35,9 @@ VO?lFZ014[[3Y<miNiaPRL2
 !s100 JKaf>?H]Dc2mCR@ikH<3S0
 Z12 OL;C;10.7c;67
 32
-Z13 !s110 1662223267
+Z13 !s110 1662468975
 !i10b 1
-Z14 !s108 1662223267.000000
+Z14 !s108 1662468975.000000
 Z15 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd|
 Z16 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd|
 !i113 0
@@ -66,8 +66,114 @@ R16
 !i113 0
 R17
 R18
+Ccfg_fa_behavioral
+eFA
+Z19 aBEHAVIORAL
+DAx4 work 2 fa 10 behavioral 22 l9VY[HBGCaEz?neT;FB;H3
+R8
+R9
+Z20 DEx4 work 2 fa 0 22 olkG2i7eJWm@MH>a<IfBQ2
+Z21 w1661611158
+R0
+Z22 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd
+Z23 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd
+l0
+L24
+VaO4WOjE`aHQ<=hm3j=>i:0
+!s100 ;fLgj2F5I1BR>Vc^?i^<S3
+R12
+32
+Z24 !s110 1662468976
+!i10b 0
+Z25 !s108 1662468976.000000
+Z26 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd|
+Z27 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd|
+!i113 0
+R17
+R18
+Ccfg_rca_behavioral
+eRCA
+R19
+DAx4 work 3 rca 10 behavioral 22 gl4A@UTAcH@g3=S;Ef2CK3
+R5
+R6
+R8
+R9
+Z28 DEx4 work 3 rca 0 22 cWeQnl2YYBRRjk03=WP2J3
+R21
+R0
+Z29 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd
+Z30 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd
+l0
+L74
+VEbZe9WT9=ZjKG`[W1:D2L1
+!s100 NFi73Z74gHUAJJ0Rb<Y?F3
+R12
+32
+Z31 !s110 1662468977
+!i10b 0
+Z32 !s108 1662468977.000000
+Z33 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd|
+Z34 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd|
+!i113 0
+R17
+R18
+Ccfg_rca_structural
+eRCA
+aSTRUCTURAL
+R20
+DCx4 work 17 cfg_fa_behavioral 0 22 aO4WOjE`aHQ<=hm3j=>i:0
+DAx4 work 3 rca 10 structural 22 g8JIFiOGEgoF@oEMjo@OT3
+R5
+R6
+R8
+R9
+R28
+R21
+R0
+R29
+R30
+l0
+L64
+VlzJ^nCWh6NjcTh[?3c;eD3
+!s100 LDOgTWOZ^0mDAXEE4JJQ>3
+R12
+32
+R31
+!i10b 0
+R32
+R33
+R34
+!i113 0
+R17
+R18
+Ccfg_struct_pg_1
+ePG_NET
+aSTRUCT_PG_1
+DAx4 work 6 pg_net 11 struct_pg_1 22 CN3_eb<8<i485OX2QCLz?2
+R8
+R9
+Z35 DEx4 work 6 pg_net 0 22 1B=aeUX@5^R[CTdb^DWon0
+Z36 w1661611483
+R0
+Z37 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd
+Z38 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd
+l0
+L27
+VKn6I[h7o=YPizAR?hgB[a2
+!s100 Mb2kob?[Q:0Z<Q`Pf:9Uh2
+R12
+32
+R24
+!i10b 0
+R25
+Z39 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd|
+Z40 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd|
+!i113 0
+R17
+R18
 Ecounter
-Z19 w1661611321
+Z41 w1661611321
 R4
 R7
 R5
@@ -75,19 +181,19 @@ R6
 R8
 R9
 R0
-Z20 8../000-commons/counter.vhd
-Z21 F../000-commons/counter.vhd
+Z42 8../000-commons/counter.vhd
+Z43 F../000-commons/counter.vhd
 l0
 L10
 V2z=Xk[d[K2STc>B3zVQSZ2
 !s100 VmN@o5[8[55[i^=;I0Zj23
 R12
 32
-R13
+Z44 !s110 1662468974
 !i10b 1
-R14
-Z22 !s90 -reportprogress|300|-work|work|../000-commons/counter.vhd|
-Z23 !s107 ../000-commons/counter.vhd|
+Z45 !s108 1662468974.000000
+Z46 !s90 -reportprogress|300|-work|work|../000-commons/counter.vhd|
+Z47 !s107 ../000-commons/counter.vhd|
 !i113 0
 R17
 R18
@@ -105,66 +211,216 @@ Vf5MX^_LX2DDCSQYKfk9`D3
 !s100 2Coi^C`D2ac[0<7:eCQA41
 R12
 32
-R13
+R44
 !i10b 1
-R14
-R22
-R23
+R45
+R46
+R47
 !i113 0
 R17
 R18
-Edlx_dp
-Z24 w1662211109
-Z25 DPx4 work 7 mytypes 0 22 49LHiEL_?n=XNmT1dU7gd0
-R7
+Ecs_block
+Z48 w1661679803
+R5
+R6
 R8
 R9
 R0
-Z26 8../a.b-DataPath.vhd
-Z27 F../a.b-DataPath.vhd
+Z49 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd
+Z50 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd
 l0
-L11
-VX>D@TDMOa5ZI=;^PkO3X:1
-!s100 :h[T_]mE_HP`8>abZlI3k0
+L8
+V4XWn_C5UAZIeRS<DK^jS91
+!s100 DPd7JOZNz=6zG_eXZ3aMB1
 R12
 32
-Z28 !s110 1662223268
+R31
 !i10b 1
-Z29 !s108 1662223268.000000
-Z30 !s90 -reportprogress|300|-work|work|../a.b-DataPath.vhd|
-Z31 !s107 ../a.b-DataPath.vhd|
+R32
+Z51 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd|
+Z52 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd|
 !i113 0
 R17
 R18
 Astructure
-R25
-R7
+R5
+R6
 R8
 R9
-DEx4 work 6 dlx_dp 0 22 X>D@TDMOa5ZI=;^PkO3X:1
-l195
-L70
-VM2O?4NPjQRTc@^QoSieb:2
-!s100 gU:YahRJG9RYVkDL4Zl_T0
+DEx4 work 8 cs_block 0 22 4XWn_C5UAZIeRS<DK^jS91
+l48
+L21
+V>V:Wla?[bYR1SoE[WSdXZ1
+!s100 @^0dEW>c^S>z`a2U:o0f21
 R12
 32
-R28
-!i10b 1
-R29
-R30
 R31
+!i10b 1
+R32
+R51
+R52
 !i113 0
 R17
 R18
-Edlx_dp_tb
-Z32 w1662223232
-R25
+Ecs_sum
+R21
+R5
+R6
+R8
+R9
+R0
+Z53 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd
+Z54 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd
+l0
+L7
+VLXKH=W2OK3iJVbj^:4JFe3
+!s100 ARbc^TDL:T3QX9iPaoU@b1
+R12
+32
+R31
+!i10b 1
+R32
+Z55 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd|
+Z56 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd|
+!i113 0
+R17
+R18
+Astructure
+R5
+R6
+R8
+R9
+DEx4 work 6 cs_sum 0 22 LXKH=W2OK3iJVbj^:4JFe3
+l35
+L24
+V9z8n57<2?8mOZeWN`a8Km3
+!s100 3:4<h25JVSC6VR1gZmeNT2
+R12
+32
+R31
+!i10b 1
+R32
+R55
+R56
+!i113 0
+R17
+R18
+Edlx_alu
+Z57 w1661623145
+Z58 DPx4 work 7 mytypes 0 22 lmLLJ8m4m4EcRV`=aL82a0
 R7
 R8
 R9
 R0
-Z33 8a.b-DataPath_tb.vhd
-Z34 Fa.b-DataPath_tb.vhd
+Z59 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd
+Z60 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd
+l0
+L14
+V6_I`2>>aOXD4h`?ED<aKa1
+!s100 1kG3>z8PWTI:oa0aN`H=B2
+R12
+32
+R31
+!i10b 1
+R32
+Z61 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd|
+Z62 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd|
+!i113 0
+R17
+R18
+Abhv
+R58
+R7
+R8
+R9
+DEx4 work 7 dlx_alu 0 22 6_I`2>>aOXD4h`?ED<aKa1
+l56
+L26
+VBZh:E398;mZ0o_IfHAj582
+!s100 jE6<z3cMBha3B4<DzIh=V3
+R12
+32
+R31
+!i10b 1
+R32
+R61
+R62
+!i113 0
+R17
+R18
+Pdlx_controlwords
+R8
+R9
+w1662467723
+R0
+8../002-ControlWords.vhd
+F../002-ControlWords.vhd
+l0
+L4
+VIiMLneGfCf1W_AM4@iFW51
+!s100 ;nRDImo0>a:T;KS<SAH<D1
+R12
+32
+R13
+!i10b 1
+R45
+!s90 -reportprogress|300|-work|work|../002-ControlWords.vhd|
+!s107 ../002-ControlWords.vhd|
+!i113 0
+R17
+R18
+Edlx_dp
+Z63 w1662466168
+R58
+R7
+R8
+R9
+R0
+Z64 8../a.b-DataPath.vhd
+Z65 F../a.b-DataPath.vhd
+l0
+L11
+VE:`EMI^Xgo:7GX=>fV]2J3
+!s100 zz4`53]FEm24F9Dde<H9T2
+R12
+32
+R1
+!i10b 1
+R32
+Z66 !s90 -reportprogress|300|-work|work|../a.b-DataPath.vhd|
+Z67 !s107 ../a.b-DataPath.vhd|
+!i113 0
+R17
+R18
+Astructure
+R58
+R7
+R8
+R9
+DEx4 work 6 dlx_dp 0 22 E:`EMI^Xgo:7GX=>fV]2J3
+l196
+L71
+VblUP1KST_iZ^2HHGchL8d0
+!s100 G46MDmBS0Y1?Kn:bH<elX3
+R12
+32
+R1
+!i10b 1
+R32
+R66
+R67
+!i113 0
+R17
+R18
+Edlx_dp_tb
+Z68 w1662468971
+R58
+R7
+R8
+R9
+R0
+Z69 8a.b-DataPath_tb.vhd
+Z70 Fa.b-DataPath_tb.vhd
 l0
 L9
 VijbL>O15@L`>a;[Z@nI9b1
@@ -173,59 +429,102 @@ R12
 32
 R1
 !i10b 1
-Z35 !s108 1662223269.000000
-Z36 !s90 -reportprogress|300|-work|work|a.b-DataPath_tb.vhd|
-Z37 !s107 a.b-DataPath_tb.vhd|
+Z71 !s108 1662468978.000000
+Z72 !s90 -reportprogress|300|-work|work|a.b-DataPath_tb.vhd|
+Z73 !s107 a.b-DataPath_tb.vhd|
 !i113 0
 R17
 R18
 Astructure
-R25
+R58
 R7
 R8
 R9
 DEx4 work 9 dlx_dp_tb 0 22 ijbL>O15@L`>a;[Z@nI9b1
-l127
+l151
 L12
-VH1TEZbn_V05NQDE06JOUk2
-!s100 R8dF28j<HdTI6H6G^Sod<2
+VB;gKI?_>`XC0MES=EGfho3
+!s100 9jJQ2c7BJSN`AWmon<9ac1
 R12
 32
 R1
 !i10b 1
-R35
-R36
-R37
+R71
+R72
+R73
+!i113 0
+R17
+R18
+Edlx_ex
+Z74 w1661624784
+R58
+R7
+R8
+R9
+R0
+Z75 8../a.b-DataPath.core/a.b.c-EX.vhd
+Z76 F../a.b-DataPath.core/a.b.c-EX.vhd
+l0
+L12
+V[M@CLEn=l>od^F<hYf]3;2
+!s100 ;N?2RX7lhHj_6dU91W6HF1
+R12
+32
+R31
+!i10b 1
+R32
+Z77 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.vhd|
+Z78 !s107 ../a.b-DataPath.core/a.b.c-EX.vhd|
+!i113 0
+R17
+R18
+Astructure
+R58
+R7
+R8
+R9
+DEx4 work 6 dlx_ex 0 22 [M@CLEn=l>od^F<hYf]3;2
+l61
+L37
+VI2CeE_`V<AH:^QEXahQ`k3
+!s100 mR]WQ=h_QmL[85XkC5MGd2
+R12
+32
+R31
+!i10b 1
+R32
+R77
+R78
 !i113 0
 R17
 R18
 Edlx_id
-Z38 w1662209617
-R25
+Z79 w1662209617
+R58
 R5
 R3
 R4
 R8
 R9
 R0
-Z39 8../a.b-DataPath.core/a.b.b-ID.vhd
-Z40 F../a.b-DataPath.core/a.b.b-ID.vhd
+Z80 8../a.b-DataPath.core/a.b.b-ID.vhd
+Z81 F../a.b-DataPath.core/a.b.b-ID.vhd
 l0
 L13
 Vh>?l<37_YIQ=n7jhNPW[?1
 !s100 <GnjRWiizKQOF4Qz^Z1cg1
 R12
 32
-R28
+R24
 !i10b 1
-R29
-Z41 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.vhd|
-Z42 !s107 ../a.b-DataPath.core/a.b.b-ID.vhd|
+R25
+Z82 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.vhd|
+Z83 !s107 ../a.b-DataPath.core/a.b.b-ID.vhd|
 !i113 0
 R17
 R18
 Astructure
-R25
+R58
 R5
 R3
 R4
@@ -238,23 +537,23 @@ VcaJQ2chhMc1ZaflG0OWk43
 !s100 `NdX>LH3UBhgbY3oYD]Mg3
 R12
 32
-R28
+R24
 !i10b 1
-R29
-R41
-R42
+R25
+R82
+R83
 !i113 0
 R17
 R18
 Edlx_if
-Z43 w1661439419
-R25
+Z84 w1661439419
+R58
 R7
 R8
 R9
 R0
-Z44 8../a.b-DataPath.core/a.b.a-IF.vhd
-Z45 F../a.b-DataPath.core/a.b.a-IF.vhd
+Z85 8../a.b-DataPath.core/a.b.a-IF.vhd
+Z86 F../a.b-DataPath.core/a.b.a-IF.vhd
 l0
 L16
 VY2?oNRd<6P9]ZE4iI3<fo1
@@ -264,13 +563,13 @@ R12
 R13
 !i10b 1
 R14
-Z46 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.a-IF.vhd|
-Z47 !s107 ../a.b-DataPath.core/a.b.a-IF.vhd|
+Z87 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.a-IF.vhd|
+Z88 !s107 ../a.b-DataPath.core/a.b.a-IF.vhd|
 !i113 0
 R17
 R18
 Astructure
-R25
+R58
 R7
 R8
 R9
@@ -284,73 +583,108 @@ R12
 R13
 !i10b 1
 R14
-R46
-R47
+R87
+R88
 !i113 0
 R17
 R18
-Eiram
-Z48 w1661513986
-Z49 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
-R5
+Efa
+R21
 R8
 R9
 R0
-Z50 8../test_bench_and_memory/a.c-IRAM.vhd
-Z51 F../test_bench_and_memory/a.c-IRAM.vhd
+R22
+R23
 l0
-L11
-Va@VW=:k_Q:fA>TOM3BK:o2
-!s100 C7N;MCZ68]MbS0`E9Di[z3
+L4
+VolkG2i7eJWm@MH>a<IfBQ2
+!s100 R@78Q9B;RU?BKW[d:f7WA2
 R12
 32
-R1
+R24
 !i10b 1
-R29
-Z52 !s90 -reportprogress|300|-work|work|../test_bench_and_memory/a.c-IRAM.vhd|
-Z53 !s107 ../test_bench_and_memory/a.c-IRAM.vhd|
+R25
+R26
+R27
 !i113 0
 R17
 R18
-Airam_bhe
-R49
-R5
+Abehavioral
 R8
 R9
-DEx4 work 4 iram 0 22 a@VW=:k_Q:fA>TOM3BK:o2
-l31
-L24
-VazURXDRPQ?>_=K<>bR7T]0
-!s100 TFcaM^;TlT;OS8cR6SZH]3
+R20
+l16
+L14
+Vl9VY[HBGCaEz?neT;FB;H3
+!s100 DMi>BZZVj6i=_GX:XX[z53
 R12
 32
-R1
+R24
 !i10b 1
-R29
-R52
-R53
+R25
+R26
+R27
+!i113 0
+R17
+R18
+Eg_block
+Z89 w1661611494
+R8
+R9
+R0
+Z90 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd
+Z91 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd
+l0
+L7
+V?FgV6fJIAPo<>:O;C:_dl2
+!s100 VFe2K1L5kOoSBIXg?Ho9@2
+R12
+32
+R24
+!i10b 1
+R25
+Z92 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd|
+Z93 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd|
+!i113 0
+R17
+R18
+Astructure
+R8
+R9
+DEx4 work 7 g_block 0 22 ?FgV6fJIAPo<>:O;C:_dl2
+l13
+L12
+VYj2NUJg3@22ZO_76BMVSQ2
+!s100 W<bfIMo1obZfA>UjF^S^H1
+R12
+32
+R24
+!i10b 1
+R25
+R92
+R93
 !i113 0
 R17
 R18
 Emux2to1
-Z54 w1661611158
+R21
 R7
 R8
 R9
 R0
-Z55 8../000-commons/mux2to1_bhv.vhd
-Z56 F../000-commons/mux2to1_bhv.vhd
+Z94 8../000-commons/mux2to1_bhv.vhd
+Z95 F../000-commons/mux2to1_bhv.vhd
 l0
 L9
 V6gA>]iI<lP9Po6V[ea85m0
 !s100 1VdhD78dkD<Q?MJhe]8WY2
 R12
 32
-R13
+R44
 !i10b 1
-R14
-Z57 !s90 -reportprogress|300|-work|work|../000-commons/mux2to1_bhv.vhd|
-Z58 !s107 ../000-commons/mux2to1_bhv.vhd|
+R45
+Z96 !s90 -reportprogress|300|-work|work|../000-commons/mux2to1_bhv.vhd|
+Z97 !s107 ../000-commons/mux2to1_bhv.vhd|
 !i113 0
 R17
 R18
@@ -365,33 +699,33 @@ VloZ>I?`R?@HbaBl<9fXAa2
 !s100 c=0VA6?Wo22n^PNzN_1i[1
 R12
 32
-R13
+R44
 !i10b 1
-R14
-R57
-R58
+R45
+R96
+R97
 !i113 0
 R17
 R18
 Emux2to1_1b
-Z59 w1661203552
+Z98 w1661203552
 R7
 R8
 R9
 R0
-Z60 8../000-commons/mux2to1_1bit_bhv.vhd
-Z61 F../000-commons/mux2to1_1bit_bhv.vhd
+Z99 8../000-commons/mux2to1_1bit_bhv.vhd
+Z100 F../000-commons/mux2to1_1bit_bhv.vhd
 l0
 L9
 VMj0PRUYJKFCh2F?[kIP<_0
 !s100 hVi<Of0:9e9lLP0=477jL2
 R12
 32
-R13
+R44
 !i10b 1
-R14
-Z62 !s90 -reportprogress|300|-work|work|../000-commons/mux2to1_1bit_bhv.vhd|
-Z63 !s107 ../000-commons/mux2to1_1bit_bhv.vhd|
+R45
+Z101 !s90 -reportprogress|300|-work|work|../000-commons/mux2to1_1bit_bhv.vhd|
+Z102 !s107 ../000-commons/mux2to1_1bit_bhv.vhd|
 !i113 0
 R17
 R18
@@ -406,37 +740,219 @@ VI3jdhn3Hi^YNNCjN_f@DB2
 !s100 Tl8oIo5H>R?XTCcn9KRCK0
 R12
 32
-R13
+R44
 !i10b 1
-R14
-R62
-R63
+R45
+R101
+R102
 !i113 0
 R17
 R18
 Pmytypes
 R8
 R9
-w1662215142
+w1662374471
 R0
 8../000-globals.vhd
 F../000-globals.vhd
 l0
 L5
-V49LHiEL_?n=XNmT1dU7gd0
-!s100 RZfUojUj[2ldkAzIA]3lS0
+VlmLLJ8m4m4EcRV`=aL82a0
+!s100 m5o:i8==5c4NVNi^?65S30
 R12
 32
-R13
+R44
 !i10b 1
-!s108 1662223266.000000
+R45
 !s90 -reportprogress|300|-work|work|../000-globals.vhd|
 !s107 ../000-globals.vhd|
 !i113 0
 R17
 R18
+Ep4
+R21
+R58
+R8
+R9
+R0
+Z103 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd
+Z104 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd
+l0
+L8
+V[Q9=i5<5LVR6k=cB:>COH1
+!s100 4OeOiUFQH@BAA93hi32<93
+R12
+32
+R31
+!i10b 1
+R32
+Z105 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd|
+Z106 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd|
+!i113 0
+R17
+R18
+Astructure
+R58
+R8
+R9
+DEx4 work 2 p4 0 22 [Q9=i5<5LVR6k=cB:>COH1
+l51
+L22
+V?M>X8PTO`VnbIn@odflQk2
+!s100 MDc8El82Y8j?h9ZoXZC>13
+R12
+32
+R31
+!i10b 1
+R32
+R105
+R106
+!i113 0
+R17
+R18
+Epg_block
+Z107 w1661611502
+R8
+R9
+R0
+Z108 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd
+Z109 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd
+l0
+L7
+V<AcRIYhh:bfQcRSLEm7ec2
+!s100 R>I6d6@:^@zhbWdNC=<fz1
+R12
+32
+R24
+!i10b 1
+R25
+Z110 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd|
+Z111 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd|
+!i113 0
+R17
+R18
+Astructure
+R8
+R9
+DEx4 work 8 pg_block 0 22 <AcRIYhh:bfQcRSLEm7ec2
+l13
+L12
+Vb4cj[7XKOhY`>WFRfaEo`3
+!s100 9YB^`M=8ETe`8Ya?`QS=>3
+R12
+32
+R24
+!i10b 1
+R25
+R110
+R111
+!i113 0
+R17
+R18
+Epg_net
+R36
+R8
+R9
+R0
+R37
+R38
+l0
+L8
+V1B=aeUX@5^R[CTdb^DWon0
+!s100 fWIOLbWYNFg=iC>GHF7zU2
+R12
+32
+R24
+!i10b 1
+R25
+R39
+R40
+!i113 0
+R17
+R18
+Astruct_pg_1
+R8
+R9
+R35
+l19
+L16
+VCN3_eb<8<i485OX2QCLz?2
+!s100 >Zb4@ZiAhd4h03BFzA8cP1
+R12
+32
+R24
+!i10b 1
+R25
+R39
+R40
+!i113 0
+R17
+R18
+Erca
+R21
+R5
+R6
+R8
+R9
+R0
+R29
+R30
+l0
+L7
+VcWeQnl2YYBRRjk03=WP2J3
+!s100 dSmQMj3I^>ol[MPN8QdW82
+R12
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 0
+R17
+R18
+Abehavioral
+R5
+R6
+R8
+R9
+R28
+l53
+L48
+Vgl4A@UTAcH@g3=S;Ef2CK3
+!s100 fSYd[N0<_Xj:7PV_@Sb;B0
+R12
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 0
+R17
+R18
+Astructural
+R5
+R6
+R8
+R9
+R28
+l33
+L18
+Vg8JIFiOGEgoF@oEMjo@OT3
+!s100 hU1ZWTama34Pe[QaRi^8j1
+R12
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 0
+R17
+R18
 Erf
-Z64 w1662198427
+Z112 w1662198427
 R7
 R3
 R4
@@ -445,19 +961,19 @@ R6
 R8
 R9
 R0
-Z65 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
-Z66 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
+Z113 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
+Z114 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
 l0
 L40
 VTl_g2`lM?5nKjm:2B[FKN3
 !s100 >kNoC>4o`7HMoz3m3JGW:0
 R12
 32
-R28
+R24
 !i10b 1
-R29
-Z67 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd|
-Z68 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd|
+R25
+Z115 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd|
+Z116 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd|
 !i113 0
 R17
 R18
@@ -476,11 +992,11 @@ Vm=U_k1j>A;N[P_FBjTZ@M0
 !s100 YQYbz`58OF[5Y0<@]ZTXl2
 R12
 32
-R28
+R24
 !i10b 1
-R29
-R67
-R68
+R25
+R115
+R116
 !i113 0
 R17
 R18
@@ -505,7 +1021,7 @@ R14
 R17
 R18
 Erf_cu
-Z69 w1661439588
+Z117 w1661439588
 R7
 R3
 R4
@@ -514,19 +1030,19 @@ R6
 R8
 R9
 R0
-Z70 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
-Z71 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
+Z118 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
+Z119 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
 l0
 L11
 V]C9ZmE?QRQ];_L^e3m4C50
 !s100 XgbMY9a^1mi]]]ad2F:zG2
 R12
 32
-R28
+R13
 !i10b 1
-R29
-Z72 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd|
-Z73 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd|
+R14
+Z120 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd|
+Z121 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd|
 !i113 0
 R17
 R18
@@ -545,16 +1061,16 @@ V=N3k;YcOjcCe7939iI7Y23
 !s100 ^=[>RCHzYlWmXJ=zSEG5o3
 R12
 32
-R28
+R13
 !i10b 1
-R29
-R72
-R73
+R14
+R120
+R121
 !i113 0
 R17
 R18
 Erf_datapath
-Z74 w1661441615
+Z122 w1661441615
 R7
 R3
 R4
@@ -563,19 +1079,19 @@ R6
 R8
 R9
 R0
-Z75 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
-Z76 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
+Z123 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
+Z124 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
 l0
 L14
 V4Z95AIC38DEZn65d2IPC53
 !s100 9TM@`G60@R5VdKI0<_>[z0
 R12
 32
-R28
+R13
 !i10b 1
-R29
-Z77 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd|
-Z78 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd|
+R14
+Z125 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd|
+Z126 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd|
 !i113 0
 R17
 R18
@@ -594,16 +1110,16 @@ VBzb=@HmH3@ONh=j[Y6NIK1
 !s100 gCQOlS<Qk90HIKW6S^jH21
 R12
 32
-R28
+R13
 !i10b 1
-R29
-R77
-R78
+R14
+R125
+R126
 !i113 0
 R17
 R18
 Erf_phys
-Z79 w1661445534
+Z127 w1661445534
 R3
 R4
 R5
@@ -612,19 +1128,19 @@ R7
 R8
 R9
 R0
-Z80 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd
-Z81 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd
+Z128 8../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd
+Z129 F../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd
 l0
 L23
 VU7<HW;_=F?B=K_Gii:AnS2
 !s100 3HF<HYX=LehD?keol94o;0
 R12
 32
-R28
+R13
 !i10b 1
-R29
-Z82 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd|
-Z83 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd|
+R14
+Z130 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd|
+Z131 !s107 ../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd|
 !i113 0
 R17
 R18
@@ -643,11 +1159,136 @@ VBIO?P[F6TMi>nRh`8S56`1
 !s100 4i_IK;A0?@213dbGbB^Wj1
 R12
 32
-R28
+R13
 !i10b 1
-R29
-R82
-R83
+R14
+R130
+R131
+!i113 0
+R17
+R18
+Eromem
+Z132 w1662219540
+Z133 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R5
+R8
+R9
+R0
+Z134 8../test_bench_and_memory/TB_romem/romem.vhd
+Z135 F../test_bench_and_memory/TB_romem/romem.vhd
+l0
+L11
+V;ENlIQg<H8Rhmmhl7:_o53
+!s100 =zoY6Rhc0SW3KecGR;i7z3
+R12
+32
+R1
+!i10b 1
+R71
+Z136 !s90 -reportprogress|300|-work|work|../test_bench_and_memory/TB_romem/romem.vhd|
+Z137 !s107 ../test_bench_and_memory/TB_romem/romem.vhd|
+!i113 0
+R17
+R18
+Abehavioral
+R133
+R5
+R8
+R9
+DEx4 work 5 romem 0 22 ;ENlIQg<H8Rhmmhl7:_o53
+l36
+L29
+V:9DXSXhF5kXLnOb`:2<Sh0
+!s100 lJ=_]5X<C;Il>X6hP4X0d1
+R12
+32
+R1
+!i10b 1
+R71
+R136
+R137
+!i113 0
+R17
+R18
+Eshifter_generic
+R112
+R6
+R5
+R8
+R9
+R0
+Z138 8../01-generic_shifter.vhd
+Z139 F../01-generic_shifter.vhd
+l0
+L8
+V3f1^P5:>1A;[NVl``Hz?J0
+!s100 F8YoePME<`]z2NZEW;DQh3
+R12
+32
+R44
+!i10b 1
+R45
+Z140 !s90 -reportprogress|300|-work|work|../01-generic_shifter.vhd|
+Z141 !s107 ../01-generic_shifter.vhd|
+!i113 0
+R17
+R18
+Abehavioral
+R6
+R5
+R8
+R9
+DEx4 work 15 shifter_generic 0 22 3f1^P5:>1A;[NVl``Hz?J0
+l24
+L22
+VkI1iF`om3EEdA:]C72iL]2
+!s100 C2mXmU1NJ3U:26M1YT`J=2
+R12
+32
+R44
+!i10b 1
+R45
+R140
+R141
+!i113 0
+R17
+R18
+Esparse_tree
+Z142 w1661611523
+R8
+R9
+R0
+Z143 8../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd
+Z144 F../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd
+l0
+L8
+VRDji=lz;AS^mEC>UeR=hY3
+!s100 V>8RVZi;2Q<1z>nfHbOMB3
+R12
+32
+R24
+!i10b 1
+R25
+Z145 !s90 -reportprogress|300|-work|work|../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd|
+Z146 !s107 ../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd|
+!i113 0
+R17
+R18
+Astructure
+R8
+R9
+DEx4 work 11 sparse_tree 0 22 RDji=lz;AS^mEC>UeR=hY3
+l43
+L20
+VS[=h_FGC:a[@ZhdZg4mYn2
+!s100 D1MQHk^;V09TKjckZ<UKg1
+R12
+32
+R24
+!i10b 1
+R25
+R145
+R146
 !i113 0
 R17
 R18

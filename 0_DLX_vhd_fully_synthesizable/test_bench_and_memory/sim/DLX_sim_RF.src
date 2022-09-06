@@ -65,6 +65,12 @@ sim:/dlx_testbench/IRAM/ENTRIES
 
 add wave sim:/dlx_testbench/iram_first_word \
 sim:/dlx_testbench/instruction_i \
+sim:/dlx_testbench/UUT/CU_I/IR_IN \
+sim:/dlx_testbench/UUT/CU_I/cw \
+sim:/dlx_testbench/UUT/CU_I/cw1 \
+sim:/dlx_testbench/UUT/CU_I/cw2 \
+sim:/dlx_testbench/UUT/CU_I/cw3 \
+sim:/dlx_testbench/UUT/CU_I/cw4 
 
 add wave -group "ID" \
 sim:/dlx_testbench/UUT/dp/npc_id_i \
@@ -78,12 +84,14 @@ sim:/dlx_testbench/UUT/regrd_sel_i \
 -unsigned sim:/dlx_testbench/UUT/dp/id_stage/ADDR_WR \
 sim:/dlx_testbench/UUT/dp/id_stage/IMM_I \
 -divider "Register File" \
--unsigned sim:/dlx_testbench/UUT/dp/id_stage/regfile/ADD_RD1 \
--unsigned sim:/dlx_testbench/UUT/dp/id_stage/regfile/ADD_RD2 \
--unsigned sim:/dlx_testbench/UUT/dp/id_stage/regfile/ADD_WR \
--decimal sim:/dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Physical_RF/REGISTERS \
+sim:/dlx_testbench/UUT/dp/id_stage/regfile/ADD_RD1 \
+sim:/dlx_testbench/UUT/dp/id_stage/regfile/ADD_RD2 \
+sim:/dlx_testbench/UUT/dp/id_stage/regfile/ADD_WR \
+sim:/dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Physical_RF/REGISTERS \
 sim:/dlx_testbench/UUT/dp/id_stage/OUT1 \
 sim:/dlx_testbench/UUT/dp/id_stage/OUT2 
+
+add wave -group "Register File Internal" sim:/dlx_testbench/UUT/dp/id_stage/regfile/*
 
 add wave -group "ID controls" \
 sim:/dlx_testbench/UUT/dp/id_stage/RF_WR_EN \
