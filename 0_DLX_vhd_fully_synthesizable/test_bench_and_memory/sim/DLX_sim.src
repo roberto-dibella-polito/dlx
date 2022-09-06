@@ -110,8 +110,10 @@ sim:/dlx_testbench/DRAM/READNOTWRITE \
 sim:/dlx_testbench/DRAM/DATA_READY 
 
 add wave -group "DRAM" sim:/dlx_testbench/DRAM/ADDR \
+sim:/dlx_testbench/UUT/dp/data_mem_mem_i \
 sim:/dlx_testbench/DRAM/INOUT_DATA \
-sim:/dlx_testbench/dram_first_word 
+sim:/dlx_testbench/DRAM_DATA \
+sim:/dlx_testbench/DRAM/DRAM_mem(58)
 
 add wave -group "WB" \
 sim:/dlx_testbench/UUT/dp/rd_fwd_wb_i \

@@ -8,7 +8,7 @@ addi r3,r1,#-4	# r3 = -2
 nop
 nop
 nop
-nop
+sw 57(r2),r1	# Store word (58,2)
 subi r4,r3,#-1	# r4 = -1
 addui r5,r1,#4	# r5 = 6
 nop
@@ -21,7 +21,8 @@ sub r8,r5,r4	# r8 = 6-(-1)=7
 nop
 nop
 addu r9,r6,r1	# r9 = 5
-
+nop
+lw r31,57(r2)	# Load word previously stored => r31 = 2
 sge r10,r1,r2	# r10= 1
 sge r10,r2,r1	# r10= 0
 sge r10,r1,r1	# r10= 1

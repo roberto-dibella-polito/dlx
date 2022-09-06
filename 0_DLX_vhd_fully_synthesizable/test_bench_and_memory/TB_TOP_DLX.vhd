@@ -77,10 +77,12 @@ architecture tb of DLX_TestBench is
 	signal DRAM_ENABLE :		std_logic;
 	signal DRAM_READNOTWRITE :	std_logic;
 	signal DRAM_READY :			std_logic;
-	signal DRAM_DATA :			std_logic_vector(2*Data_size-1 downto 0);
+	signal DRAM_DATA :			std_logic_vector(Data_size-1 downto 0);
 
 	signal iram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal dram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
+	--signal dram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
+	--signal dram_dummy_word		: std_logic_vector(DATA_SIZE-1 downto 0);
+	--signal dram_data_i			: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal iram_addr_shifted	: std_logic_vector(PC_SIZE-1 downto 0);
 
 	signal opcode_i				: std_logic_vector(OP_SIZE-1 downto 0);
@@ -109,13 +111,26 @@ begin
 		generic map (
 			file_path_init 	=> "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex.txt",
 			file_path 		=> "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex_out.txt",
+			Data_size 		=> 64,
+			Instr_size		=> 32,
 			DATA_DELAY		=> 0
 		)
-		port map ( CLK, RST, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, DRAM_DATA );
+		--port map ( CLK, RST, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, DRAM_DATA );
+		port map(
+			CLK   				=> CLK,
+			RST					=> RST,
+			ADDR				=> DRAM_ADDRESS,
+			ENABLE				=> DRAM_ENABLE,
+			READNOTWRITE		=> DRAM_READNOTWRITE,
+			DATA_READY			=> DRAM_READY,
+			INOUT_DATA			=> DRAM_DATA
+		);
+
+	--dram_first_word	<= DRAM_DATA(31 downto 0);
+	--dram_dummy_word <= (others=>'-');
+	--DRAM_DATA(2*DATA_SIZE-1 downto DATA_SIZE) <= dram_dummy_word;
 
 	iram_first_word	<= IRAM_DATA(31 downto 0);
-	dram_first_word	<= DRAM_DATA(31 downto 0);
-
 	opcode_i 	<= iram_first_word(31 downto 26);
 	func_i		<= iram_first_word(FUNC_SIZE-1 downto 0);
 	
@@ -126,7 +141,7 @@ begin
 	-- DLX
 	UUT : DLX 
 		generic map( IR_SIZE => 32, PC_SIZE => 32, DATA_SIZE => 32) 
-		port map ( CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, iram_first_word, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, dram_first_word );
+		port map ( CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, iram_first_word, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, DRAM_DATA );
 
 	-- INSTRUCTION EVALUATOR
 	-- Only used to display the fetched instruction in an easy way

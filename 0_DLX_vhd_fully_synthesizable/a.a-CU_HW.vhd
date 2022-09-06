@@ -217,8 +217,8 @@ begin  -- dlx_cu_rtl
 	DRAM_ISSUE			<= cw3(CW_SIZE-9);
 	DRAM_READNOTWRITE	<= cw3(CW_SIZE-10);
 	--JUMP_EN				<= cw3(CW_SIZE-11);
-	eq_cond_i			<= cw3(CW_SIZE-11);
-	neq_cond_i			<= cw3(CW_SIZE-12);
+	eqz_cond_i			<= cw3(CW_SIZE-11);
+	neqz_cond_i			<= cw3(CW_SIZE-12);
 	jump_en_i			<= cw3(CW_SIZE-13);
 	
 	PIPE_MEM_WB_EN		<= pipe_enable_i;

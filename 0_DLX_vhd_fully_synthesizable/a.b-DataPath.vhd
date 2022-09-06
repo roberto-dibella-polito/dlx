@@ -403,7 +403,7 @@ begin
 	
 	
 	DRAM_ADDRESS	<= alu_out_mem_i;
-	DRAM_DATA	<= data_mem_mem_i;
+	DRAM_DATA		<= data_mem_mem_i;
 	alu_out_mem_o	<= alu_out_mem_i;
 	data_mem_mem_o	<= data_mem_mem_i;
 	rd_fwd_mem_o	<= rd_fwd_mem_i;

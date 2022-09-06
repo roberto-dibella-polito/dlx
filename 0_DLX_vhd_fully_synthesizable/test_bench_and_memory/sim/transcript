@@ -14,16 +14,16 @@
 # //
 source DLX_sim.src
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:54 on Sep 06,2022
+# Start time: 23:02:13 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../000-globals.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package myTypes
-# End time: 16:42:54 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:13 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:54 on Sep 06,2022
+# Start time: 23:02:13 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -34,10 +34,10 @@ source DLX_sim.src
 # -- Loading package MATH_REAL
 # -- Compiling entity counter
 # -- Compiling architecture BEHAVIOR of counter
-# End time: 16:42:54 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:13 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:54 on Sep 06,2022
+# Start time: 23:02:13 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -45,10 +45,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1_1b
 # -- Compiling architecture behavior of mux2to1_1b
-# End time: 16:42:55 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 23:02:13 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:55 on Sep 06,2022
+# Start time: 23:02:13 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -56,10 +56,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1
 # -- Compiling architecture behavior of mux2to1
-# End time: 16:42:55 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:13 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:55 on Sep 06,2022
+# Start time: 23:02:13 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -68,19 +68,19 @@ source DLX_sim.src
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity SHIFTER_GENERIC
 # -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
-# End time: 16:42:55 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:13 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:55 on Sep 06,2022
+# Start time: 23:02:13 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../002-ControlWords.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package DLX_ControlWords
-# End time: 16:42:55 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:13 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:55 on Sep 06,2022
+# Start time: 23:02:13 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.a-IF.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -89,18 +89,18 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_IF
 # -- Compiling architecture structure of DLX_IF
-# End time: 16:42:55 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:13 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:55 on Sep 06,2022
+# Start time: 23:02:13 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
 # -- Loading package STANDARD
 # -- Loading package MATH_REAL
 # -- Compiling package rf_constants
-# End time: 16:42:55 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:14 on Sep 06,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:55 on Sep 06,2022
+# Start time: 23:02:14 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -112,10 +112,10 @@ source DLX_sim.src
 # -- Loading package rf_constants
 # -- Compiling entity address_converter
 # -- Compiling architecture behavior of address_converter
-# End time: 16:42:55 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:14 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:55 on Sep 06,2022
+# Start time: 23:02:14 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -127,10 +127,10 @@ source DLX_sim.src
 # -- Loading package rf_constants
 # -- Compiling entity RF_phys
 # -- Compiling architecture behavior_async of RF_phys
-# End time: 16:42:56 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 23:02:14 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:56 on Sep 06,2022
+# Start time: 23:02:14 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -142,10 +142,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF_datapath
 # -- Compiling architecture BEHAVIOR of RF_datapath
-# End time: 16:42:56 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:14 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:56 on Sep 06,2022
+# Start time: 23:02:14 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -157,10 +157,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF_CU
 # -- Compiling architecture BEHAVIOR of RF_CU
-# End time: 16:42:56 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:14 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:56 on Sep 06,2022
+# Start time: 23:02:14 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -172,10 +172,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF
 # -- Compiling architecture STRUCTURE of RF
-# End time: 16:42:56 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:14 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:56 on Sep 06,2022
+# Start time: 23:02:14 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -186,10 +186,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_ID
 # -- Compiling architecture structure of DLX_ID
-# End time: 16:42:56 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:14 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:56 on Sep 06,2022
+# Start time: 23:02:14 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -199,40 +199,40 @@ source DLX_sim.src
 # -- Compiling configuration CFG_STRUCT_PG_1
 # -- Loading entity PG_NET
 # -- Loading architecture STRUCT_PG_1 of PG_NET
-# End time: 16:42:56 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:15 on Sep 06,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:56 on Sep 06,2022
+# Start time: 23:02:15 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity G_BLOCK
 # -- Compiling architecture STRUCTURE of G_BLOCK
-# End time: 16:42:56 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:15 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:56 on Sep 06,2022
+# Start time: 23:02:15 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity PG_BLOCK
 # -- Compiling architecture STRUCTURE of PG_BLOCK
-# End time: 16:42:56 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:15 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:57 on Sep 06,2022
+# Start time: 23:02:15 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SPARSE_TREE
 # -- Compiling architecture STRUCTURE of SPARSE_TREE
-# End time: 16:42:57 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:15 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:57 on Sep 06,2022
+# Start time: 23:02:15 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -242,10 +242,10 @@ source DLX_sim.src
 # -- Compiling configuration CFG_FA_BEHAVIORAL
 # -- Loading entity FA
 # -- Loading architecture BEHAVIORAL of FA
-# End time: 16:42:57 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:15 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:57 on Sep 06,2022
+# Start time: 23:02:15 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -264,10 +264,10 @@ source DLX_sim.src
 # -- Compiling configuration CFG_RCA_BEHAVIORAL
 # -- Loading entity RCA
 # -- Loading architecture BEHAVIORAL of RCA
-# End time: 16:42:57 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:15 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:57 on Sep 06,2022
+# Start time: 23:02:15 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -276,10 +276,10 @@ source DLX_sim.src
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity CS_BLOCK
 # -- Compiling architecture STRUCTURE of CS_BLOCK
-# End time: 16:42:57 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:15 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:57 on Sep 06,2022
+# Start time: 23:02:15 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -288,10 +288,10 @@ source DLX_sim.src
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity CS_SUM
 # -- Compiling architecture STRUCTURE of CS_SUM
-# End time: 16:42:57 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:15 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:57 on Sep 06,2022
+# Start time: 23:02:16 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -299,10 +299,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity P4
 # -- Compiling architecture STRUCTURE of P4
-# End time: 16:42:57 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:16 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:57 on Sep 06,2022
+# Start time: 23:02:16 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -311,10 +311,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_ALU
 # -- Compiling architecture bhv of DLX_ALU
-# End time: 16:42:57 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:16 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:58 on Sep 06,2022
+# Start time: 23:02:16 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -323,10 +323,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_EX
 # -- Compiling architecture structure of DLX_EX
-# End time: 16:42:58 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:16 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:58 on Sep 06,2022
+# Start time: 23:02:16 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -335,10 +335,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_DP
 # -- Compiling architecture structure of DLX_DP
-# End time: 16:42:58 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:16 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:58 on Sep 06,2022
+# Start time: 23:02:16 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.a-CU_HW.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -349,10 +349,355 @@ source DLX_sim.src
 # -- Loading package DLX_ControlWords
 # -- Compiling entity dlx_cu
 # -- Compiling architecture dlx_cu_hw of dlx_cu
-# End time: 16:42:58 on Sep 06,2022, Elapsed time: 0:00:00
+# ** Error: ../../a.a-CU_HW.vhd(220): Illegal target for signal assignment.
+# ** Error: ../../a.a-CU_HW.vhd(220): (vcom-1136) Unknown identifier "eq_cond_i".
+# ** Error: ../../a.a-CU_HW.vhd(221): Illegal target for signal assignment.
+# ** Error: ../../a.a-CU_HW.vhd(221): (vcom-1136) Unknown identifier "neq_cond_i".
+# ** Note: ../../a.a-CU_HW.vhd(403): VHDL Compiler exiting
+# End time: 23:02:16 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 4, Warnings: 0
+# /software/mentor/questa10.7c/questasim/linux_x86_64/vcom failed.
+source DLX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:53 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 23:02:53 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:58 on Sep 06,2022
+# Start time: 23:02:53 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 23:02:54 on Sep 06,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:54 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 23:02:54 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:54 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 23:02:54 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:54 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 23:02:54 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:54 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../002-ControlWords.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package DLX_ControlWords
+# End time: 23:02:54 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:54 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 23:02:54 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:54 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 23:02:54 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:54 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 23:02:54 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:54 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 23:02:55 on Sep 06,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:55 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 23:02:55 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:55 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 23:02:55 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:55 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 23:02:55 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:55 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 23:02:55 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:55 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 23:02:55 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:55 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 23:02:55 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:55 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 23:02:56 on Sep 06,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:56 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 23:02:56 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:56 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 23:02:56 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:56 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 23:02:56 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:56 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 23:02:56 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:56 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 23:02:56 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:56 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 23:02:56 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:56 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 23:02:57 on Sep 06,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:57 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 23:02:57 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:57 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 23:02:57 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:57 on Sep 06,2022
+# vcom -reportprogress 300 -work work ../../a.a-CU_HW.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package myTypes
+# -- Loading package DLX_ControlWords
+# -- Compiling entity dlx_cu
+# -- Compiling architecture dlx_cu_hw of dlx_cu
+# End time: 23:02:57 on Sep 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 23:02:57 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a-DLX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -361,10 +706,10 @@ source DLX_sim.src
 # -- Loading package DLX_ControlWords
 # -- Compiling entity DLX
 # -- Compiling architecture dlx_rtl of DLX
-# End time: 16:42:58 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:57 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:58 on Sep 06,2022
+# Start time: 23:02:57 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -373,10 +718,10 @@ source DLX_sim.src
 # -- Loading package std_logic_textio
 # -- Compiling entity ROMEM
 # -- Compiling architecture Behavioral of ROMEM
-# End time: 16:42:58 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:57 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:58 on Sep 06,2022
+# Start time: 23:02:57 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -385,10 +730,10 @@ source DLX_sim.src
 # -- Loading package std_logic_textio
 # -- Compiling entity RWMEM
 # -- Compiling architecture beh of RWMEM
-# End time: 16:42:58 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:57 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:42:58 on Sep 06,2022
+# Start time: 23:02:57 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_TOP_DLX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -398,10 +743,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_TestBench
 # -- Compiling architecture tb of DLX_TestBench
-# End time: 16:42:58 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:02:58 on Sep 06,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -t 100ps work.dlx_testbench -voptargs="+acc" 
-# Start time: 16:42:58 on Sep 06,2022
+# Start time: 23:02:58 on Sep 06,2022
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in architecture body "RF_CU(BEHAVIOR)".
 # Loading std.standard
@@ -435,8 +780,6 @@ source DLX_sim.src
 # Loading work.dlx_ex(structure)#1
 # Loading work.dlx_alu(bhv)#1
 # Loading work.shifter_generic(behavioral)#1
-# ** Warning: (vsim-8683) Uninitialized out port /dlx_testbench/UUT/CU_I/PIPE_CLEAR_n has no driver.
-# This port will contribute value (U) to the signal network.
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /dlx_testbench
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -561,6 +904,10 @@ source DLX_sim.src
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Error: (vsim-3953) STD_LOGIC_1164.HREAD End of string encountered
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -591,6 +938,10 @@ source DLX_sim.src
 #    Time: 0 ps  Iteration: 3  Instance: /dlx_testbench
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 0 ps  Iteration: 3  Instance: /dlx_testbench
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
@@ -664,28 +1015,22 @@ source DLX_sim.src
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 35 ns  Iteration: 4  Instance: /dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Conv_W
 # Causality operation skipped due to absence of debug database file
-RUN 20 NS
-# invalid command name "RUN"
-run 20 ns
-run 20 ns
-run 30 ns
 run 50 ns
+run 30 ns
 run 10 ns
-quit -sim
-# End time: 16:50:02 on Sep 06,2022, Elapsed time: 0:07:04
-# Errors: 3, Warnings: 113
+run 10 ns
 source DLX_sim.src
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:08 on Sep 06,2022
+# Start time: 23:18:16 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../000-globals.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package myTypes
-# End time: 16:50:08 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:16 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:08 on Sep 06,2022
+# Start time: 23:18:16 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -696,10 +1041,10 @@ source DLX_sim.src
 # -- Loading package MATH_REAL
 # -- Compiling entity counter
 # -- Compiling architecture BEHAVIOR of counter
-# End time: 16:50:09 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 23:18:16 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:09 on Sep 06,2022
+# Start time: 23:18:16 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -707,10 +1052,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1_1b
 # -- Compiling architecture behavior of mux2to1_1b
-# End time: 16:50:09 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:17 on Sep 06,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:09 on Sep 06,2022
+# Start time: 23:18:17 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -718,10 +1063,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1
 # -- Compiling architecture behavior of mux2to1
-# End time: 16:50:09 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:17 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:09 on Sep 06,2022
+# Start time: 23:18:17 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -730,19 +1075,19 @@ source DLX_sim.src
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity SHIFTER_GENERIC
 # -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
-# End time: 16:50:09 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:17 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:09 on Sep 06,2022
+# Start time: 23:18:17 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../002-ControlWords.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package DLX_ControlWords
-# End time: 16:50:09 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:17 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:09 on Sep 06,2022
+# Start time: 23:18:17 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.a-IF.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -751,18 +1096,18 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_IF
 # -- Compiling architecture structure of DLX_IF
-# End time: 16:50:09 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:17 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:09 on Sep 06,2022
+# Start time: 23:18:17 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
 # -- Loading package STANDARD
 # -- Loading package MATH_REAL
 # -- Compiling package rf_constants
-# End time: 16:50:09 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:17 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:09 on Sep 06,2022
+# Start time: 23:18:17 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -774,10 +1119,10 @@ source DLX_sim.src
 # -- Loading package rf_constants
 # -- Compiling entity address_converter
 # -- Compiling architecture behavior of address_converter
-# End time: 16:50:10 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 23:18:17 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:10 on Sep 06,2022
+# Start time: 23:18:17 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -789,10 +1134,10 @@ source DLX_sim.src
 # -- Loading package rf_constants
 # -- Compiling entity RF_phys
 # -- Compiling architecture behavior_async of RF_phys
-# End time: 16:50:10 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:18 on Sep 06,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:10 on Sep 06,2022
+# Start time: 23:18:18 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -804,10 +1149,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF_datapath
 # -- Compiling architecture BEHAVIOR of RF_datapath
-# End time: 16:50:10 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:18 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:10 on Sep 06,2022
+# Start time: 23:18:18 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -819,10 +1164,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF_CU
 # -- Compiling architecture BEHAVIOR of RF_CU
-# End time: 16:50:10 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:18 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:10 on Sep 06,2022
+# Start time: 23:18:18 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -834,10 +1179,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF
 # -- Compiling architecture STRUCTURE of RF
-# End time: 16:50:10 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:18 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:10 on Sep 06,2022
+# Start time: 23:18:18 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -848,10 +1193,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_ID
 # -- Compiling architecture structure of DLX_ID
-# End time: 16:50:10 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:18 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:10 on Sep 06,2022
+# Start time: 23:18:18 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -861,40 +1206,40 @@ source DLX_sim.src
 # -- Compiling configuration CFG_STRUCT_PG_1
 # -- Loading entity PG_NET
 # -- Loading architecture STRUCT_PG_1 of PG_NET
-# End time: 16:50:10 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:18 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:10 on Sep 06,2022
+# Start time: 23:18:18 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity G_BLOCK
 # -- Compiling architecture STRUCTURE of G_BLOCK
-# End time: 16:50:11 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 23:18:18 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:11 on Sep 06,2022
+# Start time: 23:18:18 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity PG_BLOCK
 # -- Compiling architecture STRUCTURE of PG_BLOCK
-# End time: 16:50:11 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:19 on Sep 06,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:11 on Sep 06,2022
+# Start time: 23:18:19 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SPARSE_TREE
 # -- Compiling architecture STRUCTURE of SPARSE_TREE
-# End time: 16:50:11 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:19 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:11 on Sep 06,2022
+# Start time: 23:18:19 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -904,10 +1249,10 @@ source DLX_sim.src
 # -- Compiling configuration CFG_FA_BEHAVIORAL
 # -- Loading entity FA
 # -- Loading architecture BEHAVIORAL of FA
-# End time: 16:50:11 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:19 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:11 on Sep 06,2022
+# Start time: 23:18:19 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -926,10 +1271,10 @@ source DLX_sim.src
 # -- Compiling configuration CFG_RCA_BEHAVIORAL
 # -- Loading entity RCA
 # -- Loading architecture BEHAVIORAL of RCA
-# End time: 16:50:11 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:19 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:11 on Sep 06,2022
+# Start time: 23:18:19 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -938,10 +1283,10 @@ source DLX_sim.src
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity CS_BLOCK
 # -- Compiling architecture STRUCTURE of CS_BLOCK
-# End time: 16:50:11 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:19 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:11 on Sep 06,2022
+# Start time: 23:18:19 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -950,10 +1295,10 @@ source DLX_sim.src
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity CS_SUM
 # -- Compiling architecture STRUCTURE of CS_SUM
-# End time: 16:50:11 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:19 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:11 on Sep 06,2022
+# Start time: 23:18:19 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -961,10 +1306,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity P4
 # -- Compiling architecture STRUCTURE of P4
-# End time: 16:50:12 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 23:18:19 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:12 on Sep 06,2022
+# Start time: 23:18:19 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -973,10 +1318,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_ALU
 # -- Compiling architecture bhv of DLX_ALU
-# End time: 16:50:12 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:19 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:12 on Sep 06,2022
+# Start time: 23:18:20 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -985,10 +1330,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_EX
 # -- Compiling architecture structure of DLX_EX
-# End time: 16:50:12 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:20 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:12 on Sep 06,2022
+# Start time: 23:18:20 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -997,10 +1342,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_DP
 # -- Compiling architecture structure of DLX_DP
-# End time: 16:50:12 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:20 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:12 on Sep 06,2022
+# Start time: 23:18:20 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a.a-CU_HW.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1011,10 +1356,10 @@ source DLX_sim.src
 # -- Loading package DLX_ControlWords
 # -- Compiling entity dlx_cu
 # -- Compiling architecture dlx_cu_hw of dlx_cu
-# End time: 16:50:12 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:20 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:12 on Sep 06,2022
+# Start time: 23:18:20 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../a-DLX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1023,10 +1368,10 @@ source DLX_sim.src
 # -- Loading package DLX_ControlWords
 # -- Compiling entity DLX
 # -- Compiling architecture dlx_rtl of DLX
-# End time: 16:50:12 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:20 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:12 on Sep 06,2022
+# Start time: 23:18:20 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1035,10 +1380,10 @@ source DLX_sim.src
 # -- Loading package std_logic_textio
 # -- Compiling entity ROMEM
 # -- Compiling architecture Behavioral of ROMEM
-# End time: 16:50:12 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:20 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:12 on Sep 06,2022
+# Start time: 23:18:20 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1047,10 +1392,10 @@ source DLX_sim.src
 # -- Loading package std_logic_textio
 # -- Compiling entity RWMEM
 # -- Compiling architecture beh of RWMEM
-# End time: 16:50:12 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:20 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:50:13 on Sep 06,2022
+# Start time: 23:18:20 on Sep 06,2022
 # vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_TOP_DLX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1060,10 +1405,12 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_TestBench
 # -- Compiling architecture tb of DLX_TestBench
-# End time: 16:50:13 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 23:18:20 on Sep 06,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# End time: 23:18:22 on Sep 06,2022, Elapsed time: 0:15:24
+# Errors: 2, Warnings: 116
 # vsim -t 100ps work.dlx_testbench -voptargs="+acc" 
-# Start time: 16:50:13 on Sep 06,2022
+# Start time: 23:18:22 on Sep 06,2022
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -1096,8 +1443,6 @@ source DLX_sim.src
 # Loading work.dlx_ex(structure)#1
 # Loading work.dlx_alu(bhv)#1
 # Loading work.shifter_generic(behavioral)#1
-# ** Warning: (vsim-8683) Uninitialized out port /dlx_testbench/UUT/CU_I/PIPE_CLEAR_n has no driver.
-# This port will contribute value (U) to the signal network.
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /dlx_testbench
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -1222,6 +1567,10 @@ source DLX_sim.src
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Error: (vsim-3953) STD_LOGIC_1164.HREAD End of string encountered
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -1252,6 +1601,10 @@ source DLX_sim.src
 #    Time: 0 ps  Iteration: 3  Instance: /dlx_testbench
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 0 ps  Iteration: 3  Instance: /dlx_testbench
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
@@ -1324,12 +1677,15 @@ source DLX_sim.src
 #    Time: 35 ns  Iteration: 4  Instance: /dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Conv_W
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 35 ns  Iteration: 4  Instance: /dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Conv_W
-run 600 ns
+run 50 ns
+run 50 ns
+add wave  \
+sim:/dlx_testbench/UUT/dp/data_mem_mem_i
+add wave  \
+sim:/dlx_testbench/DRAM/DRAM_mem(58)
 restart
 # ** Note: (vsim-8009) Loading existing optimized design _opt
-# ** Warning: (vsim-8683) Uninitialized out port /dlx_testbench/UUT/CU_I/PIPE_CLEAR_n has no driver.
-# This port will contribute value (U) to the signal network.
-run 180 ns
+run 100 ns
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /dlx_testbench
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -1454,6 +1810,10 @@ run 180 ns
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Error: (vsim-3953) STD_LOGIC_1164.HREAD End of string encountered
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -1484,6 +1844,10 @@ run 180 ns
 #    Time: 0 ps  Iteration: 3  Instance: /dlx_testbench
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 0 ps  Iteration: 3  Instance: /dlx_testbench
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
@@ -1556,19 +1920,26 @@ run 180 ns
 #    Time: 35 ns  Iteration: 4  Instance: /dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Conv_W
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 35 ns  Iteration: 4  Instance: /dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Conv_W
-run 80 ns
+run 50 ns
+run 50 ns
+add wave  \
+sim:/dlx_testbench/UUT/dp/DRAM_DATA
+add wave  \
+sim:/dlx_testbench/UUT/DRAM_READY \
+sim:/dlx_testbench/UUT/DRAM_READNOTWRITE \
+sim:/dlx_testbench/UUT/DRAM_ISSUE
 source DLX_sim.src
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:14 on Sep 06,2022
+# Start time: 00:04:49 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../000-globals.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package myTypes
-# End time: 16:55:14 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:49 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:14 on Sep 06,2022
+# Start time: 00:04:49 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1579,10 +1950,10 @@ source DLX_sim.src
 # -- Loading package MATH_REAL
 # -- Compiling entity counter
 # -- Compiling architecture BEHAVIOR of counter
-# End time: 16:55:14 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:49 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:14 on Sep 06,2022
+# Start time: 00:04:49 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1590,10 +1961,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1_1b
 # -- Compiling architecture behavior of mux2to1_1b
-# End time: 16:55:14 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:49 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:14 on Sep 06,2022
+# Start time: 00:04:49 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1601,10 +1972,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity mux2to1
 # -- Compiling architecture behavior of mux2to1
-# End time: 16:55:14 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:49 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:14 on Sep 06,2022
+# Start time: 00:04:49 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1613,19 +1984,19 @@ source DLX_sim.src
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity SHIFTER_GENERIC
 # -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
-# End time: 16:55:14 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:49 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:14 on Sep 06,2022
+# Start time: 00:04:49 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../002-ControlWords.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling package DLX_ControlWords
-# End time: 16:55:15 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 00:04:49 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:15 on Sep 06,2022
+# Start time: 00:04:50 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.a-IF.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1634,18 +2005,18 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_IF
 # -- Compiling architecture structure of DLX_IF
-# End time: 16:55:15 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:50 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:15 on Sep 06,2022
+# Start time: 00:04:50 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
 # -- Loading package STANDARD
 # -- Loading package MATH_REAL
 # -- Compiling package rf_constants
-# End time: 16:55:15 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:50 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:15 on Sep 06,2022
+# Start time: 00:04:50 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1657,10 +2028,10 @@ source DLX_sim.src
 # -- Loading package rf_constants
 # -- Compiling entity address_converter
 # -- Compiling architecture behavior of address_converter
-# End time: 16:55:15 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:50 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:15 on Sep 06,2022
+# Start time: 00:04:50 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1672,10 +2043,10 @@ source DLX_sim.src
 # -- Loading package rf_constants
 # -- Compiling entity RF_phys
 # -- Compiling architecture behavior_async of RF_phys
-# End time: 16:55:15 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:50 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:15 on Sep 06,2022
+# Start time: 00:04:50 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1687,10 +2058,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF_datapath
 # -- Compiling architecture BEHAVIOR of RF_datapath
-# End time: 16:55:15 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:50 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:15 on Sep 06,2022
+# Start time: 00:04:50 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1702,10 +2073,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF_CU
 # -- Compiling architecture BEHAVIOR of RF_CU
-# End time: 16:55:15 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:50 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:15 on Sep 06,2022
+# Start time: 00:04:50 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1717,10 +2088,10 @@ source DLX_sim.src
 # -- Loading package NUMERIC_STD
 # -- Compiling entity RF
 # -- Compiling architecture STRUCTURE of RF
-# End time: 16:55:16 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 00:04:50 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:16 on Sep 06,2022
+# Start time: 00:04:51 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1731,10 +2102,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_ID
 # -- Compiling architecture structure of DLX_ID
-# End time: 16:55:16 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:51 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:16 on Sep 06,2022
+# Start time: 00:04:51 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1744,40 +2115,40 @@ source DLX_sim.src
 # -- Compiling configuration CFG_STRUCT_PG_1
 # -- Loading entity PG_NET
 # -- Loading architecture STRUCT_PG_1 of PG_NET
-# End time: 16:55:16 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:51 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:16 on Sep 06,2022
+# Start time: 00:04:51 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity G_BLOCK
 # -- Compiling architecture STRUCTURE of G_BLOCK
-# End time: 16:55:16 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:51 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:16 on Sep 06,2022
+# Start time: 00:04:51 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity PG_BLOCK
 # -- Compiling architecture STRUCTURE of PG_BLOCK
-# End time: 16:55:16 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:51 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:16 on Sep 06,2022
+# Start time: 00:04:51 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SPARSE_TREE
 # -- Compiling architecture STRUCTURE of SPARSE_TREE
-# End time: 16:55:16 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:51 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:16 on Sep 06,2022
+# Start time: 00:04:51 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1787,10 +2158,10 @@ source DLX_sim.src
 # -- Compiling configuration CFG_FA_BEHAVIORAL
 # -- Loading entity FA
 # -- Loading architecture BEHAVIORAL of FA
-# End time: 16:55:16 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:51 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:16 on Sep 06,2022
+# Start time: 00:04:51 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1809,10 +2180,10 @@ source DLX_sim.src
 # -- Compiling configuration CFG_RCA_BEHAVIORAL
 # -- Loading entity RCA
 # -- Loading architecture BEHAVIORAL of RCA
-# End time: 16:55:17 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 00:04:51 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:17 on Sep 06,2022
+# Start time: 00:04:51 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1821,10 +2192,10 @@ source DLX_sim.src
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity CS_BLOCK
 # -- Compiling architecture STRUCTURE of CS_BLOCK
-# End time: 16:55:17 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:52 on Sep 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:17 on Sep 06,2022
+# Start time: 00:04:52 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1833,10 +2204,10 @@ source DLX_sim.src
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity CS_SUM
 # -- Compiling architecture STRUCTURE of CS_SUM
-# End time: 16:55:17 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:52 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:17 on Sep 06,2022
+# Start time: 00:04:52 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1844,10 +2215,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity P4
 # -- Compiling architecture STRUCTURE of P4
-# End time: 16:55:17 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:52 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:17 on Sep 06,2022
+# Start time: 00:04:52 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1856,10 +2227,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_ALU
 # -- Compiling architecture bhv of DLX_ALU
-# End time: 16:55:17 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:52 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:17 on Sep 06,2022
+# Start time: 00:04:52 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1868,10 +2239,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_EX
 # -- Compiling architecture structure of DLX_EX
-# End time: 16:55:17 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:52 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:17 on Sep 06,2022
+# Start time: 00:04:52 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.b-DataPath.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1880,10 +2251,10 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_DP
 # -- Compiling architecture structure of DLX_DP
-# End time: 16:55:17 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:52 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:17 on Sep 06,2022
+# Start time: 00:04:52 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a.a-CU_HW.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1894,10 +2265,10 @@ source DLX_sim.src
 # -- Loading package DLX_ControlWords
 # -- Compiling entity dlx_cu
 # -- Compiling architecture dlx_cu_hw of dlx_cu
-# End time: 16:55:18 on Sep 06,2022, Elapsed time: 0:00:01
+# End time: 00:04:52 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:18 on Sep 06,2022
+# Start time: 00:04:52 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../a-DLX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1906,10 +2277,10 @@ source DLX_sim.src
 # -- Loading package DLX_ControlWords
 # -- Compiling entity DLX
 # -- Compiling architecture dlx_rtl of DLX
-# End time: 16:55:18 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:53 on Sep 07,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:18 on Sep 06,2022
+# Start time: 00:04:53 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1918,10 +2289,10 @@ source DLX_sim.src
 # -- Loading package std_logic_textio
 # -- Compiling entity ROMEM
 # -- Compiling architecture Behavioral of ROMEM
-# End time: 16:55:18 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:53 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:18 on Sep 06,2022
+# Start time: 00:04:53 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1930,10 +2301,10 @@ source DLX_sim.src
 # -- Loading package std_logic_textio
 # -- Compiling entity RWMEM
 # -- Compiling architecture beh of RWMEM
-# End time: 16:55:18 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:53 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
-# Start time: 16:55:18 on Sep 06,2022
+# Start time: 00:04:53 on Sep 07,2022
 # vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_TOP_DLX.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1943,12 +2314,12 @@ source DLX_sim.src
 # -- Loading package myTypes
 # -- Compiling entity DLX_TestBench
 # -- Compiling architecture tb of DLX_TestBench
-# End time: 16:55:18 on Sep 06,2022, Elapsed time: 0:00:00
+# End time: 00:04:53 on Sep 07,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 16:55:20 on Sep 06,2022, Elapsed time: 0:05:07
-# Errors: 2, Warnings: 111
+# End time: 00:04:54 on Sep 07,2022, Elapsed time: 0:46:32
+# Errors: 2, Warnings: 115
 # vsim -t 100ps work.dlx_testbench -voptargs="+acc" 
-# Start time: 16:55:20 on Sep 06,2022
+# Start time: 00:04:54 on Sep 07,2022
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
@@ -1981,8 +2352,6 @@ source DLX_sim.src
 # Loading work.dlx_ex(structure)#1
 # Loading work.dlx_alu(bhv)#1
 # Loading work.shifter_generic(behavioral)#1
-# ** Warning: (vsim-8683) Uninitialized out port /dlx_testbench/UUT/CU_I/PIPE_CLEAR_n has no driver.
-# This port will contribute value (U) to the signal network.
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 #    Time: 0 ps  Iteration: 0  Instance: /dlx_testbench
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -2107,6 +2476,10 @@ source DLX_sim.src
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Error: (vsim-3953) STD_LOGIC_1164.HREAD End of string encountered
 #    Time: 0 ps  Iteration: 1  Instance: /dlx_testbench/IRAM
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -2137,6 +2510,10 @@ source DLX_sim.src
 #    Time: 0 ps  Iteration: 3  Instance: /dlx_testbench
 # ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 #    Time: 0 ps  Iteration: 3  Instance: /dlx_testbench
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
+# ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
+#    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
 #    Time: 0 ps  Iteration: 5  Instance: /dlx_testbench/IRAM
 # ** Warning: CONV_INTEGER(UNSIGNED) input array has 32 bits and MSB is not zero.
@@ -2209,13 +2586,840 @@ source DLX_sim.src
 #    Time: 35 ns  Iteration: 4  Instance: /dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Conv_W
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 35 ns  Iteration: 4  Instance: /dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Conv_W
-run 180 ns
-run 20 ns
-run 390 ns
-run 50 ns
-force -freeze sim:/dlx_testbench/UUT/dp/id_stage/regfile/DataPath/Physical_RF/REGISTERS(10) 32'd65535 0
-run 5 ns
-quit -sim
-# End time: 17:17:27 on Sep 06,2022, Elapsed time: 0:22:07
-# Errors: 2, Warnings: 112
-quit 
+run 200 ns
+# ** Fatal: (vsim-3420) Array lengths do not match. Left is 32 (31 downto 0). Right is 0 (31 downto 32 (null array)).
+#    Time: 145 ns  Iteration: 0  Process: /dlx_testbench/DRAM/WR_PROCESS File: ../../test_bench_and_memory/TB_rwmem/rwmem.vhd
+# Fatal error in Process WR_PROCESS at ../../test_bench_and_memory/TB_rwmem/rwmem.vhd line 91
+# 
+# HDL call sequence:
+# Stopped at ../../test_bench_and_memory/TB_rwmem/rwmem.vhd 91 Process WR_PROCESS
+# 
+run 10 ns
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at ../../test_bench_and_memory/TB_rwmem/rwmem.vhd 91 Process WR_PROCESS
+# 
+source DLX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:08:58 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 00:08:58 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:08:58 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 00:08:59 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:08:59 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 00:08:59 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:08:59 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 00:08:59 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:08:59 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 00:08:59 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:08:59 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../002-ControlWords.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package DLX_ControlWords
+# End time: 00:08:59 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:08:59 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 00:08:59 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:08:59 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 00:08:59 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:08:59 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 00:09:00 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:00 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 00:09:00 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:00 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 00:09:00 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:00 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 00:09:00 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:00 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 00:09:00 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:00 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 00:09:00 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:00 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 00:09:00 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:00 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 00:09:01 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:01 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 00:09:01 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:01 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 00:09:01 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:01 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 00:09:01 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:01 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 00:09:01 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:01 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 00:09:01 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:01 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 00:09:01 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:01 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 00:09:02 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:02 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 00:09:02 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:02 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 00:09:02 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:02 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 00:09:02 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:02 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.a-CU_HW.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package myTypes
+# -- Loading package DLX_ControlWords
+# -- Compiling entity dlx_cu
+# -- Compiling architecture dlx_cu_hw of dlx_cu
+# End time: 00:09:02 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:02 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a-DLX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Loading package DLX_ControlWords
+# -- Compiling entity DLX
+# -- Compiling architecture dlx_rtl of DLX
+# End time: 00:09:02 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:02 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity ROMEM
+# -- Compiling architecture Behavioral of ROMEM
+# End time: 00:09:02 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:02 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity RWMEM
+# -- Compiling architecture beh of RWMEM
+# End time: 00:09:03 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:09:03 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_TOP_DLX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package myTypes
+# -- Compiling entity DLX_TestBench
+# -- Compiling architecture tb of DLX_TestBench
+# End time: 00:09:03 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 00:09:04 on Sep 07,2022, Elapsed time: 0:04:10
+# Errors: 5, Warnings: 115
+# vsim -t 100ps work.dlx_testbench -voptargs="+acc" 
+# Start time: 00:09:04 on Sep 07,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.mytypes
+# Loading work.dlx_testbench(tb)#1
+# Loading ieee.std_logic_textio(body)
+# Loading work.romem(behavioral)#1
+# Loading ieee.numeric_std(body)
+# Loading work.rwmem(beh)#1
+# ** Fatal: (vsim-3348) Port length (16) does not match actual length (32) for port "/dlx_testbench/DRAM/INOUT_DATA".
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_testbench/DRAM File: ../../test_bench_and_memory/TB_rwmem/rwmem.vhd Line: 25
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 00:09:05 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Unrecognized dataset prefix: sim
+# Unrecognized dataset prefix: sim
+# Unrecognized dataset prefix: sim
+source DLX_sim.src
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:18 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../000-globals.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package myTypes
+# End time: 00:10:19 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:19 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../000-commons/counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity counter
+# -- Compiling architecture BEHAVIOR of counter
+# End time: 00:10:19 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:19 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1_1b
+# -- Compiling architecture behavior of mux2to1_1b
+# End time: 00:10:19 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:19 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mux2to1
+# -- Compiling architecture behavior of mux2to1
+# End time: 00:10:19 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:19 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity SHIFTER_GENERIC
+# -- Compiling architecture BEHAVIORAL of SHIFTER_GENERIC
+# End time: 00:10:19 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:19 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../002-ControlWords.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package DLX_ControlWords
+# End time: 00:10:19 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:19 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.a-IF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_IF
+# -- Compiling architecture structure of DLX_IF
+# End time: 00:10:19 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:19 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Compiling package rf_constants
+# End time: 00:10:20 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:20 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity address_converter
+# -- Compiling architecture behavior of address_converter
+# End time: 00:10:20 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:20 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Compiling entity RF_phys
+# -- Compiling architecture behavior_async of RF_phys
+# End time: 00:10:20 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:20 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_datapath
+# -- Compiling architecture BEHAVIOR of RF_datapath
+# End time: 00:10:20 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:20 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF_CU
+# -- Compiling architecture BEHAVIOR of RF_CU
+# End time: 00:10:20 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:20 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RF
+# -- Compiling architecture STRUCTURE of RF
+# End time: 00:10:20 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:20 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Loading package rf_constants
+# -- Loading package std_logic_arith
+# -- Loading package myTypes
+# -- Compiling entity DLX_ID
+# -- Compiling architecture structure of DLX_ID
+# End time: 00:10:20 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:20 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_NET
+# -- Compiling architecture STRUCT_PG_1 of PG_NET
+# -- Compiling configuration CFG_STRUCT_PG_1
+# -- Loading entity PG_NET
+# -- Loading architecture STRUCT_PG_1 of PG_NET
+# End time: 00:10:21 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:21 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity G_BLOCK
+# -- Compiling architecture STRUCTURE of G_BLOCK
+# End time: 00:10:21 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:21 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PG_BLOCK
+# -- Compiling architecture STRUCTURE of PG_BLOCK
+# End time: 00:10:21 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:21 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SPARSE_TREE
+# -- Compiling architecture STRUCTURE of SPARSE_TREE
+# End time: 00:10:21 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:21 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FA
+# -- Compiling architecture BEHAVIORAL of FA
+# -- Compiling configuration CFG_FA_BEHAVIORAL
+# -- Loading entity FA
+# -- Loading architecture BEHAVIORAL of FA
+# End time: 00:10:21 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:21 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity RCA
+# -- Compiling architecture STRUCTURAL of RCA
+# -- Compiling architecture BEHAVIORAL of RCA
+# -- Loading entity RCA
+# -- Compiling configuration CFG_RCA_STRUCTURAL
+# -- Loading entity RCA
+# -- Loading architecture STRUCTURAL of RCA
+# -- Loading entity FA
+# -- Loading configuration cfg_fa_behavioral
+# -- Compiling configuration CFG_RCA_BEHAVIORAL
+# -- Loading entity RCA
+# -- Loading architecture BEHAVIORAL of RCA
+# End time: 00:10:21 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:21 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_BLOCK
+# -- Compiling architecture STRUCTURE of CS_BLOCK
+# End time: 00:10:21 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:21 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity CS_SUM
+# -- Compiling architecture STRUCTURE of CS_SUM
+# End time: 00:10:22 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:22 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Compiling entity P4
+# -- Compiling architecture STRUCTURE of P4
+# End time: 00:10:22 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:22 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_ALU
+# -- Compiling architecture bhv of DLX_ALU
+# End time: 00:10:22 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:22 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_EX
+# -- Compiling architecture structure of DLX_EX
+# End time: 00:10:22 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:22 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.b-DataPath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package myTypes
+# -- Compiling entity DLX_DP
+# -- Compiling architecture structure of DLX_DP
+# End time: 00:10:22 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:22 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a.a-CU_HW.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package myTypes
+# -- Loading package DLX_ControlWords
+# -- Compiling entity dlx_cu
+# -- Compiling architecture dlx_cu_hw of dlx_cu
+# End time: 00:10:22 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:22 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../a-DLX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package myTypes
+# -- Loading package DLX_ControlWords
+# -- Compiling entity DLX
+# -- Compiling architecture dlx_rtl of DLX
+# End time: 00:10:22 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:22 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling entity ROMEM
+# -- Compiling architecture Behavioral of ROMEM
+# End time: 00:10:23 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:23 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Compiling entity RWMEM
+# -- Compiling architecture beh of RWMEM
+# End time: 00:10:23 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 10.7c Compiler 2018.08 Aug 17 2018
+# Start time: 00:10:23 on Sep 07,2022
+# vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_TOP_DLX.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package myTypes
+# -- Compiling entity DLX_TestBench
+# -- Compiling architecture tb of DLX_TestBench
+# End time: 00:10:23 on Sep 07,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -t 100ps work.dlx_testbench -voptargs="+acc" 
+# Start time: 00:10:23 on Sep 07,2022
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.mytypes
+# Loading work.dlx_testbench(tb)#1
+# Loading ieee.std_logic_textio(body)
+# Loading work.romem(behavioral)#1
+# Loading ieee.numeric_std(body)
+# Loading work.rwmem(beh)#1
+# ** Fatal: (vsim-3348) Port length (16) does not match actual length (32) for port "/dlx_testbench/DRAM/ADDR".
+#    Time: 0 ps  Iteration: 0  Instance: /dlx_testbench/DRAM File: ../../test_bench_and_memory/TB_rwmem/rwmem.vhd Line: 21
+# FATAL ERROR while loading design
+# Error loading design
+# End time: 00:10:24 on Sep 07,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Unrecognized dataset prefix: sim
+# Unrecognized dataset prefix: sim
+# Unrecognized dataset prefix: sim
