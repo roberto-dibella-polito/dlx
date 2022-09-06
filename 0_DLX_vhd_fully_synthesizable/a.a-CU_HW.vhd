@@ -91,8 +91,8 @@ architecture dlx_cu_hw of dlx_cu is
 		NOP_CW,				-- 0x01
 		not_implemented,	-- 0x02	J
 		not_implemented, 	-- 0x03	JAL 
-		not_implemented, 	-- 0x04	BEQZ
-		not_implemented, 	-- 0x05	BNEZ
+		BQZ_CW,			 	-- 0x04	BEQZ
+		BNZ_CW,			 	-- 0x05	BNEZ
 		not_implemented, 	-- 0x06
 		not_implemented,	-- 0x07
 		RI_CW, 				-- 0x08	ADDI
@@ -161,13 +161,15 @@ architecture dlx_cu_hw of dlx_cu is
 	signal cw1 : std_logic_vector(CW_SIZE -1 downto 0); -- first stage
 	signal cw2 : std_logic_vector(CW_SIZE - 1 - 5 downto 0); -- second stage
 	signal cw3 : std_logic_vector(CW_SIZE - 1 - 8 downto 0); -- third stage
-	signal cw4 : std_logic_vector(CW_SIZE - 1 - 11 downto 0); -- fourth stage
+	signal cw4 : std_logic_vector(CW_SIZE - 1 - 13 downto 0); -- fourth stage
 
 	signal aluOpcode_i: aluOp := NOP; -- ALUOP defined in package
 	signal aluOpcode1: aluOp := NOP;
 	signal aluOpcode2: aluOp := NOP;
 
-	signal pipe_enable_i, pipe_clear_i, stall : std_logic;
+	signal pipe_enable_i, pipe_clear_i, stall 				: std_logic;
+	signal eqz_cond_i, neqz_cond_i, jump_en_i, branch_taken	: std_logic;
+	
 	
 begin  -- dlx_cu_rtl
 
@@ -183,7 +185,9 @@ begin  -- dlx_cu_rtl
 
 	--stall <= not IRAM_READY;
 	
-	pipe_clear_i	<= '1';			-- For now, no branch instruction is created
+	
+	--pipe_clear_i	<= '1';			-- For now, no branch instruction is created
+	
 	pipe_enable_i 	<= not stall;
 	PC_LATCH_EN		<= not stall;
 
@@ -212,13 +216,22 @@ begin  -- dlx_cu_rtl
 	
 	DRAM_ISSUE			<= cw3(CW_SIZE-9);
 	DRAM_READNOTWRITE	<= cw3(CW_SIZE-10);
-	JUMP_EN				<= cw3(CW_SIZE-11);
+	--JUMP_EN				<= cw3(CW_SIZE-11);
+	eq_cond_i			<= cw3(CW_SIZE-11);
+	neq_cond_i			<= cw3(CW_SIZE-12);
+	jump_en_i			<= cw3(CW_SIZE-13);
 	
 	PIPE_MEM_WB_EN		<= pipe_enable_i;
 	
-	WB_MUX_SEL			<= cw4(CW_SIZE-12);
-	RF_WE				<= cw4(CW_SIZE-13);
+	WB_MUX_SEL			<= cw4(CW_SIZE-14);
+	RF_WE				<= cw4(CW_SIZE-15);
 
+	-- COMBINATIONAL LOGIC
+	-- for flow control
+	branch_taken		<= (neqz_cond_i and is_zero) or (eqz_cond_i and not is_zero) or jump_en_i;
+	JUMP_EN				<= branch_taken;
+	PIPE_CLEAR_n		<= not branch_taken;
+	
 	-- process to pipeline control words
 	CW_PIPE: process (Clk, Rst)
 	begin  -- process Clk
@@ -226,7 +239,7 @@ begin  -- dlx_cu_rtl
 			cw1 <= NOP_CW;
 			cw2 <= NOP_CW(CW_SIZE-1-5 downto 0);
 			cw3 <= NOP_CW(CW_SIZE - 1 - 8 downto 0);
-			cw4 <= NOP_CW(CW_SIZE - 1 - 11 downto 0);
+			cw4 <= NOP_CW(CW_SIZE - 1 - 13 downto 0);
 			--cw5 <= (others => '0');
 			aluOpcode1 <= NOP;
 			aluOpcode2 <= NOP;
@@ -235,12 +248,21 @@ begin  -- dlx_cu_rtl
 			-- Pipeline should not stall
 			--if( stall = '0' ) then
 				cw1 <= cw;
-				cw2 <= cw1(CW_SIZE - 1 - 5 downto 0);
-				cw3 <= cw2(CW_SIZE - 1 - 8 downto 0);
-				cw4 <= cw3(CW_SIZE - 1 - 11 downto 0);
-
 				aluOpcode1 <= aluOpcode_i;
-				aluOpcode2 <= aluOpcode1;
+					
+				-- If a branch is taken, the pipeline has to be flushed
+				if( branch_taken = '1' ) then	
+					cw2 <= NOP_CW(CW_SIZE-1-5 downto 0);
+					cw3 <= NOP_CW(CW_SIZE - 1 - 8 downto 0);
+					cw4 <= NOP_CW(CW_SIZE - 1 - 13 downto 0);
+					aluOpcode2 <= NOP;
+				else				
+					cw2 <= cw1(CW_SIZE - 1 - 5 downto 0);
+					cw3 <= cw2(CW_SIZE - 1 - 8 downto 0);
+					cw4 <= cw3(CW_SIZE - 1 - 13 downto 0);
+					aluOpcode2 <= aluOpcode1;
+				end if;
+				
 			--end if;
 		
 		end if;
@@ -345,8 +367,8 @@ begin  -- dlx_cu_rtl
 				end case;
 			when 2	=> aluOpcode_i <= NOP; 		-- J
 			when 3	=> aluOpcode_i <= NOP; 		-- JAL
-			when 4	=> aluOpcode_i <= NOP;		-- BEQZ
-			when 5	=> aluOpcode_i <= NOP;		-- BNEZ
+			when 4	=> aluOpcode_i <= ADD;		-- BEQZ
+			when 5	=> aluOpcode_i <= ADD;		-- BNEZ
 			when 8	=> aluOpcode_i <= ADD;		-- ADDI
 			when 10	=> aluOpcode_i <= SUB;		-- SUBI
 			when 12	=> aluOpcode_i <= AND_O;	-- ANDI
