@@ -80,10 +80,11 @@ architecture tb of DLX_TestBench is
 	signal DRAM_DATA :			std_logic_vector(Data_size-1 downto 0);
 
 	signal iram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
-	--signal dram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
-	--signal dram_dummy_word		: std_logic_vector(DATA_SIZE-1 downto 0);
-	--signal dram_data_i			: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal dram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal dram_dummy_word		: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal dram_data_i			: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal iram_addr_shifted	: std_logic_vector(PC_SIZE-1 downto 0);
+	signal dram_addr_odd		: std_logic_vector(PC_SIZE-1 downto 0);
 
 	signal opcode_i				: std_logic_vector(OP_SIZE-1 downto 0);
 	signal func_i				: std_logic_vector(FUNC_SIZE-1 downto 0);
@@ -126,9 +127,9 @@ begin
 			INOUT_DATA			=> DRAM_DATA
 		);
 
-	--dram_first_word	<= DRAM_DATA(31 downto 0);
-	--dram_dummy_word <= (others=>'-');
-	--DRAM_DATA(2*DATA_SIZE-1 downto DATA_SIZE) <= dram_dummy_word;
+	dram_first_word	<= DRAM_DATA(31 downto 0);
+	dram_dummy_word <= (others=>'Z');
+	DRAM_DATA(2*DATA_SIZE-1 downto DATA_SIZE) <= dram_dummy_word;
 
 	iram_first_word	<= IRAM_DATA(31 downto 0);
 	opcode_i 	<= iram_first_word(31 downto 26);
@@ -136,12 +137,13 @@ begin
 	
 	-- The memory is BYTE-ADDRESSABLE: each row corresponds to 4 bytes
 	-- => Incoming address is shifted by two
-	iram_addr_shifted <= "00" & IRAM_ADDRESS(31 downto 2);
+	iram_addr_shifted 	<= "00" & IRAM_ADDRESS(31 downto 2);
+	dram_addr_odd		<= DRAM_ADDRESS(31 downto 1) & '0';
 
 	-- DLX
 	UUT : DLX 
 		generic map( IR_SIZE => 32, PC_SIZE => 32, DATA_SIZE => 32) 
-		port map ( CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, iram_first_word, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, DRAM_DATA );
+		port map ( CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, iram_first_word, dram_addr_odd, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, dram_first_word	);
 
 	-- INSTRUCTION EVALUATOR
 	-- Only used to display the fetched instruction in an easy way
