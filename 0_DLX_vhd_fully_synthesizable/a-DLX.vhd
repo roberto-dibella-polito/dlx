@@ -194,8 +194,9 @@ architecture dlx_rtl of DLX is
 	signal rf_we_i			: std_logic;
 	signal iram_address_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal iram_data_i		: std_logic_vector(DATA_SIZE-1 downto 0);
-	
-	
+	signal dram_address_i	: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal dram_data_i		: std_logic_vector(DATA_SIZE-1 downto 0);
+
 begin  -- DLX
 
 	CU_I: dlx_cu generic map(
@@ -268,7 +269,7 @@ begin  -- DLX
 		MEM_IN_EN		=> mem_in_en_i,
  		BRANCH_T		=> is_zero_i,
 		ALU_OP			=> alu_op_i,
-		DRAM_ADDRESS	=> DRAM_ADDRESS,
+		DRAM_ADDRESS	=> dram_address_i,
 		DRAM_DATA		=> DRAM_DATA,
 		JUMP_EN			=> jump_en_i,
 		PC_LATCH_EN		=> pc_latch_en_i,
@@ -278,5 +279,8 @@ begin  -- DLX
 
 	IRAM_ADDRESS 	<= iram_address_i;
 	iram_data_i		<= IRAM_DATA;
+	
+	DRAM_ADDRESS	<= dram_address_i;
+	--dram_data_i		<= DRAM_DATA;
 
 end dlx_rtl;

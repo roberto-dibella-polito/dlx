@@ -77,7 +77,7 @@ architecture tb of DLX_TestBench is
 	signal DRAM_ENABLE :		std_logic;
 	signal DRAM_READNOTWRITE :	std_logic;
 	signal DRAM_READY :			std_logic;
-	signal DRAM_DATA :			std_logic_vector(Data_size-1 downto 0);
+	signal DRAM_DATA :			std_logic_vector(2*Data_size-1 downto 0);
 
 	signal iram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal dram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
@@ -120,16 +120,18 @@ begin
 		port map(
 			CLK   				=> CLK,
 			RST					=> RST,
-			ADDR				=> DRAM_ADDRESS,
+			ADDR				=> dram_addr_odd,
 			ENABLE				=> DRAM_ENABLE,
 			READNOTWRITE		=> DRAM_READNOTWRITE,
 			DATA_READY			=> DRAM_READY,
 			INOUT_DATA			=> DRAM_DATA
 		);
 
-	dram_first_word	<= DRAM_DATA(31 downto 0);
+	--dram_first_word	<= DRAM_DATA(31 downto 0);
 	dram_dummy_word <= (others=>'Z');
-	DRAM_DATA(2*DATA_SIZE-1 downto DATA_SIZE) <= dram_dummy_word;
+	--DRAM_DATA(2*DATA_SIZE-1 downto DATA_SIZE) <= dram_dummy_word;
+	DRAM_DATA(2*DATA_SIZE-1 downto DATA_SIZE) 	<= dram_first_word;
+	DRAM_DATA(DATA_SIZE-1 downto 0)				<= dram_dummy_word;
 
 	iram_first_word	<= IRAM_DATA(31 downto 0);
 	opcode_i 	<= iram_first_word(31 downto 26);
@@ -143,8 +145,23 @@ begin
 	-- DLX
 	UUT : DLX 
 		generic map( IR_SIZE => 32, PC_SIZE => 32, DATA_SIZE => 32) 
-		port map ( CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, iram_first_word, dram_addr_odd, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, dram_first_word	);
+		--port map ( CLK, RST, IRAM_ADDRESS, IRAM_ENABLE, IRAM_READY, iram_first_word, dram_addr_odd, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, dram_first_word	);
+		port map(
+			-- Inputs
+			CLK						=> CLK,
+			RST						=> RST,
 
+			IRAM_ADDRESS			=> IRAM_ADDRESS,
+			IRAM_ISSUE				=> IRAM_ENABLE,
+			IRAM_READY				=> IRAM_READY,
+			IRAM_DATA				=> iram_first_word,
+
+			DRAM_ADDRESS			=> DRAM_ADDRESS,
+			DRAM_ISSUE				=> DRAM_ENABLE,
+			DRAM_READNOTWRITE		=> DRAM_READNOTWRITE,
+			DRAM_READY				=> DRAM_READY,
+			DRAM_DATA				=> dram_first_word
+		);
 	-- INSTRUCTION EVALUATOR
 	-- Only used to display the fetched instruction in an easy way
 	-- Inputs: 	opcode_i, func_i

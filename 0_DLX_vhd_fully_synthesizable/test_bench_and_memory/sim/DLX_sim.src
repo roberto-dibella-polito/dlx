@@ -102,7 +102,10 @@ sim:/dlx_testbench/UUT/dp/ex_stage/BRANCH_T
 add wave -group "MEM" \
 sim:/dlx_testbench/UUT/dp/rd_fwd_mem_i \
 sim:/dlx_testbench/UUT/dp/alu_out_mem_i \
-sim:/dlx_testbench/UUT/dp/data_mem_mem_i 
+sim:/dlx_testbench/UUT/dp/DRAM_ADDRESS \
+sim:/dlx_testbench/UUT/dp/DRAM_DATA \
+sim:/dlx_testbench/UUT/dp/data_mem_mem_i \
+sim:/dlx_testbench/dram_first_word 
 
 add wave -divider "DRAM controls" 
 add wave -group "DRAM Controls" sim:/dlx_testbench/DRAM/ENABLE \
@@ -113,7 +116,12 @@ add wave -group "DRAM" sim:/dlx_testbench/DRAM/ADDR \
 sim:/dlx_testbench/UUT/dp/data_mem_mem_i \
 sim:/dlx_testbench/DRAM/INOUT_DATA \
 sim:/dlx_testbench/DRAM_DATA \
-sim:/dlx_testbench/DRAM/DRAM_mem(58)
+sim:/dlx_testbench/DRAM/DRAM_mem(53) \
+sim:/dlx_testbench/DRAM/DRAM_mem(54) \
+sim:/dlx_testbench/DRAM/DRAM_mem(55) \
+sim:/dlx_testbench/DRAM/DRAM_mem(56) \
+sim:/dlx_testbench/DRAM/DRAM_mem(57) \
+sim:/dlx_testbench/DRAM/DRAM_mem(58) 
 
 add wave -group "WB" \
 sim:/dlx_testbench/UUT/dp/rd_fwd_wb_i \
