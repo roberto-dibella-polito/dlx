@@ -116,12 +116,11 @@ add wave -group "DRAM" sim:/dlx_testbench/DRAM/ADDR \
 sim:/dlx_testbench/UUT/dp/data_mem_mem_i \
 sim:/dlx_testbench/DRAM/INOUT_DATA \
 sim:/dlx_testbench/DRAM_DATA \
-sim:/dlx_testbench/DRAM/DRAM_mem(53) \
-sim:/dlx_testbench/DRAM/DRAM_mem(54) \
-sim:/dlx_testbench/DRAM/DRAM_mem(55) \
-sim:/dlx_testbench/DRAM/DRAM_mem(56) \
-sim:/dlx_testbench/DRAM/DRAM_mem(57) \
-sim:/dlx_testbench/DRAM/DRAM_mem(58) 
+sim:/dlx_testbench/dram_first_word \
+sim:/dlx_testbench/UUT/DRAM_DATA \
+sim:/dlx_testbench/UUT/dp/DRAM_DATA \
+sim:/dlx_testbench/UUT/dp/data_mem_mem_i \
+sim:/dlx_testbench/dram_dlx_i
 
 add wave -group "WB" \
 sim:/dlx_testbench/UUT/dp/rd_fwd_wb_i \
@@ -129,8 +128,11 @@ sim:/dlx_testbench/UUT/dp/data_mem_wb_i \
 sim:/dlx_testbench/UUT/dp/alu_out_wb_i \
 sim:/dlx_testbench/UUT/dp/wr_data_id_i 
 
+add wave -divider "DRAM" \
+sim:/dlx_testbench/DRAM/DRAM_mem 
+
 #add wave -group "IF" sim:/dlx_testbench/UUT/dp/if_stage/*
 #add wave -group "IRAM" sim:/dlx_testbench/IRAM/*
 #add wave -group "Control Unit" sim:/dlx_testbench/UUT/CU_I/*
 
-run 50 ns
+run 200 ns
