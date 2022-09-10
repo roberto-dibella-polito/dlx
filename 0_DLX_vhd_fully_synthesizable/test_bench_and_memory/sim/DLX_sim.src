@@ -1,4 +1,5 @@
 vcom -reportprogress 300 -work work ../../000-globals.vhd
+vcom -reportprogress 300 -work work ../../000-commons/counter_v2.vhd
 vcom -reportprogress 300 -work work ../../000-commons/counter.vhd
 vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd
 vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd
@@ -37,6 +38,7 @@ vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.vhd
 vcom -reportprogress 300 -work work ../../a.b-DataPath.vhd
 
 ## CONTROL UNIT
+vcom -reportprogress 300 -work work ../../a.a.a-bubble_generator.vhd
 vcom -reportprogress 300 -work work ../../a.a-CU_HW.vhd
 
 ## TOP-LEVEL ENTITY
@@ -65,6 +67,15 @@ sim:/dlx_testbench/IRAM/ENTRIES
 
 add wave sim:/dlx_testbench/iram_first_word \
 sim:/dlx_testbench/instruction_i \
+sim:/dlx_testbench/rs1 sim:/dlx_testbench/rs2 \
+sim:/dlx_testbench/rd sim:/dlx_testbench/UUT/CU_I/cw1 
+
+add wave -group "IF/ID" \
+sim:/dlx_testbench/UUT/dp/PIPE_IF_ID_EN \
+sim:/dlx_testbench/UUT/dp/instr_if_o \
+sim:/dlx_testbench/UUT/dp/npc_if_o \
+sim:/dlx_testbench/UUT/dp/ir \
+sim:/dlx_testbench/UUT/dp/npc_id_i 
 
 add wave -group "ID" \
 sim:/dlx_testbench/UUT/dp/npc_id_i \
@@ -130,6 +141,11 @@ sim:/dlx_testbench/UUT/dp/wr_data_id_i
 
 add wave -divider "DRAM" \
 sim:/dlx_testbench/DRAM/DRAM_mem 
+
+add wave -divider "Stall signals" \
+sim:/dlx_testbench/UUT/CU_I/stall \
+sim:/dlx_testbench/UUT/CU_I/stall_forDram \
+sim:/dlx_testbench/UUT/CU_I/stall_forIram
 
 #add wave -group "IF" sim:/dlx_testbench/UUT/dp/if_stage/*
 #add wave -group "IRAM" sim:/dlx_testbench/IRAM/*
