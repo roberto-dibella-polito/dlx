@@ -79,8 +79,9 @@ entity dlx_cu is
 		PC_LATCH_EN        : out std_logic;		-- Program Counte Latch Enable
 
 		-- WB Control signals
-		WB_MUX_SEL         : out std_logic_vector(2 downto 0);		-- Write Back MUX Sel
-		RF_WE              : out std_logic		-- Register File Write Enable
+		--WB_MUX_SEL         : out std_logic_vector(2 downto 0);		-- Write Back MUX Sel
+		WB_MUX_SEL			: out std_logic;
+		RF_WE              	: out std_logic		-- Register File Write Enable
 
 	);  
 end dlx_cu;
@@ -91,10 +92,10 @@ architecture dlx_cu_hw of dlx_cu is
 	signal cw_mem : mem_array := (
 		RR_CW, 				-- 0x00	R type: IS IT CORRECT?
 		NOP_CW,				-- 0x01
-		J_CW,				-- 0x02	J
-		JAL_CW, 			-- 0x03	JAL 
-		BQZ_CW,			 	-- 0x04	BEQZ
-		BNZ_CW,			 	-- 0x05	BNEZ
+		not_implemented,	-- 0x02	J
+		not_implemented,	-- 0x03	JAL 
+		BQZ_CW,				-- 0x04	BEQZ
+		BNZ_CW,				-- 0x05	BNEZ
 		not_implemented, 	-- 0x06
 		not_implemented,	-- 0x07
 		RI_CW, 				-- 0x08	ADDI
@@ -170,12 +171,12 @@ architecture dlx_cu_hw of dlx_cu is
 	signal aluOpcode1       : aluOp := NOP;
 	signal aluOpcode2       : aluOp := NOP;
 
-	signal pipe_enable_i, pipe_clear_i, stall 				: std_logic;
-	signal eqz_cond_i, neqz_cond_i, jump_en_i, branch_taken                 : std_logic;
-	signal stall_forDram, dram_issue_i, dram_issue_o		        : std_logic;
+	signal pipe_enable_i, pipe_clear_i, stall							: std_logic;
+	signal eqz_cond_i, neqz_cond_i, jump_en_i, branch_taken				: std_logic;
+	signal stall_forDram, dram_issue_i, dram_issue_o		        	: std_logic;
 	signal stall_doubleSW, stall_doubleSW_id_ex, stall_doubleSW_ex_mem	: std_logic;
-	signal iram_issue_i							: std_logic;
-	signal stall_forIram, stall_forIram_1					: std_logic;
+	signal iram_issue_i													: std_logic;
+	signal stall_forIram, stall_forIram_1								: std_logic;
 	
 	signal opcode1	: std_logic_vector(OP_CODE_SIZE-1 downto 0);
 	
@@ -202,10 +203,10 @@ begin  -- dlx_cu_rtl
 	stall_forIram	<= iram_issue_i and (not IRAM_READY);	-- Wait for the IRAM to be ready
 	stall_forDram	<= dram_issue_o;
 
-	stall			<= stall_forDram or stall_forIram;		-- The pipeline has to be stopped AFTER the stall of the IRAM
-										-- Not doing it will make the CPU loose an instruction
-	pipe_enable_i 	        <= not stall;
-	PC_LATCH_EN		<= not stall;
+	stall		<= stall_forDram or stall_forIram;		-- The pipeline has to be stopped AFTER the stall of the IRAM
+									-- Not doing it will make the CPU loose an instruction
+	pipe_enable_i	<= not stall;
+	PC_LATCH_EN	<= not stall;
 
 	-- Request data to the IRAM
 	iram_issue_i	<= not stall_forDram;
@@ -215,39 +216,40 @@ begin  -- dlx_cu_rtl
 	PIPE_IF_ID_EN	<= pipe_enable_i;
 	
 	--RF_EN				<= cw1(CW_SIZE-1);	-- For now, RF always active. Enable used for single ports
-	RF_EN		<= '1';	
-	RF_RS1_EN	<= cw1(CW_SIZE-2);
-	RF_RS2_EN	<= cw1(CW_SIZE-3);
-	RF_CALL		<= '0';
-	RF_RET		<= '0';
-	IMM_ISOFF	<= cw1(CW_SIZE-4);
-	IMM_UNS		<= cw1(CW_SIZE-5);
-	RegRD_SEL	<= cw1(CW_SIZE-6);
+	RF_EN			<= '1';	
+	RF_RS1_EN		<= cw1(CW_SIZE-2);
+	RF_RS2_EN		<= cw1(CW_SIZE-3);
+	RF_CALL			<= '0';
+	RF_RET			<= '0';
+	IMM_ISOFF		<= cw1(CW_SIZE-4);
+	IMM_UNS			<= cw1(CW_SIZE-5);
+	RegRD_SEL		<= cw1(CW_SIZE-6);
 	
-	PIPE_ID_EX_EN	<= pipe_enable_i;
+	PIPE_ID_EX_EN		<= pipe_enable_i;
 	
-	MUXA_SEL	<= cw2(CW_SIZE-7);
-	MUXB_SEL	<= cw2(CW_SIZE-8);
-	MEM_IN_EN	<= cw2(CW_SIZE-9);
+	MUXA_SEL		<= cw2(CW_SIZE-7);
+	MUXB_SEL		<= cw2(CW_SIZE-8);
+	MEM_IN_EN		<= cw2(CW_SIZE-9);
 	
-	PIPE_EX_MEM_EN	<= pipe_enable_i;
+	PIPE_EX_MEM_EN		<= pipe_enable_i;
 	
 	dram_issue_i		<= cw3(CW_SIZE-10);
-	DRAM_ISSUE			<= dram_issue_o;
+	DRAM_ISSUE		<= dram_issue_o;
 	DRAM_READNOTWRITE	<= cw3(CW_SIZE-11);
-	eqz_cond_i			<= cw3(CW_SIZE-12);
-	neqz_cond_i			<= cw3(CW_SIZE-13);
-	jump_en_i			<= cw3(CW_SIZE-14);
+	eqz_cond_i		<= cw3(CW_SIZE-12);
+	neqz_cond_i		<= cw3(CW_SIZE-13);
+	jump_en_i		<= cw3(CW_SIZE-14);
 	
 	PIPE_MEM_WB_EN		<= pipe_enable_i;
   
-	WB_MUX_SEL			<= cw4(CW_SIZE-14 downto CW_SIZE-15);
-	RF_WE				<= cw4(CW_SIZE-16);
+	--WB_MUX_SEL		<= cw4(CW_SIZE-14 downto CW_SIZE-15);
+	WB_MUX_SEL		<= cw4(CW_SIZE-15);
+	RF_WE			<= cw4(CW_SIZE-16);
 
 	-- COMBINATIONAL LOGIC
 	-- for flow control
 	branch_taken		<= (neqz_cond_i and is_zero) or (eqz_cond_i and not is_zero) or jump_en_i;
-	JUMP_EN				<= branch_taken;
+	JUMP_EN			<= branch_taken;
 	PIPE_CLEAR_n		<= not branch_taken;
 	
 	-- process to pipeline control words

@@ -59,12 +59,12 @@ entity DLX_DP is
 		
 		-- MEM control signals
 		--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
-		JUMP_EN		: in std_logic;	-- JUMP Enable Signal for PC input MUX
-		PC_LATCH_EN	: in std_logic;	-- Pipelined version -> with no stalls, always active
+		JUMP_EN		: in std_logic;		-- JUMP Enable Signal for PC input MUX
+		PC_LATCH_EN	: in std_logic;		-- Program Counter enable signal
 		
 		-- WB Control signals
 		WB_MUX_SEL	: in std_logic_vector(2 downto 0);  -- Write Back MUX Sel
-		RF_WE		: in std_logic  -- Register File Write Enable
+		RF_WE		: in std_logic  					-- Register File Write Enable
 
 	);
 end DLX_DP;
@@ -73,12 +73,12 @@ architecture structure of DLX_DP is
 
 	component DLX_IF
 		generic (
-			IR_SIZE		: integer := 32;       -- Instruction Register Size
-			PC_SIZE		: integer := 32       -- Program Counter Size
+			IR_SIZE		: integer := 32;	-- Instruction Register Size
+			PC_SIZE		: integer := 32		-- Program Counter Size
 		);
 		port(
 		CLK			: in std_logic;
-		RST			: in std_logic;			-- Active LOW
+		RST			: in std_logic;			-- Asynchronous reset, Active:HIGH
 		
 		-- Instruction Memory interface
 		IRAM_ADDRESS	: out std_logic_vector(PC_SIZE-1 downto 0);
@@ -87,7 +87,7 @@ architecture structure of DLX_DP is
 		-- Stage interface
 		NPC_ALU			: in std_logic_vector(PC_SIZE-1 downto 0);
 		NPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);
-		OPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);		--Old PC that's gonna be forwarded to the WBMUX
+		--OPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);		--Old PC that's gonna be forwarded to the WBMUX
 		INSTR			: out std_logic_vector(IR_SIZE-1 downto 0);
 		
 		-- IF control signals
@@ -165,27 +165,27 @@ architecture structure of DLX_DP is
 		generic (N : integer);
 		port (
 			IN0,IN1, IN2	: in std_logic_vector (N-1 downto 0); --input signals
-			SEL		: in std_logic_vector(2 downto 0); --select signal
-			MUX_OUT	: out std_logic_vector (N-1 downto 0));--N bits output
+			SEL				: in std_logic_vector(2 downto 0); --select signal
+			MUX_OUT			: out std_logic_vector (N-1 downto 0));--N bits output
 	end component;
 
 
 	
-	signal npc_alu_fb			: std_logic_vector(PC_SIZE-1 downto 0);		-- Feedback signal for the ALU-computed NPC
+	signal npc_alu_fb	: std_logic_vector(PC_SIZE-1 downto 0);		-- Feedback signal for the ALU-computed NPC
 	
 	-- IF/ID signals
-	signal npc_if_o, npc_id_i		: std_logic_vector(PC_SIZE-1 downto 0);		-- NPC signal (npc_ex_i = npc_latch)
-	signal instr_if_o, ir			: std_logic_vector(INSTR_SIZE-1 downto 0);	-- Instruction register (ir)
+	signal npc_if_o, npc_id_i			: std_logic_vector(PC_SIZE-1 downto 0);		-- NPC signal (npc_ex_i = npc_latch)
+	signal instr_if_o, ir				: std_logic_vector(INSTR_SIZE-1 downto 0);	-- Instruction register (ir)
 	
 	signal rs1_id_i, rs2_id_i, rd_id_i	: std_logic_vector(RX_SIZE-1 downto 0);		-- RX addresses from IR
-	signal imm_id_i				: std_logic_vector(OFFSET_SIZE-1 downto 0); -- Immediate from IR
-	signal wr_data_id_i			: std_logic_vector(DATA_SIZE-1 downto 0);	-- Write back data from WB
+	signal imm_id_i						: std_logic_vector(OFFSET_SIZE-1 downto 0); -- Immediate from IR
+	signal wr_data_id_i					: std_logic_vector(DATA_SIZE-1 downto 0);	-- Write back data from WB
 	
 	-- ID/EX signals
 	signal rf_out1_id_o, rf_out2_id_o, rf_out1_ex_i, rf_out2_ex_i	: std_logic_vector(DATA_SIZE-1 downto 0);			-- 
-	signal imm_id_o, imm_ex_i		: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal rd_fwd_id_o, rd_fwd_ex_i		: std_logic_vector(RX_SIZE-1 downto 0);
-	signal npc_id_o, npc_ex_i		: std_logic_vector(PC_SIZE-1 downto 0);	
+	signal imm_id_o, imm_ex_i										: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal rd_fwd_id_o, rd_fwd_ex_i									: std_logic_vector(RX_SIZE-1 downto 0);
+	signal npc_id_o, npc_ex_i										: std_logic_vector(PC_SIZE-1 downto 0);	
 
 	signal ir_reset				: std_logic_vector(INSTR_SIZE-OP_SIZE-1 downto 0);
 
@@ -193,9 +193,9 @@ architecture structure of DLX_DP is
 	signal pc_forw				: std_logic_vector(PC_SIZE-1 downto 0);
 	
 	-- EX/MEM signals
-	signal alu_out_ex_o, alu_out_mem_i	: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal alu_out_ex_o, alu_out_mem_i		: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal data_mem_ex_o, data_mem_mem_i	: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal rd_fwd_ex_o, rd_fwd_mem_i	: std_logic_vector(RX_SIZE-1 downto 0);
+	signal rd_fwd_ex_o, rd_fwd_mem_i		: std_logic_vector(RX_SIZE-1 downto 0);
 	signal branch_t_ex_o, branch_t_mem_i 	: std_logic;
 	
 	-- MEM interface internal signals
@@ -206,22 +206,21 @@ architecture structure of DLX_DP is
 	signal dram_data_i	: std_logic_vector(DATA_SIZE-1 downto 0);	
 
 	-- MEM/WB signals
-	signal rd_fwd_mem_o, rd_fwd_wb_i	: std_logic_vector(RX_SIZE-1 downto 0);
+	signal rd_fwd_mem_o, rd_fwd_wb_i		: std_logic_vector(RX_SIZE-1 downto 0);
 	signal data_mem_mem_o, data_mem_wb_i	: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal alu_out_mem_o, alu_out_wb_i	: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal wb_sel				:std_logic_vector(2 downto 0);
+	signal alu_out_mem_o, alu_out_wb_i		: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal wb_sel							: std_logic_vector(2 downto 0);
 	
 begin
-	
 			
-	mux3to1dp: mux3to1 generic map( N => PC_SIZE)
-		port map(
-			IN0		=> data_mem_wb_i,
-			IN1		=> alu_out_wb_i,
-			IN2		=> pc_forw,			--PC Forwarding Signal
-			SEL		=> wb_sel,	
-			MUX_OUT		=> wr_data_id_i
-		);
+	--mux3to1dp: mux3to1 generic map( N => PC_SIZE)
+	--	port map(
+	--		IN0		=> data_mem_wb_i,
+	--		IN1		=> alu_out_wb_i,
+	--		IN2		=> pc_forw,			--PC Forwarding Signal
+	--		SEL		=> wb_sel,	
+	--		MUX_OUT		=> wr_data_id_i
+	--	);
 	
 	if_stage: DLX_IF generic map( IR_SIZE => INSTR_SIZE, PC_SIZE => PC_SIZE ) 
 	port map(
@@ -266,11 +265,7 @@ begin
 	
 	rs1_id_i <= ir(25 downto 21);
 	rs2_id_i <= ir(20 downto 16);
-	
-	rd_id_i <= ir(15 downto 11) when RegRD_SEL = '0' else ir(20 downto 16);
-
-
-	--rd_id_i	 <= ir(15 downto 11);
+	rd_id_i  <= ir(15 downto 11) when RegRD_SEL = '0' else ir(20 downto 16);
 	
 	imm_id_i <= ir(25 downto 0);
 			
@@ -337,11 +332,11 @@ begin
 
 			elsif( PIPE_ID_EX_EN = '1' ) then
 				
-				rf_out1_ex_i <= rf_out1_id_o;
-				rf_out2_ex_i <= rf_out2_id_o;
-				imm_ex_i <= imm_id_o;
-				rd_fwd_ex_i <= rd_fwd_id_o;
-				npc_ex_i <= npc_id_o;
+				rf_out1_ex_i	<= rf_out1_id_o;
+				rf_out2_ex_i	<= rf_out2_id_o;
+				imm_ex_i		<= imm_id_o;
+				rd_fwd_ex_i		<= rd_fwd_id_o;
+				npc_ex_i		<= npc_id_o;
 
 			end if;
 		
@@ -427,7 +422,6 @@ begin
 	DRAM_DATA		<= dram_data_i;
 	dram_data_i		<= data_mem_mem_i;
 	data_mem_mem_o	<= dram_data_i;
-	--data_mem_mem_o	<= DRAM_DATA;
 
 	-- MEM/WB registers
 	mem_wb_pipe: process(CLK, RST)
@@ -458,18 +452,15 @@ begin
 	
 	-- WRITE BACK stage
 	-- Multiplexer
-	wb_mux: process(WB_MUX_SEL,alu_out_wb_i, data_mem_wb_i, pc_forw)
-	begin
-		case WB_MUX_SEL is
-			when "00"	=> wr_data_id_i <= data_mem_wb_i;
-			when "01"	=> wr_data_id_i <= alu_out_wb_i;
-			when "10"	=> wr_data_id_i <= pc_forw;
-		end case;
-	end process;
-			
-	
+	--wb_mux: process(WB_MUX_SEL,alu_out_wb_i, data_mem_wb_i, pc_forw)
+	--begin
+	--	case WB_MUX_SEL is
+	--		when "00"	=> wr_data_id_i <= data_mem_wb_i;
+	--		when "01"	=> wr_data_id_i <= alu_out_wb_i;
+	--		when "10"	=> wr_data_id_i <= pc_forw;
+	--	end case;
+	--end process;		
 				
-				
-	--wr_data_id_i <= data_mem_wb_i when WB_MUX_SEL = '0' else alu_out_wb_i;
+	wr_data_id_i <= data_mem_wb_i when WB_MUX_SEL = '0' else alu_out_wb_i;
 
 end structure;
