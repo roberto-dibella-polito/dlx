@@ -13,8 +13,9 @@ entity dlx_cu is
 		FUNC_SIZE			: integer := 11;	-- Func Field Size for R-Type Ops
 		OP_CODE_SIZE		: integer := 6;		-- Op Code Size
 		IR_SIZE				: integer := 32;	-- Instruction Register Size    
-		CW_SIZE				: integer := 15		-- Control Word Size
-	);	
+		CW_SIZE				: integer := 16
+	);	-- Control Word Size
+
 
 	port (
 		Clk					: in  std_logic;	-- Clock
@@ -78,7 +79,7 @@ entity dlx_cu is
 		PC_LATCH_EN        : out std_logic;		-- Program Counte Latch Enable
 
 		-- WB Control signals
-		WB_MUX_SEL         : out std_logic;		-- Write Back MUX Sel
+		WB_MUX_SEL         : out std_logic_vector(2 downto 0);		-- Write Back MUX Sel
 		RF_WE              : out std_logic		-- Register File Write Enable
 
 	);  
@@ -146,27 +147,13 @@ architecture dlx_cu_hw of dlx_cu is
 		not_implemented,	-- 0x37
 		not_implemented,	-- 0x38
 		not_implemented,	-- 0x39
-		RUI_CW,				-- 0x3A	SLTUI
-		RUI_CW,				-- 0x3B	SGTUI
+		RUI_CW,			-- 0x3A	SLTUI
+		RUI_CW,			-- 0x3B	SGTUI
 		not_implemented,	-- 0x3C	
-		RUI_CW,				-- 0x3D	SGEUI
+		RUI_CW,			-- 0x3D	SGEUI
 		not_implemented,	-- 0x3E
 		not_implemented		-- 0x3F
 	);	
-
-	component bubble_generator
-		generic(
-			OPCODE_SIZE		: integer := 6;
-			REG_ADDR_SIZE	: integer := 5	);
-		port(
-			CLK				: in std_logic;
-			RST				: in std_logic;	-- Active:High
-			ENABLE			: in std_logic;
-			OPCODE			: in std_logic_vector(OPCODE_SIZE-1 downto 0);	
-			OPCODE_1		: in std_logic_vector(OPCODE_SIZE-1 downto 0);		
-			BUBBLE_EN		: out std_logic
-		);
-	end component;
 	
 	signal IR_opcode	: std_logic_vector(OP_CODE_SIZE -1 downto 0);  -- OpCode part of IR
 	signal IR_func 		: std_logic_vector(FUNC_SIZE-1 downto 0);   -- Func part of IR when Rtype
@@ -179,18 +166,16 @@ architecture dlx_cu_hw of dlx_cu is
 	signal cw3	: std_logic_vector(CW_SIZE - 1 - 9 downto 0); -- third stage
 	signal cw4	: std_logic_vector(CW_SIZE - 1 - 14 downto 0); -- fourth stage
 
-	signal aluOpcode_i: aluOp := NOP; -- ALUOP defined in package
-	signal aluOpcode1: aluOp := NOP;
-	signal aluOpcode2: aluOp := NOP;
+	signal aluOpcode_i      : aluOp := NOP; -- ALUOP defined in package
+	signal aluOpcode1       : aluOp := NOP;
+	signal aluOpcode2       : aluOp := NOP;
 
 	signal pipe_enable_i, pipe_clear_i, stall 				: std_logic;
-	signal eqz_cond_i, neqz_cond_i, jump_en_i, branch_taken	: std_logic;
-	signal stall_forDram, dram_issue_i, dram_issue_o		: std_logic;
-	signal stall_doubleSW, stall_doubleSW_id_ex, stall_doubleSW_ex_mem		: std_logic;
-	signal iram_issue_i										: std_logic;
+	signal eqz_cond_i, neqz_cond_i, jump_en_i, branch_taken                 : std_logic;
+	signal stall_forDram, dram_issue_i, dram_issue_o		        : std_logic;
+	signal stall_doubleSW, stall_doubleSW_id_ex, stall_doubleSW_ex_mem	: std_logic;
+	signal iram_issue_i							: std_logic;
 	signal stall_forIram, stall_forIram_1					: std_logic;
-	
-	signal bubble_en_i	: std_logic;
 	
 	signal opcode1	: std_logic_vector(OP_CODE_SIZE-1 downto 0);
 	
@@ -206,21 +191,6 @@ begin  -- dlx_cu_rtl
 	-- and a new instruction will be fetched every clk
 	--stall <= '0';
 
-	-- BUBBLE GENERATOR
-	--bubble_gen: bubble_generator
-	--generic map(
-	--	OPCODE_SIZE		=> OP_SIZE,
-	--	REG_ADDR_SIZE	=> RX_SIZE )
-	--port map(
-	--	CLK				=> CLK,
-	--	RST				=> RST,
-	--	ENABLE			=> pipe_enable_i,
-	--	OPCODE			=> IR_opcode,	
-	--	OPCODE_1		=> opcode1,		
-	--	BUBBLE_EN		=> bubble_en_i
-	--);
-
-	--cw0 <= cw when bubble_en_i = '0' else NOP_CW;
 	cw0 <= cw;	
 	
 	-- STALL UNIT
@@ -233,36 +203,34 @@ begin  -- dlx_cu_rtl
 	stall_forDram	<= dram_issue_o;
 
 	stall			<= stall_forDram or stall_forIram;		-- The pipeline has to be stopped AFTER the stall of the IRAM
-															-- Not doing it will make the CPU loose an instruction
-	pipe_enable_i 	<= not stall;
-	--pipe_enable_i		<= '0';
-	--PC_LATCH_EN		<= (not stall) and (not bubble_en_i);
+										-- Not doing it will make the CPU loose an instruction
+	pipe_enable_i 	        <= not stall;
 	PC_LATCH_EN		<= not stall;
 
 	-- Request data to the IRAM
 	iram_issue_i	<= not stall_forDram;
-	IRAM_ISSUE		<= iram_issue_i;
+	IRAM_ISSUE	<= iram_issue_i;
 		
 
-	PIPE_IF_ID_EN		<= pipe_enable_i;
+	PIPE_IF_ID_EN	<= pipe_enable_i;
 	
 	--RF_EN				<= cw1(CW_SIZE-1);	-- For now, RF always active. Enable used for single ports
-	RF_EN				<= '1';	
-	RF_RS1_EN			<= cw1(CW_SIZE-2);
-	RF_RS2_EN			<= cw1(CW_SIZE-3);
-	RF_CALL				<= '0';
-	RF_RET				<= '0';
-	IMM_ISOFF			<= cw1(CW_SIZE-4);
-	IMM_UNS				<= cw1(CW_SIZE-5);
-	RegRD_SEL			<= cw1(CW_SIZE-6);
+	RF_EN		<= '1';	
+	RF_RS1_EN	<= cw1(CW_SIZE-2);
+	RF_RS2_EN	<= cw1(CW_SIZE-3);
+	RF_CALL		<= '0';
+	RF_RET		<= '0';
+	IMM_ISOFF	<= cw1(CW_SIZE-4);
+	IMM_UNS		<= cw1(CW_SIZE-5);
+	RegRD_SEL	<= cw1(CW_SIZE-6);
 	
-	PIPE_ID_EX_EN		<= pipe_enable_i;
+	PIPE_ID_EX_EN	<= pipe_enable_i;
 	
-	MUXA_SEL			<= cw2(CW_SIZE-7);
-	MUXB_SEL			<= cw2(CW_SIZE-8);
-	MEM_IN_EN			<= cw2(CW_SIZE-9);
+	MUXA_SEL	<= cw2(CW_SIZE-7);
+	MUXB_SEL	<= cw2(CW_SIZE-8);
+	MEM_IN_EN	<= cw2(CW_SIZE-9);
 	
-	PIPE_EX_MEM_EN		<= pipe_enable_i;
+	PIPE_EX_MEM_EN	<= pipe_enable_i;
 	
 	dram_issue_i		<= cw3(CW_SIZE-10);
 	DRAM_ISSUE			<= dram_issue_o;
@@ -272,7 +240,8 @@ begin  -- dlx_cu_rtl
 	jump_en_i			<= cw3(CW_SIZE-14);
 	
 	PIPE_MEM_WB_EN		<= pipe_enable_i;
-	WB_MUX_SEL			<= cw4(CW_SIZE-15);
+  
+	WB_MUX_SEL			<= cw4(CW_SIZE-14 downto CW_SIZE-15);
 	RF_WE				<= cw4(CW_SIZE-16);
 
 	-- COMBINATIONAL LOGIC
@@ -330,74 +299,7 @@ begin  -- dlx_cu_rtl
 	end process CW_PIPE;
 
 	ALU_OP <= aluOpcode2;
-
-	-- purpose: Generation of ALU OpCode
-	-- type   : combinational
-	-- inputs : IR_i
-	-- outputs: aluOpcode
-	--ALU_OP_CODE_P : process (IR_opcode, IR_func)
-	--begin  -- process ALU_OP_CODE_P
-	--	case IR_opcode is
-	--		-- case of R type requires analysis of FUNC
-	--		when RR_OP =>
-	--			case IR_func is
-	--				when ADD_FUNC 	=> aluOpcode_i <= ADD; 
-	--				when AND_FUNC 	=> aluOpcode_i <= AND_O; 
-	--				when OR_FUNC	=> aluOpcode_i <= OR_O; 
-	--				when SGE_FUNC	=> aluOpcode_i <= SGE;
-	--				when SLE_FUNC	=> aluOpcode_i <= SLE; 
-	--				when SLL_FUNC	=> aluOpcode_i <= SLL_O;
-	--				when SNE_FUNC	=> aluOpcode_i <= SNE; 
-	--				when SRL_FUNC	=> aluOpcode_i <= SRL_O;
-	--				when SUB_FUNC	=> aluOpcode_i <= SUB; 
-	--				when XOR_FUNC	=> aluOpcode_i <= XOR_O;
-	--				when ADDU_FUNC	=> aluOpcode_i <= ADDU;	-- for now 
-	--				when MULT_FUNC	=> aluOpcode_i <= MULT;	-- for now
-	--				when SEQ_FUNC	=> aluOpcode_i <= SEQ; 
-	--				when SGEU_FUNC	=> aluOpcode_i <= SGEU;
-	--				when SGT_FUNC	=> aluOpcode_i <= SGT; 
-	--				when SGTU_FUNC	=> aluOpcode_i <= SGTU;
-	--				when SLT_FUNC	=> aluOpcode_i <= SLT;
-	--				when SLTU_FUNC	=> aluOpcode_i <= SLTU; 
-	--				when SRA_FUNC	=> aluOpcode_i <= SRA_O;
-	--				when SUBU_FUNC	=> aluOpcode_i <= SUBU; 
-	--				when others		=> aluOpcode_i <= NOP;
-	--			end case;
-	--		when J_OP		=> aluOpcode_i <= NOP; -- j
-	--		when JAL_OP		=> aluOpcode_i <= NOP; -- jal
-	--		when BEQZ_OP	=> aluOpcode_i <= NOP;
-	--		when BNEZ_OP	=> aluOpcode_i <= NOP;
-	--		when ADDI_OP	=> aluOpcode_i <= ADD;
-	--		when SUBI_OP	=> aluOpcode_i <= SUB;
-	--		when ANDI_OP	=> aluOpcode_i <= AND_O;
-	--		when ORI_OP		=> aluOpcode_i <= OR_O;
-	--		when XORI_OP	=> aluOpcode_i <= XOR_O;
-	--		when SLLI_OP	=> aluOpcode_i <= SLL_O;
-	--		when NOP_OP		=> aluOpcode_i <= NOP;
-	--		when SRLI_OP	=> aluOpcode_i <= SRL_O;
-	--		when SNEI_OP	=> aluOpcode_i <= SNE;
-	--		when SLEI_OP	=> aluOpcode_i <= SLE;
-	--		when SGEI_OP	=> aluOpcode_i <= SGE;
-	--		when LW_OP		=> aluOpcode_i <= ADD;
-	--		when SW_OP		=> aluOpcode_i <= ADD;
-	--		when ADDUI_OP	=> aluOpcode_i <= NOP; -- TO BE VERIFIED
-	--		when JALR_OP	=> aluOpcode_i <= NOP; 
-	--		when JR_OP		=> aluOpcode_i <= NOP; 
-	--		when LBU_OP		=> aluOpcode_i <= NOP; 
-	--		when LHI_OP		=> aluOpcode_i <= NOP; 
-	--		when LHU_OP		=> aluOpcode_i <= NOP; 
-	--		when SB_OP		=> aluOpcode_i <= NOP; 
-	--		when SEQI_OP	=> aluOpcode_i <= NOP;
-	--		when SGEUI_OP	=> aluOpcode_i <= SGEU;
-	--		when SGTUI_OP	=> aluOpcode_i <= SGTU;
-	--		when SLTI_OP	=> aluOpcode_i <= SLT;
-	--		when SLTUI_OP	=> aluOpcode_i <= SLTU;
-	--		when SRAI_OP	=> aluOpcode_i <= SRA_O;
-	--		when SUBUI_OP	=> aluOpcode_i <= SUBU; 			
-	--		when others => aluOpcode_i <= NOP;
-	--	end case;
-	--end process ALU_OP_CODE_P;
-	
+ 
 	ALU_OP_CODE_P : process (IR_opcode, IR_func)
 	begin  -- process ALU_OP_CODE_P
 		case conv_integer(unsigned(IR_opcode)) is
