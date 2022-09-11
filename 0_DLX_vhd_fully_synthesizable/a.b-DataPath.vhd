@@ -58,7 +58,7 @@ entity DLX_DP is
 		
 		-- MEM control signals
 		--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
-		JUMP_EN		: in std_logic;	-- JUMP Enable Signal for PC input MUX
+		JUMP_EN		: in std_logic_vector(2 downto 0);	-- JUMP Enable Signal for PC input MUX
 		PC_LATCH_EN	: in std_logic;	-- Pipelined version -> with no stalls, always active
 		
 		-- WB Control signals
@@ -89,7 +89,7 @@ architecture structure of DLX_DP is
 			INSTR		: out std_logic_vector(IR_SIZE-1 downto 0);
 			
 			-- IF control signals
-			NPC_SEL		: in std_logic;
+			NPC_SEL		: in std_logic_vector(2 downto 0);
 			PC_LATCH_EN	: in std_logic
 		);
 	end component;
