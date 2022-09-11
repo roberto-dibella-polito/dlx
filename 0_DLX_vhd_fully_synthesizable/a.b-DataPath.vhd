@@ -157,7 +157,20 @@ architecture structure of DLX_DP is
 			ALU_OP		: in aluOp		
 		);
 	end component;
+
+	component  mux2to1 is 
+	generic (N : integer);
+	port (
+		IN0,IN1	: in std_logic_vector (N-1 downto 0); --input signals
+		SEL		: in std_logic; --select signal
+		MUX_OUT	: out std_logic_vector (N-1 downto 0));--N bits output
+	end component;
 	
+	signal regist_sel			: std_logic;
+	signal reg_fwd				: std_logic_vector(ADDR_SIZE-1 downto 0);
+
+	signal rsel				:std_logic_vector(ADDR_SIZE-1 downto 0);
+
 	signal npc_alu_fb			: std_logic_vector(PC_SIZE-1 downto 0);		-- Feedback signal for the ALU-computed NPC
 	
 	-- IF/ID signals
@@ -194,6 +207,13 @@ architecture structure of DLX_DP is
 	signal alu_out_mem_o, alu_out_wb_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	
 begin
+	
+	muxconn: mux2to1 port map(
+		IN0			=> 	rd_fwd_wb_i,
+		IN1			=>	"11111",
+		SEL			=> 	regist_sel,
+		MUX_OUT			=> 	reg_fwd
+		);
 	
 	if_stage: DLX_IF generic map( IR_SIZE => INSTR_SIZE, PC_SIZE => PC_SIZE ) 
 	port map(
@@ -272,7 +292,7 @@ begin
 		
 		IMM_ISOFF	=> IMM_ISOFF,
 		
-		ADDR_WR  	=> rd_fwd_wb_i,
+		ADDR_WR  	=> reg_fwd,
 		ADDR_RS1 	=> rs1_id_i,
 		ADDR_RS2 	=> rs2_id_i,
 		DATAIN  	=> wr_data_id_i,
