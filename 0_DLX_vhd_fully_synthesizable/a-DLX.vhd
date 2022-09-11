@@ -89,7 +89,7 @@ architecture dlx_rtl of DLX is
 			--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
 			JUMP_EN			: in std_logic;	-- JUMP Enable Signal for PC input MUX
 			PC_LATCH_EN		: in std_logic;	-- Pipelined version -> with no stalls, always active
-			
+			REG_EN			: in std_logic;
 			-- WB Control signals
 			WB_MUX_SEL		: in std_logic;  -- Write Back MUX Sel
 			RF_WE			: in std_logic  -- Register File Write Enable
