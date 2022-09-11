@@ -87,7 +87,7 @@ architecture dlx_rtl of DLX is
 			
 			-- MEM control signals
 			--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
-			JUMP_EN			: in std_logic;	-- JUMP Enable Signal for PC input MUX
+			JUMP_EN			: in std_logic_vector(2 downto 0);	-- JUMP Enable Signal for PC input MUX
 			PC_LATCH_EN		: in std_logic;	-- Pipelined version -> with no stalls, always active
 			
 			-- WB Control signals
@@ -188,7 +188,7 @@ architecture dlx_rtl of DLX is
 	signal dram_issue_i		: std_logic;
 	signal dram_rd_wr_i		: std_logic;
 	signal dram_ready_i		: std_logic;
-	signal jump_en_i		: std_logic;
+	signal jump_en_i		: std_logic_vector(2 downto 0);
 	signal pc_latch_en_i	: std_logic;
 	signal wb_mux_sel_i		: std_logic;
 	signal rf_we_i			: std_logic;
