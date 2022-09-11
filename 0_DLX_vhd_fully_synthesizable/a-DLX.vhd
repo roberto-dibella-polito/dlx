@@ -151,6 +151,8 @@ architecture dlx_rtl of DLX is
 			--LMD_LATCH_EN       : out std_logic;	-- LMD Register Latch Enable
 			JUMP_EN            : out std_logic;		-- JUMP Enable Signal for PC input MUX
 			PC_LATCH_EN        : out std_logic;		-- Program Counte Latch Enable
+			REG_EN		   : out std_logic;
+
 
 			-- WB Control signals
 			WB_MUX_SEL         : out std_logic;		-- Write Back MUX Sel
@@ -163,6 +165,8 @@ architecture dlx_rtl of DLX is
 	----------------------------------------------------------------
 	-- Signals Declaration
 	----------------------------------------------------------------
+	
+	signal reg_enable		:std_logic;
 
 	-- Control Unit Bus signals
 	signal instr_i			: std_logic_vector(DATA_SIZE-1 downto 0);
@@ -235,6 +239,7 @@ begin  -- DLX
 		DRAM_READY			=> DRAM_READY,
 		JUMP_EN            	=> jump_en_i,
 		PC_LATCH_EN        	=> pc_latch_en_i,
+		REG_EN			=> reg_enable,
 		WB_MUX_SEL         	=> wb_mux_sel_i,
 		RF_WE              	=> rf_we_i
 	);  
@@ -273,6 +278,7 @@ begin  -- DLX
 		JUMP_EN			=> jump_en_i,
 		PC_LATCH_EN		=> pc_latch_en_i,
 		WB_MUX_SEL		=> wb_mux_sel_i,
+		REG_EN			=> reg_enable,
 		RF_WE			=> rf_we_i
 	);
 
