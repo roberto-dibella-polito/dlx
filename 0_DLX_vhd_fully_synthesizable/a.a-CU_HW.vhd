@@ -91,8 +91,8 @@ architecture dlx_cu_hw of dlx_cu is
 	signal cw_mem : mem_array := (
 		RR_CW, 				-- 0x00	R type: IS IT CORRECT?
 		NOP_CW,				-- 0x01
-		J,				-- 0x02	J
-		JAL, 				-- 0x03	JAL 
+		J_CW,				-- 0x02	J
+		JAL_CW, 			-- 0x03	JAL 
 		BQZ_CW,			 	-- 0x04	BEQZ
 		BNZ_CW,			 	-- 0x05	BNEZ
 		not_implemented, 	-- 0x06
@@ -147,10 +147,10 @@ architecture dlx_cu_hw of dlx_cu is
 		not_implemented,	-- 0x37
 		not_implemented,	-- 0x38
 		not_implemented,	-- 0x39
-		RUI_CW,			-- 0x3A	SLTUI
-		RUI_CW,			-- 0x3B	SGTUI
+		RUI_CW,				-- 0x3A	SLTUI
+		RUI_CW,				-- 0x3B	SGTUI
 		not_implemented,	-- 0x3C	
-		RUI_CW,			-- 0x3D	SGEUI
+		RUI_CW,				-- 0x3D	SGEUI
 		not_implemented,	-- 0x3E
 		not_implemented		-- 0x3F
 	);	

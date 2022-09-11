@@ -459,7 +459,7 @@ begin
 	-- WRITE BACK stage
 	-- Multiplexer
 	wb_mux: process(WB_MUX_SEL,alu_out_wb_i, data_mem_wb_i, pc_forw)
-	--begin
+	begin
 		case WB_MUX_SEL is
 			when "00"	=> wr_data_id_i <= data_mem_wb_i;
 			when "01"	=> wr_data_id_i <= alu_out_wb_i;
