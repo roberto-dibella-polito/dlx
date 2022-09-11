@@ -13,7 +13,7 @@ entity dlx_cu is
 		FUNC_SIZE			: integer := 11;	-- Func Field Size for R-Type Ops
 		OP_CODE_SIZE		: integer := 6;		-- Op Code Size
 		IR_SIZE				: integer := 32;	-- Instruction Register Size    
-		CW_SIZE				: integer := 15
+		CW_SIZE				: integer := 16
 	);	-- Control Word Size
 
 	port (
@@ -75,6 +75,7 @@ entity dlx_cu is
 		--LMD_LATCH_EN       : out std_logic;	-- LMD Register Latch Enable
 		JUMP_EN            : out std_logic;		-- JUMP Enable Signal for PC input MUX
 		PC_LATCH_EN        : out std_logic;		-- Program Counte Latch Enable
+		REG_EN		   : out std_logic;
 
 		-- WB Control signals
 		WB_MUX_SEL         : out std_logic;		-- Write Back MUX Sel
@@ -224,7 +225,8 @@ begin  -- dlx_cu_rtl
 	PIPE_MEM_WB_EN		<= pipe_enable_i;
 	
 	WB_MUX_SEL			<= cw4(CW_SIZE-14);
-	RF_WE				<= cw4(CW_SIZE-15);
+	REG_SEL				<= cw4(CW_SIZE-15);
+	RF_WE				<= cw4(CW_SIZE-16);
 
 	-- COMBINATIONAL LOGIC
 	-- for flow control
