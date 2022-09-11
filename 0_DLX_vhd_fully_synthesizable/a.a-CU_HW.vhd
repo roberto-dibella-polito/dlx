@@ -73,7 +73,7 @@ entity dlx_cu is
 		DRAM_READY			: in std_logic;
 		
 		--LMD_LATCH_EN       : out std_logic;	-- LMD Register Latch Enable
-		JUMP_EN            : out std_logic;		-- JUMP Enable Signal for PC input MUX
+		JUMP_EN            : out std_logic_vector(2 downto 0);		-- JUMP Enable Signal for PC input MUX
 		PC_LATCH_EN        : out std_logic;		-- Program Counte Latch Enable
 
 		-- WB Control signals
@@ -89,8 +89,8 @@ architecture dlx_cu_hw of dlx_cu is
 	signal cw_mem : mem_array := (
 		RR_CW, 				-- 0x00	R type: IS IT CORRECT?
 		NOP_CW,				-- 0x01
-		not_implemented,	-- 0x02	J
-		not_implemented, 	-- 0x03	JAL 
+		J,	-- 0x02	J
+		JAL, 	-- 0x03	JAL 
 		BQZ_CW,			 	-- 0x04	BEQZ
 		BNZ_CW,			 	-- 0x05	BNEZ
 		not_implemented, 	-- 0x06
