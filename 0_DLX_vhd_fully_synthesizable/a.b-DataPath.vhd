@@ -63,7 +63,8 @@ entity DLX_DP is
 		PC_LATCH_EN	: in std_logic;		-- Program Counter enable signal
 		
 		-- WB Control signals
-		WB_MUX_SEL	: in std_logic_vector(2 downto 0);  -- Write Back MUX Sel
+		--WB_MUX_SEL	: in std_logic_vector(2 downto 0);  -- Write Back MUX Sel
+		WB_MUX_SEL	: in std_logic;		
 		RF_WE		: in std_logic  					-- Register File Write Enable
 
 	);
@@ -228,9 +229,9 @@ begin
 		RST		=> RST,
 		IRAM_ADDRESS	=> IRAM_ADDRESS,
 		IRAM_DATA	=> IRAM_DATA,
-		NPC_ALU		=> npc_alu_fb,
+		NPC_ALU		=> alu_out_mem_i,
 		NPC_OUT		=> npc_if_o,
-		OPC_OUT		=> pc_forw,
+		--OPC_OUT		=> pc_forw,
 		INSTR		=> instr_if_o,
 		NPC_SEL		=> JUMP_EN,
 		PC_LATCH_EN	=> PC_LATCH_EN

@@ -32,7 +32,7 @@ vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.
 vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd
 vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd
 vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU.vhd
+vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU_P4.vhd
 vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.vhd
 
 vcom -reportprogress 300 -work work ../../a.b-DataPath.vhd
@@ -56,7 +56,12 @@ vsim -t 100ps work.dlx_testbench -voptargs=+acc
 
 # Top level entity signals
 add wave sim:/dlx_testbench/CLK \
-sim:/dlx_testbench/RST \
+sim:/dlx_testbench/RST
+
+add wave -group "PC selection" \
+sim:/dlx_testbench/UUT/dp/if_stage/NPC_SEL \
+sim:/dlx_testbench/UUT/dp/if_stage/NPC_ALU \
+sim:/dlx_testbench/UUT/dp/if_stage/NPC_4_i \
 sim:/dlx_testbench/IRAM_ADDRESS 
 
 add wave -group "IRAM control" \
@@ -109,7 +114,14 @@ sim:/dlx_testbench/UUT/dp/ex_stage/PORT_B \
 sim:/dlx_testbench/UUT/dp/ex_stage/IMM_IN \
 sim:/dlx_testbench/UUT/dp/ex_stage/ALU_OUT \
 sim:/dlx_testbench/UUT/dp/ex_stage/RD_FWD_IN \
-sim:/dlx_testbench/UUT/dp/ex_stage/BRANCH_T 
+sim:/dlx_testbench/UUT/dp/ex_stage/BRANCH_T
+
+add wave -group "Branch signals" \
+sim:/dlx_testbench/UUT/dp/PIPE_CLEAR_n \
+sim:/dlx_testbench/UUT/CU_I/neqz_cond_i \
+sim:/dlx_testbench/UUT/CU_I/eqz_cond_i \
+sim:/dlx_testbench/UUT/CU_I/jump_en_i \
+sim:/dlx_testbench/UUT/CU_I/branch_taken
 
 add wave -group "MEM" \
 sim:/dlx_testbench/UUT/dp/rd_fwd_mem_i \
@@ -152,4 +164,5 @@ sim:/dlx_testbench/UUT/CU_I/stall_forIram
 #add wave -group "IRAM" sim:/dlx_testbench/IRAM/*
 #add wave -group "Control Unit" sim:/dlx_testbench/UUT/CU_I/*
 
-run 3150 ns
+#run 3150 ns
+run 120 ns

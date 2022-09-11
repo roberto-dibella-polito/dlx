@@ -61,7 +61,7 @@ architecture structure of DLX_EX is
 begin
 
 	-- Zero detector
-	BRANCH_T <= '1' when ( unsigned(PORT_A) = to_unsigned(0,DATA_SIZE) ) else '0';
+	BRANCH_T <= '0' when ( unsigned(PORT_A) = to_unsigned(0,DATA_SIZE) ) else '1';
 	
 	muxA: mux2to1 generic map (N => DATA_SIZE)
 	port map (
