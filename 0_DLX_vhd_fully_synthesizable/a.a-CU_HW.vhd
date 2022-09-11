@@ -13,8 +13,8 @@ entity dlx_cu is
 		FUNC_SIZE			: integer := 11;	-- Func Field Size for R-Type Ops
 		OP_CODE_SIZE		: integer := 6;		-- Op Code Size
 		IR_SIZE				: integer := 32;	-- Instruction Register Size    
-		CW_SIZE				: integer := 15
-	);	-- Control Word Size
+		CW_SIZE				: integer := 15		-- Control Word Size
+	);	
 
 	port (
 		Clk					: in  std_logic;	-- Clock
@@ -53,7 +53,8 @@ entity dlx_cu is
 		RF_EN				: out std_logic;
 		RF_RS1_EN			: out std_logic;
 		RF_RS2_EN			: out std_logic;
-		IMM_ISOFF			: out std_logic;	
+		IMM_ISOFF			: out std_logic;
+		IMM_UNS				: out std_logic;	
 
 		-- EX Control Signals
 		MUXA_SEL           	: out std_logic;  	-- MUX-A Sel
@@ -96,12 +97,12 @@ architecture dlx_cu_hw of dlx_cu is
 		not_implemented, 	-- 0x06
 		not_implemented,	-- 0x07
 		RI_CW, 				-- 0x08	ADDI
-		RI_CW,				-- 0x09	ADDUI
+		RUI_CW,				-- 0x09	ADDUI
 		RI_CW,				-- 0x0A	SUBI
-		RI_CW,				-- 0x0B	SUBUI
-		RI_CW,				-- 0x0C	ANDI
-		RI_CW,				-- 0x0D	ORI
-		RI_CW,				-- 0x0E	XORI
+		RUI_CW,				-- 0x0B	SUBUI
+		RUI_CW,				-- 0x0C	ANDI
+		RUI_CW,				-- 0x0D	ORI
+		RUI_CW,				-- 0x0E	XORI
 		not_implemented,	-- 0x0F	LHI
 		not_implemented,	-- 0x10	
 		not_implemented,	-- 0x11	
@@ -145,23 +146,38 @@ architecture dlx_cu_hw of dlx_cu is
 		not_implemented,	-- 0x37
 		not_implemented,	-- 0x38
 		not_implemented,	-- 0x39
-		not_implemented,	-- 0x3A	SLTUI
-		not_implemented,	-- 0x3B	SGTUI
+		RUI_CW,				-- 0x3A	SLTUI
+		RUI_CW,				-- 0x3B	SGTUI
 		not_implemented,	-- 0x3C	
-		not_implemented,	-- 0x3D	SGEUI
+		RUI_CW,				-- 0x3D	SGEUI
 		not_implemented,	-- 0x3E
 		not_implemented		-- 0x3F
 	);	
+
+	component bubble_generator
+		generic(
+			OPCODE_SIZE		: integer := 6;
+			REG_ADDR_SIZE	: integer := 5	);
+		port(
+			CLK				: in std_logic;
+			RST				: in std_logic;	-- Active:High
+			ENABLE			: in std_logic;
+			OPCODE			: in std_logic_vector(OPCODE_SIZE-1 downto 0);	
+			OPCODE_1		: in std_logic_vector(OPCODE_SIZE-1 downto 0);		
+			BUBBLE_EN		: out std_logic
+		);
+	end component;
 	
 	signal IR_opcode	: std_logic_vector(OP_CODE_SIZE -1 downto 0);  -- OpCode part of IR
 	signal IR_func 		: std_logic_vector(FUNC_SIZE-1 downto 0);   -- Func part of IR when Rtype
 	signal cw   		: std_logic_vector(CW_SIZE - 1 downto 0); -- full control word read from cw_mem
 
 	-- control word is shifted to the correct stage
-	signal cw1 : std_logic_vector(CW_SIZE -1 downto 0); -- first stage
-	signal cw2 : std_logic_vector(CW_SIZE - 1 - 5 downto 0); -- second stage
-	signal cw3 : std_logic_vector(CW_SIZE - 1 - 8 downto 0); -- third stage
-	signal cw4 : std_logic_vector(CW_SIZE - 1 - 13 downto 0); -- fourth stage
+	signal cw0	: std_logic_vector(CW_SIZE - 1 downto 0);
+	signal cw1	: std_logic_vector(CW_SIZE - 1 downto 0); -- first stage
+	signal cw2	: std_logic_vector(CW_SIZE - 1 - 6 downto 0); -- second stage
+	signal cw3	: std_logic_vector(CW_SIZE - 1 - 9 downto 0); -- third stage
+	signal cw4	: std_logic_vector(CW_SIZE - 1 - 14 downto 0); -- fourth stage
 
 	signal aluOpcode_i: aluOp := NOP; -- ALUOP defined in package
 	signal aluOpcode1: aluOp := NOP;
@@ -169,7 +185,14 @@ architecture dlx_cu_hw of dlx_cu is
 
 	signal pipe_enable_i, pipe_clear_i, stall 				: std_logic;
 	signal eqz_cond_i, neqz_cond_i, jump_en_i, branch_taken	: std_logic;
+	signal stall_forDram, dram_issue_i, dram_issue_o		: std_logic;
+	signal stall_doubleSW, stall_doubleSW_id_ex, stall_doubleSW_ex_mem		: std_logic;
+	signal iram_issue_i										: std_logic;
+	signal stall_forIram, stall_forIram_1					: std_logic;
 	
+	signal bubble_en_i	: std_logic;
+	
+	signal opcode1	: std_logic_vector(OP_CODE_SIZE-1 downto 0);
 	
 begin  -- dlx_cu_rtl
 
@@ -181,20 +204,46 @@ begin  -- dlx_cu_rtl
 	-- PIPELINE ENABLE SIGNAL
 	-- For now, all the pipeline register will remain ACTIVE
 	-- and a new instruction will be fetched every clk
-	stall <= '0';
+	--stall <= '0';
 
-	--stall <= not IRAM_READY;
+	-- BUBBLE GENERATOR
+	--bubble_gen: bubble_generator
+	--generic map(
+	--	OPCODE_SIZE		=> OP_SIZE,
+	--	REG_ADDR_SIZE	=> RX_SIZE )
+	--port map(
+	--	CLK				=> CLK,
+	--	RST				=> RST,
+	--	ENABLE			=> pipe_enable_i,
+	--	OPCODE			=> IR_opcode,	
+	--	OPCODE_1		=> opcode1,		
+	--	BUBBLE_EN		=> bubble_en_i
+	--);
+
+	--cw0 <= cw when bubble_en_i = '0' else NOP_CW;
+	cw0 <= cw;	
 	
+	-- STALL UNIT
+	-- Handles:
+	-- . DRAM Ready signal
 	
-	--pipe_clear_i	<= '1';			-- For now, no branch instruction is created
+	dram_issue_o	<= dram_issue_i and (not DRAM_READY);	-- Wait for the DRAM to be ready
 	
+	stall_forIram	<= iram_issue_i and (not IRAM_READY);	-- Wait for the IRAM to be ready
+	stall_forDram	<= dram_issue_o;
+
+	stall			<= stall_forDram or stall_forIram;		-- The pipeline has to be stopped AFTER the stall of the IRAM
+															-- Not doing it will make the CPU loose an instruction
 	pipe_enable_i 	<= not stall;
+	--pipe_enable_i		<= '0';
+	--PC_LATCH_EN		<= (not stall) and (not bubble_en_i);
 	PC_LATCH_EN		<= not stall;
 
 	-- Request data to the IRAM
-	-- for now, ALWAY
-	IRAM_ISSUE		<= '1';
-	
+	iram_issue_i	<= not stall_forDram;
+	IRAM_ISSUE		<= iram_issue_i;
+		
+
 	PIPE_IF_ID_EN		<= pipe_enable_i;
 	
 	--RF_EN				<= cw1(CW_SIZE-1);	-- For now, RF always active. Enable used for single ports
@@ -204,27 +253,27 @@ begin  -- dlx_cu_rtl
 	RF_CALL				<= '0';
 	RF_RET				<= '0';
 	IMM_ISOFF			<= cw1(CW_SIZE-4);
-	RegRD_SEL			<= cw1(CW_SIZE-5);
+	IMM_UNS				<= cw1(CW_SIZE-5);
+	RegRD_SEL			<= cw1(CW_SIZE-6);
 	
 	PIPE_ID_EX_EN		<= pipe_enable_i;
 	
-	MUXA_SEL			<= cw2(CW_SIZE-6);
-	MUXB_SEL			<= cw2(CW_SIZE-7);
-	MEM_IN_EN			<= cw2(CW_SIZE-8);
+	MUXA_SEL			<= cw2(CW_SIZE-7);
+	MUXB_SEL			<= cw2(CW_SIZE-8);
+	MEM_IN_EN			<= cw2(CW_SIZE-9);
 	
 	PIPE_EX_MEM_EN		<= pipe_enable_i;
 	
-	DRAM_ISSUE			<= cw3(CW_SIZE-9);
-	DRAM_READNOTWRITE	<= cw3(CW_SIZE-10);
-	--JUMP_EN				<= cw3(CW_SIZE-11);
-	eqz_cond_i			<= cw3(CW_SIZE-11);
-	neqz_cond_i			<= cw3(CW_SIZE-12);
-	jump_en_i			<= cw3(CW_SIZE-13);
+	dram_issue_i		<= cw3(CW_SIZE-10);
+	DRAM_ISSUE			<= dram_issue_o;
+	DRAM_READNOTWRITE	<= cw3(CW_SIZE-11);
+	eqz_cond_i			<= cw3(CW_SIZE-12);
+	neqz_cond_i			<= cw3(CW_SIZE-13);
+	jump_en_i			<= cw3(CW_SIZE-14);
 	
 	PIPE_MEM_WB_EN		<= pipe_enable_i;
-	
-	WB_MUX_SEL			<= cw4(CW_SIZE-14);
-	RF_WE				<= cw4(CW_SIZE-15);
+	WB_MUX_SEL			<= cw4(CW_SIZE-15);
+	RF_WE				<= cw4(CW_SIZE-16);
 
 	-- COMBINATIONAL LOGIC
 	-- for flow control
@@ -237,33 +286,45 @@ begin  -- dlx_cu_rtl
 	begin  -- process Clk
 		if Rst = '1' then                   -- asynchronous reset (active low)
 			cw1 <= NOP_CW;
-			cw2 <= NOP_CW(CW_SIZE-1-5 downto 0);
-			cw3 <= NOP_CW(CW_SIZE - 1 - 8 downto 0);
-			cw4 <= NOP_CW(CW_SIZE - 1 - 13 downto 0);
-			--cw5 <= (others => '0');
-			aluOpcode1 <= NOP;
-			aluOpcode2 <= NOP;
+			cw2 <= NOP_CW(CW_SIZE - 1 - 6 downto 0);
+			cw3 <= NOP_CW(CW_SIZE - 1 - 9 downto 0);
+			cw4 <= NOP_CW(CW_SIZE - 1 - 14 downto 0);
+			-----------------------------------------
+			aluOpcode1 	<= NOP;
+			aluOpcode2 	<= NOP;
+			-----------------------------------------
+			opcode1					<= NOP_OP; 
+			-----------------------------------------
+			-----------------------------------------
 		elsif Clk'event and Clk = '1' then  -- rising clock edge
 			
-			-- Pipeline should not stall
-			--if( stall = '0' ) then
-				cw1 <= cw;
-				aluOpcode1 <= aluOpcode_i;
-					
+			-- Pipeline should stall
+			if( pipe_enable_i = '1' ) then
+				cw1				<= cw0;
+				aluOpcode1		<= aluOpcode_i;				
+
 				-- If a branch is taken, the pipeline has to be flushed
 				if( branch_taken = '1' ) then	
-					cw2 <= NOP_CW(CW_SIZE-1-5 downto 0);
-					cw3 <= NOP_CW(CW_SIZE - 1 - 8 downto 0);
-					cw4 <= NOP_CW(CW_SIZE - 1 - 13 downto 0);
+					cw2 <= NOP_CW(CW_SIZE - 1 - 6 downto 0);
+					cw3 <= NOP_CW(CW_SIZE - 1 - 9 downto 0);
+					cw4 <= NOP_CW(CW_SIZE - 1 - 14 downto 0);
+					-----------------------------------------
 					aluOpcode2 <= NOP;
+					-----------------------------------------
+					opcode1	<= NOP_OP;
+					-----------------------------------------
 				else				
-					cw2 <= cw1(CW_SIZE - 1 - 5 downto 0);
-					cw3 <= cw2(CW_SIZE - 1 - 8 downto 0);
-					cw4 <= cw3(CW_SIZE - 1 - 13 downto 0);
+					cw2 <= cw1(CW_SIZE - 1 - 6 downto 0);
+					cw3 <= cw2(CW_SIZE - 1 - 9 downto 0);
+					cw4 <= cw3(CW_SIZE - 1 - 14 downto 0);
+					---------------------------------------					
 					aluOpcode2 <= aluOpcode1;
+					---------------------------------------
+					opcode1	<= IR_opcode;
+					---------------------------------------
 				end if;
 				
-			--end if;
+			end if;
 		
 		end if;
 	end process CW_PIPE;

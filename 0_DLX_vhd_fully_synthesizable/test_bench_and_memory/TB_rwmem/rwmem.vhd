@@ -91,7 +91,7 @@ begin  -- beh
 						DRAM_Mem(to_integer(unsigned(ADDR))) <= INOUT_DATA(Data_size - 1 downto Instr_size); 
 						mem_ready <= '1';
 					else
-						tmp_data <=DRAM_mem(to_integer(unsigned(ADDR))+1) & DRAM_mem(to_integer(unsigned(ADDR)));
+						tmp_data <=DRAM_mem(to_integer(unsigned(ADDR))) & DRAM_mem(to_integer(unsigned(ADDR))+1);
 						int_data_ready <= '1';
 					end if;
 				else
@@ -100,6 +100,12 @@ begin  -- beh
 				end if;
 			else
 				counter <= 0;
+
+				-- ADDED 
+				-- If data_delay = 0, flags are never cleared
+				mem_ready <= '0';
+				int_data_ready <= '0';
+	
 			end if;
 		end if;
 	end process;
