@@ -43,6 +43,7 @@ entity DLX_DP is
 		RS2_EN		: in std_logic;
 		
 		IMM_ISOFF	: in std_logic;
+		IMM_UNS		: in std_logic;
 		RegRD_SEL	: in std_logic;	
 		
 		-- EX control signals
@@ -108,7 +109,7 @@ architecture structure of DLX_DP is
 		
 			-- Windowed register file control interface
 			CALL		: in std_logic;
-			RET		: in std_logic;
+			RET			: in std_logic;
 			SPILL		: out std_logic;
 			FILL		: out std_logic;
 			RF_EN		: in std_logic;
@@ -117,6 +118,7 @@ architecture structure of DLX_DP is
 			RF_WR_EN	: in std_logic;
 		
 			IMM_ISOFF	: in std_logic;
+			IMM_UNS		: in std_logic;
 		
 			ADDR_WR  	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
 		    ADDR_RS1 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
@@ -194,20 +196,20 @@ architecture structure of DLX_DP is
 	signal alu_out_ex_o, alu_out_mem_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal data_mem_ex_o, data_mem_mem_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal rd_fwd_ex_o, rd_fwd_mem_i	: std_logic_vector(RX_SIZE-1 downto 0);
-	signal branch_t_ex_o, branch_t_mem_i	: std_logic;
+	signal branch_t_ex_o, branch_t_mem_i 	: std_logic;
 	
 	-- MEM interface internal signals
 	--DRAM_WE			: in std_logic;  -- Data RAM Write Enable
 	--DMEM_READY		: out std_logic;
 	--DMEM_ISSUE		: in std_logic;
 	signal z_word		: std_logic_vector(DATA_SIZE-1 downto 0);
-	
+	signal dram_data_i	: std_logic_vector(DATA_SIZE-1 downto 0);	
+
 	-- MEM/WB signals
 	signal rd_fwd_mem_o, rd_fwd_wb_i	: std_logic_vector(RX_SIZE-1 downto 0);
 	signal data_mem_mem_o, data_mem_wb_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal alu_out_mem_o, alu_out_wb_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal wb_sel				:std_logic_vector(2 downto 0);
-
 	
 begin
 	
@@ -245,21 +247,15 @@ begin
 	begin
 		if( RST = '1' ) then
 			
-			ir <= NOP_OP & ir_reset;
-			npc_id_i <= (others=>'0');
+			ir 			<= NOP_OP & ir_reset;
+			npc_id_i 	<= (others=>'0');
 			
 		elsif(CLK'event and CLK = '1') then
 			
-			if( PIPE_IF_ID_EN <= '1' ) then
-			-- Instruction Register
-			--if(IR_LATCH_EN = '1') then
-				ir <= instr_if_o;
-			--end if;
-				
-			-- NPC register
-			--if(NPC_LATCH_EN = '1') then	
-				npc_id_i <= npc_if_o;
-			--end if;
+			if( PIPE_IF_ID_EN = '1' ) then
+
+				ir 			<= instr_if_o;
+				npc_id_i 	<= npc_if_o;
 			
 			end if;
 		end if;
@@ -299,6 +295,7 @@ begin
 		RF_WR_EN	=> RF_WE,
 		
 		IMM_ISOFF	=> IMM_ISOFF,
+		IMM_UNS		=> IMM_UNS,
 		
 		ADDR_WR  	=> rd_fwd_wb_i,
 		ADDR_RS1 	=> rs1_id_i,
@@ -325,8 +322,8 @@ begin
 		
 			rf_out1_ex_i	<= (others=>'0');
 			rf_out2_ex_i	<= (others=>'0');
-			imm_ex_i	<= (others=>'0');
-			npc_ex_i	<= (others=>'0');
+			imm_ex_i		<= (others=>'0');
+			npc_ex_i		<= (others=>'0');
 			rd_fwd_ex_i 	<= (others=>'0');
 			
 		elsif(CLK'event and CLK = '1') then
@@ -337,23 +334,15 @@ begin
 				imm_ex_i	<= (others=>'0');
 				npc_ex_i	<= (others=>'0');
 				rd_fwd_ex_i	<= (others=>'0');
-			elsif( PIPE_ID_EX_EN <= '1' ) then
-						
-				-- Operands registers Register
-				--if(RegA_LATCH_EN = '1') then
-					rf_out1_ex_i <= rf_out1_id_o;
-				--end if;
-			
-				--if(RegB_LATCH_EN = '1') then
-					rf_out2_ex_i <= rf_out2_id_o;
-				--end if;
-			
-				--if(RegIMM_LATCH_EN = '1') then
-					imm_ex_i <= imm_id_o;
-				--end if;
-			
+
+			elsif( PIPE_ID_EX_EN = '1' ) then
+				
+				rf_out1_ex_i <= rf_out1_id_o;
+				rf_out2_ex_i <= rf_out2_id_o;
+				imm_ex_i <= imm_id_o;
 				rd_fwd_ex_i <= rd_fwd_id_o;
 				npc_ex_i <= npc_id_o;
+
 			end if;
 		
 		end if;
@@ -375,7 +364,7 @@ begin
 		ALU_OUT		=> alu_out_ex_o,
 		DATA_MEM	=> data_mem_ex_o,
 		RD_FWD_OUT	=> rd_fwd_ex_o,
-		BRANCH_T	=> BRANCH_T,
+		BRANCH_T	=> branch_t_ex_o,
 		MUXA_SEL	=> MUXA_SEL,
 		MUXB_SEL	=> MUXB_SEL,
 		ALU_OP		=> ALU_OP	
@@ -406,15 +395,16 @@ begin
 				branch_t_mem_i	<= '0';
 			
 			elsif( PIPE_EX_MEM_EN = '1') then
+				
 				-- Operands registers Register
-				--if(ALU_OUTREG_EN = '1') then
-					alu_out_mem_i <= alu_out_ex_o;
-				--end if;
+				alu_out_mem_i <= alu_out_ex_o;
+				
 				if( MEM_IN_EN = '1' ) then
 					data_mem_mem_i	<= z_word;
 				else
 					data_mem_mem_i	<= data_mem_ex_o;
 				end if;
+				
 				rd_fwd_mem_i	<= rd_fwd_ex_o;
 				branch_t_mem_i	<= branch_t_ex_o;
 			
@@ -431,12 +421,13 @@ begin
 	
 	
 	DRAM_ADDRESS	<= alu_out_mem_i;
-	DRAM_DATA		<= data_mem_mem_i;
 	alu_out_mem_o	<= alu_out_mem_i;
-	data_mem_mem_o	<= data_mem_mem_i;
 	rd_fwd_mem_o	<= rd_fwd_mem_i;
 	
-	
+	DRAM_DATA		<= dram_data_i;
+	dram_data_i		<= data_mem_mem_i;
+	data_mem_mem_o	<= dram_data_i;
+	--data_mem_mem_o	<= DRAM_DATA;
 
 	-- MEM/WB registers
 	mem_wb_pipe: process(CLK, RST)
@@ -456,12 +447,8 @@ begin
 				rd_fwd_wb_i	<= (others=>'0');
 			
 			elsif( PIPE_MEM_WB_EN = '1' ) then
-			
-				-- LMD register
-				--if(LMD_LATCH_EN = '1') then
-					data_mem_wb_i <= data_mem_mem_o;
-				--end if;
-				
+
+				data_mem_wb_i	<= DRAM_DATA;
 				alu_out_wb_i	<= alu_out_mem_o;
 				rd_fwd_wb_i		<= rd_fwd_mem_o;
 			

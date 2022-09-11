@@ -47,8 +47,9 @@ vcom -reportprogress 300 -work work ../../a-DLX.vhd
 ############### TESTBENCH ###############################
 #vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_packages/rocache.vhd
 #vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_packages/rwcache.vhd
-vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem.vhd
+vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem_async.vhd
 vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem.vhd
+#vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem_async.vhd
 vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_TOP_DLX.vhd
 
 vsim -t 100ps work.dlx_testbench -voptargs=+acc
@@ -67,8 +68,8 @@ sim:/dlx_testbench/IRAM/ENTRIES
 
 add wave sim:/dlx_testbench/iram_first_word \
 sim:/dlx_testbench/instruction_i \
-sim:/dlx_testbench/rs1 sim:/dlx_testbench/rs2 \
-sim:/dlx_testbench/rd sim:/dlx_testbench/UUT/CU_I/cw1 
+-unsigned sim:/dlx_testbench/rs1 -unsigned sim:/dlx_testbench/rs2 \
+-unsigned sim:/dlx_testbench/rd sim:/dlx_testbench/UUT/CU_I/cw1 
 
 add wave -group "IF/ID" \
 sim:/dlx_testbench/UUT/dp/PIPE_IF_ID_EN \
@@ -151,4 +152,4 @@ sim:/dlx_testbench/UUT/CU_I/stall_forIram
 #add wave -group "IRAM" sim:/dlx_testbench/IRAM/*
 #add wave -group "Control Unit" sim:/dlx_testbench/UUT/CU_I/*
 
-run 200 ns
+run 3150 ns
