@@ -3,12 +3,12 @@ nop
 nop
 nop
 nop
-subi r2,r1,#1	# r2 = 1
 addi r3,r1,#-4	# r3 = -2
+subi r2,r1,#1	# r2 = 1
 nop
 nop
 nop
-sw 57(r2),r1	# Store word (58,2)
+sw 57(r3),r3	# Store word (55,-2)
 subi r4,r3,#-1	# r4 = -1
 addui r5,r1,#4	# r5 = 6
 nop
