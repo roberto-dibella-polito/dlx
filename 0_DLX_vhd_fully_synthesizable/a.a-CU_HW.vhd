@@ -73,7 +73,7 @@ entity dlx_cu is
 		DRAM_READY			: in std_logic;
 		
 		--LMD_LATCH_EN       : out std_logic;	-- LMD Register Latch Enable
-		JUMP_EN            : out std_logic_vector(2 downto 0);		-- JUMP Enable Signal for PC input MUX
+		JUMP_EN            : out std_logic;		-- JUMP Enable Signal for PC input MUX
 		PC_LATCH_EN        : out std_logic;		-- Program Counte Latch Enable
 
 		-- WB Control signals
