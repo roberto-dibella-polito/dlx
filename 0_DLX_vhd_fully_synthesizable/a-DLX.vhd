@@ -83,11 +83,11 @@ architecture dlx_rtl of DLX is
 			
 			-- DRAM Data Interface
 			DRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
-			DRAM_DATA		: inout std_logic_vector(2*DATA_SIZE-1 downto 0);
+			DRAM_DATA		: inout std_logic_vector(DATA_SIZE-1 downto 0);
 			
 			-- MEM control signals
 			--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
-			JUMP_EN			: in std_logic_vector(2 downto 0);	-- JUMP Enable Signal for PC input MUX
+			JUMP_EN			: in std_logic;	-- JUMP Enable Signal for PC input MUX
 			PC_LATCH_EN		: in std_logic;	-- Pipelined version -> with no stalls, always active
 			
 			-- WB Control signals
@@ -188,15 +188,14 @@ architecture dlx_rtl of DLX is
 	signal dram_issue_i		: std_logic;
 	signal dram_rd_wr_i		: std_logic;
 	signal dram_ready_i		: std_logic;
-	signal jump_en_i		: std_logic_vector(2 downto 0);
+	signal jump_en_i		: std_logic;
 	signal pc_latch_en_i	: std_logic;
 	signal wb_mux_sel_i		: std_logic;
 	signal rf_we_i			: std_logic;
 	signal iram_address_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal iram_data_i		: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal dram_address_i	: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal dram_data_i		: std_logic_vector(DATA_SIZE-1 downto 0);
-
+	
+	
 begin  -- DLX
 
 	CU_I: dlx_cu generic map(
@@ -269,7 +268,7 @@ begin  -- DLX
 		MEM_IN_EN		=> mem_in_en_i,
  		BRANCH_T		=> is_zero_i,
 		ALU_OP			=> alu_op_i,
-		DRAM_ADDRESS	=> dram_address_i,
+		DRAM_ADDRESS	=> DRAM_ADDRESS,
 		DRAM_DATA		=> DRAM_DATA,
 		JUMP_EN			=> jump_en_i,
 		PC_LATCH_EN		=> pc_latch_en_i,
@@ -279,8 +278,5 @@ begin  -- DLX
 
 	IRAM_ADDRESS 	<= iram_address_i;
 	iram_data_i		<= IRAM_DATA;
-	
-	DRAM_ADDRESS	<= dram_address_i;
-	--dram_data_i		<= DRAM_DATA;
 
 end dlx_rtl;
