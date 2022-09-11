@@ -167,7 +167,7 @@ begin
 	-- Outputs:	sub_i, shift_arith_i, shift_dir_i, shift_rotate_i
 	
 	sub_i			<= '1' when( ALU_OP = SUB or ALU_OP = SUBU ) else '0';
-	shift_arith_i	<= '1' when( ALU_OP = SUBU ) else '0';
+	shift_arith_i	<= '0' when( ALU_OP = SRA_O ) else '1';
 	shift_dir_i		<= '1' when( ALU_OP = SLL_O ) else '0';
 	
 	alu_control: process(ALU_OP, adder_out, and_out, or_out, sge_out, sle_out, shifter_out, 

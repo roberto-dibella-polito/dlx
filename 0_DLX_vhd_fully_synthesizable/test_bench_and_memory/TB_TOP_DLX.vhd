@@ -100,9 +100,9 @@ begin
 	IRAM : ROMEM
 		generic map (
 			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/test_arithmetic_comments.asm.mem",	-- Arithmetics test
-			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/Branch.asm.mem",				-- Branch test
+			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/Branch.asm.mem",				-- Branch test
 			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/SL.asm.mem",					-- Load&Store test
-			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/rf_test.asm.mem",				-- RF test
+			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/rf_test.asm.mem",				-- RF test
 			ENTRIES		=> 512,
 			DATA_DELAY	=> 3 ns
 		)
@@ -122,6 +122,7 @@ begin
 			file_path 		=> "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex_out.txt",
 			Data_size 		=> 64,
 			Instr_size		=> 32,
+			RAM_DEPTH		=> 256,
 			DATA_DELAY		=> 0
 			--time_delay		=> 3 ns
 		)

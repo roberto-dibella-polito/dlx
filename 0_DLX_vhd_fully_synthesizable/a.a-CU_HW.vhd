@@ -248,9 +248,12 @@ begin  -- dlx_cu_rtl
 
 	-- COMBINATIONAL LOGIC
 	-- for flow control
-	branch_taken		<= (neqz_cond_i and is_zero) or (eqz_cond_i and not is_zero) or jump_en_i;
+
+	-- IS_ZERO_n = '0' when PORT_A = '0' => 
+	branch_taken	<= (neqz_cond_i and is_zero) or (eqz_cond_i and not is_zero) or jump_en_i;
 	JUMP_EN			<= branch_taken;
-	PIPE_CLEAR_n		<= not branch_taken;
+	
+	PIPE_CLEAR_n	<= not branch_taken;
 	
 	-- process to pipeline control words
 	CW_PIPE: process (Clk, Rst)
