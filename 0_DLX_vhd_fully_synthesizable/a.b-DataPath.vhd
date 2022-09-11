@@ -60,7 +60,7 @@ entity DLX_DP is
 		--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
 		JUMP_EN		: in std_logic;	-- JUMP Enable Signal for PC input MUX
 		PC_LATCH_EN	: in std_logic;	-- Pipelined version -> with no stalls, always active
-		
+		REG_EN		: in std_logic;
 		-- WB Control signals
 		WB_MUX_SEL	: in std_logic;  -- Write Back MUX Sel
 		RF_WE		: in std_logic  -- Register File Write Enable
@@ -207,7 +207,7 @@ architecture structure of DLX_DP is
 	signal alu_out_mem_o, alu_out_wb_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	
 begin
-	
+	REG_EN <= regist_sel;
 	muxconn: mux2to1 port map(
 		IN0			=> 	rd_fwd_wb_i,
 		IN1			=>	"11111",
