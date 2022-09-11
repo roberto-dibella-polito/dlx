@@ -13,9 +13,10 @@ architecture tb of DLX_TestBench is
 	component ROMEM is
 	generic (
 		FILE_PATH	: string;				-- ROM data file
-		ENTRIES		: integer := 128;		-- Number of lines in the ROM
-		WORD_SIZE	: integer := 32;		-- Number of bits per word
-		DATA_DELAY	: natural := 2			-- Delay ( in # of clock cycles )
+		ENTRIES		: integer	:= 128;		-- Number of lines in the ROM
+		WORD_SIZE	: integer 	:= 32;		-- Number of bits per word
+		--DATA_DELAY	: natural := 2			-- Delay ( in # of clock cycles )
+		DATA_DELAY	: time		:= 3 ns
 	);
 	port (
 		CLK					: in std_logic;
@@ -35,6 +36,7 @@ architecture tb of DLX_TestBench is
 			Instr_size: natural := 32;
 			RAM_DEPTH: 	natural := 128;
 			data_delay: natural := 2
+			--time_delay	: time := 3 ns
 		);
 	port (
 			CLK   				: in std_logic;
@@ -82,21 +84,27 @@ architecture tb of DLX_TestBench is
 	signal iram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal dram_first_word		: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal dram_dummy_word		: std_logic_vector(DATA_SIZE-1 downto 0);
-	signal dram_data_i			: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal dram_z_word			: std_logic_vector(DATA_SIZE-1 downto 0);
+	signal dram_mem_i			: std_logic_vector(2*DATA_SIZE-1 downto 0);
+	signal dram_dlx_i			: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal iram_addr_shifted	: std_logic_vector(PC_SIZE-1 downto 0);
 	signal dram_addr_odd		: std_logic_vector(PC_SIZE-1 downto 0);
 
 	signal opcode_i				: std_logic_vector(OP_SIZE-1 downto 0);
 	signal func_i				: std_logic_vector(FUNC_SIZE-1 downto 0);
 	signal instruction_i		: dlxInstr;
+	signal rs1,rs2,rd			: std_logic_vector(RX_SIZE-1 downto 0);
 	
 begin
 	-- IRAM
 	IRAM : ROMEM
 		generic map (
-			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/test_arithmetic_comments.asm.mem",
-			ENTRIES		=> 256,
-			DATA_DELAY	=> 0
+			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/test_arithmetic_comments.asm.mem",	-- Arithmetics test
+			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/Branch.asm.mem",				-- Branch test
+			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/SL.asm.mem",					-- Load&Store test
+			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/rf_test.asm.mem",				-- RF test
+			ENTRIES		=> 512,
+			DATA_DELAY	=> 3 ns
 		)
 		port map (
 			CLK					=> Clk,
@@ -115,6 +123,7 @@ begin
 			Data_size 		=> 64,
 			Instr_size		=> 32,
 			DATA_DELAY		=> 0
+			--time_delay		=> 3 ns
 		)
 		--port map ( CLK, RST, DRAM_ADDRESS, DRAM_ENABLE, DRAM_READNOTWRITE, DRAM_READY, DRAM_DATA );
 		port map(
@@ -127,15 +136,22 @@ begin
 			INOUT_DATA			=> DRAM_DATA
 		);
 
-	--dram_first_word	<= DRAM_DATA(31 downto 0);
-	dram_dummy_word <= (others=>'Z');
-	--DRAM_DATA(2*DATA_SIZE-1 downto DATA_SIZE) <= dram_dummy_word;
-	DRAM_DATA(2*DATA_SIZE-1 downto DATA_SIZE) 	<= dram_first_word;
-	DRAM_DATA(DATA_SIZE-1 downto 0)				<= dram_dummy_word;
+	dram_z_word 	<= (others=>'0');
+
+	-- Ritorno
+	dram_dlx_i <= DRAM_DATA(2*DATA_SIZE-1 downto DATA_SIZE);
+	dram_first_word <= dram_dlx_i when DRAM_READNOTWRITE = '1' else (others=>'Z');
+
+	-- Andata
+	DRAM_DATA <= dram_mem_i;
+	dram_mem_i <=  dram_first_word & dram_z_word when DRAM_READNOTWRITE = '0' else (others=>'Z');		
 
 	iram_first_word	<= IRAM_DATA(31 downto 0);
 	opcode_i 	<= iram_first_word(31 downto 26);
 	func_i		<= iram_first_word(FUNC_SIZE-1 downto 0);
+	rs1		 	<= iram_first_word(25 downto 21);
+	rs2			<= iram_first_word(20 downto 16);
+	rd			<= iram_first_word(15 downto 11);
 	
 	-- The memory is BYTE-ADDRESSABLE: each row corresponds to 4 bytes
 	-- => Incoming address is shifted by two
@@ -162,6 +178,8 @@ begin
 			DRAM_READY				=> DRAM_READY,
 			DRAM_DATA				=> dram_first_word
 		);
+
+
 	-- INSTRUCTION EVALUATOR
 	-- Only used to display the fetched instruction in an easy way
 	-- Inputs: 	opcode_i, func_i

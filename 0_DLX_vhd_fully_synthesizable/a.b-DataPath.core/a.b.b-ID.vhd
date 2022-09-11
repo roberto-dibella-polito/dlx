@@ -32,6 +32,7 @@ entity DLX_ID is
 		RF_WR_EN	: in std_logic;
 		
 		IMM_ISOFF	: in std_logic;
+		IMM_UNS		: in std_logic;
 		
 		ADDR_WR  	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
         ADDR_RS1 	: IN  std_logic_vector(ADDR_SIZE-1 downto 0);
@@ -86,12 +87,14 @@ begin
 	-- SIGN EXTENDER
 	-- It takes 26 bits: if the instruction is a J-type, the
 	-- flag is rised and the right immediate is selected.
-	imm_or_off: process( IMM_ISOFF, IMM_I )
+	imm_or_off: process( IMM_ISOFF, IMM_UNS, IMM_I )
 	begin
 		if IMM_ISOFF = '1' then
 			IMM_O	<= SXT(IMM_I,IMM_O'length);
-		else
+		elsif IMM_UNS = '0' then
 			IMM_O	<= SXT(IMM_I(15 downto 0),IMM_O'length);
+		else
+			IMM_O	<= x0(15 downto 0) & IMM_I(15 downto 0);
 		end if;
 	end process;
 	

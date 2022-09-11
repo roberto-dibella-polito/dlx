@@ -13,7 +13,8 @@ entity RWMEM is
 			Data_size : natural := 64;
 			Instr_size: natural := 32;
 			RAM_DEPTH: 	natural := 128;
-			data_delay: natural := 2
+			data_delay: natural := 2;
+			time_delay: time := 3 ns
 		);
 	port (
 			CLK   				: in std_logic;
@@ -90,9 +91,9 @@ begin  -- beh
 						DRAM_Mem(to_integer(unsigned(ADDR))+1) <= INOUT_DATA(Instr_size - 1 downto 0);
 						DRAM_Mem(to_integer(unsigned(ADDR))) <= INOUT_DATA(Data_size - 1 downto Instr_size); 
 						mem_ready <= '1';
-					else
-						tmp_data <=DRAM_mem(to_integer(unsigned(ADDR))) & DRAM_mem(to_integer(unsigned(ADDR))+1);
-						int_data_ready <= '1';
+					--else
+					--	tmp_data <=DRAM_mem(to_integer(unsigned(ADDR))+1) & DRAM_mem(to_integer(unsigned(ADDR)));
+					--	int_data_ready <= '1';
 					end if;
 				else
 					mem_ready <= '0';
@@ -107,6 +108,16 @@ begin  -- beh
 				int_data_ready <= '0';
 	
 			end if;
+		end if;
+	end process;
+
+	async_read: process(ENABLE,READNOTWRITE,ADDR)
+	begin
+		if(ENABLE = '1' and READNOTWRITE = '1') then
+			tmp_data <= DRAM_mem(to_integer(unsigned(ADDR))) & DRAM_mem(to_integer(unsigned(ADDR))+1) after time_delay;
+			int_data_ready <= '1' after time_delay;
+		else
+			int_data_ready <= '0';
 		end if;
 	end process;
 

@@ -72,6 +72,7 @@ architecture dlx_rtl of DLX is
 			RS2_EN			: in std_logic;
 			
 			IMM_ISOFF		: in std_logic;
+			IMM_UNS			: in std_logic;
 			RegRD_SEL		: in std_logic;	
 			
 			-- EX control signals
@@ -105,7 +106,6 @@ architecture dlx_rtl of DLX is
 			IR_SIZE				: integer := 32;	-- Instruction Register Size    
 			CW_SIZE				: integer := 15
 		);	-- Control Word Size
-
 		port (
 			Clk					: in  std_logic;	-- Clock
 			Rst					: in  std_logic;	-- Reset:Active-High
@@ -133,7 +133,8 @@ architecture dlx_rtl of DLX is
 			RF_EN				: out std_logic;
 			RF_RS1_EN			: out std_logic;
 			RF_RS2_EN			: out std_logic;
-			IMM_ISOFF			: out std_logic;	
+			IMM_ISOFF			: out std_logic;
+			IMM_UNS				: out std_logic;	
 			RegRD_SEL			: out std_logic;
 
 			-- EX Control Signals
@@ -179,6 +180,7 @@ architecture dlx_rtl of DLX is
 	signal rf_rs1_en_i		: std_logic;
 	signal rf_rs2_en_i		: std_logic;
 	signal imm_isoff_i		: std_logic;
+	signal imm_uns_i		: std_logic;
 	signal regrd_sel_i		: std_logic;
 	signal muxA_sel_i		: std_logic;
 	signal muxB_sel_i		: std_logic;
@@ -225,7 +227,8 @@ begin  -- DLX
 		RF_EN				=> rf_en_i,
 		RF_RS1_EN			=> rf_rs1_en_i,
 		RF_RS2_EN			=> rf_rs2_en_i,
-		IMM_ISOFF			=> imm_isoff_i,	
+		IMM_ISOFF			=> imm_isoff_i,
+		IMM_UNS				=> imm_uns_i,	
 		MUXA_SEL           	=> muxA_sel_i,
 		MUXB_SEL           	=> muxB_sel_i,
 		MEM_IN_EN			=> mem_in_en_i,
@@ -264,6 +267,7 @@ begin  -- DLX
 		RS1_EN			=> rf_rs1_en_i,
 		RS2_EN			=> rf_rs2_en_i,
 		IMM_ISOFF		=> imm_isoff_i,	
+		IMM_UNS			=> imm_uns_i,
 		MUXA_SEL		=> muxA_sel_i,
 		MUXB_SEL		=> muxB_sel_i,
 		MEM_IN_EN		=> mem_in_en_i,
