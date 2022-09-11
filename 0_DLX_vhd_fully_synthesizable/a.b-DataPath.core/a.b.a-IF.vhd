@@ -29,6 +29,7 @@ entity DLX_IF is
 		-- Stage interface
 		NPC_ALU			: in std_logic_vector(PC_SIZE-1 downto 0);
 		NPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);
+		OPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);		--Old PC that's gonna be forwarded to the WBMUX
 		INSTR			: out std_logic_vector(IR_SIZE-1 downto 0);
 		
 		-- IF control signals
@@ -50,7 +51,7 @@ architecture structure of DLX_IF is
 	signal PC_i, NPC_4_i, NPC_OUT_i	: std_logic_vector(PC_SIZE-1 downto 0);
 	
 begin
-
+	OPC_OUT <= 
 	--------------------------------------
 	--	PROGRAM COUNTER register		--
 	--------------------------------------
@@ -74,7 +75,12 @@ begin
 	-- INCREMENTER
 	-------------------------------------
 	NPC_4_i <= std_logic_vector(unsigned(PC_i) + 4);
-	
+		
+	-------------------------------------
+	-- PC Forwarder
+	-------------------------------------
+	OPC_OUT <= PC_i;
+	      
 	-------------------------------------
 	-- MULTIPLEXER
 	-------------------------------------
