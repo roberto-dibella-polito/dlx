@@ -22,17 +22,17 @@ package DLX_ControlWords is
 	-- 0	pipe_flush_n
 
 	constant uC_MEM_SIZE	: integer := 64;
-	constant CW_SIZE		: integer := 16;
+	constant CW_SIZE		: integer := 17;
 	
-	constant RR_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1110000001000111";	-- Register-Register control word
-	constant RI_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1100101001000111";
-	constant NOP_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "0000000001000001";
-	constant LW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1100101011000011";
-	constant SW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1110001010000001";	
+	constant RR_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11100000010001101";	-- Register-Register control word
+	constant RI_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11001010010001101";
+	constant NOP_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "00000000010000001";
+	constant LW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11001010110000101";
+	constant SW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11100010100000001";	
 	constant J_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "";
 	constant JAL_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "";
-	constant BQZ_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1100011000100001";
-	constant BNZ_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "1100011000010001";
+	constant BQZ_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11000110001000001";
+	constant BNZ_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11000110000100001";
 	
 	constant not_implemented	: std_logic_vector(CW_SIZE-1 downto 0) := (others=>'0');
 	
