@@ -91,8 +91,8 @@ architecture dlx_cu_hw of dlx_cu is
 	signal cw_mem : mem_array := (
 		RR_CW, 				-- 0x00	R type: IS IT CORRECT?
 		NOP_CW,				-- 0x01
-		not_implemented,	-- 0x02	J
-		not_implemented, 	-- 0x03	JAL 
+		J,				-- 0x02	J
+		JAL, 				-- 0x03	JAL 
 		BQZ_CW,			 	-- 0x04	BEQZ
 		BNZ_CW,			 	-- 0x05	BNEZ
 		not_implemented, 	-- 0x06
@@ -299,7 +299,7 @@ begin  -- dlx_cu_rtl
 	end process CW_PIPE;
 
 	ALU_OP <= aluOpcode2;
- 
+
 	ALU_OP_CODE_P : process (IR_opcode, IR_func)
 	begin  -- process ALU_OP_CODE_P
 		case conv_integer(unsigned(IR_opcode)) is
