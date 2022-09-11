@@ -32,7 +32,7 @@ entity DLX_IF is
 		INSTR			: out std_logic_vector(IR_SIZE-1 downto 0);
 		
 		-- IF control signals
-		NPC_SEL			: in std_logic;
+		NPC_SEL			: in std_logic_vector(2 downto 0);
 		PC_LATCH_EN		: in std_logic
 	);
 end DLX_IF;
@@ -42,8 +42,8 @@ architecture structure of DLX_IF is
 	component mux2to1 is 
 		generic (N : integer);
 		port (
-			IN0,IN1	: in std_logic_vector (N-1 downto 0); --input signals
-			SEL		: in std_logic; --select signal
+			IN0,IN1, IN2	: in std_logic_vector (N-1 downto 0); --input signals
+			SEL		: in std_logic_vector(2 downto 0); --select signal
 			MUX_OUT	: out std_logic_vector (N-1 downto 0));--N bits output
 	end component;
 	
@@ -78,11 +78,13 @@ begin
 	-------------------------------------
 	-- MULTIPLEXER
 	-------------------------------------
-	mux: mux2to1 generic map( N => PC_SIZE ) port map(
-		IN0 => NPC_4_i,
-		IN1	=> NPC_ALU,
-		SEL	=> NPC_SEL,
-		MUX_OUT	=> NPC_OUT_i );
+	      
+      mux: mux3to1 generic map( N => PC_SIZE ) port map(
+	IN0 => NPC_4_i,
+	IN1	=> NPC_ALU,
+	IN2	=> PC_i,
+	SEL	=> NPC_SEL,
+	MUX_OUT	=> NPC_OUT_i );
 		
 	NPC_OUT <= NPC_OUT_i;
 	
