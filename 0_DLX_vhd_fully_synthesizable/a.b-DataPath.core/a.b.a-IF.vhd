@@ -29,10 +29,11 @@ entity DLX_IF is
 		-- Stage interface
 		NPC_ALU			: in std_logic_vector(PC_SIZE-1 downto 0);
 		NPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);
+		OPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);		--Old PC that's gonna be forwarded to the WBMUX
 		INSTR			: out std_logic_vector(IR_SIZE-1 downto 0);
 		
 		-- IF control signals
-		NPC_SEL			: in std_logic;
+		NPC_SEL			: in std_logic_vector(1 downto 0);
 		PC_LATCH_EN		: in std_logic
 	);
 end DLX_IF;
@@ -78,13 +79,23 @@ begin
 	-------------------------------------
 	-- MULTIPLEXER
 	-------------------------------------
-	mux: mux2to1 generic map( N => PC_SIZE ) port map(
-		IN0 => NPC_4_i,
-		IN1	=> NPC_ALU,
-		SEL	=> NPC_SEL,
-		MUX_OUT	=> NPC_OUT_i );
-		
+	--mux: mux2to1 generic map( N => PC_SIZE ) port map(
+	--	IN0 => NPC_4_i,
+	--	IN1	=> NPC_ALU,
+	--	SEL	=> NPC_SEL,
+	--	MUX_OUT	=> NPC_OUT_i );
+	
+	mux: process(NPC_SEL, NPC_4_i, NPC_ALU, PC_i)
+	begin
+		case NPC_SEL is
+			when "00"	=> NPC_OUT_i <= NPC_4_i;
+			when "01"	=> NPC_OUT_i <= NPC_ALU;
+			when others => NPC_OUT_i <= PC_i; 
+		end case;
+	end process;
+
 	NPC_OUT <= NPC_OUT_i;
+	OPC_OUT <= NPC_4_i;
 	
 	-------------------------------------
 	-- Instruction Memory Interface

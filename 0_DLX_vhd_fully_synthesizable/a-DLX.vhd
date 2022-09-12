@@ -73,7 +73,7 @@ architecture dlx_rtl of DLX is
 			
 			IMM_ISOFF		: in std_logic;
 			IMM_UNS			: in std_logic;
-			RegRD_SEL		: in std_logic;	
+			RegRD_SEL		: in std_logic_vector(1 downto 0);	
 			
 			-- EX control signals
 			MUXA_SEL		: in std_logic;
@@ -87,12 +87,12 @@ architecture dlx_rtl of DLX is
 			DRAM_DATA		: inout std_logic_vector(2*DATA_SIZE-1 downto 0);
 			
 			-- MEM control signals
-			--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
-			JUMP_EN			: in std_logic;	-- JUMP Enable Signal for PC input MUX
-			PC_LATCH_EN		: in std_logic;	-- Pipelined version -> with no stalls, always active
+			--LMD_LATCH_EN	: in std_logic;						-- LMD Register Latch Enable
+			JUMP_EN			: in std_logic_vector(1 downto 0);	-- JUMP Enable Signal for PC input MUX
+			PC_LATCH_EN		: in std_logic;						
 			
 			-- WB Control signals
-			WB_MUX_SEL		: in std_logic;  -- Write Back MUX Sel
+			WB_MUX_SEL		: in std_logic_vector(1 downto 0);  -- Write Back MUX Sel
 			RF_WE			: in std_logic  -- Register File Write Enable
 		);
 	end component;
@@ -135,7 +135,7 @@ architecture dlx_rtl of DLX is
 			RF_RS2_EN			: out std_logic;
 			IMM_ISOFF			: out std_logic;
 			IMM_UNS				: out std_logic;	
-			RegRD_SEL			: out std_logic;
+			RegRD_SEL			: out std_logic_vector(1 downto 0);
 
 			-- EX Control Signals
 			MUXA_SEL           	: out std_logic;  	-- MUX-A Sel
@@ -149,13 +149,13 @@ architecture dlx_rtl of DLX is
 			DRAM_READNOTWRITE	: out std_logic;
 			DRAM_READY			: in std_logic;
 
-			--LMD_LATCH_EN       : out std_logic;	-- LMD Register Latch Enable
-			JUMP_EN            : out std_logic;		-- JUMP Enable Signal for PC input MUX
-			PC_LATCH_EN        : out std_logic;		-- Program Counte Latch Enable
+			--LMD_LATCH_EN       : out std_logic;						-- LMD Register Latch Enable
+			JUMP_EN            : out std_logic_vector(1 downto 0);		-- JUMP Enable Signal for PC input MUX
+			PC_LATCH_EN        : out std_logic;							-- Program Counte Latch Enable
 
 			-- WB Control signals
-			WB_MUX_SEL         : out std_logic;		-- Write Back MUX Sel
-			RF_WE              : out std_logic		-- Register File Write Enable
+			WB_MUX_SEL         : out std_logic_vector(1 downto 0);		-- Write Back MUX Sel
+			RF_WE              : out std_logic							-- Register File Write Enable
 
 		);  
 	end component;
@@ -181,7 +181,7 @@ architecture dlx_rtl of DLX is
 	signal rf_rs2_en_i		: std_logic;
 	signal imm_isoff_i		: std_logic;
 	signal imm_uns_i		: std_logic;
-	signal regrd_sel_i		: std_logic;
+	signal regrd_sel_i		: std_logic_vector(1 downto 0);
 	signal muxA_sel_i		: std_logic;
 	signal muxB_sel_i		: std_logic;
 	signal mem_in_en_i		: std_logic;
@@ -190,9 +190,9 @@ architecture dlx_rtl of DLX is
 	signal dram_issue_i		: std_logic;
 	signal dram_rd_wr_i		: std_logic;
 	signal dram_ready_i		: std_logic;
-	signal jump_en_i		: std_logic;
+	signal jump_en_i		: std_logic_vector(1 downto 0);
 	signal pc_latch_en_i	: std_logic;
-	signal wb_mux_sel_i		: std_logic;
+	signal wb_mux_sel_i		: std_logic_vector(1 downto 0);
 	signal rf_we_i			: std_logic;
 	signal iram_address_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal iram_data_i		: std_logic_vector(DATA_SIZE-1 downto 0);
@@ -285,6 +285,5 @@ begin  -- DLX
 	iram_data_i		<= IRAM_DATA;
 	
 	DRAM_ADDRESS	<= dram_address_i;
-	--dram_data_i		<= DRAM_DATA;
 
 end dlx_rtl;
