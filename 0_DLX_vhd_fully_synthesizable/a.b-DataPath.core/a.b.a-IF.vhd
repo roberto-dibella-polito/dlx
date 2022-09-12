@@ -29,6 +29,7 @@ entity DLX_IF is
 		-- Stage interface
 		NPC_ALU			: in std_logic_vector(PC_SIZE-1 downto 0);
 		NPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);
+		--OPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);							-- Old PC to be forwarded to ALU
 		INSTR			: out std_logic_vector(IR_SIZE-1 downto 0);
 		
 		-- IF control signals
@@ -85,6 +86,7 @@ begin
 		MUX_OUT	=> NPC_OUT_i );
 		
 	NPC_OUT <= NPC_OUT_i;
+	--OPC_OUT <= PC_i; 
 	
 	-------------------------------------
 	-- Instruction Memory Interface

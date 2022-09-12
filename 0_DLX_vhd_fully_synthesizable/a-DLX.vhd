@@ -73,6 +73,7 @@ architecture dlx_rtl of DLX is
 			
 			IMM_ISOFF		: in std_logic;
 			IMM_UNS			: in std_logic;
+			Reg31_SEL		: in std_logic;
 			RegRD_SEL		: in std_logic;	
 			
 			-- EX control signals
@@ -81,6 +82,7 @@ architecture dlx_rtl of DLX is
 			BRANCH_T		: out std_logic;
 			ALU_OP			: in aluOp;
 			MEM_IN_EN		: in std_logic;
+			NPC_WB_EN		: in std_logic;
 			
 			-- DRAM Data Interface
 			DRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
@@ -89,7 +91,7 @@ architecture dlx_rtl of DLX is
 			-- MEM control signals
 			--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
 			JUMP_EN			: in std_logic;	-- JUMP Enable Signal for PC input MUX
-			PC_LATCH_EN		: in std_logic;	-- Pipelined version -> with no stalls, always active
+			PC_LATCH_EN		: in std_logic;	
 			
 			-- WB Control signals
 			WB_MUX_SEL		: in std_logic;  -- Write Back MUX Sel
@@ -134,7 +136,8 @@ architecture dlx_rtl of DLX is
 			RF_RS1_EN			: out std_logic;
 			RF_RS2_EN			: out std_logic;
 			IMM_ISOFF			: out std_logic;
-			IMM_UNS				: out std_logic;	
+			IMM_UNS				: out std_logic;
+			Reg31_SEL			: out std_logic;	
 			RegRD_SEL			: out std_logic;
 
 			-- EX Control Signals
@@ -143,6 +146,7 @@ architecture dlx_rtl of DLX is
 			IS_ZERO				: in std_logic;
 			ALU_OP				: out aluOp;		-- FUNC field
 			MEM_IN_EN			: out std_logic;
+			NPC_WB_EN			: out std_logic;
 
 			-- MEM Control Signals
 			DRAM_ISSUE			: out std_logic;
@@ -181,10 +185,12 @@ architecture dlx_rtl of DLX is
 	signal rf_rs2_en_i		: std_logic;
 	signal imm_isoff_i		: std_logic;
 	signal imm_uns_i		: std_logic;
+	signal reg31_sel_i		: std_logic;
 	signal regrd_sel_i		: std_logic;
 	signal muxA_sel_i		: std_logic;
 	signal muxB_sel_i		: std_logic;
 	signal mem_in_en_i		: std_logic;
+	signal npc_wb_en_i		: std_logic;
 	signal is_zero_i		: std_logic;
 	signal alu_op_i			: aluOp;
 	signal dram_issue_i		: std_logic;
@@ -219,6 +225,7 @@ begin  -- DLX
 		PIPE_EX_MEM_EN		=> pipe_ex_mem_en_i,
 		PIPE_MEM_WB_EN		=> pipe_mem_wb_en_i,
 		PIPE_CLEAR_n		=> pipe_clear_n_i,
+		Reg31_SEL			=> reg31_sel_i,
 		RegRD_SEL			=> regrd_sel_i,
 		RF_CALL				=> rf_call_i,
 		RF_RET				=> rf_ret_i,
@@ -232,6 +239,7 @@ begin  -- DLX
 		MUXA_SEL           	=> muxA_sel_i,
 		MUXB_SEL           	=> muxB_sel_i,
 		MEM_IN_EN			=> mem_in_en_i,
+		NPC_WB_EN			=> npc_wb_en_i,
 		IS_ZERO				=> is_zero_i,
 		ALU_OP				=> alu_op_i,
 		DRAM_ISSUE			=> DRAM_ISSUE,
@@ -258,6 +266,7 @@ begin  -- DLX
 		IRAM_ADDRESS	=> iram_address_i,
 		IRAM_DATA		=> iram_data_i,
 		INSTR			=> instr_i,
+		Reg31_SEL		=> reg31_sel_i,
 		RegRD_SEL		=> regrd_sel_i,
 		CALL			=> rf_call_i,
 		RET				=> rf_ret_i,
@@ -271,6 +280,7 @@ begin  -- DLX
 		MUXA_SEL		=> muxA_sel_i,
 		MUXB_SEL		=> muxB_sel_i,
 		MEM_IN_EN		=> mem_in_en_i,
+		NPC_WB_EN		=> npc_wb_en_i,
  		BRANCH_T		=> is_zero_i,
 		ALU_OP			=> alu_op_i,
 		DRAM_ADDRESS	=> dram_address_i,

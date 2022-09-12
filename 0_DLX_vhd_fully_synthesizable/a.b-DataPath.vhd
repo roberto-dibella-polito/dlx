@@ -44,6 +44,7 @@ entity DLX_DP is
 		
 		IMM_ISOFF	: in std_logic;
 		IMM_UNS		: in std_logic;
+		Reg31_SEL	: in std_logic;
 		RegRD_SEL	: in std_logic;	
 		
 		-- EX control signals
@@ -52,18 +53,17 @@ entity DLX_DP is
 		BRANCH_T	: out std_logic;
 		ALU_OP		: in aluOp;
 		MEM_IN_EN	: in std_logic;
+		NPC_WB_EN	: in std_logic;
 		
 		-- DRAM Data Interface
 		DRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
 		DRAM_DATA	: inout std_logic_vector(DATA_SIZE-1 downto 0);
 		
 		-- MEM control signals
-		--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable
 		JUMP_EN		: in std_logic;		-- JUMP Enable Signal for PC input MUX
 		PC_LATCH_EN	: in std_logic;		-- Program Counter enable signal
 		
 		-- WB Control signals
-		--WB_MUX_SEL	: in std_logic_vector(2 downto 0);  -- Write Back MUX Sel
 		WB_MUX_SEL	: in std_logic;		
 		RF_WE		: in std_logic  					-- Register File Write Enable
 
@@ -88,7 +88,6 @@ architecture structure of DLX_DP is
 		-- Stage interface
 		NPC_ALU			: in std_logic_vector(PC_SIZE-1 downto 0);
 		NPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);
-		--OPC_OUT			: out std_logic_vector(PC_SIZE-1 downto 0);		--Old PC that's gonna be forwarded to the WBMUX
 		INSTR			: out std_logic_vector(IR_SIZE-1 downto 0);
 		
 		-- IF control signals
@@ -169,8 +168,6 @@ architecture structure of DLX_DP is
 			SEL				: in std_logic_vector(2 downto 0); --select signal
 			MUX_OUT			: out std_logic_vector (N-1 downto 0));--N bits output
 	end component;
-
-
 	
 	signal npc_alu_fb	: std_logic_vector(PC_SIZE-1 downto 0);		-- Feedback signal for the ALU-computed NPC
 	
@@ -181,6 +178,8 @@ architecture structure of DLX_DP is
 	signal rs1_id_i, rs2_id_i, rd_id_i	: std_logic_vector(RX_SIZE-1 downto 0);		-- RX addresses from IR
 	signal imm_id_i						: std_logic_vector(OFFSET_SIZE-1 downto 0); -- Immediate from IR
 	signal wr_data_id_i					: std_logic_vector(DATA_SIZE-1 downto 0);	-- Write back data from WB
+	signal opc_if_o, opc_id_i			: std_logic_vector(PC_SIZE-1 downto 0);
+	signal pc_selected_i				: std_logic_vector(PC_SIZE-1 downto 0);
 	
 	-- ID/EX signals
 	signal rf_out1_id_o, rf_out2_id_o, rf_out1_ex_i, rf_out2_ex_i	: std_logic_vector(DATA_SIZE-1 downto 0);			-- 
@@ -189,15 +188,13 @@ architecture structure of DLX_DP is
 	signal npc_id_o, npc_ex_i										: std_logic_vector(PC_SIZE-1 downto 0);	
 
 	signal ir_reset				: std_logic_vector(INSTR_SIZE-OP_SIZE-1 downto 0);
-
-	-- PC FOrwarding Signal
-	signal pc_forw				: std_logic_vector(PC_SIZE-1 downto 0);
 	
 	-- EX/MEM signals
 	signal alu_out_ex_o, alu_out_mem_i		: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal data_mem_ex_o, data_mem_mem_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal rd_fwd_ex_o, rd_fwd_mem_i		: std_logic_vector(RX_SIZE-1 downto 0);
 	signal branch_t_ex_o, branch_t_mem_i 	: std_logic;
+	signal data_mem_selected				: std_logic_vector(DATA_SIZE-1 downto 0);
 	
 	-- MEM interface internal signals
 	--DRAM_WE			: in std_logic;  -- Data RAM Write Enable
@@ -211,6 +208,7 @@ architecture structure of DLX_DP is
 	signal data_mem_mem_o, data_mem_wb_i	: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal alu_out_mem_o, alu_out_wb_i		: std_logic_vector(DATA_SIZE-1 downto 0);
 	signal wb_sel							: std_logic_vector(2 downto 0);
+	signal regRd_sel_i						: std_logic_vector(1 downto 0);
 	
 begin
 			
@@ -225,16 +223,15 @@ begin
 	
 	if_stage: DLX_IF generic map( IR_SIZE => INSTR_SIZE, PC_SIZE => PC_SIZE ) 
 	port map(
-		CLK		=> CLK,
-		RST		=> RST,
+		CLK				=> CLK,
+		RST				=> RST,
 		IRAM_ADDRESS	=> IRAM_ADDRESS,
-		IRAM_DATA	=> IRAM_DATA,
-		NPC_ALU		=> alu_out_mem_i,
-		NPC_OUT		=> npc_if_o,
-		--OPC_OUT		=> pc_forw,
-		INSTR		=> instr_if_o,
-		NPC_SEL		=> JUMP_EN,
-		PC_LATCH_EN	=> PC_LATCH_EN
+		IRAM_DATA		=> IRAM_DATA,
+		NPC_ALU			=> alu_out_mem_i,
+		NPC_OUT			=> npc_if_o,
+		INSTR			=> instr_if_o,
+		NPC_SEL			=> JUMP_EN,
+		PC_LATCH_EN		=> PC_LATCH_EN
 	);
 	
 	INSTR <= instr_if_o;
@@ -249,6 +246,7 @@ begin
 			
 			ir 			<= NOP_OP & ir_reset;
 			npc_id_i 	<= (others=>'0');
+			opc_id_i	<= (others=>'0');
 			
 		elsif(CLK'event and CLK = '1') then
 			
@@ -256,6 +254,7 @@ begin
 
 				ir 			<= instr_if_o;
 				npc_id_i 	<= npc_if_o;
+				opc_id_i	<= opc_if_o;
 			
 			end if;
 		end if;
@@ -266,7 +265,18 @@ begin
 	
 	rs1_id_i <= ir(25 downto 21);
 	rs2_id_i <= ir(20 downto 16);
-	rd_id_i  <= ir(15 downto 11) when RegRD_SEL = '0' else ir(20 downto 16);
+	--rd_id_i  <= ir(15 downto 11) when RegRD_SEL = '0' else ir(20 downto 16);
+	
+	regRd_sel_i <= Reg31_SEL & RegRD_SEL;
+
+	rd_sel: process(ir, regRd_sel_i)
+	begin
+		case regRd_sel_i is
+			when "00" => rd_id_i <= ir(15 downto 11);
+			when "01" => rd_id_i <= ir(20 downto 16);
+			when others => rd_id_i <= "11111";
+		end case;
+	end process;
 	
 	imm_id_i <= ir(25 downto 0);
 			
@@ -366,6 +376,8 @@ begin
 		ALU_OP		=> ALU_OP	
 	);
 	
+	data_mem_selected <= data_mem_ex_o when NPC_WB_EN = '0' else npc_ex_i;
+	
 	-- EX/MEM REGISTERS
 	-- Blocking and flushing mechanisms not yet implemented
 	-- Input:	ALU_OUTREG_EN
@@ -398,7 +410,7 @@ begin
 				if( MEM_IN_EN = '1' ) then
 					data_mem_mem_i	<= z_word;
 				else
-					data_mem_mem_i	<= data_mem_ex_o;
+					data_mem_mem_i	<= data_mem_selected;
 				end if;
 				
 				rd_fwd_mem_i	<= rd_fwd_ex_o;

@@ -15,8 +15,6 @@ entity dlx_cu is
 		IR_SIZE				: integer := 32;	-- Instruction Register Size    
 		CW_SIZE				: integer := 16
 	);	-- Control Word Size
-
-
 	port (
 		Clk					: in  std_logic;	-- Clock
 		Rst					: in  std_logic;	-- Reset:Active-High
@@ -46,6 +44,7 @@ entity dlx_cu is
 		--RegA_LATCH_EN      : out std_logic;  -- Register A Latch Enable
 		--RegB_LATCH_EN      : out std_logic;  -- Register B Latch Enable
 		--RegIMM_LATCH_EN    : out std_logic;  -- Immediate Register Latch Enable
+		Reg31_SEL			: out std_logic;		
 		RegRD_SEL			: out std_logic;
 		RF_CALL				: out std_logic;
 		RF_RET				: out std_logic;
@@ -66,7 +65,8 @@ entity dlx_cu is
 		-- Controlled by PIPE_EX_MEM_EN
 		--ALU_OUTREG_EN      : out std_logic;  -- ALU Output Register Enable
 		--EQ_COND            : out std_logic;  -- Branch if (not) Equal to Zero
-		MEM_IN_EN			: out std_logic;		
+		MEM_IN_EN			: out std_logic;
+		NPC_WB_EN			: out std_logic;		
 		
 		-- MEM Control Signals
 		-- . DRAM control interface
@@ -75,8 +75,8 @@ entity dlx_cu is
 		DRAM_READY			: in std_logic;
 		
 		--LMD_LATCH_EN       : out std_logic;	-- LMD Register Latch Enable
-		JUMP_EN            : out std_logic;		-- JUMP Enable Signal for PC input MUX
-		PC_LATCH_EN        : out std_logic;		-- Program Counte Latch Enable
+		JUMP_EN				: out std_logic;		-- JUMP Enable Signal for PC input MUX
+		PC_LATCH_EN			: out std_logic;		-- Program Counte Latch Enable
 
 		-- WB Control signals
 		--WB_MUX_SEL         : out std_logic_vector(2 downto 0);		-- Write Back MUX Sel
@@ -90,10 +90,10 @@ architecture dlx_cu_hw of dlx_cu is
 
 	type mem_array is array (integer range 0 to MICROCODE_MEM_SIZE - 1) of std_logic_vector(CW_SIZE - 1 downto 0);
 	signal cw_mem : mem_array := (
-		RR_CW, 				-- 0x00	R type: IS IT CORRECT?
+		RR_CW, 				-- 0x00	R type
 		NOP_CW,				-- 0x01
-		not_implemented,	-- 0x02	J
-		not_implemented,	-- 0x03	JAL 
+		J_CW,				-- 0x02	J
+		JAL_CW,				-- 0x03	JAL 
 		BQZ_CW,				-- 0x04	BEQZ
 		BNZ_CW,				-- 0x05	BNEZ
 		not_implemented, 	-- 0x06
@@ -110,14 +110,14 @@ architecture dlx_cu_hw of dlx_cu is
 		not_implemented,	-- 0x11	
 		not_implemented,	-- 0x12	JR
 		not_implemented,	-- 0x13	JALR
-		RI_CW,				-- 0x14	SLLI
+		RUI_CW,				-- 0x14	SLLI
 		NOP_CW,				-- 0x15	NOP
-		RI_CW,				-- 0x16	SRLI
-		not_implemented,	-- 0x17	SRAI
-		not_implemented,	-- 0x18	SEQI
+		RUI_CW,				-- 0x16	SRLI
+		RUI_CW,				-- 0x17	SRAI
+		RI_CW,				-- 0x18	SEQI
 		RI_CW,				-- 0x19	SNEI
-		not_implemented,	-- 0x1A	SLTI
-		not_implemented,	-- 0x1B	SGTI
+		RI_CW,				-- 0x1A	SLTI
+		RI_CW,				-- 0x1B	SGTI
 		RI_CW,				-- 0x1C	SLEI
 		RI_CW,				-- 0x1D	SGEI
 		not_implemented,	-- 0x1E
@@ -163,9 +163,9 @@ architecture dlx_cu_hw of dlx_cu is
 	-- control word is shifted to the correct stage
 	signal cw0	: std_logic_vector(CW_SIZE - 1 downto 0);
 	signal cw1	: std_logic_vector(CW_SIZE - 1 downto 0); -- first stage
-	signal cw2	: std_logic_vector(CW_SIZE - 1 - 6 downto 0); -- second stage
-	signal cw3	: std_logic_vector(CW_SIZE - 1 - 9 downto 0); -- third stage
-	signal cw4	: std_logic_vector(CW_SIZE - 1 - 14 downto 0); -- fourth stage
+	signal cw2	: std_logic_vector(CW_SIZE - 1 - 7 downto 0); -- second stage
+	signal cw3	: std_logic_vector(CW_SIZE - 1 - 11 downto 0); -- third stage
+	signal cw4	: std_logic_vector(CW_SIZE - 1 - 16 downto 0); -- fourth stage
 
 	signal aluOpcode_i      : aluOp := NOP; -- ALUOP defined in package
 	signal aluOpcode1       : aluOp := NOP;
@@ -203,14 +203,14 @@ begin  -- dlx_cu_rtl
 	stall_forIram	<= iram_issue_i and (not IRAM_READY);	-- Wait for the IRAM to be ready
 	stall_forDram	<= dram_issue_o;
 
-	stall		<= stall_forDram or stall_forIram;		-- The pipeline has to be stopped AFTER the stall of the IRAM
-									-- Not doing it will make the CPU loose an instruction
+	stall			<= stall_forDram or stall_forIram;		-- The pipeline has to be stopped AFTER the stall of the IRAM
+															-- Not doing it will make the CPU loose an instruction
 	pipe_enable_i	<= not stall;
-	PC_LATCH_EN	<= not stall;
+	PC_LATCH_EN		<= not stall;
 
 	-- Request data to the IRAM
 	iram_issue_i	<= not stall_forDram;
-	IRAM_ISSUE	<= iram_issue_i;
+	IRAM_ISSUE		<= iram_issue_i;
 		
 
 	PIPE_IF_ID_EN	<= pipe_enable_i;
@@ -223,35 +223,36 @@ begin  -- dlx_cu_rtl
 	RF_RET			<= '0';
 	IMM_ISOFF		<= cw1(CW_SIZE-4);
 	IMM_UNS			<= cw1(CW_SIZE-5);
-	RegRD_SEL		<= cw1(CW_SIZE-6);
+	Reg31_SEL		<= cw1(CW_SIZE-6);
+	RegRD_SEL		<= cw1(CW_SIZE-7);
 	
 	PIPE_ID_EX_EN		<= pipe_enable_i;
 	
-	MUXA_SEL		<= cw2(CW_SIZE-7);
-	MUXB_SEL		<= cw2(CW_SIZE-8);
-	MEM_IN_EN		<= cw2(CW_SIZE-9);
+	MUXA_SEL		<= cw2(CW_SIZE-8);
+	MUXB_SEL		<= cw2(CW_SIZE-9);
+	MEM_IN_EN		<= cw2(CW_SIZE-10);
+	NPC_WB_EN		<= cw2(CW_SIZE-11);
 	
 	PIPE_EX_MEM_EN		<= pipe_enable_i;
 	
-	dram_issue_i		<= cw3(CW_SIZE-10);
-	DRAM_ISSUE		<= dram_issue_o;
-	DRAM_READNOTWRITE	<= cw3(CW_SIZE-11);
-	eqz_cond_i		<= cw3(CW_SIZE-12);
-	neqz_cond_i		<= cw3(CW_SIZE-13);
-	jump_en_i		<= cw3(CW_SIZE-14);
+	dram_issue_i		<= cw3(CW_SIZE-12);
+	DRAM_ISSUE			<= dram_issue_o;
+	DRAM_READNOTWRITE	<= cw3(CW_SIZE-13);
+	eqz_cond_i			<= cw3(CW_SIZE-14);
+	neqz_cond_i			<= cw3(CW_SIZE-15);
+	jump_en_i			<= cw3(CW_SIZE-16);
 	
 	PIPE_MEM_WB_EN		<= pipe_enable_i;
   
-	--WB_MUX_SEL		<= cw4(CW_SIZE-14 downto CW_SIZE-15);
-	WB_MUX_SEL		<= cw4(CW_SIZE-15);
-	RF_WE			<= cw4(CW_SIZE-16);
+	WB_MUX_SEL		<= cw4(CW_SIZE-17);
+	RF_WE			<= cw4(CW_SIZE-18);
 
 	-- COMBINATIONAL LOGIC
 	-- for flow control
 
 	-- IS_ZERO_n = '0' when PORT_A = '0' => 
-	branch_taken	<= (neqz_cond_i and is_zero) or (eqz_cond_i and not is_zero) or jump_en_i;
-	JUMP_EN			<= branch_taken;
+	branch_taken	<= (neqz_cond_i and is_zero) or (eqz_cond_i and not is_zero);
+	JUMP_EN			<= branch_taken or jump_en_i;
 	
 	PIPE_CLEAR_n	<= not branch_taken;
 	
@@ -260,9 +261,9 @@ begin  -- dlx_cu_rtl
 	begin  -- process Clk
 		if Rst = '1' then                   -- asynchronous reset (active low)
 			cw1 <= NOP_CW;
-			cw2 <= NOP_CW(CW_SIZE - 1 - 6 downto 0);
-			cw3 <= NOP_CW(CW_SIZE - 1 - 9 downto 0);
-			cw4 <= NOP_CW(CW_SIZE - 1 - 14 downto 0);
+			cw2 <= NOP_CW(CW_SIZE - 1 - 7 downto 0);
+			cw3 <= NOP_CW(CW_SIZE - 1 - 11 downto 0);
+			cw4 <= NOP_CW(CW_SIZE - 1 - 16 downto 0);
 			-----------------------------------------
 			aluOpcode1 	<= NOP;
 			aluOpcode2 	<= NOP;
@@ -279,18 +280,18 @@ begin  -- dlx_cu_rtl
 
 				-- If a branch is taken, the pipeline has to be flushed
 				if( branch_taken = '1' ) then	
-					cw2 <= NOP_CW(CW_SIZE - 1 - 6 downto 0);
-					cw3 <= NOP_CW(CW_SIZE - 1 - 9 downto 0);
-					cw4 <= NOP_CW(CW_SIZE - 1 - 14 downto 0);
+					cw2 <= NOP_CW(CW_SIZE - 1 - 7 downto 0);
+					cw3 <= NOP_CW(CW_SIZE - 1 - 11 downto 0);
+					cw4 <= NOP_CW(CW_SIZE - 1 - 16 downto 0);
 					-----------------------------------------
 					aluOpcode2 <= NOP;
 					-----------------------------------------
 					opcode1	<= NOP_OP;
 					-----------------------------------------
 				else				
-					cw2 <= cw1(CW_SIZE - 1 - 6 downto 0);
-					cw3 <= cw2(CW_SIZE - 1 - 9 downto 0);
-					cw4 <= cw3(CW_SIZE - 1 - 14 downto 0);
+					cw2 <= cw1(CW_SIZE - 1 - 7 downto 0);
+					cw3 <= cw2(CW_SIZE - 1 - 11 downto 0);
+					cw4 <= cw3(CW_SIZE - 1 - 16 downto 0);
 					---------------------------------------					
 					aluOpcode2 <= aluOpcode1;
 					---------------------------------------
@@ -333,8 +334,8 @@ begin  -- dlx_cu_rtl
 					when 35	=> aluOpcode_i <= SUBU; 	-- SUBU
 					when others		=> aluOpcode_i <= NOP;
 				end case;
-			when 2	=> aluOpcode_i <= NOP; 		-- J
-			when 3	=> aluOpcode_i <= NOP; 		-- JAL
+			when 2	=> aluOpcode_i <= ADD; 		-- J
+			when 3	=> aluOpcode_i <= ADD; 		-- JAL
 			when 4	=> aluOpcode_i <= ADD;		-- BEQZ
 			when 5	=> aluOpcode_i <= ADD;		-- BNEZ
 			when 8	=> aluOpcode_i <= ADD;		-- ADDI
