@@ -1,2 +1,2 @@
-addi r1,r0,14
+add r8, r3, r3
 

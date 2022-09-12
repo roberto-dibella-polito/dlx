@@ -45,6 +45,7 @@ entity DLX_DP is
 		IMM_ISOFF	: in std_logic;
 		IMM_UNS		: in std_logic;
 		RegRD_SEL	: in std_logic;	
+		--PC_SEL		: in std_logic;
 		
 		-- EX control signals
 		MUXA_SEL	: in std_logic;
@@ -181,6 +182,8 @@ architecture structure of DLX_DP is
 	signal rs1_id_i, rs2_id_i, rd_id_i	: std_logic_vector(RX_SIZE-1 downto 0);		-- RX addresses from IR
 	signal imm_id_i						: std_logic_vector(OFFSET_SIZE-1 downto 0); -- Immediate from IR
 	signal wr_data_id_i					: std_logic_vector(DATA_SIZE-1 downto 0);	-- Write back data from WB
+	signal opc_if_o, opc_id_i			: std_logic_vector(PC_SIZE-1 downto 0);
+	signal pc_selected_i				: std_logic_vector(PC_SIZE-1 downto 0);
 	
 	-- ID/EX signals
 	signal rf_out1_id_o, rf_out2_id_o, rf_out1_ex_i, rf_out2_ex_i	: std_logic_vector(DATA_SIZE-1 downto 0);			-- 
@@ -225,16 +228,16 @@ begin
 	
 	if_stage: DLX_IF generic map( IR_SIZE => INSTR_SIZE, PC_SIZE => PC_SIZE ) 
 	port map(
-		CLK		=> CLK,
-		RST		=> RST,
+		CLK				=> CLK,
+		RST				=> RST,
 		IRAM_ADDRESS	=> IRAM_ADDRESS,
-		IRAM_DATA	=> IRAM_DATA,
-		NPC_ALU		=> alu_out_mem_i,
-		NPC_OUT		=> npc_if_o,
-		--OPC_OUT		=> pc_forw,
-		INSTR		=> instr_if_o,
-		NPC_SEL		=> JUMP_EN,
-		PC_LATCH_EN	=> PC_LATCH_EN
+		IRAM_DATA		=> IRAM_DATA,
+		NPC_ALU			=> alu_out_mem_i,
+		NPC_OUT			=> npc_if_o,
+		--OPC_OUT			=> opc_if_o,
+		INSTR			=> instr_if_o,
+		NPC_SEL			=> JUMP_EN,
+		PC_LATCH_EN		=> PC_LATCH_EN
 	);
 	
 	INSTR <= instr_if_o;
@@ -249,6 +252,7 @@ begin
 			
 			ir 			<= NOP_OP & ir_reset;
 			npc_id_i 	<= (others=>'0');
+			opc_id_i	<= (others=>'0');
 			
 		elsif(CLK'event and CLK = '1') then
 			
@@ -256,6 +260,7 @@ begin
 
 				ir 			<= instr_if_o;
 				npc_id_i 	<= npc_if_o;
+				opc_id_i	<= opc_if_o;
 			
 			end if;
 		end if;
@@ -269,6 +274,8 @@ begin
 	rd_id_i  <= ir(15 downto 11) when RegRD_SEL = '0' else ir(20 downto 16);
 	
 	imm_id_i <= ir(25 downto 0);
+
+	--pc_selected_i <= npc_id_i when PC_SEL = '0' else opc_id_i;
 			
 	id_stage: DLX_ID generic map(
 		ADDR_SIZE	=> RX_SIZE,

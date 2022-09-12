@@ -92,7 +92,7 @@ architecture dlx_cu_hw of dlx_cu is
 	signal cw_mem : mem_array := (
 		RR_CW, 				-- 0x00	R type: IS IT CORRECT?
 		NOP_CW,				-- 0x01
-		not_implemented,	-- 0x02	J
+		J_CW,		-- 0x02	J
 		not_implemented,	-- 0x03	JAL 
 		BQZ_CW,				-- 0x04	BEQZ
 		BNZ_CW,				-- 0x05	BNEZ
@@ -110,14 +110,14 @@ architecture dlx_cu_hw of dlx_cu is
 		not_implemented,	-- 0x11	
 		not_implemented,	-- 0x12	JR
 		not_implemented,	-- 0x13	JALR
-		RI_CW,				-- 0x14	SLLI
+		RUI_CW,				-- 0x14	SLLI
 		NOP_CW,				-- 0x15	NOP
-		RI_CW,				-- 0x16	SRLI
-		not_implemented,	-- 0x17	SRAI
-		not_implemented,	-- 0x18	SEQI
+		RUI_CW,				-- 0x16	SRLI
+		RUI_CW,				-- 0x17	SRAI
+		RI_CW,				-- 0x18	SEQI
 		RI_CW,				-- 0x19	SNEI
-		not_implemented,	-- 0x1A	SLTI
-		not_implemented,	-- 0x1B	SGTI
+		RI_CW,				-- 0x1A	SLTI
+		RI_CW,				-- 0x1B	SGTI
 		RI_CW,				-- 0x1C	SLEI
 		RI_CW,				-- 0x1D	SGEI
 		not_implemented,	-- 0x1E
@@ -333,7 +333,7 @@ begin  -- dlx_cu_rtl
 					when 35	=> aluOpcode_i <= SUBU; 	-- SUBU
 					when others		=> aluOpcode_i <= NOP;
 				end case;
-			when 2	=> aluOpcode_i <= NOP; 		-- J
+			when 2	=> aluOpcode_i <= ADD; 		-- J
 			when 3	=> aluOpcode_i <= NOP; 		-- JAL
 			when 4	=> aluOpcode_i <= ADD;		-- BEQZ
 			when 5	=> aluOpcode_i <= ADD;		-- BNEZ

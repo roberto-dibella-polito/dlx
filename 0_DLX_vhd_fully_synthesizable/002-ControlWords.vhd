@@ -31,7 +31,7 @@ package DLX_ControlWords is
 	constant NOP_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "00000000001000001";
 	constant LW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11000101111000011";
 	constant SW_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11100001010000001";	
-	--constant J_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "";
+	constant J_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "00010011000001001";
 	--constant JAL_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "";
 	constant BQZ_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11000011000100001";
 	constant BNZ_CW	: std_logic_vector(CW_SIZE-1 downto 0) := "11000011000010001";
