@@ -108,7 +108,7 @@ architecture dlx_cu_hw of dlx_cu is
 		not_implemented,	-- 0x0F	LHI
 		not_implemented,	-- 0x10	
 		not_implemented,	-- 0x11	
-		not_implemented,	-- 0x12	JR
+		JR_CW,				-- 0x12	JR
 		not_implemented,	-- 0x13	JALR
 		RUI_CW,				-- 0x14	SLLI
 		NOP_CW,				-- 0x15	NOP
@@ -353,7 +353,7 @@ begin  -- dlx_cu_rtl
 			when 43	=> aluOpcode_i <= ADD;		-- SW
 			when 9	=> aluOpcode_i <= NOP;		-- ADDU
 			when 19	=> aluOpcode_i <= NOP; 		-- JALR
-			when 18	=> aluOpcode_i <= NOP; 		-- JR
+			when 18	=> aluOpcode_i <= ADD; 		-- JR
 			when 36	=> aluOpcode_i <= NOP; 		-- LBU
 			when 15	=> aluOpcode_i <= NOP; 		-- LHI
 			when 37	=> aluOpcode_i <= NOP; 		-- LHU

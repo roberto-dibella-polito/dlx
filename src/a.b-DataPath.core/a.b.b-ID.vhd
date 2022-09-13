@@ -81,21 +81,34 @@ architecture structure of DLX_ID is
 	signal addr_wRS1, addr_wRS2, addr_wRD	: std_logic_vector(NbitAdd-1 downto 0);
 	signal p_addr_wRS1, p_addr_wRS2, p_addr_wRD	: unsigned(NbitAdd-1 downto 0);
 	signal aRS1_iszero_n, aRS2_iszero_n		: std_logic;
+	signal imm_sel							: std_logic_vector(1 downto 0);
 	
 begin
 		
 	-- SIGN EXTENDER
 	-- It takes 26 bits: if the instruction is a J-type, the
 	-- flag is rised and the right immediate is selected.
-	imm_or_off: process( IMM_ISOFF, IMM_UNS, IMM_I )
+	
+	imm_sel <= IMM_ISOFF & IMM_UNS:
+	
+	--imm_or_off: process( IMM_ISOFF, IMM_UNS, IMM_I )
+	imm_or_off: process( imm_sel, IMM_I )
 	begin
-		if IMM_ISOFF = '1' then
-			IMM_O	<= SXT(IMM_I,IMM_O'length);
-		elsif IMM_UNS = '0' then
-			IMM_O	<= SXT(IMM_I(15 downto 0),IMM_O'length);
-		else
-			IMM_O	<= x0(15 downto 0) & IMM_I(15 downto 0);
-		end if;
+		--if IMM_ISOFF = '1' then
+		--	IMM_O	<= SXT(IMM_I,IMM_O'length);
+		--elsif IMM_UNS = '0' then
+		--	IMM_O	<= SXT(IMM_I(15 downto 0),IMM_O'length);
+		--else
+		--	IMM_O	<= x0(15 downto 0) & IMM_I(15 downto 0);
+		--end if;
+		
+		case imm_sel is
+			when "10" => IMM_O <= SXT(IMM_I,IMM_O'length);
+			when "00" => IMM_O <= SXT(IMM_I(15 downto 0),IMM_O'length);
+			when "01" => IMM_O <= x0(15 downto 0) & IMM_I(15 downto 0);
+			when "11" => IMM_O <= x0;
+		end case;
+		
 	end process;
 	
 	NPC_FWD_O	<= NPC_FWD_I;
