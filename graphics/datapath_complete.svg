@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.07196458"
-     inkscape:cx="-1528.5297"
-     inkscape:cy="-1882.8707"
+     inkscape:zoom="1.1514333"
+     inkscape:cx="871.08825"
+     inkscape:cy="202.79073"
      inkscape:window-width="1366"
      inkscape:window-height="705"
      inkscape:window-x="-8"
@@ -526,7 +526,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#ffffff;stroke:#0000ff;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+       style="display:none;fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
        d="M 3.879153,4.4193426 234.95018,4.4532164 V 76.423985 h 24.39933 V 4.4532133 L 293.8841,4.4193395 V 94.633865 H 3.879153 Z"
        id="path138055"
        inkscape:export-filename="D:\Documenti D\Documenti Politecnico\2. Magistrale\Microelectronic systems\DLX\graphics\datapath.png"
@@ -867,7 +867,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2863">NPC_ALU</tspan></text>
+         id="tspan24475">NPC_ALU</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,54.724171,17.219833)"
@@ -878,7 +878,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2865">NPC_OUT</tspan></text>
+         id="tspan24477">NPC_OUT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,57.514555,36.387663)"
@@ -889,7 +889,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2867">INSTR</tspan></text>
+         id="tspan24479">INSTR</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.06302689,0.06302689,0,51.602343,45.576346)"
@@ -900,7 +900,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="153.62954"
          y="321.83515"
-         id="tspan2869">NPC</tspan></text>
+         id="tspan24481">NPC</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.06302689,0.06302689,0,123.49817,45.587463)"
@@ -911,7 +911,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="124.75779"
          y="321.83515"
-         id="tspan2871">NPC_EX</tspan></text>
+         id="tspan24483">NPC_EX</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.06302689,0.06302689,0,123.36539,57.394558)"
@@ -922,7 +922,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="148.06741"
          y="321.83515"
-         id="tspan2873">RegA</tspan></text>
+         id="tspan24485">RegA</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.06302689,0.06302689,0,123.36539,70.25834)"
@@ -933,7 +933,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="148.56753"
          y="321.83515"
-         id="tspan2875">RegB</tspan></text>
+         id="tspan24487">RegB</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.03425574,0.03425574,0,132.49983,90.580431)"
@@ -944,7 +944,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="89.702483"
          y="321.83515"
-         id="tspan2877">RD_FWD_EX</tspan></text>
+         id="tspan24489">RD_FWD_EX</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.06302689,0.06302689,0,123.36539,84.889063)"
@@ -955,7 +955,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="126.07634"
          y="321.83515"
-         id="tspan2879">RegImm</tspan></text>
+         id="tspan24491">RegImm</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.06302689,0.06302689,0,51.560013,64.672255)"
@@ -966,7 +966,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="172.43787"
          y="321.83515"
-         id="tspan2881">IR</tspan></text>
+         id="tspan24493">IR</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.06499285,0,0,0.06499285,13.265565,32.598407)"
@@ -977,7 +977,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2883">PC</tspan></text>
+         id="tspan24495">PC</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,47.161236,4.11682)"
@@ -988,7 +988,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2885">NPC_SEL</tspan></text>
+         id="tspan24497">NPC_SEL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,16.904734,4.0268606)"
@@ -999,7 +999,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2887">PC_LATCH_EN</tspan></text>
+         id="tspan24499">PC_LATCH_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04711203,0.04711203,0,20.202374,66.983485)"
@@ -1010,7 +1010,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2889">IRAM_ADDRESS
+         id="tspan24501">IRAM_ADDRESS
 </tspan></text>
     <text
        xml:space="preserve"
@@ -1022,7 +1022,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2891">IRAM_DATA
+         id="tspan24503">IRAM_DATA
 </tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
@@ -1056,7 +1056,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2893">IRAM_ADDRESS
+         id="tspan24505">IRAM_ADDRESS
 </tspan></text>
     <text
        xml:space="preserve"
@@ -1068,7 +1068,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2895">IRAM_DATA
+         id="tspan24507">IRAM_DATA
 </tspan></text>
     <path
        id="path857-1-1"
@@ -1087,7 +1087,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="233.08203"
          y="51.732422"
-         id="tspan2897">+</tspan></text>
+         id="tspan24509">+</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.07851962,0,0,0.07851962,5.2118526,30.10092)"
@@ -1098,7 +1098,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="233.08203"
          y="51.732422"
-         id="tspan2899">4</tspan></text>
+         id="tspan24511">4</tspan></text>
     <g
        id="g3573-3-1"
        transform="matrix(0,0.899554,0.899554,0,-37.304262,-22.377667)"
@@ -1269,7 +1269,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2901">NPC_SEL</tspan></text>
+         id="tspan24513">NPC_SEL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04711203,0.04711203,0,2.1556263,18.256078)"
@@ -1280,7 +1280,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2903">PC_LATCH_EN</tspan></text>
+         id="tspan24515">PC_LATCH_EN</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 39.851447,18.170976 V 29.299051"
@@ -1353,7 +1353,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2905">NPC_FWD_OUT</tspan></text>
+         id="tspan24517">NPC_FWD_OUT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04750425,0,0,0.04750425,85.25186,21.078332)"
@@ -1364,7 +1364,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2907">NPC_FWD_I</tspan></text>
+         id="tspan24519">NPC_FWD_I</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,85.215637,63.978989)"
@@ -1375,7 +1375,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2909">RD_FWD_I</tspan></text>
+         id="tspan24521">RD_FWD_I</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,122.69571,64.156571)"
@@ -1386,7 +1386,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2911">RD_FWD_O</tspan></text>
+         id="tspan24523">RD_FWD_O</tspan></text>
     <g
        id="g49724-3-0-7"
        transform="matrix(0,-0.90704299,0.90704299,0,76.541602,95.045689)"
@@ -1429,7 +1429,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2913">ADDR_RD1</tspan></text>
+         id="tspan24525">ADDR_RD1</tspan></text>
     <g
        id="g49724-3-0-3-55"
        transform="matrix(0,-0.90704299,0.90704299,0,76.541602,98.857665)"
@@ -1456,7 +1456,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2915">ADDR_RD2</tspan></text>
+         id="tspan24527">ADDR_RD2</tspan></text>
     <g
        id="g49724-3-0-2-9-7"
        transform="matrix(0,-0.90704299,0.90704299,0,76.541613,103.93604)"
@@ -1483,7 +1483,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2917">DATAIN</tspan></text>
+         id="tspan24529">DATAIN</tspan></text>
     <g
        id="g49724-3-0-3-5-2-5"
        transform="matrix(0,-0.90704299,0.90704299,0,76.541613,106.88582)"
@@ -1526,7 +1526,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2919">ADDR_WR</tspan></text>
+         id="tspan24531">ADDR_WR</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04750425,0,0,0.04750425,125.98366,58.370045)"
@@ -1537,7 +1537,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2921">IMM_O</tspan></text>
+         id="tspan24533">IMM_O</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 122.39312,58.430121 5.4142,-1.2e-5"
@@ -1562,7 +1562,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2923">OUT2</tspan></text>
+         id="tspan24535">OUT2</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04750425,0,0,0.04750425,115.11929,36.615614)"
@@ -1573,7 +1573,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2925">OUT1</tspan></text>
+         id="tspan24537">OUT1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.29819px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
@@ -1691,7 +1691,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2927">RET</tspan></text>
+         id="tspan24539">RET</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,85.785561,46.729533)"
@@ -1702,7 +1702,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2929">CALL</tspan></text>
+         id="tspan24541">CALL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,81.574667,34.963813)"
@@ -1713,7 +1713,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2931">IMM_ISOFF</tspan></text>
+         id="tspan24543">IMM_ISOFF</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,75.923628,16.164557)"
@@ -1724,7 +1724,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2933">IMM_ISOFF</tspan></text>
+         id="tspan24545">IMM_ISOFF</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04750425,0,0,0.04750425,54.686148,-8.9876931)"
@@ -1735,7 +1735,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2935">PIPE_LATCH_EN</tspan></text>
+         id="tspan24547">PIPE_LATCH_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04750425,0,0,0.04750425,70.533947,-8.9876931)"
@@ -1746,7 +1746,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2937">PIPE_CLEAR_n</tspan></text>
+         id="tspan24549">PIPE_CLEAR_n</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,90.635115,46.900888)"
@@ -1757,7 +1757,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2939">SPILL</tspan></text>
+         id="tspan24551">SPILL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,83.95279,10.705788)"
@@ -1768,7 +1768,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2941">RET</tspan></text>
+         id="tspan24553">RET</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,80.063104,11.777101)"
@@ -1779,7 +1779,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2943">CALL</tspan></text>
+         id="tspan24555">CALL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,87.895002,11.948449)"
@@ -1790,7 +1790,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2945">SPILL</tspan></text>
+         id="tspan24557">SPILL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,93.059892,45.864144)"
@@ -1801,7 +1801,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2947">FILL</tspan></text>
+         id="tspan24559">FILL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,102.66038,48.255864)"
@@ -1812,7 +1812,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2949">RS1_EN</tspan></text>
+         id="tspan24561">RS1_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,105.08516,48.507841)"
@@ -1823,7 +1823,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2951">RS2_EN</tspan></text>
+         id="tspan24563">RS2_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,97.810823,50.800214)"
@@ -1834,7 +1834,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2953">RF_WR_EN</tspan></text>
+         id="tspan24565">RF_WR_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,91.596094,10.9117)"
@@ -1845,7 +1845,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2955">FILL</tspan></text>
+         id="tspan24567">FILL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,96.347022,15.847775)"
@@ -1856,7 +1856,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2957">RF_WR_EN</tspan></text>
+         id="tspan24569">RF_WR_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,100.2356,47.442304)"
@@ -1867,7 +1867,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2959">RF_EN</tspan></text>
+         id="tspan24571">RF_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,104.26885,13.150791)"
@@ -1878,7 +1878,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2961">RS1_EN</tspan></text>
+         id="tspan24573">RS1_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,108.22979,13.402782)"
@@ -1889,7 +1889,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2963">RS2_EN</tspan></text>
+         id="tspan24575">RS2_EN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04750425,0.04750425,0,100.30795,12.489869)"
@@ -1900,7 +1900,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2965">RF_EN</tspan></text>
+         id="tspan24577">RF_EN</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 105.41967,39.288487 V 33.874291"
@@ -2169,7 +2169,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2967">IMM_I</tspan></text>
+         id="tspan24579">IMM_I</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 133.7833,33.764969 h -5.88602"
@@ -2644,16 +2644,16 @@
     <g
        id="g3382-4-6-8-0"
        transform="matrix(0.899554,0,0,0.899554,200.23168,32.51646)"
-       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.2223324;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#0000ff;stroke:#0000ff;stroke-width:0.222332;stroke-miterlimit:4;stroke-dasharray:none"
        inkscape:export-filename="D:\Documenti D\Documenti Politecnico\2. Magistrale\Microelectronic systems\DLX\graphics\datapath.png"
        inkscape:export-xdpi="400.00104"
        inkscape:export-ydpi="400.00104">
       <path
-         style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:0.2223324;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#0000ff;fill-opacity:1;stroke:#0000ff;stroke-width:0.222332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 91.68275,24.683832 h 1.32936 l -0.664679,1.229658 z"
          id="path2663-84-3-4-6-0" />
       <path
-         style="fill:#0000ff;stroke:#0000ff;stroke-width:0.2223324;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:#0000ff;stroke:#0000ff;stroke-width:0.222332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 92.347428,18.714768 2e-6,5.969064"
          id="path3233-1-9-2-3-7" />
     </g>
@@ -2757,7 +2757,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="233.08203"
          y="51.732422"
-         id="tspan2969">Zero?</tspan></text>
+         id="tspan24581">Zero?</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.07851962,0,0,0.07851962,174.16698,51.932005)"
@@ -2768,7 +2768,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="233.08203"
          y="51.732422"
-         id="tspan2971">ALU</tspan></text>
+         id="tspan24583">ALU</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 160.77018,36.742723 h -5.11661"
@@ -2869,7 +2869,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2973">NPC_IN</tspan></text>
+         id="tspan24585">NPC_IN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,151.27706,29.335199)"
@@ -2880,7 +2880,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2975">PORT_A</tspan></text>
+         id="tspan24587">PORT_A</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,151.27706,48.06954)"
@@ -2891,7 +2891,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2977">PORT_B</tspan></text>
+         id="tspan24589">PORT_B</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,151.15808,56.874821)"
@@ -2902,7 +2902,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2979">IMM_IN</tspan></text>
+         id="tspan24591">IMM_IN</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,151.27705,67.99569)"
@@ -2913,7 +2913,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2981">RD_FWD_I
+         id="tspan24593">RD_FWD_I
 </tspan></text>
     <text
        xml:space="preserve"
@@ -2925,7 +2925,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2983">RD_FWD_O</tspan></text>
+         id="tspan24595">RD_FWD_O</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,198.59436,64.294208)"
@@ -2936,7 +2936,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2985">DATA_MEM</tspan></text>
+         id="tspan24597">DATA_MEM</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,198.72432,12.750482)"
@@ -2947,7 +2947,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2987">BRANCH_T</tspan></text>
+         id="tspan24599">BRANCH_T</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04711203,0.04711203,0,208.23988,15.894114)"
@@ -2958,7 +2958,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2989">BRANCH_T</tspan></text>
+         id="tspan24601">BRANCH_T</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#0000ff;stroke-width:0.2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
        id="rect1853-5-4-60-7-2"
@@ -2979,7 +2979,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2991">WB_MUX_SEL</tspan></text>
+         id="tspan24603">WB_MUX_SEL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.04711203,0,0,0.04711203,199.83248,38.702386)"
@@ -2990,7 +2990,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2993">ALU_OUT</tspan></text>
+         id="tspan24605">ALU_OUT</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04711203,0.04711203,0,161.71796,30.052653)"
@@ -3001,7 +3001,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2995">MUXB_SEL</tspan></text>
+         id="tspan24607">MUXB_SEL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04711203,0.04711203,0,168.20014,27.949148)"
@@ -3012,7 +3012,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2997">ALU_OP</tspan></text>
+         id="tspan24609">ALU_OP</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04711203,0.04711203,0,154.28917,30.099768)"
@@ -3023,7 +3023,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan2999">MUXA_SEL</tspan></text>
+         id="tspan24611">MUXA_SEL</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 155.65357,36.742723 -1.57936,-0.0089"
@@ -3114,7 +3114,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan3001">DRAM_ADDRESS</tspan></text>
+         id="tspan24613">DRAM_ADDRESS</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 234.15146,55.027671 h -3.67712"
@@ -3142,7 +3142,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan3003">DRAM_DATA</tspan></text>
+         id="tspan24615">DRAM_DATA</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 234.15145,71.251418 h -3.67712"
@@ -3205,31 +3205,31 @@
        inkscape:export-filename="D:\Documenti D\Documenti Politecnico\2. Magistrale\Microelectronic systems\DLX\graphics\datapath.png"
        inkscape:export-xdpi="400.00104"
        inkscape:export-ydpi="400.00104"
-       style="stroke-width:0.2223324;stroke-miterlimit:4;stroke-dasharray:none">
+       style="stroke-width:0.222332;stroke-miterlimit:4;stroke-dasharray:none">
       <path
          id="path857-3-8"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.2223324;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.222332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
          d="m 303.04181,147.93516 v 3.73947 12.09801 3.73947 l 6.81885,-3.73947 v -12.09801 z" />
       <text
          xml:space="preserve"
-         style="font-size:2.40573px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;stroke-width:0.2223324;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+         style="font-size:2.40573px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;stroke-width:0.222332;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
          x="304.22235"
          y="163.43581"
          id="text22562-5-5"><tspan
            sodipodi:role="line"
            id="tspan22560-9-9"
-           style="stroke-width:0.2223324;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+           style="stroke-width:0.222332;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
            x="304.22235"
            y="163.43581">0</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:2.40573px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;stroke-width:0.2223324;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+         style="font-size:2.40573px;line-height:1.25;font-family:Typold;-inkscape-font-specification:Typold;stroke-width:0.222332;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
          x="304.69025"
          y="153.64734"
          id="text22562-0-6-3"><tspan
            sodipodi:role="line"
            id="tspan22560-2-4-2"
-           style="stroke-width:0.2223324;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
+           style="stroke-width:0.222332;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"
            x="304.69025"
            y="153.64734">1</tspan></text>
     </g>
@@ -3350,7 +3350,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan3005">MUXB_SEL</tspan></text>
+         id="tspan24617">MUXB_SEL</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04711203,0.04711203,0,168.20013,13.730629)"
@@ -3361,7 +3361,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan3007">ALU_OP</tspan></text>
+         id="tspan24619">ALU_OP</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.04711203,0.04711203,0,154.28915,15.881257)"
@@ -3372,7 +3372,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="56.25"
          y="321.83515"
-         id="tspan3009">MUXA_SEL</tspan></text>
+         id="tspan24621">MUXA_SEL</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 170.50195,54.920562 h 7.42879 V 21.458385"
@@ -3397,7 +3397,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="71.894429"
          y="321.83515"
-         id="tspan3011">RD_FWD_MEM</tspan></text>
+         id="tspan24623">RD_FWD_MEM</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.03270738,0.03270738,0,206.29695,35.577919)"
@@ -3408,7 +3408,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="70.473898"
          y="321.83515"
-         id="tspan3013">BRANCH_T_MEM</tspan></text>
+         id="tspan24625">BRANCH_T_MEM</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05368401,0.05368401,0,199.72906,65.040686)"
@@ -3419,7 +3419,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="81.230419"
          y="321.83515"
-         id="tspan3015">ALU_OUTREG</tspan></text>
+         id="tspan24627">ALU_OUTREG</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.03164971,0.03164971,0,206.62188,77.688712)"
@@ -3430,7 +3430,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="69.187203"
          y="321.83515"
-         id="tspan3017">DATA_MEM_MEM</tspan></text>
+         id="tspan24629">DATA_MEM_MEM</tspan></text>
     <rect
        style="fill:#b0c9ff;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers stroke fill"
        id="rect10729-08-9-5-9-9-6-4-2-6"
@@ -3471,7 +3471,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="71.894429"
          y="321.83515"
-         id="tspan3019">RD_FWD_MEM</tspan></text>
+         id="tspan24631">RD_FWD_MEM</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.05368401,0.05368401,0,252.68619,65.040686)"
@@ -3482,7 +3482,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="81.230419"
          y="321.83515"
-         id="tspan3021">ALU_OUTREG</tspan></text>
+         id="tspan24633">ALU_OUTREG</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0,-0.03164971,0.03164971,0,259.57902,77.688712)"
@@ -3493,7 +3493,7 @@
        inkscape:export-ydpi="400.00104"><tspan
          x="69.187203"
          y="321.83515"
-         id="tspan3023">DATA_MEM_MEM</tspan></text>
+         id="tspan24635">DATA_MEM_MEM</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 89.803184,33.764969 h 1.807194"
