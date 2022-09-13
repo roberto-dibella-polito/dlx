@@ -1,56 +1,56 @@
-vcom -reportprogress 300 -work work ../../000-globals.vhd
-vcom -reportprogress 300 -work work ../../000-commons/counter_v2.vhd
-vcom -reportprogress 300 -work work ../../000-commons/counter.vhd
-vcom -reportprogress 300 -work work ../../000-commons/mux2to1_1bit_bhv.vhd
-vcom -reportprogress 300 -work work ../../000-commons/mux2to1_bhv.vhd
-vcom -reportprogress 300 -work work ../../01-generic_shifter.vhd
-vcom -reportprogress 300 -work work ../../002-ControlWords.vhd
+vcom -reportprogress 300 -work work ../src/000-globals.vhd
+vcom -reportprogress 300 -work work ../src/000-commons/counter_v2.vhd
+vcom -reportprogress 300 -work work ../src/000-commons/counter.vhd
+vcom -reportprogress 300 -work work ../src/000-commons/mux2to1_1bit_bhv.vhd
+vcom -reportprogress 300 -work work ../src/000-commons/mux2to1_bhv.vhd
+vcom -reportprogress 300 -work work ../src/01-generic_shifter.vhd
+vcom -reportprogress 300 -work work ../src/002-ControlWords.vhd
 
 ################ UNITY UNDER TEST ################################################
 
 ## DATAPTH
 
 # Instruction Fetch
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.a-IF.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.a-IF.vhd
 
 # Instruction Decode
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.b-ID.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/rf_constants.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_datapath.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.b-ID.vhd
 
 # Execute
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU_P4.vhd
-vcom -reportprogress 300 -work work ../../a.b-DataPath.core/a.b.c-EX.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.a-PG_net.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G_block.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU_P4.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.core/a.b.c-EX.vhd
 
-vcom -reportprogress 300 -work work ../../a.b-DataPath.vhd
+vcom -reportprogress 300 -work work ../src/a.b-DataPath.vhd
 
 ## CONTROL UNIT
-vcom -reportprogress 300 -work work ../../a.a.a-bubble_generator.vhd
-vcom -reportprogress 300 -work work ../../a.a-CU_HW.vhd
+vcom -reportprogress 300 -work work ../src/a.a.a-bubble_generator.vhd
+vcom -reportprogress 300 -work work ../src/a.a-CU_HW.vhd
 
 ## TOP-LEVEL ENTITY
-vcom -reportprogress 300 -work work ../../a-DLX.vhd
+vcom -reportprogress 300 -work work ../src/a-DLX.vhd
 
 ############### TESTBENCH ###############################
-#vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_packages/rocache.vhd
-#vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_packages/rwcache.vhd
-vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_romem/romem_async.vhd
-vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem.vhd
-#vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_rwmem/rwmem_async.vhd
-vcom -reportprogress 300 -work work ../../test_bench_and_memory/TB_TOP_DLX.vhd
+#vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_packages/rocache.vhd
+#vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_packages/rwcache.vhd
+vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_romem/romem_async.vhd
+vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_rwmem/rwmem.vhd
+#vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_rwmem/rwmem_async.vhd
+vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_TOP_DLX.vhd
 
 vsim -t 100ps work.dlx_testbench -voptargs=+acc
 
