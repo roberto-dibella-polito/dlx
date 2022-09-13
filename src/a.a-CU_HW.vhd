@@ -274,12 +274,12 @@ begin  -- dlx_cu_rtl
 		elsif Clk'event and Clk = '1' then  -- rising clock edge
 			
 			-- Pipeline should stall
-			if( pipe_enable_i = '1' ) then
-				cw1				<= cw0;
-				aluOpcode1		<= aluOpcode_i;				
+			if( pipe_enable_i = '1' ) then			
 
 				-- If a branch is taken, the pipeline has to be flushed
 				if( branch_taken = '1' ) then	
+					cw1				<= NOP_CW;
+					aluOpcode1		<= NOP;	
 					cw2 <= NOP_CW(CW_SIZE - 1 - 7 downto 0);
 					cw3 <= NOP_CW(CW_SIZE - 1 - 11 downto 0);
 					cw4 <= NOP_CW(CW_SIZE - 1 - 16 downto 0);
@@ -289,6 +289,8 @@ begin  -- dlx_cu_rtl
 					opcode1	<= NOP_OP;
 					-----------------------------------------
 				else				
+					cw1				<= cw0;
+					aluOpcode1		<= aluOpcode_i;					
 					cw2 <= cw1(CW_SIZE - 1 - 7 downto 0);
 					cw3 <= cw2(CW_SIZE - 1 - 11 downto 0);
 					cw4 <= cw3(CW_SIZE - 1 - 16 downto 0);

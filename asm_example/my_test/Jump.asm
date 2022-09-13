@@ -2,7 +2,7 @@ seq r25, r25, r25 	# 0		r25 <= 1
 nop					# 4	
 nop					# 8
 nop					# 12
-nop					# 16
+addi r2, r0, myloop	# 16
 sne r20, r25, r20 	# 20	just to try 
 addi r31, r25, 1	# 24
 

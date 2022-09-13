@@ -104,7 +104,8 @@ begin
 			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/SL.asm.mem",					-- Load&Store test
 			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/rf_test.asm.mem",				-- RF test
 			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/Jump.asm.mem",				-- Jump test
-			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/JumpAndLink.asm.mem",			-- Jump and Link test
+			--file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/JumpAndLink.asm.mem",			-- Jump and Link test
+			file_path	=> "/home/ms22.32/Desktop/DLX/asm_example/my_test/0_myTest.asm.mem",			-- Complete tests
 			ENTRIES		=> 512,
 			DATA_DELAY	=> 3 ns
 		)
@@ -120,8 +121,8 @@ begin
 	-- DRAM
 	DRAM : RWMEM
 		generic map (
-			file_path_init 	=> "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex.txt",
-			file_path 		=> "/home/ms22.32/Desktop/DLX/0_DLX_vhd_fully_synthesizable/test_bench_and_memory/TB_rwmem/hex_out.txt",
+			file_path_init 	=> "/home/ms22.32/Desktop/DLX/test_bench_and_memory/TB_rwmem/hex.txt",
+			file_path 		=> "/home/ms22.32/Desktop/DLX/test_bench_and_memory/TB_rwmem/hex_out.txt",
 			Data_size 		=> 64,
 			Instr_size		=> 32,
 			RAM_DEPTH		=> 256,

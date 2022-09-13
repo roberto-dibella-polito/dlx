@@ -89,7 +89,7 @@ begin
 	-- It takes 26 bits: if the instruction is a J-type, the
 	-- flag is rised and the right immediate is selected.
 	
-	imm_sel <= IMM_ISOFF & IMM_UNS:
+	imm_sel <= IMM_ISOFF & IMM_UNS;
 	
 	--imm_or_off: process( IMM_ISOFF, IMM_UNS, IMM_I )
 	imm_or_off: process( imm_sel, IMM_I )
@@ -106,7 +106,7 @@ begin
 			when "10" => IMM_O <= SXT(IMM_I,IMM_O'length);
 			when "00" => IMM_O <= SXT(IMM_I(15 downto 0),IMM_O'length);
 			when "01" => IMM_O <= x0(15 downto 0) & IMM_I(15 downto 0);
-			when "11" => IMM_O <= x0;
+			when others => IMM_O <= x0;
 		end case;
 		
 	end process;

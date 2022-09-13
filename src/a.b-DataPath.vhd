@@ -249,8 +249,13 @@ begin
 			opc_id_i	<= (others=>'0');
 			
 		elsif(CLK'event and CLK = '1') then
+
+			if( PIPE_CLEAR_n = '0' ) then
+				ir 			<= NOP_OP & ir_reset;
+				npc_id_i 	<= (others=>'0');
+				opc_id_i	<= (others=>'0');
 			
-			if( PIPE_IF_ID_EN = '1' ) then
+			elsif( PIPE_IF_ID_EN = '1' ) then
 
 				ir 			<= instr_if_o;
 				npc_id_i 	<= npc_if_o;
