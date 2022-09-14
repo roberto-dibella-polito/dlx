@@ -1,0 +1,21 @@
+#----------------------------------------------------------
+# snap/.snaprc_snap_complete : snapshot resource file                          
+# label = snap_complete                                      
+#----------------------------------------------------------
+set tmpstr ""
+set tmpbar ""
+lappend tmpstr "dir" $sdir
+lappend tmpstr "label" snap_complete
+lappend tmpstr "fplan" $sdir/ss_snap_complete.fplan.gif
+lappend tmpstr "amoeba" $sdir/ss_snap_complete.amoeba.gif
+lappend tmpstr "place" $sdir/ss_snap_complete.place.gif
+lappend tmpstr "trgGlbOverflowPctH" 0
+lappend tmpstr "trgGlbOverflowPctV" 0.0059182103332
+lappend tmpbar "Congestion"
+lappend tmpstr "Congestion" 0.0059182103332
+lappend tmpbar WNS
+lappend tmpstr WNS 0.01
+lappend tmpbar TNS
+lappend tmpstr TNS 0.0
+lappend tmpbar Overlap
+lappend tmpstr Overlap 0

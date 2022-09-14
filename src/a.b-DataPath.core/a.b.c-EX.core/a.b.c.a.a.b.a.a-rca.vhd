@@ -55,8 +55,10 @@ begin
   Ci_append <= (others => '0');
   
   S_n   <= (('0'&A) + ('0'&B) + (Ci_append&Ci));
-  Co    <= S_n(Nbit) after DRCAC;
-  S     <= S_n(Nbit-1 downto 0) after DRCAS;
+  --Co    <= S_n(Nbit) after DRCAC;
+  --S     <= S_n(Nbit-1 downto 0) after DRCAS;
+	Co    <= S_n(Nbit);
+	S     <= S_n(Nbit-1 downto 0);
   
 end BEHAVIORAL;
 

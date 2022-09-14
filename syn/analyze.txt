@@ -1,0 +1,124 @@
+*************** Previous work directory deleted ****************
+*************** New work directory created *********************
+Running PRESTO HDLC
+Compiling Package Declaration MYTYPES
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration COUNTER_AR
+Compiling Architecture BEHAVIOR of COUNTER_AR
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration COUNTER
+Compiling Architecture BEHAVIOR of COUNTER
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration MUX2TO1_1B
+Compiling Architecture BEHAVIOR of MUX2TO1_1B
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration MUX2TO1
+Compiling Architecture BEHAVIOR of MUX2TO1
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration SHIFTER_GENERIC
+Compiling Architecture BEHAVIORAL of SHIFTER_GENERIC
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Package Declaration DLX_CONTROLWORDS
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration DLX_IF
+Compiling Architecture STRUCTURE of DLX_IF
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Package Declaration RF_CONSTANTS
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration ADDRESS_CONVERTER
+Compiling Architecture BEHAVIOR of ADDRESS_CONVERTER
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration RF_PHYS
+Compiling Architecture BEHAVIOR_ASYNC of RF_PHYS
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration RF_DATAPATH
+Compiling Architecture BEHAVIOR of RF_DATAPATH
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration RF_CU
+Compiling Architecture BEHAVIOR of RF_CU
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration RF
+Compiling Architecture STRUCTURE of RF
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration DLX_ID
+Compiling Architecture STRUCTURE of DLX_ID
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration PG_NET
+Compiling Architecture STRUCT_PG_1 of PG_NET
+Compiling Configuration CFG_STRUCT_PG_1 of PG_NET
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration G_BLOCK
+Compiling Architecture STRUCTURE of G_BLOCK
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration PG_BLOCK
+Compiling Architecture STRUCTURE of PG_BLOCK
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration SPARSE_TREE
+Compiling Architecture STRUCTURE of SPARSE_TREE
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration FA
+Compiling Architecture BEHAVIORAL of FA
+Compiling Configuration CFG_FA_BEHAVIORAL of FA
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration RCA
+Compiling Architecture STRUCTURAL of RCA
+Compiling Architecture BEHAVIORAL of RCA
+Compiling Configuration CFG_RCA_STRUCTURAL of RCA
+Compiling Configuration CFG_RCA_BEHAVIORAL of RCA
+Warning:  The entity 'RCA' has multiple architectures defined. The last defined architecture 'BEHAVIORAL' will be used to build the design by default. (VHD-6)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration CS_BLOCK
+Compiling Architecture STRUCTURE of CS_BLOCK
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration CS_SUM
+Compiling Architecture STRUCTURE of CS_SUM
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration P4
+Compiling Architecture STRUCTURE of P4
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration DLX_ALU
+Compiling Architecture BHV of DLX_ALU
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration DLX_EX
+Compiling Architecture STRUCTURE of DLX_EX
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration DLX_DP
+Compiling Architecture STRUCTURE of DLX_DP
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration DLX_CU
+Compiling Architecture DLX_CU_HW of DLX_CU
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration DLX
+Compiling Architecture DLX_RTL of DLX
+Presto compilation completed successfully.
+Error: Current design is not defined. (UID-4)
+Error: Current design is not defined. (UID-4)
+0

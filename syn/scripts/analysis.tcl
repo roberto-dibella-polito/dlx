@@ -43,7 +43,8 @@ analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.b-G
 analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a.c-PG_block.vhd
 analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.a-SparseTree.vhd
 analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a.a-fa.vhd
-analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd
+#analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca.vhd
+analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a.a-rca_notime.vhd
 analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b.a-csel_block.vhd
 analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a.b-csel_gen.vhd
 analyze -f vhdl -lib WORK ../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a.a-P4Adder.vhd
@@ -61,7 +62,7 @@ analyze -f vhdl -lib WORK ../src/a-DLX.vhd
 set power_preserve_rtl_hier_names true
 
 elaborate DLX -arch dlx_rtl -lib WORK > results/elaborate.txt
-uniquify
+#uniquify
 link
 
 

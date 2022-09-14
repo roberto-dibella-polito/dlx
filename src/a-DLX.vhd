@@ -86,7 +86,7 @@ architecture dlx_rtl of DLX is
 			
 			-- DRAM Data Interface
 			DRAM_ADDRESS	: out std_logic_vector(ADDR_SIZE-1 downto 0);
-			DRAM_DATA		: inout std_logic_vector(2*DATA_SIZE-1 downto 0);
+			DRAM_DATA		: inout std_logic_vector(DATA_SIZE-1 downto 0);
 			
 			-- MEM control signals
 			--LMD_LATCH_EN	: in std_logic;	-- LMD Register Latch Enable

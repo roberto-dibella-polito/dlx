@@ -1,0 +1,302 @@
+ 
+****************************************
+Report : area
+Design : DLX
+Version: F-2011.09-SP3
+Date   : Wed Sep 14 02:02:25 2022
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:                          135
+Number of nets:                           197
+Number of cells:                            2
+Number of combinational cells:              0
+Number of sequential cells:                 0
+Number of macros:                           0
+Number of buf/inv:                          0
+Number of references:                       2
+
+Combinational area:       9537.962040
+Noncombinational area:    8600.844273
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:          18138.806313
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area           Local cell area
+                                  -------------------  ---------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black
+                                  Total       Total    national   national   boxes   Design
+--------------------------------  ----------  -------  ---------  ---------  ------  ------------------------------------------------------------------------
+DLX                               18138.8063    100.0     0.0000     0.0000  0.0000  DLX
+CU_I                                506.9960      2.8   256.6900   250.3060  0.0000  dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19
+dp                                17631.8103     97.2   875.6720  1831.6761  0.0000  DLX_DP_ADDR_SIZE32_DATA_SIZE32
+dp/ex_stage                        3388.5740     18.7    14.3640     0.0000  0.0000  DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5
+dp/ex_stage/alu                    3239.8800     17.9   358.0360     0.0000  0.0000  DLX_ALU_DATA_SIZE32
+dp/ex_stage/alu/adder               592.9140      3.3    73.1500     0.0000  0.0000  P4_Nbit32
+dp/ex_stage/alu/adder/SparseTree    179.5500      1.0     5.0540     0.0000  0.0000  SPARSE_TREE_Nbit32_Ncarry4
+dp/ex_stage/alu/adder/SparseTree/G10
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_0
+dp/ex_stage/alu/adder/SparseTree/G20_1
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_9
+dp/ex_stage/alu/adder/SparseTree/G_2exp_0_2
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_8
+dp/ex_stage/alu/adder/SparseTree/G_2exp_0_3
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_7
+dp/ex_stage/alu/adder/SparseTree/G_2exp_0_4
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_6
+dp/ex_stage/alu/adder/SparseTree/G_2exp_0_5
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_4
+dp/ex_stage/alu/adder/SparseTree/G_2n_0_4_1
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_5
+dp/ex_stage/alu/adder/SparseTree/G_2n_0_5_1
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_3
+dp/ex_stage/alu/adder/SparseTree/G_2n_0_5_2
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_2
+dp/ex_stage/alu/adder/SparseTree/G_2n_0_5_3
+                                      1.5960      0.0     1.5960     0.0000  0.0000  G_BLOCK_1
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_0
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_0
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_1
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_26
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_10
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_17
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_11
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_16
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_12
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_15
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_13
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_14
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_14
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_13
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_2
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_25
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_3
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_24
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_4
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_23
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_5
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_22
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_6
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_21
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_7
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_20
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_8
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_19
+dp/ex_stage/alu/adder/SparseTree/PG_ij_1_9
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_18
+dp/ex_stage/alu/adder/SparseTree/PG_ij_2_0
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_12
+dp/ex_stage/alu/adder/SparseTree/PG_ij_2_1
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_11
+dp/ex_stage/alu/adder/SparseTree/PG_ij_2_2
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_10
+dp/ex_stage/alu/adder/SparseTree/PG_ij_2_3
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_9
+dp/ex_stage/alu/adder/SparseTree/PG_ij_2_4
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_8
+dp/ex_stage/alu/adder/SparseTree/PG_ij_2_5
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_7
+dp/ex_stage/alu/adder/SparseTree/PG_ij_2_6
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_6
+dp/ex_stage/alu/adder/SparseTree/PG_ij_3_0
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_5
+dp/ex_stage/alu/adder/SparseTree/PG_ij_3_1
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_4
+dp/ex_stage/alu/adder/SparseTree/PG_ij_3_2
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_3
+dp/ex_stage/alu/adder/SparseTree/PG_ij_4_0_0
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_2
+dp/ex_stage/alu/adder/SparseTree/PG_ij_4_1_0
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_BLOCK_1
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_1
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_0
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_10
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_23
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_11
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_22
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_12
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_21
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_13
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_20
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_14
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_19
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_15
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_18
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_16
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_17
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_17
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_16
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_18
+                                      3.4580      0.0     3.4580     0.0000  0.0000  PG_NET_15
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_19
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_14
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_2
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_31
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_20
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_13
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_21
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_12
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_22
+                                      3.4580      0.0     3.4580     0.0000  0.0000  PG_NET_11
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_23
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_10
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_24
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_9
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_25
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_8
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_26
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_7
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_27
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_6
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_28
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_5
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_29
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_4
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_3
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_30
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_30
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_3
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_31
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_2
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_32
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_1
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_4
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_29
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_5
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_28
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_6
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_27
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_7
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_26
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_8
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_25
+dp/ex_stage/alu/adder/SparseTree/PG_net_i_9
+                                      2.6600      0.0     2.6600     0.0000  0.0000  PG_NET_24
+dp/ex_stage/alu/adder/SumGen        340.2140      1.9     0.0000     0.0000  0.0000  CS_SUM_Nbit32_N4
+dp/ex_stage/alu/adder/SumGen/CS_Bn_0
+                                     42.0280      0.2     0.0000     0.0000  0.0000  CS_BLOCK_N4_0
+dp/ex_stage/alu/adder/SumGen/CS_Bn_0/Mux
+                                      7.9800      0.0     7.9800     0.0000  0.0000  mux2to1_N4_0
+dp/ex_stage/alu/adder/SumGen/CS_Bn_0/RCA0
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_0
+dp/ex_stage/alu/adder/SumGen/CS_Bn_0/RCA1
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_15
+dp/ex_stage/alu/adder/SumGen/CS_Bn_1
+                                     42.0280      0.2     0.0000     0.0000  0.0000  CS_BLOCK_N4_7
+dp/ex_stage/alu/adder/SumGen/CS_Bn_1/Mux
+                                      7.9800      0.0     7.9800     0.0000  0.0000  mux2to1_N4_7
+dp/ex_stage/alu/adder/SumGen/CS_Bn_1/RCA0
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_14
+dp/ex_stage/alu/adder/SumGen/CS_Bn_1/RCA1
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_13
+dp/ex_stage/alu/adder/SumGen/CS_Bn_2
+                                     42.0280      0.2     0.0000     0.0000  0.0000  CS_BLOCK_N4_6
+dp/ex_stage/alu/adder/SumGen/CS_Bn_2/Mux
+                                      7.9800      0.0     7.9800     0.0000  0.0000  mux2to1_N4_6
+dp/ex_stage/alu/adder/SumGen/CS_Bn_2/RCA0
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_12
+dp/ex_stage/alu/adder/SumGen/CS_Bn_2/RCA1
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_11
+dp/ex_stage/alu/adder/SumGen/CS_Bn_3
+                                     42.0280      0.2     0.0000     0.0000  0.0000  CS_BLOCK_N4_5
+dp/ex_stage/alu/adder/SumGen/CS_Bn_3/Mux
+                                      7.9800      0.0     7.9800     0.0000  0.0000  mux2to1_N4_5
+dp/ex_stage/alu/adder/SumGen/CS_Bn_3/RCA0
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_10
+dp/ex_stage/alu/adder/SumGen/CS_Bn_3/RCA1
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_9
+dp/ex_stage/alu/adder/SumGen/CS_Bn_4
+                                     42.0280      0.2     0.0000     0.0000  0.0000  CS_BLOCK_N4_4
+dp/ex_stage/alu/adder/SumGen/CS_Bn_4/Mux
+                                      7.9800      0.0     7.9800     0.0000  0.0000  mux2to1_N4_4
+dp/ex_stage/alu/adder/SumGen/CS_Bn_4/RCA0
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_8
+dp/ex_stage/alu/adder/SumGen/CS_Bn_4/RCA1
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_7
+dp/ex_stage/alu/adder/SumGen/CS_Bn_5
+                                     42.5600      0.2     0.0000     0.0000  0.0000  CS_BLOCK_N4_3
+dp/ex_stage/alu/adder/SumGen/CS_Bn_5/Mux
+                                      8.5120      0.0     8.5120     0.0000  0.0000  mux2to1_N4_3
+dp/ex_stage/alu/adder/SumGen/CS_Bn_5/RCA0
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_6
+dp/ex_stage/alu/adder/SumGen/CS_Bn_5/RCA1
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_5
+dp/ex_stage/alu/adder/SumGen/CS_Bn_6
+                                     44.9540      0.2     0.0000     0.0000  0.0000  CS_BLOCK_N4_2
+dp/ex_stage/alu/adder/SumGen/CS_Bn_6/Mux
+                                      8.5120      0.0     8.5120     0.0000  0.0000  mux2to1_N4_2
+dp/ex_stage/alu/adder/SumGen/CS_Bn_6/RCA0
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_4
+dp/ex_stage/alu/adder/SumGen/CS_Bn_6/RCA1
+                                     19.4180      0.1    19.4180     0.0000  0.0000  RCA_Nbit4_3
+dp/ex_stage/alu/adder/SumGen/CS_Bn_7
+                                     42.5600      0.2     0.0000     0.0000  0.0000  CS_BLOCK_N4_1
+dp/ex_stage/alu/adder/SumGen/CS_Bn_7/Mux
+                                      8.5120      0.0     8.5120     0.0000  0.0000  mux2to1_N4_1
+dp/ex_stage/alu/adder/SumGen/CS_Bn_7/RCA0
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_2
+dp/ex_stage/alu/adder/SumGen/CS_Bn_7/RCA1
+                                     17.0240      0.1    17.0240     0.0000  0.0000  RCA_Nbit4_1
+dp/ex_stage/alu/r60                 246.8480      1.4   246.8480     0.0000  0.0000  DLX_ALU_DATA_SIZE32_DW01_cmp6_3
+dp/ex_stage/alu/r61                 174.4960      1.0   174.4960     0.0000  0.0000  DLX_ALU_DATA_SIZE32_DW01_cmp6_2
+dp/ex_stage/alu/shifter            1867.5860     10.3   198.1700     0.0000  0.0000  SHIFTER_GENERIC_N32
+dp/ex_stage/alu/shifter/rol_32      309.8900      1.7   309.8900     0.0000  0.0000  SHIFTER_GENERIC_N32_DW_lbsh_0
+dp/ex_stage/alu/shifter/ror_30      309.8900      1.7   309.8900     0.0000  0.0000  SHIFTER_GENERIC_N32_DW_rbsh_0
+dp/ex_stage/alu/shifter/sla_46      256.9560      1.4   256.9560     0.0000  0.0000  SHIFTER_GENERIC_N32_DW_sla_0
+dp/ex_stage/alu/shifter/sll_48      282.7580      1.6   282.7580     0.0000  0.0000  SHIFTER_GENERIC_N32_DW01_ash_0
+dp/ex_stage/alu/shifter/sra_39      259.3500      1.4   259.3500     0.0000  0.0000  SHIFTER_GENERIC_N32_DW_sra_0
+dp/ex_stage/alu/shifter/srl_41      250.5720      1.4   250.5720     0.0000  0.0000  SHIFTER_GENERIC_N32_DW_rash_0
+dp/ex_stage/muxA                     67.2980      0.4    67.2980     0.0000  0.0000  mux2to1_N32_2
+dp/ex_stage/muxB                     67.0320      0.4    67.0320     0.0000  0.0000  mux2to1_N32_1
+dp/id_stage                       11140.8782     61.4   142.8420     0.0000  0.0000  DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32
+dp/id_stage/regfile               10998.0362     60.6     0.0000     0.0000  0.0000  RF_Nbit32_M20_N4_F2
+dp/id_stage/regfile/ControlUnit      66.5000      0.4    48.4120    18.0880  0.0000  RF_CU
+dp/id_stage/regfile/DataPath      10931.5362     60.3     1.8620     0.0000  0.0000  RF_datapath_Nbit32_M20_N4_F2
+dp/id_stage/regfile/DataPath/CANRESTORE_counter
+                                      9.3100      0.1     4.7880     4.5220  0.0000  counter_Nbit1_1
+dp/id_stage/regfile/DataPath/CANSAVE_counter
+                                      9.3100      0.1     4.7880     4.5220  0.0000  counter_Nbit1_2
+dp/id_stage/regfile/DataPath/Conv_RD1
+                                     18.6200      0.1    18.6200     0.0000  0.0000  address_converter_0
+dp/id_stage/regfile/DataPath/Conv_RD2
+                                     18.6200      0.1    18.6200     0.0000  0.0000  address_converter_3
+dp/id_stage/regfile/DataPath/Conv_W
+                                     18.6200      0.1    18.6200     0.0000  0.0000  address_converter_2
+dp/id_stage/regfile/DataPath/Cwp_counter
+                                      9.3100      0.1     4.7880     4.5220  0.0000  counter_Nbit1_0
+dp/id_stage/regfile/DataPath/Mux_en_control
+                                      2.3940      0.0     2.3940     0.0000  0.0000  mux2to1_1b_1
+dp/id_stage/regfile/DataPath/Mux_rd
+                                     11.7040      0.1    11.7040     0.0000  0.0000  mux2to1_N6_0
+dp/id_stage/regfile/DataPath/Mux_rd1_control
+                                      2.3940      0.0     2.3940     0.0000  0.0000  mux2to1_1b_0
+dp/id_stage/regfile/DataPath/Mux_rd2_control
+                                      2.3940      0.0     2.3940     0.0000  0.0000  mux2to1_1b_3
+dp/id_stage/regfile/DataPath/Mux_sf
+                                      2.3940      0.0     2.3940     0.0000  0.0000  mux2to1_N1
+dp/id_stage/regfile/DataPath/Mux_wr
+                                     11.7040      0.1    11.7040     0.0000  0.0000  mux2to1_N6_1
+dp/id_stage/regfile/DataPath/Mux_wr_control
+                                      2.3940      0.0     2.3940     0.0000  0.0000  mux2to1_1b_2
+dp/id_stage/regfile/DataPath/Physical_RF
+                                  10747.9962     59.3  4449.1160  6298.8802  0.0000  RF_phys_Nbit32_Nreg36_NbitAdd6
+dp/id_stage/regfile/DataPath/SF_converter
+                                     18.6200      0.1    18.6200     0.0000  0.0000  address_converter_1
+dp/id_stage/regfile/DataPath/Spill_fill_counter
+                                     34.5800      0.2    21.0140    13.5660  0.0000  counter_Nbit3
+dp/id_stage/regfile/DataPath/Swp_counter
+                                      9.3100      0.1     4.7880     4.5220  0.0000  counter_Nbit1_3
+dp/if_stage                         395.0100      2.2    66.5000   170.2400  0.0000  DLX_IF_IR_SIZE32_PC_SIZE32
+dp/if_stage/add_77                   93.6320      0.5    93.6320     0.0000  0.0000  DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1
+dp/if_stage/mux                      64.6380      0.4    64.6380     0.0000  0.0000  mux2to1_N32_0
+--------------------------------  ----------  -------  ---------  ---------  ------  ------------------------------------------------------------------------
+Total                                                  9537.9620  8600.8443  0.0000
+
+1

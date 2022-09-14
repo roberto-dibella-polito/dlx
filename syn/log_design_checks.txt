@@ -1,0 +1,505 @@
+ 
+****************************************
+check_design summary:
+Version:     F-2011.09-SP3
+Date:        Tue Sep 13 23:58:33 2022
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                    207
+    Unconnected ports (LINT-28)                                    75
+    Feedthrough (LINT-29)                                         115
+    Shorted outputs (LINT-31)                                      14
+    Constant outputs (LINT-52)                                      3
+
+Cells                                                             101
+    Cells do not drive (LINT-1)                                     1
+    Connected to power or ground (LINT-32)                         79
+    Nets connected to multiple pins on same cell (LINT-33)         20
+    Cells have undriven hier pins (LINT-59)                         1
+
+Tristate                                                           71
+    A tristate bus has a non tri-state driver (LINT-34)            39
+    Single tristate driver drives an input pin (LINT-63)           32
+--------------------------------------------------------------------------------
+
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', cell 'Swp_counter' does not drive any nets. (LINT-1)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'IR_IN[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'RF_SPILL' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', port 'RF_FILL' is not connected to any nets. (LINT-28)
+Warning: In design 'counter_Nbit1_0', port 'up_dwn_n' is not connected to any nets. (LINT-28)
+Warning: In design 'counter_Nbit1_1', port 'up_dwn_n' is not connected to any nets. (LINT-28)
+Warning: In design 'counter_Nbit1_2', port 'up_dwn_n' is not connected to any nets. (LINT-28)
+Warning: In design 'counter_Nbit1_3', port 'up_dwn_n' is not connected to any nets. (LINT-28)
+Warning: In design 'SHIFTER_GENERIC_N32_DW01_ash_0', port 'DATA_TC' is not connected to any nets. (LINT-28)
+Warning: In design 'SHIFTER_GENERIC_N32_DW01_ash_0', port 'SH_TC' is not connected to any nets. (LINT-28)
+Warning: In design 'SHIFTER_GENERIC_N32_DW_sla_0', port 'SH_TC' is not connected to any nets. (LINT-28)
+Warning: In design 'SHIFTER_GENERIC_N32_DW_rash_0', port 'DATA_TC' is not connected to any nets. (LINT-28)
+Warning: In design 'SHIFTER_GENERIC_N32_DW_rash_0', port 'SH_TC' is not connected to any nets. (LINT-28)
+Warning: In design 'SHIFTER_GENERIC_N32_DW_sra_0', port 'SH_TC' is not connected to any nets. (LINT-28)
+Warning: In design 'SHIFTER_GENERIC_N32_DW_lbsh_0', port 'SH_TC' is not connected to any nets. (LINT-28)
+Warning: In design 'SHIFTER_GENERIC_N32_DW_rbsh_0', port 'SH_TC' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_ALU_DATA_SIZE32_DW01_cmp6_2', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_ALU_DATA_SIZE32_DW01_cmp6_2', port 'LT' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_ALU_DATA_SIZE32_DW01_cmp6_2', port 'LE' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_ALU_DATA_SIZE32_DW01_cmp6_2', port 'GE' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_ALU_DATA_SIZE32_DW01_cmp6_3', port 'TC' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_ALU_DATA_SIZE32_DW01_cmp6_3', port 'EQ' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_ALU_DATA_SIZE32_DW01_cmp6_3', port 'NE' is not connected to any nets. (LINT-28)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[31]' is connected directly to output port 'INSTR[31]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[30]' is connected directly to output port 'INSTR[30]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[29]' is connected directly to output port 'INSTR[29]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[28]' is connected directly to output port 'INSTR[28]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[27]' is connected directly to output port 'INSTR[27]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[26]' is connected directly to output port 'INSTR[26]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[25]' is connected directly to output port 'INSTR[25]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[24]' is connected directly to output port 'INSTR[24]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[23]' is connected directly to output port 'INSTR[23]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[22]' is connected directly to output port 'INSTR[22]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[21]' is connected directly to output port 'INSTR[21]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[20]' is connected directly to output port 'INSTR[20]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[19]' is connected directly to output port 'INSTR[19]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[18]' is connected directly to output port 'INSTR[18]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[17]' is connected directly to output port 'INSTR[17]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[16]' is connected directly to output port 'INSTR[16]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[15]' is connected directly to output port 'INSTR[15]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[14]' is connected directly to output port 'INSTR[14]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[13]' is connected directly to output port 'INSTR[13]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[12]' is connected directly to output port 'INSTR[12]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[11]' is connected directly to output port 'INSTR[11]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[10]' is connected directly to output port 'INSTR[10]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[9]' is connected directly to output port 'INSTR[9]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[8]' is connected directly to output port 'INSTR[8]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[7]' is connected directly to output port 'INSTR[7]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[6]' is connected directly to output port 'INSTR[6]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[5]' is connected directly to output port 'INSTR[5]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[4]' is connected directly to output port 'INSTR[4]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[3]' is connected directly to output port 'INSTR[3]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[2]' is connected directly to output port 'INSTR[2]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[1]' is connected directly to output port 'INSTR[1]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', input port 'IRAM_DATA[0]' is connected directly to output port 'INSTR[0]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[31]' is connected directly to output port 'NPC_FWD_O[31]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[30]' is connected directly to output port 'NPC_FWD_O[30]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[29]' is connected directly to output port 'NPC_FWD_O[29]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[28]' is connected directly to output port 'NPC_FWD_O[28]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[27]' is connected directly to output port 'NPC_FWD_O[27]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[26]' is connected directly to output port 'NPC_FWD_O[26]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[25]' is connected directly to output port 'NPC_FWD_O[25]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[24]' is connected directly to output port 'NPC_FWD_O[24]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[23]' is connected directly to output port 'NPC_FWD_O[23]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[22]' is connected directly to output port 'NPC_FWD_O[22]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[21]' is connected directly to output port 'NPC_FWD_O[21]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[20]' is connected directly to output port 'NPC_FWD_O[20]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[19]' is connected directly to output port 'NPC_FWD_O[19]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[18]' is connected directly to output port 'NPC_FWD_O[18]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[17]' is connected directly to output port 'NPC_FWD_O[17]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[16]' is connected directly to output port 'NPC_FWD_O[16]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[15]' is connected directly to output port 'NPC_FWD_O[15]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[14]' is connected directly to output port 'NPC_FWD_O[14]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[13]' is connected directly to output port 'NPC_FWD_O[13]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[12]' is connected directly to output port 'NPC_FWD_O[12]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[11]' is connected directly to output port 'NPC_FWD_O[11]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[10]' is connected directly to output port 'NPC_FWD_O[10]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[9]' is connected directly to output port 'NPC_FWD_O[9]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[8]' is connected directly to output port 'NPC_FWD_O[8]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[7]' is connected directly to output port 'NPC_FWD_O[7]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[6]' is connected directly to output port 'NPC_FWD_O[6]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[5]' is connected directly to output port 'NPC_FWD_O[5]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[4]' is connected directly to output port 'NPC_FWD_O[4]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[3]' is connected directly to output port 'NPC_FWD_O[3]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[2]' is connected directly to output port 'NPC_FWD_O[2]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[1]' is connected directly to output port 'NPC_FWD_O[1]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'NPC_FWD_I[0]' is connected directly to output port 'NPC_FWD_O[0]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'RD_FWD_I[4]' is connected directly to output port 'RD_FWD_O[4]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'RD_FWD_I[3]' is connected directly to output port 'RD_FWD_O[3]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'RD_FWD_I[2]' is connected directly to output port 'RD_FWD_O[2]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'RD_FWD_I[1]' is connected directly to output port 'RD_FWD_O[1]'. (LINT-29)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', input port 'RD_FWD_I[0]' is connected directly to output port 'RD_FWD_O[0]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[31]' is connected directly to output port 'DATA_MEM[31]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[30]' is connected directly to output port 'DATA_MEM[30]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[29]' is connected directly to output port 'DATA_MEM[29]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[28]' is connected directly to output port 'DATA_MEM[28]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[27]' is connected directly to output port 'DATA_MEM[27]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[26]' is connected directly to output port 'DATA_MEM[26]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[25]' is connected directly to output port 'DATA_MEM[25]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[24]' is connected directly to output port 'DATA_MEM[24]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[23]' is connected directly to output port 'DATA_MEM[23]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[22]' is connected directly to output port 'DATA_MEM[22]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[21]' is connected directly to output port 'DATA_MEM[21]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[20]' is connected directly to output port 'DATA_MEM[20]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[19]' is connected directly to output port 'DATA_MEM[19]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[18]' is connected directly to output port 'DATA_MEM[18]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[17]' is connected directly to output port 'DATA_MEM[17]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[16]' is connected directly to output port 'DATA_MEM[16]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[15]' is connected directly to output port 'DATA_MEM[15]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[14]' is connected directly to output port 'DATA_MEM[14]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[13]' is connected directly to output port 'DATA_MEM[13]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[12]' is connected directly to output port 'DATA_MEM[12]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[11]' is connected directly to output port 'DATA_MEM[11]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[10]' is connected directly to output port 'DATA_MEM[10]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[9]' is connected directly to output port 'DATA_MEM[9]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[8]' is connected directly to output port 'DATA_MEM[8]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[7]' is connected directly to output port 'DATA_MEM[7]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[6]' is connected directly to output port 'DATA_MEM[6]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[5]' is connected directly to output port 'DATA_MEM[5]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[4]' is connected directly to output port 'DATA_MEM[4]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[3]' is connected directly to output port 'DATA_MEM[3]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[2]' is connected directly to output port 'DATA_MEM[2]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[1]' is connected directly to output port 'DATA_MEM[1]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'PORT_B[0]' is connected directly to output port 'DATA_MEM[0]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'RD_FWD_IN[4]' is connected directly to output port 'RD_FWD_OUT[4]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'RD_FWD_IN[3]' is connected directly to output port 'RD_FWD_OUT[3]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'RD_FWD_IN[2]' is connected directly to output port 'RD_FWD_OUT[2]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'RD_FWD_IN[1]' is connected directly to output port 'RD_FWD_OUT[1]'. (LINT-29)
+Warning: In design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5', input port 'RD_FWD_IN[0]' is connected directly to output port 'RD_FWD_OUT[0]'. (LINT-29)
+Warning: In design 'SPARSE_TREE_Nbit32_Ncarry4', input port 'Cin' is connected directly to output port 'Cout[0]'. (LINT-29)
+Warning: In design 'address_converter_1', input port 'ADDR[1]' is connected directly to output port 'PH_ADDR[1]'. (LINT-29)
+Warning: In design 'address_converter_1', input port 'ADDR[0]' is connected directly to output port 'PH_ADDR[0]'. (LINT-29)
+Warning: In design 'address_converter_2', input port 'ADDR[1]' is connected directly to output port 'PH_ADDR[1]'. (LINT-29)
+Warning: In design 'address_converter_2', input port 'ADDR[0]' is connected directly to output port 'PH_ADDR[0]'. (LINT-29)
+Warning: In design 'SHIFTER_GENERIC_N32_DW_sla_0', input port 'A[0]' is connected directly to output port 'B[0]'. (LINT-29)
+Warning: In design 'SHIFTER_GENERIC_N32_DW_sra_0', input port 'A[31]' is connected directly to output port 'B[31]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', input port 'A[1]' is connected directly to output port 'SUM[1]'. (LINT-29)
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_1', input port 'A[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', output port 'PIPE_IF_ID_EN' is connected directly to output port 'PIPE_MEM_WB_EN'. (LINT-31)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', output port 'PIPE_IF_ID_EN' is connected directly to output port 'PIPE_ID_EX_EN'. (LINT-31)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', output port 'RF_CALL' is connected directly to output port 'RF_RET'. (LINT-31)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', output port 'IMM_O[31]' is connected directly to output port 'IMM_O[25]'. (LINT-31)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', output port 'IMM_O[31]' is connected directly to output port 'IMM_O[26]'. (LINT-31)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', output port 'IMM_O[31]' is connected directly to output port 'IMM_O[27]'. (LINT-31)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', output port 'IMM_O[31]' is connected directly to output port 'IMM_O[28]'. (LINT-31)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', output port 'IMM_O[31]' is connected directly to output port 'IMM_O[29]'. (LINT-31)
+Warning: In design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32', output port 'IMM_O[31]' is connected directly to output port 'IMM_O[30]'. (LINT-31)
+Warning: In design 'RF_CU', output port 'RF_ENABLE' is connected directly to output port 'CNT_SPILL_FILL'. (LINT-31)
+Warning: In design 'RF_CU', output port 'RST_RF' is connected directly to output port 'LD_SAVE'. (LINT-31)
+Warning: In design 'RF_CU', output port 'CNT_SAVE' is connected directly to output port 'CNT_REST'. (LINT-31)
+Warning: In design 'RF_CU', output port 'RST_SWP' is connected directly to output port 'RST_REST'. (LINT-31)
+Warning: In design 'RF_CU', output port 'RST_SWP' is connected directly to output port 'RST_CWP'. (LINT-31)
+Warning: In design 'DLX', a pin on submodule 'dp' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CALL' is connected to logic 0. 
+Warning: In design 'DLX', a pin on submodule 'dp' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'RET' is connected to logic 0. 
+Warning: In design 'DLX', a pin on submodule 'dp' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'RF_EN' is connected to logic 1. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[31]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[30]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[29]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[28]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[27]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[26]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[25]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[24]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[22]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[21]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[20]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[19]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[18]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[17]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[16]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[7]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 1. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[0]' is connected to logic 0. 
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', a pin on submodule 'add_77' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'DLX_ALU_DATA_SIZE32', a pin on submodule 'shifter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'SHIFT_ROTATE' is connected to logic 1. 
+Warning: In design 'DLX_ALU_DATA_SIZE32', a pin on submodule 'r61' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TC' is connected to logic 0. 
+Warning: In design 'DLX_ALU_DATA_SIZE32', a pin on submodule 'r60' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'TC' is connected to logic 1. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'SF_converter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'ADDR[4]' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'SF_converter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'ADDR[3]' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Cwp_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'load' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Cwp_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'D_in[0]' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Swp_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'load' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Swp_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'D_in[0]' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Spill_fill_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'load' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Spill_fill_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'up_dwn_n' is connected to logic 1. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Spill_fill_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'D_in[2]' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Spill_fill_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'D_in[1]' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Spill_fill_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'D_in[0]' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'CANSAVE_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'clear_n' is connected to logic 1. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'CANSAVE_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'D_in[0]' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'CANRESTORE_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'load' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'CANRESTORE_counter' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'D_in[0]' is connected to logic 0. 
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', a pin on submodule 'Mux_rd2_control' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'IN0' is connected to logic 0. 
+Warning: In design 'SHIFTER_GENERIC_N32', a pin on submodule 'sll_48' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DATA_TC' is connected to logic 0. 
+Warning: In design 'SHIFTER_GENERIC_N32', a pin on submodule 'sll_48' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'SH_TC' is connected to logic 0. 
+Warning: In design 'SHIFTER_GENERIC_N32', a pin on submodule 'sla_46' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'SH_TC' is connected to logic 0. 
+Warning: In design 'SHIFTER_GENERIC_N32', a pin on submodule 'srl_41' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'DATA_TC' is connected to logic 0. 
+Warning: In design 'SHIFTER_GENERIC_N32', a pin on submodule 'srl_41' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'SH_TC' is connected to logic 0. 
+Warning: In design 'SHIFTER_GENERIC_N32', a pin on submodule 'sra_39' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'SH_TC' is connected to logic 0. 
+Warning: In design 'SHIFTER_GENERIC_N32', a pin on submodule 'rol_32' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'SH_TC' is connected to logic 0. 
+Warning: In design 'SHIFTER_GENERIC_N32', a pin on submodule 'ror_30' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'SH_TC' is connected to logic 0. 
+Warning: In design 'CS_BLOCK_N4_0', a pin on submodule 'RCA0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 0. 
+Warning: In design 'CS_BLOCK_N4_0', a pin on submodule 'RCA1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 1. 
+Warning: In design 'CS_BLOCK_N4_1', a pin on submodule 'RCA0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 0. 
+Warning: In design 'CS_BLOCK_N4_1', a pin on submodule 'RCA1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 1. 
+Warning: In design 'CS_BLOCK_N4_2', a pin on submodule 'RCA0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 0. 
+Warning: In design 'CS_BLOCK_N4_2', a pin on submodule 'RCA1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 1. 
+Warning: In design 'CS_BLOCK_N4_3', a pin on submodule 'RCA0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 0. 
+Warning: In design 'CS_BLOCK_N4_3', a pin on submodule 'RCA1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 1. 
+Warning: In design 'CS_BLOCK_N4_4', a pin on submodule 'RCA0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 0. 
+Warning: In design 'CS_BLOCK_N4_4', a pin on submodule 'RCA1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 1. 
+Warning: In design 'CS_BLOCK_N4_5', a pin on submodule 'RCA0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 0. 
+Warning: In design 'CS_BLOCK_N4_5', a pin on submodule 'RCA1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 1. 
+Warning: In design 'CS_BLOCK_N4_6', a pin on submodule 'RCA0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 0. 
+Warning: In design 'CS_BLOCK_N4_6', a pin on submodule 'RCA1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 1. 
+Warning: In design 'CS_BLOCK_N4_7', a pin on submodule 'RCA0' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 0. 
+Warning: In design 'CS_BLOCK_N4_7', a pin on submodule 'RCA1' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 1. 
+Warning: In design 'DLX', the same net is connected to more than one pin on submodule 'dp'. (LINT-33)
+   Net 'pipe_ex_mem_en_i' is connected to pins 'PIPE_ID_EX_EN', 'PIPE_EX_MEM_EN''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[25]' is connected to pins 'ADDR_RS1[4]', 'IMM_I[25]''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[24]' is connected to pins 'ADDR_RS1[3]', 'IMM_I[24]''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[23]' is connected to pins 'ADDR_RS1[2]', 'IMM_I[23]''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[22]' is connected to pins 'ADDR_RS1[1]', 'IMM_I[22]''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[21]' is connected to pins 'ADDR_RS1[0]', 'IMM_I[21]''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[20]' is connected to pins 'ADDR_RS2[4]', 'IMM_I[20]''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[19]' is connected to pins 'ADDR_RS2[3]', 'IMM_I[19]''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[18]' is connected to pins 'ADDR_RS2[2]', 'IMM_I[18]''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[17]' is connected to pins 'ADDR_RS2[1]', 'IMM_I[17]''.
+Warning: In design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32', the same net is connected to more than one pin on submodule 'id_stage'. (LINT-33)
+   Net 'ir[16]' is connected to pins 'ADDR_RS2[0]', 'IMM_I[16]''.
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', the same net is connected to more than one pin on submodule 'add_77'. (LINT-33)
+   Net 'n98' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'CI'.
+Warning: In design 'DLX_IF_IR_SIZE32_PC_SIZE32', the same net is connected to more than one pin on submodule 'add_77'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'B[1]', 'B[0]''.
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', the same net is connected to more than one pin on submodule 'SF_converter'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'ADDR[4]', 'ADDR[3]''.
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', the same net is connected to more than one pin on submodule 'Cwp_counter'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'load', 'D_in[0]''.
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', the same net is connected to more than one pin on submodule 'Swp_counter'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'load', 'D_in[0]''.
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', the same net is connected to more than one pin on submodule 'Spill_fill_counter'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'load', 'D_in[2]'', 'D_in[1]', 'D_in[0]'.
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', the same net is connected to more than one pin on submodule 'CANRESTORE_counter'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'load', 'D_in[0]''.
+Warning: In design 'SHIFTER_GENERIC_N32', the same net is connected to more than one pin on submodule 'sll_48'. (LINT-33)
+   Net 'n13' is connected to pins 'DATA_TC', 'SH_TC''.
+Warning: In design 'SHIFTER_GENERIC_N32', the same net is connected to more than one pin on submodule 'srl_41'. (LINT-33)
+   Net 'n15' is connected to pins 'DATA_TC', 'SH_TC''.
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[0]' has non three-state driver 'dp/data_mem_mem_i_reg[0]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[1]' has non three-state driver 'dp/data_mem_mem_i_reg[1]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[2]' has non three-state driver 'dp/data_mem_mem_i_reg[2]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[3]' has non three-state driver 'dp/data_mem_mem_i_reg[3]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[4]' has non three-state driver 'dp/data_mem_mem_i_reg[4]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[5]' has non three-state driver 'dp/data_mem_mem_i_reg[5]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[6]' has non three-state driver 'dp/data_mem_mem_i_reg[6]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[7]' has non three-state driver 'dp/data_mem_mem_i_reg[7]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[8]' has non three-state driver 'dp/data_mem_mem_i_reg[8]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[9]' has non three-state driver 'dp/data_mem_mem_i_reg[9]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[10]' has non three-state driver 'dp/data_mem_mem_i_reg[10]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[11]' has non three-state driver 'dp/data_mem_mem_i_reg[11]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[12]' has non three-state driver 'dp/data_mem_mem_i_reg[12]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[13]' has non three-state driver 'dp/data_mem_mem_i_reg[13]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[14]' has non three-state driver 'dp/data_mem_mem_i_reg[14]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[15]' has non three-state driver 'dp/data_mem_mem_i_reg[15]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[16]' has non three-state driver 'dp/data_mem_mem_i_reg[16]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[17]' has non three-state driver 'dp/data_mem_mem_i_reg[17]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[18]' has non three-state driver 'dp/data_mem_mem_i_reg[18]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[19]' has non three-state driver 'dp/data_mem_mem_i_reg[19]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[20]' has non three-state driver 'dp/data_mem_mem_i_reg[20]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[21]' has non three-state driver 'dp/data_mem_mem_i_reg[21]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[22]' has non three-state driver 'dp/data_mem_mem_i_reg[22]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[23]' has non three-state driver 'dp/data_mem_mem_i_reg[23]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[24]' has non three-state driver 'dp/data_mem_mem_i_reg[24]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[25]' has non three-state driver 'dp/data_mem_mem_i_reg[25]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[26]' has non three-state driver 'dp/data_mem_mem_i_reg[26]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[27]' has non three-state driver 'dp/data_mem_mem_i_reg[27]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[28]' has non three-state driver 'dp/data_mem_mem_i_reg[28]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[29]' has non three-state driver 'dp/data_mem_mem_i_reg[29]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[30]' has non three-state driver 'dp/data_mem_mem_i_reg[30]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'DRAM_DATA[31]' has non three-state driver 'dp/data_mem_mem_i_reg[31]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'dp/id_stage/regfile/canrestore' has non three-state driver 'dp/id_stage/regfile/DataPath/CANRESTORE_counter/Q_reg[0]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'dp/id_stage/regfile/cansave' has non three-state driver 'dp/id_stage/regfile/DataPath/CANSAVE_counter/Q_reg[0]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'dp/id_stage/regfile/DataPath/Swp_counter/Q[0]' has non three-state driver 'dp/id_stage/regfile/DataPath/Swp_counter/Q_reg[0]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'dp/id_stage/regfile/DataPath/spill_fill_addr[0]' has non three-state driver 'dp/id_stage/regfile/DataPath/Spill_fill_counter/Q_reg[0]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'dp/id_stage/regfile/DataPath/spill_fill_addr[1]' has non three-state driver 'dp/id_stage/regfile/DataPath/Spill_fill_counter/Q_reg[1]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'dp/id_stage/regfile/DataPath/addr_sf_in[2]' has non three-state driver 'dp/id_stage/regfile/DataPath/Spill_fill_counter/Q_reg[2]/Q'. (LINT-34)
+Warning: In design 'DLX', three-state bus 'dp/id_stage/regfile/DataPath/CWP[0]' has non three-state driver 'dp/id_stage/regfile/DataPath/Cwp_counter/Q_reg[0]/Q'. (LINT-34)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', output port 'RF_CALL' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', output port 'RF_RET' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19', output port 'RF_EN' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'RF_datapath_Nbit32_M20_N4_F2', input pin 'Q[0]' of hierarchical cell 'Swp_counter' has one or more internal loads, but is not connected to any nets. 'Logic 0' is assumed. (LINT-59)
+Warning: Net 'dp/z_word[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[7]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[8]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[9]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[10]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[11]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[12]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[13]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[14]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[15]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[16]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[17]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[18]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[19]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[20]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[21]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[22]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[23]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[24]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[25]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[26]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[27]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[28]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[29]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[30]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'dp/z_word[31]' has a single tri-state driver.  (LINT-63)
+1

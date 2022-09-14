@@ -1,0 +1,785 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.11-s080_1, built Fri Aug 4 11:13:11 PDT 2017
+Options:	
+Date:		Wed Sep 14 02:38:51 2022
+Host:		localhost.localdomain (x86_64 w/Linux 3.10.0-1062.12.1.el7.x86_64) (1core*12cpus*Westmere E56xx/L56xx/X56xx (Nehalem-C) 4096KB)
+OS:		CentOS Linux release 7.7.1908 (Core)
+
+License:
+		invs	Innovus Implementation System	17.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getDrawView
+<CMD> loadWorkspace -name Physical
+<CMD> win
+<CMD> set defHierChar /
+Set Default Input Pin Transition as 0.1 ps.
+<CMD> set delaycal_input_transition_delay 0.1ps
+<CMD> set fpIsMaxIoHeight 0
+<CMD> set init_gnd_net gnd
+<CMD> set init_mmmc_file Default.view
+<CMD> set init_oa_search_lib {}
+<CMD> set init_pwr_net vdd
+<CMD> set init_verilog ../netlist/dlx_pr.v
+<CMD> set init_lef_file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> init_design
+#% Begin Load MMMC data ... (date=09/14 02:40:44, mem=451.0M)
+#% End Load MMMC data ... (date=09/14 02:40:44, total cpu=0:00:00.0, real=0:00:00.0, peak res=451.1M, current mem=451.1M)
+high standard low
+
+Loading LEF file /software/dk/nangate45/lef/NangateOpenCellLibrary.lef ...
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Wed Sep 14 02:40:44 2022
+viaInitial ends at Wed Sep 14 02:40:44 2022
+Loading view definition file from Default.view
+Reading libsTYP timing library '/software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND2_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND3_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AND4_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI21_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI22_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI211_X4' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X1' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'ZN' of cell 'AOI221_X2' is not defined in the library. (File /software/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm_nowlm.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 134 cells in library 'NangateOpenCellLibrary' 
+*** End library_loading (cpu=0.03min, real=0.03min, mem=16.6M, fe_cpu=0.62min, fe_real=1.92min, fe_mem=519.3M) ***
+#% Begin Load netlist data ... (date=09/14 02:40:46, mem=545.1M)
+*** Begin netlist parsing (mem=519.3M) ***
+Created 134 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../netlist/dlx_pr.v'
+
+*** Memory Usage v#1 (Current mem = 523.316M, initial mem = 179.684M) ***
+*** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=523.3M) ***
+#% End Load netlist data ... (date=09/14 02:40:46, total cpu=0:00:00.2, real=0:00:00.0, peak res=545.1M, current mem=478.1M)
+Top level cell is DLX.
+Hooked 134 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell DLX ...
+*** Netlist is unique.
+** info: there are 135 modules.
+** info: there are 9423 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 559.738M, initial mem = 179.684M) ***
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../netlist/dlx_pr.sdc' ...
+Current (total cpu=0:00:38.6, real=0:01:56, peak res=610.4M, current mem=610.4M)
+INFO (CTE): Constraints read successfully.
+WARNING (CTE-25): Line: 8 of File ../netlist/dlx_pr.sdc : Skipped unsupported command: set_units
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=619.7M, current mem=619.7M)
+Current (total cpu=0:00:38.7, real=0:01:56, peak res=619.7M, current mem=619.7M)
+Total number of combinational cells: 99
+Total number of sequential cells: 29
+Total number of tristate cells: 6
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3
+Total number of usable buffers: 9
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV_X1 INV_X2 INV_X4 INV_X8 INV_X16 INV_X32
+Total number of usable inverters: 6
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Reading Capacitance Table File /software/dk/nangate45/lef/captables/NCSU_FreePDK_45nm.capTbl ...
+Cap table was created using Encounter 08.10-p004_1.
+Process name: master_techFreePDK45.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default
+    RC-Corner Name        : standard
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 300 Celsius
+    RC-Corner Cap Table   : '/software/dk/nangate45/lef/captables/NCSU_FreePDK_45nm.capTbl'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+*** Message Summary: 20 warning(s), 0 error(s)
+
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -coreMarginsBy die -site FreePDK45_38x28_10R_NP_162NW_34O -r 1.0 0.6 0.5 0.5 0.5 0.5
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site FreePDK45_38x28_10R_NP_162NW_34O -r 1.0 0.6 5 5 5 5
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site FreePDK45_38x28_10R_NP_162NW_34O -r 0.984608289618 0.599959 5.13 5.04 5.13 5.04
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {gnd vdd} -type core_rings -follow core -layer {top metal9 bottom metal9 left metal10 right metal10} -width {top 0.8 bottom 0.8 left 0.8 right 0.8} -spacing {top 0.8 bottom 0.8 left 0.8 right 0.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Ring generation is complete.
+vias are now being generated.
+addRing created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal9 |        4       |       NA       |
+|  via9  |        8       |        0       |
+| metal10|        4       |       NA       |
++--------+----------------+----------------+
+<CMD> selectWire 183.0850 1.3200 183.8850 178.1600 10 vdd
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length 0 -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring }
+addStripe will allow jog to connect padcore ring and block ring.
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+AddStripe segment minimum length set to 1
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {vdd gnd} -layer metal10 -direction vertical -width 0.8 -spacing 0.8 -set_to_set_distance 20 -start_from left -start_offset 15 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal10 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal10 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 16 wires.
+ViaGen created 32 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  via9  |       32       |        0       |
+| metal10|       16       |       NA       |
++--------+----------------+----------------+
+<CMD> uiSetTool ruler
+<CMD> get_visible_nets
+<CMD> zoomSelected
+<CMD> uiSetTool ruler
+<CMD> get_visible_nets
+<CMD> uiSetTool ruler
+<CMD> uiSetTool select
+<CMD> deselectAll
+**ERROR: (IMPSYT-6000):	No Object Selected.
+<CMD> gui_select -rect {-99.008 10.694 -93.933 1.770}
+<CMD> gui_select -rect {-88.510 -5.054 -110.556 25.392}
+<CMD> get_visible_nets
+invalid command name "leClearAllRuler()"
+<CMD> selectObject IO_Pin CLK
+<CMD> deselectAll
+<CMD> get_visible_nets
+<CMD> fit
+<CMD> uiSetTool ruler
+<CMD> get_visible_nets
+<CMD> get_visible_nets
+<CMD> fit
+<CMD> undo
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length 0 -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring }
+addStripe will allow jog to connect padcore ring and block ring.
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+AddStripe segment minimum length set to 1
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {vdd gnd} -layer metal10 -direction vertical -width 0.8 -spacing 0.8 -set_to_set_distance 20 -start_from left -start_offset 15 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal10 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal10 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 16 wires.
+ViaGen created 32 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  via9  |       32       |        0       |
+| metal10|       16       |       NA       |
++--------+----------------+----------------+
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length 0 -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring }
+addStripe will allow jog to connect padcore ring and block ring.
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+AddStripe segment minimum length set to 1
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {vdd gnd} -layer metal10 -direction vertical -width 0.8 -spacing 0.8 -set_to_set_distance 20 -start_from left -start_offset 15 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit metal10 -padcore_ring_bottom_layer_limit metal1 -block_ring_top_layer_limit metal10 -block_ring_bottom_layer_limit metal1 -use_wire_group 0 -snap_wire_center_to_grid None -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (20.53, 1.32) (20.53, 178.16) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (40.53, 1.32) (40.53, 178.16) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (60.53, 1.32) (60.53, 178.16) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (80.53, 1.32) (80.53, 178.16) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (100.53, 1.32) (100.53, 178.16) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (120.53, 1.32) (120.53, 178.16) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (140.53, 1.32) (140.53, 178.16) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (160.53, 1.32) (160.53, 178.16) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (22.13, 2.92) (22.13, 176.56) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (42.13, 2.92) (42.13, 176.56) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (62.13, 2.92) (62.13, 176.56) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (82.13, 2.92) (82.13, 176.56) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (102.13, 2.92) (102.13, 176.56) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (122.13, 2.92) (122.13, 176.56) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (142.13, 2.92) (142.13, 176.56) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (162.13, 2.92) (162.13, 176.56) because same wire already exists.
+Stripe generation is complete.
+<CMD> get_visible_nets
+<CMD> get_visible_nets
+<CMD> get_visible_nets
+<CMD> get_visible_nets
+<CMD> get_visible_nets
+<CMD> get_visible_nets
+<CMD> get_visible_nets
+Innovus terminated by internal (SEGV) error/signal...
+*** Stack trace:
+*** Stack trace:
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0xe53733a]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(syStackTrace+0x6b)[0xe5376fb]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x38b68f5]
+/lib64/libpthread.so.0(+0xf5f0)[0x7f676f69c5f0]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(malloc+0xa8)[0x3af3d28]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN7QStringC1EiN2Qt14InitializationE+0x16)[0x7f6773dd42b6]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(+0x11820a)[0x7f6773dda20a]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZNK7QString3argERKS_iRK5QChar+0x11d)[0x7f6773dda72d]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0xc9df221]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z12winUpdateMsgP7winsWin+0x5d)[0xce9078d]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z20winEventUpdateCursorP7winsWinPvi+0x80)[0xcb216d0]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0xcb28ed5]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z14winEventNotifyP7winsWiniiii+0x389)[0xce81339]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN6winsQt14mouseMoveEventEP11QMouseEvent+0x9b)[0xce9269b]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN7QWidget5eventEP6QEvent+0xb89)[0x7f677459b419]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_ZN6winsQt5eventEP6QEvent+0x2c)[0xce92ecc]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent+0x8c)[0x7f677454536c]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN12QApplication6notifyEP7QObjectP6QEvent+0x3d6)[0x7f677454de56]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN16QCoreApplication14notifyInternalEP7QObjectP6QEvent+0x6d)[0x7f6773eb5e8d]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN19QApplicationPrivate14sendMouseEventEP7QWidgetP11QMouseEventS1_S1_PS1_R8QPointerIS0_Eb+0x153)[0x7f677454d5e3]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN9QETWidget19translateMouseEventEPK7_XEvent+0xa5d)[0x7f67745c560d]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN12QApplication15x11ProcessEventEP7_XEvent+0x78e)[0x7f67745c3bbe]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4(_ZN19QEventDispatcherX1113processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x24e)[0x7f67745ec73e]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x183)[0x7f67758cff33]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN16QCoreApplication13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x2f)[0x7f6773ebac4f]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so(+0x1f2ec)[0x7f67758d02ec]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(Tcl_DoOneEvent+0xc0)[0x12ae8670]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x7f)[0x7f67758cfe2f]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN10QEventLoop13processEventsE6QFlagsINS_17ProcessEventsFlagEE+0x2f)[0x7f6773eb402f]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0x17d)[0x7f6773eb432d]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4(_ZN16QCoreApplication4execEv+0x89)[0x7f6773ebb5a9]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so(_ZN13TqApplication4execEv+0xdf)[0x7f67758d287f]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(_Z12edi_app_initP10Tcl_Interp+0x259)[0x3958069]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(Tcl_MainEx+0x177)[0x12ae2f17]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus(main+0x1d6)[0x3368176]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x7f676e7c0505]
+/software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/innovus/bin/64bit/innovus[0x38b3369]
+========================================
+               pstack
+========================================
+Thread 19 (Thread 0x7f676bd67700 (LWP 18318)):
+#0  0x00007f676e893953 in select () from /lib64/libc.so.6
+#1  0x0000000012b26118 in NotifierThreadProc ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 18 (Thread 0x7f676525b700 (LWP 18320)):
+#0  0x00007f676e86380d in nanosleep () from /lib64/libc.so.6
+#1  0x00007f676e8636a4 in sleep () from /lib64/libc.so.6
+#2  0x000000000e550f7a in syiPeakMem(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 17 (Thread 0x7f6764959700 (LWP 18327)):
+#0  0x00007f676f69be5d in nanosleep () from /lib64/libpthread.so.0
+#1  0x00000000049b48f6 in rdaiLicRecheck(void*) ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 16 (Thread 0x7f6761cc9700 (LWP 18349)):
+#0  0x00007f676f69c381 in sigwait () from /lib64/libpthread.so.0
+#1  0x00000000038b35fd in ctrlCHandle(void*) ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 15 (Thread 0x7f674d07d700 (LWP 18759)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f6773d8c9f6 in QWaitCondition::wait(QMutex*, unsigned long) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#2  0x00007f6774a98dde in QFileInfoGatherer::run() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#3  0x00007f6773d8bf4b in QThreadPrivate::start(void*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#4  0x0000000003b00ad9 in create_head(void*) ()
+#5  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 14 (Thread 0x7f674c77b700 (LWP 18763)):
+#0  0x00007f676e893953 in select () from /lib64/libc.so.6
+#1  0x00007f6773ee759b in qt_safe_select(int, fd_set*, fd_set*, fd_set*, timeval const*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#2  0x00007f6773eebd73 in QEventDispatcherUNIXPrivate::doSelect(QFlags<QEventLoop::ProcessEventsFlag>, timeval*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#3  0x00007f6773eec472 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#4  0x00007f6773eb402f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#5  0x00007f6773eb432d in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#6  0x00007f6773d8939f in QThread::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#7  0x00007f6773e91d93 in QInotifyFileSystemWatcherEngine::run() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#8  0x00007f6773d8bf4b in QThreadPrivate::start(void*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#9  0x0000000003b00ad9 in create_head(void*) ()
+#10 0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#11 0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 13 (Thread 0x7f6741517700 (LWP 20545)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 12 (Thread 0x7f6741d18700 (LWP 20546)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 11 (Thread 0x7f6742519700 (LWP 20547)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 10 (Thread 0x7f6742d1a700 (LWP 20548)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 9 (Thread 0x7f6735601700 (LWP 20549)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 8 (Thread 0x7f6734e00700 (LWP 20550)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 7 (Thread 0x7f67345ff700 (LWP 20551)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 6 (Thread 0x7f6733dfe700 (LWP 20552)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 5 (Thread 0x7f67335fd700 (LWP 20553)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 4 (Thread 0x7f6732dfc700 (LWP 20554)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 3 (Thread 0x7f67325fb700 (LWP 20555)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 2 (Thread 0x7f6731dfa700 (LWP 20556)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7f67785c2200 (LWP 18245)):
+#0  0x00007f676e863469 in waitpid () from /lib64/libc.so.6
+#1  0x00007f676e7e0f12 in do_system () from /lib64/libc.so.6
+#2  0x00007f676e7e12c1 in system () from /lib64/libc.so.6
+#3  0x000000000e537389 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x000000000e5376fb in syStackTrace ()
+#5  0x00000000038b68f5 in rdaiErrorHandler(int, siginfo*, void*) ()
+#6  <signal handler called>
+#7  0x0000000003af3d28 in malloc ()
+#8  0x00007f6773dd42b6 in QString::QString(int, Qt::Initialization) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#9  0x00007f6773dda20a in replaceArgEscapes(QString const&, ArgEscapeData const&, int, QString const&, QString const&, QChar const&) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#10 0x00007f6773dda72d in QString::arg(QString const&, int, QChar const&) const () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#11 0x000000000c9df221 in uiiUpdateMsg(winsWin*, int, void*) ()
+#12 0x000000000ce9078d in winUpdateMsg(winsWin*) ()
+#13 0x000000000cb216d0 in winEventUpdateCursor(winsWin*, void*, int) ()
+#14 0x000000000cb28ed5 in winEventFindRulerProc(winsWin*, winsEventQueue*, winsEventNotifyStage) [clone .part.8] ()
+#15 0x000000000ce81339 in winEventNotify(winsWin*, int, int, int, int) ()
+#16 0x000000000ce9269b in winsQt::mouseMoveEvent(QMouseEvent*) ()
+#17 0x00007f677459b419 in QWidget::event(QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#18 0x000000000ce92ecc in winsQt::event(QEvent*) ()
+#19 0x00007f677454536c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#20 0x00007f677454de56 in QApplication::notify(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#21 0x00007f6773eb5e8d in QCoreApplication::notifyInternal(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#22 0x00007f677454d5e3 in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#23 0x00007f67745c560d in QETWidget::translateMouseEvent(_XEvent const*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#24 0x00007f67745c3bbe in QApplication::x11ProcessEvent(_XEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#25 0x00007f67745ec73e in QEventDispatcherX11::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#26 0x00007f67758cff33 in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#27 0x00007f6773ebac4f in QCoreApplication::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#28 0x00007f67758d02ec in tcl_dispatch_qt () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#29 0x0000000012ae8670 in Tcl_DoOneEvent ()
+#30 0x00007f67758cfe2f in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#31 0x00007f6773eb402f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#32 0x00007f6773eb432d in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#33 0x00007f6773ebb5a9 in QCoreApplication::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#34 0x00007f67758d287f in TqApplication::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#35 0x0000000003958069 in edi_app_init(Tcl_Interp*) ()
+#36 0x0000000012ae2f17 in Tcl_MainEx ()
+#37 0x0000000003368176 in main ()
+========================================
+                gdb
+========================================
+Using: gdb
+[New LWP 20556]
+[New LWP 20555]
+[New LWP 20554]
+[New LWP 20553]
+[New LWP 20552]
+[New LWP 20551]
+[New LWP 20550]
+[New LWP 20549]
+[New LWP 20548]
+[New LWP 20547]
+[New LWP 20546]
+[New LWP 20545]
+[New LWP 18763]
+[New LWP 18759]
+[New LWP 18349]
+[New LWP 18327]
+[New LWP 18320]
+[New LWP 18318]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+0x00007f676e863469 in waitpid () from /lib64/libc.so.6
+
+Thread 19 (Thread 0x7f676bd67700 (LWP 18318)):
+#0  0x00007f676e893953 in select () from /lib64/libc.so.6
+#1  0x0000000012b26118 in NotifierThreadProc ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 18 (Thread 0x7f676525b700 (LWP 18320)):
+#0  0x00007f676e86380d in nanosleep () from /lib64/libc.so.6
+#1  0x00007f676e8636a4 in sleep () from /lib64/libc.so.6
+#2  0x000000000e550f7a in syiPeakMem(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 17 (Thread 0x7f6764959700 (LWP 18327)):
+#0  0x00007f676f69be5d in nanosleep () from /lib64/libpthread.so.0
+#1  0x00000000049b48f6 in rdaiLicRecheck(void*) ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 16 (Thread 0x7f6761cc9700 (LWP 18349)):
+#0  0x00007f676f69c381 in sigwait () from /lib64/libpthread.so.0
+#1  0x00000000038b35fd in ctrlCHandle(void*) ()
+#2  0x0000000003b00ad9 in create_head(void*) ()
+#3  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 15 (Thread 0x7f674d07d700 (LWP 18759)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f6773d8c9f6 in QWaitCondition::wait(QMutex*, unsigned long) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#2  0x00007f6774a98dde in QFileInfoGatherer::run() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#3  0x00007f6773d8bf4b in QThreadPrivate::start(void*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#4  0x0000000003b00ad9 in create_head(void*) ()
+#5  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 14 (Thread 0x7f674c77b700 (LWP 18763)):
+#0  0x00007f676e893953 in select () from /lib64/libc.so.6
+#1  0x00007f6773ee759b in qt_safe_select(int, fd_set*, fd_set*, fd_set*, timeval const*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#2  0x00007f6773eebd73 in QEventDispatcherUNIXPrivate::doSelect(QFlags<QEventLoop::ProcessEventsFlag>, timeval*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#3  0x00007f6773eec472 in QEventDispatcherUNIX::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#4  0x00007f6773eb402f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#5  0x00007f6773eb432d in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#6  0x00007f6773d8939f in QThread::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#7  0x00007f6773e91d93 in QInotifyFileSystemWatcherEngine::run() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#8  0x00007f6773d8bf4b in QThreadPrivate::start(void*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#9  0x0000000003b00ad9 in create_head(void*) ()
+#10 0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#11 0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 13 (Thread 0x7f6741517700 (LWP 20545)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 12 (Thread 0x7f6741d18700 (LWP 20546)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 11 (Thread 0x7f6742519700 (LWP 20547)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 10 (Thread 0x7f6742d1a700 (LWP 20548)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 9 (Thread 0x7f6735601700 (LWP 20549)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 8 (Thread 0x7f6734e00700 (LWP 20550)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 7 (Thread 0x7f67345ff700 (LWP 20551)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 6 (Thread 0x7f6733dfe700 (LWP 20552)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 5 (Thread 0x7f67335fd700 (LWP 20553)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7f6732dfc700 (LWP 20554)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f67325fb700 (LWP 20555)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f6731dfa700 (LWP 20556)):
+#0  0x00007f676f6989f5 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00000000127c0a36 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000127c132f in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000003b00ad9 in create_head(void*) ()
+#4  0x00007f676f694e65 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007f676e89c88d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f67785c2200 (LWP 18245)):
+#0  0x00007f676e863469 in waitpid () from /lib64/libc.so.6
+#1  0x00007f676e7e0f12 in do_system () from /lib64/libc.so.6
+#2  0x00007f676e7e12c1 in system () from /lib64/libc.so.6
+#3  0x000000000e537389 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x000000000e5376fb in syStackTrace ()
+#5  0x00000000038b68f5 in rdaiErrorHandler(int, siginfo*, void*) ()
+#6  <signal handler called>
+#7  0x0000000003af3d28 in malloc ()
+#8  0x00007f6773dd42b6 in QString::QString(int, Qt::Initialization) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#9  0x00007f6773dda20a in replaceArgEscapes(QString const&, ArgEscapeData const&, int, QString const&, QString const&, QChar const&) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#10 0x00007f6773dda72d in QString::arg(QString const&, int, QChar const&) const () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#11 0x000000000c9df221 in uiiUpdateMsg(winsWin*, int, void*) ()
+#12 0x000000000ce9078d in winUpdateMsg(winsWin*) ()
+#13 0x000000000cb216d0 in winEventUpdateCursor(winsWin*, void*, int) ()
+#14 0x000000000cb28ed5 in winEventFindRulerProc(winsWin*, winsEventQueue*, winsEventNotifyStage) [clone .part.8] ()
+#15 0x000000000ce81339 in winEventNotify(winsWin*, int, int, int, int) ()
+#16 0x000000000ce9269b in winsQt::mouseMoveEvent(QMouseEvent*) ()
+#17 0x00007f677459b419 in QWidget::event(QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#18 0x000000000ce92ecc in winsQt::event(QEvent*) ()
+#19 0x00007f677454536c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#20 0x00007f677454de56 in QApplication::notify(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#21 0x00007f6773eb5e8d in QCoreApplication::notifyInternal(QObject*, QEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#22 0x00007f677454d5e3 in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#23 0x00007f67745c560d in QETWidget::translateMouseEvent(_XEvent const*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#24 0x00007f67745c3bbe in QApplication::x11ProcessEvent(_XEvent*) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#25 0x00007f67745ec73e in QEventDispatcherX11::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtGui.so.4
+#26 0x00007f67758cff33 in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#27 0x00007f6773ebac4f in QCoreApplication::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#28 0x00007f67758d02ec in tcl_dispatch_qt () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#29 0x0000000012ae8670 in Tcl_DoOneEvent ()
+#30 0x00007f67758cfe2f in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#31 0x00007f6773eb402f in QEventLoop::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#32 0x00007f6773eb432d in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#33 0x00007f6773ebb5a9 in QCoreApplication::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/Qt/64bit/lib/libcdsQtCore.so.4
+#34 0x00007f67758d287f in TqApplication::exec() () from /software/cadence/INNOVUS/INNOVUS17.11/tools.lnx86/lib/64bit/libtq.so
+#35 0x0000000003958069 in edi_app_init(Tcl_Interp*) ()
+#36 0x0000000012ae2f17 in Tcl_MainEx ()
+#37 0x0000000003368176 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 18245] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+
+*** Memory Usage v#1 (Current mem = 890.793M, initial mem = 179.684M) ***
+*** Message Summary: 38 warning(s), 2 error(s)
+
+--- Ending "Innovus" (totcpu=0:03:56, real=0:22:01, mem=890.8M) ---

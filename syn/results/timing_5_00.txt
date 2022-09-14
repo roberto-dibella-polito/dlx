@@ -1,0 +1,146 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'DLX' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DLX
+Version: F-2011.09-SP3
+Date   : Wed Sep 14 02:34:04 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: CU_I/cw2_reg[10]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dp/alu_out_mem_i_reg[0]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX                5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  CU_I/cw2_reg[10]/CK (DFFR_X1)                           0.00 #     0.00 r
+  CU_I/cw2_reg[10]/Q (DFFR_X1)                            0.09       0.09 f
+  CU_I/MUXB_SEL (dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19)
+                                                          0.00       0.09 f
+  dp/MUXB_SEL (DLX_DP_ADDR_SIZE32_DATA_SIZE32)            0.00       0.09 f
+  dp/ex_stage/MUXB_SEL (DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5)
+                                                          0.00       0.09 f
+  dp/ex_stage/muxB/SEL (mux2to1_N32_1)                    0.00       0.09 f
+  dp/ex_stage/muxB/U38/Z (BUF_X1)                         0.05       0.14 f
+  dp/ex_stage/muxB/U6/Z (BUF_X1)                          0.04       0.18 f
+  dp/ex_stage/muxB/U2/ZN (INV_X1)                         0.13       0.31 r
+  dp/ex_stage/muxB/U37/ZN (AOI22_X1)                      0.06       0.37 f
+  dp/ex_stage/muxB/U36/ZN (INV_X1)                        0.03       0.40 r
+  dp/ex_stage/muxB/MUX_OUT[1] (mux2to1_N32_1)             0.00       0.40 r
+  dp/ex_stage/alu/PORT_B[1] (DLX_ALU_DATA_SIZE32)         0.00       0.40 r
+  dp/ex_stage/alu/U167/ZN (INV_X1)                        0.03       0.43 f
+  dp/ex_stage/alu/U258/ZN (INV_X1)                        0.17       0.60 r
+  dp/ex_stage/alu/r61/B[1] (DLX_ALU_DATA_SIZE32_DW01_cmp6_0)
+                                                          0.00       0.60 r
+  dp/ex_stage/alu/r61/U26/ZN (INV_X1)                     0.05       0.65 f
+  dp/ex_stage/alu/r61/U78/ZN (OAI221_X1)                  0.07       0.72 r
+  dp/ex_stage/alu/r61/U77/ZN (OAI221_X1)                  0.05       0.77 f
+  dp/ex_stage/alu/r61/U76/ZN (NAND3_X1)                   0.05       0.82 r
+  dp/ex_stage/alu/r61/U75/ZN (OAI221_X1)                  0.05       0.87 f
+  dp/ex_stage/alu/r61/U74/ZN (NAND3_X1)                   0.04       0.91 r
+  dp/ex_stage/alu/r61/U73/ZN (OAI221_X1)                  0.05       0.96 f
+  dp/ex_stage/alu/r61/U72/ZN (NAND3_X1)                   0.04       1.00 r
+  dp/ex_stage/alu/r61/U71/ZN (OAI221_X1)                  0.05       1.04 f
+  dp/ex_stage/alu/r61/U70/ZN (NAND3_X1)                   0.04       1.08 r
+  dp/ex_stage/alu/r61/U69/ZN (OAI221_X1)                  0.05       1.13 f
+  dp/ex_stage/alu/r61/U68/ZN (NAND3_X1)                   0.04       1.17 r
+  dp/ex_stage/alu/r61/U67/ZN (OAI221_X1)                  0.05       1.22 f
+  dp/ex_stage/alu/r61/U66/ZN (NAND3_X1)                   0.04       1.26 r
+  dp/ex_stage/alu/r61/U65/ZN (OAI221_X1)                  0.05       1.30 f
+  dp/ex_stage/alu/r61/U64/ZN (NAND3_X1)                   0.04       1.34 r
+  dp/ex_stage/alu/r61/U63/ZN (OAI221_X1)                  0.05       1.39 f
+  dp/ex_stage/alu/r61/U62/ZN (NAND3_X1)                   0.04       1.43 r
+  dp/ex_stage/alu/r61/U61/ZN (OAI221_X1)                  0.05       1.48 f
+  dp/ex_stage/alu/r61/U60/ZN (NAND3_X1)                   0.04       1.52 r
+  dp/ex_stage/alu/r61/U59/ZN (OAI221_X1)                  0.05       1.56 f
+  dp/ex_stage/alu/r61/U58/ZN (NAND3_X1)                   0.04       1.60 r
+  dp/ex_stage/alu/r61/U57/ZN (OAI221_X1)                  0.05       1.65 f
+  dp/ex_stage/alu/r61/U56/ZN (NAND3_X1)                   0.04       1.69 r
+  dp/ex_stage/alu/r61/U55/ZN (OAI221_X1)                  0.05       1.74 f
+  dp/ex_stage/alu/r61/U54/ZN (NAND3_X1)                   0.04       1.78 r
+  dp/ex_stage/alu/r61/U53/ZN (OAI221_X1)                  0.05       1.82 f
+  dp/ex_stage/alu/r61/U52/ZN (NAND3_X1)                   0.04       1.86 r
+  dp/ex_stage/alu/r61/U51/ZN (OAI221_X1)                  0.05       1.91 f
+  dp/ex_stage/alu/r61/U50/ZN (AOI22_X1)                   0.07       1.97 r
+  dp/ex_stage/alu/r61/U49/ZN (OAI22_X1)                   0.05       2.03 f
+  dp/ex_stage/alu/r61/U48/ZN (NOR4_X1)                    0.07       2.10 r
+  dp/ex_stage/alu/r61/U37/ZN (NAND4_X1)                   0.06       2.16 f
+  dp/ex_stage/alu/r61/NE (DLX_ALU_DATA_SIZE32_DW01_cmp6_0)
+                                                          0.00       2.16 f
+  dp/ex_stage/alu/U158/ZN (AOI22_X1)                      0.07       2.22 r
+  dp/ex_stage/alu/U162/ZN (NOR3_X1)                       0.03       2.25 f
+  dp/ex_stage/alu/U160/ZN (AOI21_X1)                      0.06       2.31 r
+  dp/ex_stage/alu/U154/ZN (OAI21_X1)                      0.03       2.34 f
+  dp/ex_stage/alu/U151/ZN (AOI221_X1)                     0.06       2.41 r
+  dp/ex_stage/alu/U156/ZN (NAND2_X1)                      0.04       2.44 f
+  dp/ex_stage/alu/ALU_OUT[0] (DLX_ALU_DATA_SIZE32)        0.00       2.44 f
+  dp/ex_stage/ALU_OUT[0] (DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5)
+                                                          0.00       2.44 f
+  dp/U188/ZN (INV_X1)                                     0.03       2.47 r
+  dp/U187/ZN (OAI22_X1)                                   0.03       2.51 f
+  dp/alu_out_mem_i_reg[0]/D (DFFR_X1)                     0.01       2.52 f
+  data arrival time                                                  2.52
+
+  clock CLK (rise edge)                                   5.00       5.00
+  clock network delay (ideal)                             0.00       5.00
+  dp/alu_out_mem_i_reg[0]/CK (DFFR_X1)                    0.00       5.00 r
+  library setup time                                     -0.05       4.95
+  data required time                                                 4.95
+  --------------------------------------------------------------------------
+  data required time                                                 4.95
+  data arrival time                                                 -2.52
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.44
+
+
+  Startpoint: DRAM_READY (input port)
+  Endpoint: IRAM_ISSUE (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX                5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  DRAM_READY (in)                                         0.00       0.00 f
+  CU_I/DRAM_READY (dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19)
+                                                          0.00       0.00 f
+  CU_I/U82/ZN (NOR2_X1)                                   0.04       0.04 r
+  CU_I/U35/ZN (INV_X1)                                    0.03       0.07 f
+  CU_I/IRAM_ISSUE (dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19)
+                                                          0.00       0.07 f
+  IRAM_ISSUE (out)                                        0.00       0.07 f
+  data arrival time                                                  0.07
+
+  max_delay                                               5.00       5.00
+  output external delay                                   0.00       5.00
+  data required time                                                 5.00
+  --------------------------------------------------------------------------
+  data required time                                                 5.00
+  data arrival time                                                 -0.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.93
+
+
+1

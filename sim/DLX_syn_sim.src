@@ -1,0 +1,19 @@
+vcom -reportprogress 300 -work work ../src/000-globals.vhd
+
+vcom -reportprogress 300 -work work ../netlist/dlx_syn.vhdl
+
+############### TESTBENCH ###############################
+#vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_packages/rocache.vhd
+#vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_packages/rwcache.vhd
+vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_romem/romem_async.vhd
+vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_rwmem/rwmem.vhd
+#vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_rwmem/rwmem_async.vhd
+vcom -reportprogress 300 -work work ../test_bench_and_memory/TB_TOP_DLX.vhd
+
+# Verification
+vsim -t 100ps work.dlx_testbench -voptargs=+acc
+
+
+
+#run 3150 ns
+run 120 ns
