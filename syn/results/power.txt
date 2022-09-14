@@ -1,0 +1,53 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+        -verbose
+Design : DLX
+Version: F-2011.09-SP3
+Date   : Wed Sep 14 02:03:31 2022
+****************************************
+
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+DLX                    5K_hvratio_1_1    NangateOpenCellLibrary
+
+
+Global Operating Voltage = 1.1  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+  Cell Internal Power  =   9.4068 mW   (95%)
+  Net Switching Power  = 525.3903 uW    (5%)
+                         ---------
+Total Dynamic Power    =   9.9322 mW  (100%)
+
+Cell Leakage Power     = 355.9931 uW
+
+                 Internal         Switching           Leakage            Total                         Cell
+Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
+---------------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+register       9.2189e+03           27.0749        1.2588e+05        9.3719e+03  (  91.09%)            1572
+sequential         5.6079        2.0143e-02        2.4764e+03            8.1045  (   0.08%)            64
+combinational    182.2313          498.2516        2.2764e+05          908.1141  (   8.83%)            8154
+---------------------------------------------------------------------------------------------------------
+Total          9.4068e+03 uW       525.3466 uW     3.5599e+05 nW     1.0288e+04 uW
+1

@@ -1,0 +1,306 @@
+Loading db file '/software/synopsys/syn_current_64.11/libraries/syn/gtech.db'
+Loading db file '/software/synopsys/syn_current_64.11/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'DLX'.
+Information: Building the design 'dlx_cu' instantiated from design 'DLX' with
+	the parameters "MICROCODE_MEM_SIZE=64,FUNC_SIZE=6,OP_CODE_SIZE=6,IR_SIZE=32,CW_SIZE=19". (HDL-193)
+Warning:  ../src/a.a-CU_HW.vhd:92: The initial value for signal 'cw_mem' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/a.a-CU_HW.vhd:170: The initial value for signal 'aluOpcode_i' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/a.a-CU_HW.vhd:171: The initial value for signal 'aluOpcode1' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/a.a-CU_HW.vhd:172: The initial value for signal 'aluOpcode2' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+
+Statistics for case statements in always block at line 378 in file
+	'../src/a.a-CU_HW.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           380            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19 line 327 in file
+		'../src/a.a-CU_HW.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       cw1_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       cw1_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       cw2_reg       | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       cw2_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       cw3_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       cw3_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|       cw4_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   aluOpcode1_reg    | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   aluOpcode1_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   aluOpcode2_reg    | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   aluOpcode2_reg    | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'DLX_DP' instantiated from design 'DLX' with
+	the parameters "ADDR_SIZE=32,DATA_SIZE=32". (HDL-193)
+
+Statistics for case statements in always block at line 277 in file
+	'../src/a.b-DataPath.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           279            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine DLX_DP_ADDR_SIZE32_DATA_SIZE32 line 243 in file
+		'../src/a.b-DataPath.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ir_reg        | Flip-flop |  26   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    npc_id_i_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine DLX_DP_ADDR_SIZE32_DATA_SIZE32 line 330 in file
+		'../src/a.b-DataPath.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rd_fwd_ex_i_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  rf_out1_ex_i_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  rf_out2_ex_i_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    imm_ex_i_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    npc_ex_i_reg     | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine DLX_DP_ADDR_SIZE32_DATA_SIZE32 line 392 in file
+		'../src/a.b-DataPath.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| branch_t_mem_i_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|  alu_out_mem_i_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| data_mem_mem_i_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  rd_fwd_mem_i_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine DLX_DP_ADDR_SIZE32_DATA_SIZE32 line 445 in file
+		'../src/a.b-DataPath.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   rd_fwd_wb_i_reg   | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  alu_out_wb_i_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  data_mem_wb_i_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred tri-state devices in process
+	in routine DLX_DP_ADDR_SIZE32_DATA_SIZE32 line 390 in file
+		'../src/a.b-DataPath.vhd'.
+=================================================
+| Register Name |       Type       | Width | MB |
+=================================================
+|  z_word_tri   | Tri-State Buffer |  32   | N  |
+=================================================
+Presto compilation completed successfully.
+Information: Building the design 'DLX_IF' instantiated from design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32' with
+	the parameters "IR_SIZE=32,PC_SIZE=32". (HDL-193)
+
+Inferred memory devices in process
+	in routine DLX_IF_IR_SIZE32_PC_SIZE32 line 63 in file
+		'../src/a.b-DataPath.core/a.b.a-IF.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      PC_i_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'DLX_ID' instantiated from design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32' with
+	the parameters "ADDR_SIZE=5,DATA_SIZE=32,IMM_I_SIZE=26,IMM_O_SIZE=32,NPC_SIZE=32". (HDL-193)
+
+Statistics for case statements in always block at line 95 in file
+	'../src/a.b-DataPath.core/a.b.b-ID.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           105            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'DLX_EX' instantiated from design 'DLX_DP_ADDR_SIZE32_DATA_SIZE32' with
+	the parameters "DATA_SIZE=32,NPC_SIZE=32,IMM_SIZE=32,RD_SIZE=5". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux2to1' instantiated from design 'DLX_IF_IR_SIZE32_PC_SIZE32' with
+	the parameters "N=32". (HDL-193)
+
+Statistics for case statements in always block at line 20 in file
+	'../src/000-commons/mux2to1_bhv.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'RF' instantiated from design 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32' with
+	the parameters "Nbit=32,M=20,N=4,F=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'DLX_ALU' instantiated from design 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5' with
+	the parameters "DATA_SIZE=32". (HDL-193)
+
+Statistics for case statements in always block at line 173 in file
+	'../src/a.b-DataPath.core/a.b.c-EX.core/a.b.c.a-ALU_P4.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           177            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'RF_CU'. (HDL-193)
+
+Statistics for case statements in always block at line 48 in file
+	'../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            57            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 115 in file
+	'../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           129            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine RF_CU line 107 in file
+		'../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_cu.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  current_state_reg  | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'RF_datapath' instantiated from design 'RF_Nbit32_M20_N4_F2' with
+	the parameters "Nbit=32,M=20,N=4,F=2". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'P4' instantiated from design 'DLX_ALU_DATA_SIZE32' with
+	the parameters "Nbit=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'SHIFTER_GENERIC' instantiated from design 'DLX_ALU_DATA_SIZE32' with
+	the parameters "N=32". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'address_converter'. (HDL-193)
+Warning:  ../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/address_converter.vhd:43: implicit truncation caused by range overflow. (ELAB-931)
+Presto compilation completed successfully.
+Information: Building the design 'counter' instantiated from design 'RF_datapath_Nbit32_M20_N4_F2' with
+	the parameters "Nbit=1". (HDL-193)
+
+Inferred memory devices in process
+	in routine counter_Nbit1 line 22 in file
+		'../src/000-commons/counter.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'counter' instantiated from design 'RF_datapath_Nbit32_M20_N4_F2' with
+	the parameters "Nbit=3". (HDL-193)
+
+Inferred memory devices in process
+	in routine counter_Nbit3 line 22 in file
+		'../src/000-commons/counter.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux2to1' instantiated from design 'RF_datapath_Nbit32_M20_N4_F2' with
+	the parameters "N=6". (HDL-193)
+
+Statistics for case statements in always block at line 20 in file
+	'../src/000-commons/mux2to1_bhv.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'mux2to1' instantiated from design 'RF_datapath_Nbit32_M20_N4_F2' with
+	the parameters "N=1". (HDL-193)
+
+Statistics for case statements in always block at line 20 in file
+	'../src/000-commons/mux2to1_bhv.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'mux2to1_1b'. (HDL-193)
+
+Statistics for case statements in always block at line 18 in file
+	'../src/000-commons/mux2to1_1bit_bhv.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            18            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'RF_phys' instantiated from design 'RF_datapath_Nbit32_M20_N4_F2' with
+	the parameters "Nbit=32,Nreg=36,NbitAdd=6". (HDL-193)
+
+Inferred memory devices in process
+	in routine RF_phys_Nbit32_Nreg36_NbitAdd6 line 52 in file
+		'../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      OUT2_reg       | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+|      OUT1_reg       | Latch |  32   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+
+Inferred memory devices in process
+	in routine RF_phys_Nbit32_Nreg36_NbitAdd6 line 63 in file
+		'../src/a.b-DataPath.core/a.b.b-ID.core/a.b.b.a-RF.core/RF_phys_async.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    REGISTERS_reg    | Flip-flop | 1152  |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'SPARSE_TREE' instantiated from design 'P4_Nbit32' with
+	the parameters "Nbit=32,Ncarry=4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'CS_SUM' instantiated from design 'P4_Nbit32' with
+	the parameters "Nbit=32,N=4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'PG_NET'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'G_BLOCK'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'PG_BLOCK'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'CS_BLOCK' instantiated from design 'CS_SUM_Nbit32_N4' with
+	the parameters "N=4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'RCA' instantiated from design 'CS_BLOCK_N4' with
+	the parameters "Nbit=4". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux2to1' instantiated from design 'CS_BLOCK_N4' with
+	the parameters "N=4". (HDL-193)
+
+Statistics for case statements in always block at line 20 in file
+	'../src/000-commons/mux2to1_bhv.vhd'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            20            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+1

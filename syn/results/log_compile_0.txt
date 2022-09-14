@@ -1,0 +1,281 @@
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | F-2011.09-DWBB_201109.3 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 258 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'SHIFTER_GENERIC_N32'
+  Processing 'mux2to1_N4_0'
+  Processing 'RCA_Nbit4_0'
+  Processing 'CS_BLOCK_N4_0'
+  Processing 'CS_SUM_Nbit32_N4'
+  Processing 'G_BLOCK_0'
+  Processing 'PG_BLOCK_0'
+  Processing 'PG_NET_0'
+  Processing 'SPARSE_TREE_Nbit32_Ncarry4'
+  Processing 'P4_Nbit32'
+  Processing 'DLX_ALU_DATA_SIZE32'
+  Processing 'mux2to1_N32_0'
+  Processing 'DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5'
+  Processing 'RF_phys_Nbit32_Nreg36_NbitAdd6'
+  Processing 'mux2to1_1b_0'
+  Processing 'mux2to1_N1'
+  Processing 'mux2to1_N6_0'
+  Processing 'counter_Nbit1_0'
+  Processing 'counter_Nbit3'
+  Processing 'address_converter_0'
+  Processing 'RF_datapath_Nbit32_M20_N4_F2'
+  Processing 'RF_CU'
+  Processing 'RF_Nbit32_M20_N4_F2'
+  Processing 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32'
+  Processing 'DLX_IF_IR_SIZE32_PC_SIZE32'
+  Processing 'DLX_DP_ADDR_SIZE32_DATA_SIZE32'
+  Processing 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19'
+  Processing 'DLX'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'DLX_ALU_DATA_SIZE32_DW01_cmp6_0'
+  Processing 'DLX_ALU_DATA_SIZE32_DW01_cmp6_1'
+  Processing 'SHIFTER_GENERIC_N32_DW01_ash_0'
+  Processing 'SHIFTER_GENERIC_N32_DW_sla_0'
+  Processing 'SHIFTER_GENERIC_N32_DW_rash_0'
+  Processing 'SHIFTER_GENERIC_N32_DW_sra_0'
+  Processing 'SHIFTER_GENERIC_N32_DW_lbsh_0'
+  Processing 'SHIFTER_GENERIC_N32_DW_rbsh_0'
+  Processing 'RCA_Nbit4_1_DW01_add_0'
+  Processing 'RCA_Nbit4_2_DW01_add_0'
+  Processing 'RCA_Nbit4_3_DW01_add_0'
+  Processing 'RCA_Nbit4_4_DW01_add_0'
+  Processing 'RCA_Nbit4_5_DW01_add_0'
+  Processing 'RCA_Nbit4_6_DW01_add_0'
+  Processing 'RCA_Nbit4_7_DW01_add_0'
+  Processing 'RCA_Nbit4_8_DW01_add_0'
+  Processing 'RCA_Nbit4_9_DW01_add_0'
+  Processing 'RCA_Nbit4_10_DW01_add_0'
+  Processing 'RCA_Nbit4_11_DW01_add_0'
+  Processing 'RCA_Nbit4_12_DW01_add_0'
+  Processing 'RCA_Nbit4_13_DW01_add_0'
+  Processing 'RCA_Nbit4_14_DW01_add_0'
+  Processing 'RCA_Nbit4_15_DW01_add_0'
+  Processing 'RCA_Nbit4_0_DW01_add_0'
+  Processing 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32_DW01_dec_0'
+  Processing 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32_DW01_dec_1'
+  Processing 'DLX_ID_ADDR_SIZE5_DATA_SIZE32_IMM_I_SIZE26_IMM_O_SIZE32_NPC_SIZE32_DW01_dec_2'
+  Processing 'address_converter_1_DW01_add_0'
+  Processing 'address_converter_1_DW01_cmp2_0'
+  Processing 'address_converter_2_DW01_add_0'
+  Processing 'address_converter_2_DW01_cmp2_0'
+  Processing 'address_converter_3_DW01_add_0'
+  Processing 'address_converter_3_DW01_cmp2_0'
+  Processing 'address_converter_0_DW01_add_0'
+  Processing 'address_converter_0_DW01_cmp2_0'
+  Processing 'DLX_IF_IR_SIZE32_PC_SIZE32_DW01_add_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:34   21088.7      2.51    2226.2    5469.4                          
+    0:00:34   21088.7      2.51    2226.2    5469.4                          
+    0:00:35   21113.0      2.51    2226.2    5156.2                          
+    0:00:35   21135.6      2.51    2226.2    4827.7                          
+    0:00:42   21782.7      1.39    1991.4      74.2                          
+    0:00:43   21780.6      1.39    1991.4      74.2                          
+    0:00:43   21780.6      1.39    1991.4      74.2                          
+    0:00:43   21780.6      1.39    1991.4      74.2                          
+    0:00:43   21780.6      1.39    1991.4      74.2                          
+    0:00:48   19139.5      1.46    1881.9      67.8                          
+    0:00:50   19142.7      1.42    1878.7      67.8                          
+    0:00:50   19144.0      1.38    1878.1      67.8                          
+    0:00:51   19144.0      1.38    1878.1      67.8                          
+    0:00:51   19144.0      1.38    1878.1      67.8                          
+    0:00:51   19144.0      1.38    1878.1      67.8                          
+    0:00:51   19144.0      1.38    1878.1      67.8                          
+    0:00:51   19145.4      1.38    1878.1      20.2                          
+    0:00:51   19145.9      1.38    1878.0       0.0                          
+    0:00:51   19145.9      1.38    1878.0       0.0                          
+    0:00:51   19145.9      1.38    1878.0       0.0                          
+    0:00:51   19145.9      1.38    1878.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:51   19145.9      1.38    1878.0       0.0                          
+    0:00:52   19169.3      1.35    1877.6      20.2 dp/alu_out_mem_i_reg[23]/D
+    0:00:53   19173.0      1.35    1877.4      20.2 dp/alu_out_mem_i_reg[0]/D
+    0:00:53   19178.3      1.34    1877.2       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:00:53   19182.6      1.33    1876.9      21.8 dp/alu_out_mem_i_reg[23]/D
+    0:00:54   19186.8      1.33    1876.8      10.9 dp/alu_out_mem_i_reg[0]/D
+    0:00:55   19191.9      1.32    1876.5      10.9 dp/alu_out_mem_i_reg[0]/D
+    0:00:55   19194.3      1.32    1876.5      10.9 dp/alu_out_mem_i_reg[23]/D
+    0:00:55   19199.1      1.32    1876.4      10.9 dp/alu_out_mem_i_reg[23]/D
+    0:00:55   19208.7      1.31    1876.1      10.9 CU_I/cw1_reg[6]/D        
+    0:00:56   19221.4      1.30    1876.0      35.2 dp/alu_out_mem_i_reg[23]/D
+    0:00:56   19222.8      1.29    1875.9      35.2 dp/alu_out_mem_i_reg[0]/D
+    0:00:57   19228.9      1.29    1875.7      35.2 dp/alu_out_mem_i_reg[3]/D
+    0:00:57   19236.3      1.29    1875.7      35.2 dp/alu_out_mem_i_reg[0]/D
+    0:00:57   19240.3      1.28    1875.6      35.2 dp/alu_out_mem_i_reg[0]/D
+    0:00:57   19246.2      1.28    1875.6      45.4 dp/alu_out_mem_i_reg[0]/D
+    0:00:58   19249.9      1.28    1875.4      45.4 dp/alu_out_mem_i_reg[6]/D
+    0:00:58   19256.0      1.28    1875.2      45.4 dp/alu_out_mem_i_reg[23]/D
+    0:00:59   19264.5      1.27    1875.2      45.3 dp/alu_out_mem_i_reg[0]/D
+    0:00:59   19261.6      1.27    1875.1      35.2 dp/alu_out_mem_i_reg[23]/D
+    0:00:59   19268.0      1.27    1875.1      35.2 dp/alu_out_mem_i_reg[17]/D
+    0:00:59   19273.3      1.27    1875.0      35.2 dp/alu_out_mem_i_reg[0]/D
+    0:01:00   19273.8      1.27    1874.7      35.2 dp/alu_out_mem_i_reg[23]/D
+    0:01:00   19278.9      1.26    1874.7      35.2 dp/alu_out_mem_i_reg[0]/D
+    0:01:01   19278.4      1.26    1874.7      35.2                          
+    0:01:03   19278.4      1.26    1874.7      35.2                          
+    0:01:12   18930.4      1.26    1875.0    1776.8                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
+  ----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:12   18930.4      1.26    1875.0    1776.8                          
+    0:01:12   18936.0      1.26    1874.8       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:12   18940.3      1.26    1874.8       0.0 dp/alu_out_mem_i_reg[17]/D
+    0:01:13   18942.7      1.26    1874.6       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:13   18941.9      1.26    1874.6       0.0 CU_I/cw1_reg[6]/D        
+    0:01:13   18944.3      1.25    1874.6       0.0 dp/alu_out_mem_i_reg[30]/D
+    0:01:13   18947.2      1.25    1875.8       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:14   18950.9      1.25    1875.5       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:14   18956.0      1.25    1875.3       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:14   18957.6      1.25    1875.1       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:14   18958.4      1.25    1874.7       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:15   18962.9      1.25    1874.7       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:15   18961.5      1.25    1873.4       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:15   18963.4      1.24    1873.4       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:15   18964.7      1.24    1873.3       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:17   18967.9      1.24    1872.0       0.0                          
+    0:01:18   18969.0      1.24    1872.0       0.0                          
+    0:01:18   18970.3      1.24    1871.1       0.0                          
+    0:01:19   18965.3      1.24    1865.1       0.0                          
+    0:01:19   18965.3      1.24    1865.0       0.0                          
+    0:01:19   18965.0      1.24    1862.8       0.0                          
+    0:01:20   18964.5      1.24    1857.9       0.0                          
+    0:01:20   18968.2      1.24    1857.9       0.0                          
+    0:01:20   18963.1      1.24    1857.9       0.0                          
+    0:01:21   18957.8      1.24    1857.9       0.0                          
+    0:01:21   18956.0      1.24    1857.0       0.0                          
+    0:01:22   18956.0      1.24    1856.9       0.0                          
+    0:01:22   18954.6      1.24    1845.9       0.0                          
+    0:01:22   18954.4      1.24    1839.5       0.0                          
+    0:01:23   18956.2      1.24    1833.1       0.0                          
+    0:01:23   18991.9      1.24    1804.1       0.0                          
+    0:01:24   18996.7      1.24    1747.6       0.0                          
+    0:01:24   18998.3      1.24    1743.2       0.0                          
+    0:01:25   19008.4      1.24    1732.3       0.0                          
+    0:01:25   19011.8      1.24    1713.4       0.0                          
+    0:01:26   19017.9      1.24    1705.8       0.0                          
+    0:01:26   19019.0      1.24    1704.4       0.0                          
+    0:01:26   19024.6      1.24    1694.4       0.0                          
+    0:01:26   19023.3      1.24    1693.6       0.0                          
+    0:01:27   19024.1      1.24    1689.8       0.0                          
+    0:01:27   19026.4      1.24    1683.2       0.0                          
+    0:01:27   19027.8      1.24    1677.9       0.0                          
+    0:01:27   19029.4      1.24    1668.8       0.0                          
+    0:01:28   19034.7      1.24    1654.6       0.0                          
+    0:01:28   19036.3      1.24    1653.0       0.0                          
+    0:01:28   19036.3      1.24    1652.7       0.0                          
+    0:01:29   19037.4      1.24    1646.9       0.0                          
+    0:01:29   19039.2      1.24    1643.9       0.0                          
+    0:01:30   19042.4      1.24    1631.1       0.0                          
+    0:01:30   19041.6      1.24    1631.0       0.0                          
+    0:01:30   19042.4      1.24    1630.8       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:01:30   19042.4      1.24    1630.8       0.0                          
+    0:01:30   19042.4      1.24    1630.8       0.0                          
+    0:01:32   18972.7      1.24    1631.3       0.0                          
+    0:01:33   18966.3      1.24    1631.1       0.0                          
+    0:01:33   18965.5      1.24    1631.1       0.0                          
+    0:01:33   18965.5      1.24    1631.1       0.0                          
+    0:01:33   18965.5      1.24    1631.1       0.0                          
+    0:01:33   18965.5      1.24    1631.1       0.0                          
+    0:01:33   18965.5      1.24    1631.1       0.0                          
+    0:01:33   18948.0      1.24    1631.1       0.0                          
+    0:01:33   18946.6      1.24    1631.1       0.0                          
+    0:01:33   18946.6      1.24    1631.1       0.0                          
+    0:01:33   18946.6      1.24    1631.1       0.0                          
+    0:01:33   18946.6      1.24    1631.1       0.0                          
+    0:01:33   18946.6      1.24    1631.1       0.0                          
+    0:01:33   18946.6      1.24    1631.1       0.0                          
+    0:01:34   18948.8      1.24    1631.1       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:34   18950.4      1.24    1631.1       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:34   18950.6      1.24    1631.1       0.0 dp/alu_out_mem_i_reg[30]/D
+    0:01:34   18957.0      1.24    1631.0       0.0 dp/alu_out_mem_i_reg[30]/D
+    0:01:35   18957.8      1.24    1631.0       0.0 dp/alu_out_mem_i_reg[30]/D
+    0:01:35   18962.1      1.24    1631.0       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:35   18962.9      1.23    1631.0       0.0 dp/alu_out_mem_i_reg[30]/D
+    0:01:36   18964.2      1.23    1630.9       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:36   18966.6      1.23    1630.9       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:36   18969.5      1.23    1630.9       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:36   18973.8      1.23    1630.8       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:37   18975.9      1.23    1630.8       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:37   18978.3      1.23    1630.7       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:37   18983.4      1.22    1630.7       0.0 dp/alu_out_mem_i_reg[30]/D
+    0:01:37   18986.0      1.22    1630.6       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:38   18985.5      1.22    1630.6       0.0 dp/alu_out_mem_i_reg[17]/D
+    0:01:38   18989.5      1.22    1630.6       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:38   18991.9      1.22    1630.5       0.0 dp/alu_out_mem_i_reg[0]/D
+    0:01:38   18995.6      1.22    1630.5       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:39   18995.3      1.22    1630.5       0.0                          
+    0:01:39   18993.7      1.22    1630.5       0.0                          
+    0:01:39   18991.3      1.22    1630.5       0.0                          
+    0:01:40   18991.1      1.22    1630.5       0.0                          
+    0:01:40   18990.5      1.22    1630.4       0.0                          
+    0:01:41   18989.7      1.22    1630.4       0.0                          
+    0:01:41   18990.8      1.22    1630.4       0.0                          
+    0:01:42   18992.7      1.22    1630.3       0.0                          
+    0:01:42   18992.7      1.22    1630.3       0.0                          
+    0:01:42   18992.7      1.22    1630.2       0.0                          
+    0:01:43   18992.7      1.22    1630.2       0.0                          
+    0:01:43   18993.2      1.22    1630.2       0.0                          
+    0:01:43   18993.7      1.22    1630.1       0.0                          
+    0:01:43   18996.9      1.22    1628.1       0.0                          
+    0:01:44   18995.9      1.22    1627.1       0.0                          
+    0:01:44   18996.9      1.22    1626.5       0.0                          
+    0:01:45   18999.1      1.22    1625.4       0.0                          
+    0:01:45   18997.5      1.22    1618.6       0.0                          
+    0:01:48   18997.5      1.22    1617.9       0.0                          
+    0:01:50   18998.0      1.22    1616.7       0.0                          
+    0:01:50   19000.6      1.22    1612.6       0.0 dp/alu_out_mem_i_reg[23]/D
+    0:01:51   19000.9      1.22    1612.6       0.0 dp/alu_out_mem_i_reg[23]/D
+Loading db file '/home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'DLX' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'dp/id_stage/regfile/DataPath/Swp_counter/clk': 1572 load(s), 1 driver(s)
+1

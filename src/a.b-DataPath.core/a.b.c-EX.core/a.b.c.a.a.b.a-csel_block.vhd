@@ -25,8 +25,8 @@ architecture STRUCTURE  of CS_BLOCK is
 
   -- Ripple-Carry Adder
   component RCA  
-      generic (DRCAS  : 	Time := 0 ns;   --Delay for sum
-	       DRCAC  : 	Time := 0 ns;
+      generic (--DRCAS  : 	Time := 0 ns;   --Delay for sum
+	       --DRCAC  : 	Time := 0 ns;
                Nbit   :       Integer := 6);  --Delay for carry
 	Port (	A:	In	std_logic_vector(Nbit-1 downto 0);
                 B:	In	std_logic_vector(Nbit-1 downto 0);

@@ -185,6 +185,73 @@ begin  -- dlx_cu_rtl
 	IR_opcode(5 downto 0) <= IR_IN(31 downto 26);
 	IR_func(FUNC_SIZE-1 downto 0)  <= IR_IN(FUNC_SIZE - 1 downto 0);
 
+	cw_mem <= (
+		RR_CW, 				-- 0x00	R type
+		NOP_CW,				-- 0x01
+		J_CW,				-- 0x02	J
+		JAL_CW,				-- 0x03	JAL 
+		BQZ_CW,				-- 0x04	BEQZ
+		BNZ_CW,				-- 0x05	BNEZ
+		not_implemented, 	-- 0x06
+		not_implemented,	-- 0x07
+		RI_CW, 				-- 0x08	ADDI
+		RUI_CW,				-- 0x09	ADDUI
+		RI_CW,				-- 0x0A	SUBI
+		RUI_CW,				-- 0x0B	SUBUI
+		RUI_CW,				-- 0x0C	ANDI
+		RUI_CW,				-- 0x0D	ORI
+		RUI_CW,				-- 0x0E	XORI
+		not_implemented,	-- 0x0F	LHI
+		not_implemented,	-- 0x10	
+		not_implemented,	-- 0x11	
+		JR_CW,				-- 0x12	JR
+		not_implemented,	-- 0x13	JALR
+		RUI_CW,				-- 0x14	SLLI
+		NOP_CW,				-- 0x15	NOP
+		RUI_CW,				-- 0x16	SRLI
+		RUI_CW,				-- 0x17	SRAI
+		RI_CW,				-- 0x18	SEQI
+		RI_CW,				-- 0x19	SNEI
+		RI_CW,				-- 0x1A	SLTI
+		RI_CW,				-- 0x1B	SGTI
+		RI_CW,				-- 0x1C	SLEI
+		RI_CW,				-- 0x1D	SGEI
+		not_implemented,	-- 0x1E
+		not_implemented,	-- 0x1F
+		not_implemented,	-- 0x20	LB
+		not_implemented,	-- 0x21	
+		not_implemented,	-- 0x22
+		LW_CW,				-- 0x23	LW
+		not_implemented,	-- 0x24	LBU
+		not_implemented,	-- 0x25	LHU
+		not_implemented,	-- 0x26	
+		not_implemented,	-- 0x27
+		not_implemented,	-- 0x28	SB
+		not_implemented,	-- 0x29	
+		not_implemented,	-- 0x2A
+		SW_CW,				-- 0x2B	SW
+		not_implemented,	-- 0x2C
+		not_implemented,	-- 0x2D
+		not_implemented,	-- 0x2E
+		not_implemented,	-- 0x2F
+		not_implemented,	-- 0x30
+		not_implemented,	-- 0x31
+		not_implemented,	-- 0x32
+		not_implemented,	-- 0x33
+		not_implemented,	-- 0x34
+		not_implemented,	-- 0x35
+		not_implemented,	-- 0x36
+		not_implemented,	-- 0x37
+		not_implemented,	-- 0x38
+		not_implemented,	-- 0x39
+		RUI_CW,				-- 0x3A	SLTUI
+		RUI_CW,				-- 0x3B	SGTUI
+		not_implemented,	-- 0x3C	
+		RUI_CW,				-- 0x3D	SGEUI
+		not_implemented,	-- 0x3E
+		not_implemented		-- 0x3F
+	);	
+
 	cw <= cw_mem(conv_integer(IR_opcode));
 	
 	-- PIPELINE ENABLE SIGNAL

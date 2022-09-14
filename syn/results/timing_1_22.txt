@@ -1,0 +1,131 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'DLX' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DLX
+Version: F-2011.09-SP3
+Date   : Wed Sep 14 02:02:25 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: CU_I/aluOpcode2_reg[2]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: dp/alu_out_mem_i_reg[16]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX                5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  CU_I/aluOpcode2_reg[2]/CK (DFFS_X1)                     0.00 #     0.00 r
+  CU_I/aluOpcode2_reg[2]/Q (DFFS_X1)                      0.09       0.09 f
+  CU_I/ALU_OP[2] (dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE6_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE19)
+                                                          0.00       0.09 f
+  dp/ALU_OP[2] (DLX_DP_ADDR_SIZE32_DATA_SIZE32)           0.00       0.09 f
+  dp/ex_stage/ALU_OP[2] (DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5)
+                                                          0.00       0.09 f
+  dp/ex_stage/alu/ALU_OP[2] (DLX_ALU_DATA_SIZE32)         0.00       0.09 f
+  dp/ex_stage/alu/U240/ZN (INV_X1)                        0.04       0.14 r
+  dp/ex_stage/alu/U319/ZN (NAND4_X1)                      0.05       0.19 f
+  dp/ex_stage/alu/U97/ZN (OAI21_X2)                       0.07       0.26 r
+  dp/ex_stage/alu/adder/SUB_ADD_n (P4_Nbit32)             0.00       0.26 r
+  dp/ex_stage/alu/adder/U27/Z (CLKBUF_X3)                 0.07       0.33 r
+  dp/ex_stage/alu/adder/U11/Z (XOR2_X1)                   0.12       0.46 r
+  dp/ex_stage/alu/adder/SparseTree/B[2] (SPARSE_TREE_Nbit32_Ncarry4)
+                                                          0.00       0.46 r
+  dp/ex_stage/alu/adder/SparseTree/PG_net_i_3/B (PG_NET_30)
+                                                          0.00       0.46 r
+  dp/ex_stage/alu/adder/SparseTree/PG_net_i_3/U2/Z (XOR2_X1)
+                                                          0.07       0.53 r
+  dp/ex_stage/alu/adder/SparseTree/PG_net_i_3/p (PG_NET_30)
+                                                          0.00       0.53 r
+  dp/ex_stage/alu/adder/SparseTree/PG_ij_1_0/p_prev (PG_BLOCK_0)
+                                                          0.00       0.53 r
+  dp/ex_stage/alu/adder/SparseTree/PG_ij_1_0/U2/ZN (AND2_X1)
+                                                          0.04       0.57 r
+  dp/ex_stage/alu/adder/SparseTree/PG_ij_1_0/p_out (PG_BLOCK_0)
+                                                          0.00       0.57 r
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_2/p (G_BLOCK_8)
+                                                          0.00       0.57 r
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_2/U2/ZN (AOI21_X1)
+                                                          0.03       0.60 f
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_2/U1/ZN (INV_X1)
+                                                          0.03       0.63 r
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_2/c_out (G_BLOCK_8)
+                                                          0.00       0.63 r
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_3/c_in (G_BLOCK_7)
+                                                          0.00       0.63 r
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_3/U2/ZN (AOI21_X1)
+                                                          0.03       0.66 f
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_3/U1/ZN (INV_X1)
+                                                          0.03       0.69 r
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_3/c_out (G_BLOCK_7)
+                                                          0.00       0.69 r
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_4/c_in (G_BLOCK_6)
+                                                          0.00       0.69 r
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_4/U2/ZN (AOI21_X1)
+                                                          0.03       0.71 f
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_4/U1/ZN (INV_X1)
+                                                          0.04       0.75 r
+  dp/ex_stage/alu/adder/SparseTree/G_2exp_0_4/c_out (G_BLOCK_6)
+                                                          0.00       0.75 r
+  dp/ex_stage/alu/adder/SparseTree/U2/Z (CLKBUF_X2)       0.06       0.81 r
+  dp/ex_stage/alu/adder/SparseTree/Cout[4] (SPARSE_TREE_Nbit32_Ncarry4)
+                                                          0.00       0.81 r
+  dp/ex_stage/alu/adder/SumGen/CN[4] (CS_SUM_Nbit32_N4)
+                                                          0.00       0.81 r
+  dp/ex_stage/alu/adder/SumGen/CS_Bn_4/Cin (CS_BLOCK_N4_4)
+                                                          0.00       0.81 r
+  dp/ex_stage/alu/adder/SumGen/CS_Bn_4/Mux/SEL (mux2to1_N4_4)
+                                                          0.00       0.81 r
+  dp/ex_stage/alu/adder/SumGen/CS_Bn_4/Mux/U9/ZN (INV_X1)
+                                                          0.04       0.85 f
+  dp/ex_stage/alu/adder/SumGen/CS_Bn_4/Mux/U8/ZN (AOI22_X1)
+                                                          0.06       0.91 r
+  dp/ex_stage/alu/adder/SumGen/CS_Bn_4/Mux/U4/ZN (INV_X1)
+                                                          0.02       0.93 f
+  dp/ex_stage/alu/adder/SumGen/CS_Bn_4/Mux/MUX_OUT[0] (mux2to1_N4_4)
+                                                          0.00       0.93 f
+  dp/ex_stage/alu/adder/SumGen/CS_Bn_4/S[0] (CS_BLOCK_N4_4)
+                                                          0.00       0.93 f
+  dp/ex_stage/alu/adder/SumGen/S[16] (CS_SUM_Nbit32_N4)
+                                                          0.00       0.93 f
+  dp/ex_stage/alu/adder/Sum[16] (P4_Nbit32)               0.00       0.93 f
+  dp/ex_stage/alu/U171/ZN (AOI22_X1)                      0.05       0.98 r
+  dp/ex_stage/alu/U214/ZN (OAI221_X1)                     0.05       1.03 f
+  dp/ex_stage/alu/ALU_OUT[16] (DLX_ALU_DATA_SIZE32)       0.00       1.03 f
+  dp/ex_stage/ALU_OUT[16] (DLX_EX_DATA_SIZE32_NPC_SIZE32_IMM_SIZE32_RD_SIZE5)
+                                                          0.00       1.03 f
+  dp/U279/ZN (INV_X1)                                     0.03       1.06 r
+  dp/U278/ZN (OAI22_X1)                                   0.03       1.09 f
+  dp/alu_out_mem_i_reg[16]/D (DFFR_X1)                    0.01       1.10 f
+  data arrival time                                                  1.10
+
+  clock MY_CLK (rise edge)                                1.22       1.22
+  clock network delay (ideal)                             0.00       1.22
+  clock uncertainty                                      -0.07       1.15
+  dp/alu_out_mem_i_reg[16]/CK (DFFR_X1)                   0.00       1.15 r
+  library setup time                                     -0.05       1.10
+  data required time                                                 1.10
+  --------------------------------------------------------------------------
+  data required time                                                 1.10
+  data arrival time                                                 -1.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

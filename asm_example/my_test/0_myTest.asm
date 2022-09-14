@@ -18,7 +18,7 @@ sw		102(r0),r2			; 28
 sw		104(r0),r3			; 32
 
 start:
-beqz	r29, end			; 36	if no more test are requested, stop the program
+beqz	r29, to_end			; 36	if no more test are requested, stop the program
 andi	r27, r29, 1			; 40	Selects the first bit
 lw		r26, 100(r28)		; 44	Load the PC value for the test
 srli	r29, r29, 1			; 48
@@ -44,7 +44,13 @@ otherTests:
 addi	r25, r0, 12			; 104
 beqz 	r0, start			; 108
 
-
-end:						; 122
+to_end:
+addi	r20, r0, 0xFFFF		; 112
+nop							; 116
+nop							; 120
+nop							; 124	
+nop							; 128
+sw		0(r0), r20			; 132
+end:						; 136
 beqz	r0, end
 
